@@ -265,6 +265,19 @@ input[aria-invalid=true],select[aria-invalid=true]{border-color:#B4231A}
 }
 .consentimiento label{font-size:15.5px; line-height:1.5; cursor:pointer}
 .nota-form{font-size:14px; color:var(--sutil); margin-top:16px; line-height:1.5}
+
+/* Grupos de opción */
+fieldset{border:0; padding:0; margin:0 0 20px; min-width:0}
+legend{font-family:var(--display); font-weight:700; font-size:15px; margin-bottom:10px; padding:0; line-height:1.3}
+.opciones{display:flex; flex-direction:column; gap:8px}
+.opcion{display:flex; gap:12px; align-items:flex-start; padding:12px 14px;
+  border:1.5px solid #CFCCC7; border-radius:11px; cursor:pointer;
+  transition:border-color .15s ease, background .15s ease}
+.opcion:hover{border-color:#A9A5A0}
+.opcion:has(input:checked){border-color:var(--acento); background:#FFF4EF}
+.opcion input{flex:none; width:22px; height:22px; margin:1px 0 0; accent-color:var(--acento); cursor:pointer}
+.opcion span{font-size:16px; line-height:1.42}
+.opciones[aria-invalid=true] .opcion{border-color:#B4231A}
 .abeja{position:absolute; left:-9999px; opacity:0; height:0; width:0}
 
 /* Éxito */
@@ -323,7 +336,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
       <p class="sub">Te enseño cómo entrar a la industria de seguros de vida en Estados Unidos. <b>Sin título universitario. Sin inglés perfecto. Sin experiencia.</b></p>
       <div class="acciones">
         <a class="btn" href="#formulario" data-ir-form>Quiero información</a>
-        <p class="microcopy"><span class="punto"></span>Respondo personalmente. Normalmente en menos de una hora.</p>
+        <p class="microcopy"><span class="punto"></span>Te contacta mi equipo de recursos humanos. Normalmente en menos de una hora.</p>
       </div>
     </div>
     <figure class="foto foto-retrato reveal" data-foto style="margin:0">
@@ -341,9 +354,9 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
     <div class="reveal">
       <p class="etiqueta">Quién soy</p>
       <blockquote>
-        <p>Me llamo Freddy Mota. Llegué a Estados Unidos hace cinco años.</p>
+        <p>Me llamo Freddy Mota. Llegué a Estados Unidos hace cuatro años.</p>
         <p>Empecé en construcción. Cuando vi que el sueldo no alcanzaba, me metí a hacer delivery — de todo, lo que saliera. Después junté lo suficiente para abrir mi propia empresa de limpieza.</p>
-        <p>Hace poco se me presentó la oportunidad de entrar a esta industria, y eso cambió mi techo por completo. Hoy soy General Agent en American Income Life y entreno directamente a 25 agentes, dentro de una agencia de más de 200.</p>
+        <p>Hace un año se me presentó la oportunidad de entrar a esta industria, y eso cambió mi techo por completo. Hoy soy General Agent en American Income Life y entreno directamente a 25 agentes, dentro de una agencia de más de 200.</p>
         <p>No estoy buscando gente que quiera dinero rápido. Estoy buscando gente que ya trabaja duro y solamente está en el lugar equivocado. Yo estuve ahí.</p>
       </blockquote>
     </div>
@@ -397,7 +410,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
         <div class="respuesta">
           <p>No. Nadie llega sabiendo. Lo que sí necesitas es la licencia de seguros de vida de tu estado, y eso se saca en semanas, no en años.</p>
           <p>El proceso general: tener 18 años o más, completar el curso de pre-licencia que pida tu estado (algunos ya no lo exigen), pasar el examen estatal, y en la mayoría de los estados, huellas digitales y verificación de antecedentes. Los costos y horas varían por estado.</p>
-          <p>Yo te acompaño en todo el proceso.</p>
+          <p>Mi equipo de recursos humanos te acompaña y te guía en todo el proceso.</p>
         </div>
       </details>
 
@@ -405,7 +418,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
         <summary>¿Necesito hablar inglés?</summary>
         <div class="respuesta">
           <p>Para trabajar, no. Nuestros clientes son familias latinas y las presentaciones son en español.</p>
-          <p>Para el examen de licencia depende de tu estado: 22 estados ofrecen el examen en español. En los que no, existen formularios de ESL que te dan tiempo adicional. Dime en qué estado vives y te digo exactamente cómo está el tuyo.</p>
+          <p>Para el examen de licencia depende de tu estado: 22 estados ofrecen el examen en español. En los que no, existen formularios de ESL que te dan tiempo adicional. Dinos en qué estado vives y te decimos exactamente cómo está el tuyo.</p>
         </div>
       </details>
 
@@ -490,7 +503,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
     <div class="form-intro">
       <p class="etiqueta">Último paso</p>
       <h2>Cuéntame de ti</h2>
-      <p class="sub">Toma menos de un minuto. Te contacto yo, personalmente.</p>
+      <p class="sub">Toma menos de un minuto. Mi equipo de recursos humanos te contacta y te guía durante todo el proceso.</p>
     </div>
 
     <div class="form-caja">
@@ -548,6 +561,27 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
           <p class="error" id="err-estado">Selecciona tu estado.</p>
         </div>
 
+
+        <fieldset>
+          <legend>¿Puedes trabajar legalmente en Estados Unidos?</legend>
+          <div class="opciones" id="grupo-autorizacion" role="radiogroup" aria-describedby="err-autorizacion">
+            <label class="opcion"><input type="radio" name="autorizacion" value="Sí" required><span>Sí</span></label>
+            <label class="opcion"><input type="radio" name="autorizacion" value="No"><span>No</span></label>
+          </div>
+          <p class="error" id="err-autorizacion">Selecciona una opción.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Selecciona la opción que aplique para ti</legend>
+          <div class="opciones" id="grupo-estatus" role="radiogroup" aria-describedby="err-estatus">
+            <label class="opcion"><input type="radio" name="estatus" value="Ciudadano o residente legal" required><span>Soy ciudadano o residente legal</span></label>
+            <label class="opcion"><input type="radio" name="estatus" value="Permiso de trabajo vigente"><span>Tengo un permiso de trabajo vigente</span></label>
+            <label class="opcion"><input type="radio" name="estatus" value="ITIN y licencia de conducir"><span>Tengo un número ITIN y una licencia de conducir válida</span></label>
+            <label class="opcion"><input type="radio" name="estatus" value="Ninguna de las anteriores"><span>Ninguna de las anteriores</span></label>
+          </div>
+          <p class="error" id="err-estatus">Selecciona la opción que aplique para ti.</p>
+        </fieldset>
+
         <div class="campo">
           <label for="ocupacion">¿Qué haces actualmente?</label>
           <input type="text" id="ocupacion" name="ocupacion" required
@@ -564,17 +598,17 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
         <div class="consentimiento">
           <input type="checkbox" id="consentimiento" name="consentimiento" value="si" required
                  aria-describedby="err-consentimiento">
-          <label for="consentimiento">Acepto que Freddy Mota me contacte por teléfono, mensaje de texto o WhatsApp.</label>
+          <label for="consentimiento">Acepto que Freddy Mota y su equipo me contacten por teléfono, mensaje de texto o WhatsApp.</label>
         </div>
         <p class="error" id="err-consentimiento" style="margin-top:-12px; margin-bottom:18px">Necesito tu permiso para poder contactarte.</p>
 
         <button type="submit" class="btn" id="enviar" style="max-width:none">Enviar</button>
-        <p class="nota-form">Tu información es solo para que yo te contacte. No la vendo ni la comparto. <a href="/privacidad.html">Política de privacidad</a>.</p>
+        <p class="nota-form">Tu información es solo para que mi equipo te contacte. No la vendo ni la comparto. <a href="/privacidad.html">Política de privacidad</a>.</p>
       </form>
 
       <div class="exito" id="exito" role="status" aria-live="polite">
         <h3 id="exito-titulo">Listo.</h3>
-        <p id="exito-texto">Te estoy escribiendo por WhatsApp ahora mismo.</p>
+        <p id="exito-texto">Mi equipo te está escribiendo por WhatsApp ahora mismo.</p>
         <a class="btn" id="wa-link" href="#" style="max-width:none">
           <svg class="wa-icono" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.03 1.01-1.03 2.46 1.06 2.85 1.2 3.05c.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.62.71.22 1.35.19 1.86.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.8h-.02c-1.75 0-3.47-.47-4.97-1.36l-.36-.21-3.7.97.99-3.6-.23-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88M20.52 3.45A11.78 11.78 0 0 0 12.05 0C5.5 0 .17 5.33.17 11.88c0 2.09.55 4.14 1.59 5.94L.07 24l6.34-1.66a11.85 11.85 0 0 0 5.64 1.44h.01c6.54 0 11.87-5.33 11.87-11.88 0-3.17-1.24-6.15-3.48-8.39"/></svg>
           Abrir WhatsApp
@@ -692,6 +726,24 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 
   function digitos(v){ return v.replace(/\D/g,""); }
 
+  function valorRadio(nombre){
+    var el = form.querySelector('input[name="' + nombre + '"]:checked');
+    return el ? el.value : "";
+  }
+  function marcarGrupo(nombre, malo){
+    var err = document.getElementById("err-" + nombre);
+    var grupo = document.getElementById("grupo-" + nombre);
+    if(err) err.classList.toggle("visible", malo);
+    if(grupo) grupo.setAttribute("aria-invalid", malo ? "true" : "false");
+    return !malo;
+  }
+  ["autorizacion","estatus"].forEach(function(n){
+    Array.prototype.forEach.call(form.querySelectorAll('input[name="' + n + '"]'), function(r){
+      r.addEventListener("change", function(){ marcarGrupo(n, false); });
+    });
+  });
+
+
   function validarTelefono(){
     var d = digitos(tel.value);
     if(d.length !== 10)              return marcar("telefono", true, "Necesito un número de 10 dígitos de Estados Unidos.");
@@ -706,16 +758,24 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
     ok = validarTelefono() && ok;
     ok = marcar("estado", !document.getElementById("estado").value) && ok;
     ok = marcar("ocupacion", document.getElementById("ocupacion").value.trim().length < 2) && ok;
+    ok = marcarGrupo("autorizacion", !valorRadio("autorizacion")) && ok;
+    ok = marcarGrupo("estatus", !valorRadio("estatus")) && ok;
     ok = marcar("consentimiento", !document.getElementById("consentimiento").checked) && ok;
     return ok;
   }
 
+  /* Solo LIMPIAMOS el error del campo que se está escribiendo, mientras se escribe.
+     Nunca revalidamos el formulario entero al salir de un campo: eso hacía aparecer
+     y desaparecer mensajes de otros campos, la página se movía bajo el dedo, y el
+     siguiente toque caía fuera del control al que apuntaba la persona. */
   ["nombre","ocupacion"].forEach(function(id){
-    document.getElementById(id).addEventListener("blur", function(){
-      if(this.getAttribute("aria-invalid") === "true") validar();
+    document.getElementById(id).addEventListener("input", function(){
+      if(this.getAttribute("aria-invalid") === "true" && this.value.trim().length >= 2) marcar(id, false);
     });
   });
-  tel.addEventListener("blur", function(){ if(digitos(tel.value).length) validarTelefono(); });
+  tel.addEventListener("input", function(){
+    if(tel.getAttribute("aria-invalid") === "true" && digitos(tel.value).length === 10) validarTelefono();
+  });
   document.getElementById("estado").addEventListener("change", function(){ marcar("estado", !this.value); });
   document.getElementById("consentimiento").addEventListener("change", function(){ marcar("consentimiento", !this.checked); });
 
@@ -733,8 +793,10 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
     ev.preventDefault();
 
     if(!validar()){
-      var primero = form.querySelector('[aria-invalid="true"]') ||
-                    (!document.getElementById("consentimiento").checked ? document.getElementById("consentimiento") : null);
+      var malo = form.querySelector('[aria-invalid="true"]');
+      var primero = malo && malo.classList.contains("opciones") ? malo.querySelector("input")
+                  : malo ? malo
+                  : (!document.getElementById("consentimiento").checked ? document.getElementById("consentimiento") : null);
       if(primero) primero.focus();
       return;
     }
@@ -775,7 +837,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 
   function terminar(nombre, estado, guardado){
     var primerNombre = nombre.split(/\s+/)[0];
-    var texto = "Hola Freddy, soy " + nombre + " de " + estado +
+    var texto = "Hola, soy " + nombre + " de " + estado +
                 ". Acabo de llenar el formulario en 10kmonthgroup.com y quiero información sobre la carrera.";
     var url = "https://wa.me/" + WA_NUMERO + "?text=" + encodeURIComponent(texto);
 
@@ -783,7 +845,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
     link.href = url;
 
     document.getElementById("exito-titulo").textContent = "Listo, " + primerNombre + ".";
-    document.getElementById("exito-texto").textContent  = "Te estoy escribiendo por WhatsApp ahora mismo.";
+    document.getElementById("exito-texto").textContent  = "Mi equipo te está escribiendo por WhatsApp ahora mismo.";
 
     form.style.display = "none";
     document.getElementById("exito").classList.add("visible");

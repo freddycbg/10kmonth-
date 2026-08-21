@@ -20,6 +20,15 @@ Estos tres puntos están abiertos. El sitio funciona, pero **no se publica** has
       - Si la aprueban → borra el atributo `data-compliance="pendiente"`.
       - Si la rechazan → borra el bloque `<details>` completo.
 - [ ] **Disclaimer del footer y redacción de la casilla TCPA** confirmados con el MGA.
+      La casilla dice ahora "Acepto que Freddy Mota **y su equipo** me contacten…", porque
+      quien contacta es el equipo de recursos humanos, no Freddy en persona. Si el permiso
+      solo nombrara a Freddy, no cubriría a quien de verdad llama.
+- [ ] **Las dos preguntas de autorización de trabajo del formulario, aprobadas por escrito.**
+      El formulario pregunta si la persona puede trabajar legalmente en EE. UU. y cuál de
+      estas aplica: ciudadano o residente, permiso de trabajo vigente, ITIN con licencia de
+      conducir, o ninguna. Recoger esa información tiene implicaciones legales — se confirma
+      con Carta y con el MGA antes de publicar. Están en las dos versiones para que la
+      prueba A/B siga midiendo una sola variable.
 - [ ] **Tres testimonios con consentimiento firmado.** El bloque está comentado en la sección
       "El equipo" de `index.html`, listo para descomentar. No inventar ninguno.
 
