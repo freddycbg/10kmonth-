@@ -1,0 +1,25 @@
+# 10k Month Group — sitio estático, sin build.
+[build]
+  publish    = "."
+  functions  = "netlify/functions"
+  command    = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options  = "nosniff"
+    X-Frame-Options         = "SAMEORIGIN"
+    Referrer-Policy         = "strict-origin-when-cross-origin"
+    Permissions-Policy      = "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+
+# Las fotos cambian poco: cachear fuerte.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# El HTML siempre fresco, para que un cambio de copy se vea al instante.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
