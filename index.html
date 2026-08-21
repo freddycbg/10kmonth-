@@ -497,6 +497,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 
       <form id="lead" name="lead" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
         <input type="hidden" name="form-name" value="lead">
+        <input type="hidden" name="variante" value="A">
         <p class="abeja"><label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
         <!-- UTMs del link de Instagram -->
@@ -610,6 +611,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 
   var WA_NUMERO = "13855383938";
   var WEBHOOK   = "/.netlify/functions/lead"; // reenvía a Zapier si LEAD_WEBHOOK_URL está puesto
+  var VARIANTE  = "A";
 
   document.getElementById("anio").textContent = new Date().getFullYear();
 
@@ -719,10 +721,11 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 
   /* ── Eventos de tracking (los recoge GA/Meta si algún día se instalan) ── */
   function evento(nombre, datos){
+    datos = Object.assign({ variante: VARIANTE }, datos || {});
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(Object.assign({ event: nombre }, datos || {}));
-    if(typeof window.gtag === "function") window.gtag("event", nombre, datos || {});
-    if(typeof window.fbq === "function")  window.fbq("trackCustom", nombre, datos || {});
+    window.dataLayer.push(Object.assign({ event: nombre }, datos));
+    if(typeof window.gtag === "function") window.gtag("event", nombre, datos);
+    if(typeof window.fbq === "function")  window.fbq("trackCustom", nombre, datos);
   }
 
   /* ── Envío ── */
