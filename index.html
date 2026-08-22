@@ -6,7 +6,7 @@
 <title>10k Month Group — Carrera en seguros de vida | Freddy Mota</title>
 <meta name="description" content="Te enseño cómo entrar a la industria de seguros de vida en Estados Unidos. Sin título universitario. Sin inglés perfecto. Sin experiencia.">
 <link rel="canonical" href="https://10kmonthgroup.com/">
-<meta name="theme-color" content="#FAFAFA">
+<meta name="theme-color" content="#211E1B">
 
 <!-- Open Graph — el link se comparte por WhatsApp -->
 <meta property="og:type" content="website">
@@ -30,15 +30,27 @@
 <style>
 /* ── Tokens ───────────────────────────────────────────── */
 :root{
-  --fondo:#FAFAFA;
-  --texto:#111111;
-  --acento:#E2571E;          /* botones y detalles */
-  --acento-texto:#C0410F;    /* misma familia, contraste AA para texto chico */
-  --acento-hover:#C4491A;
-  --acento-claro:#FF7A45;   /* acento legible sobre fondo oscuro */
-  --sutil:#6B6B6B;
-  --linea:#E2E0DC;
-  --tarjeta:#FFFFFF;
+  /* Paleta cálida de rango corto. Nada de blanco puro contra negro puro:
+     el salto entre secciones estrobeaba. Los neutros van sesgados hacia el
+     naranja de marca, que es de donde salen los tonos de las fotos. */
+  --fondo:#F3F0EA;          /* base */
+  --panel:#FAF8F4;          /* superficies claras: tarjetas, formulario */
+  --medio:#E8E2D8;          /* escalón intermedio, evita el salto a negro */
+  --campo:#FFFDFA;          /* dentro de los campos del formulario */
+  --oscuro:#211E1B;         /* negro cálido, no #000 */
+  --oscuro-2:#2E2A26;
+
+  --texto:#1A1714;
+  --texto-2:#4A443D;        /* párrafos secundarios */
+  --sutil:#6E675F;
+  --linea:#DDD6CA;
+  --linea-fuerte:#CFC7B9;
+
+  --acento:#E2571E;         /* botones y detalles */
+  --acento-hover:#C8481A;
+  --acento-texto:#B8420F;   /* misma familia, contraste AA en texto chico */
+  --acento-claro:#FF8A5C;   /* acento legible sobre fondo oscuro */
+  --error:#A8281C;
 
   --display:'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --cuerpo:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -86,27 +98,24 @@ p:last-child{margin-bottom:0}
 .sutil{color:var(--sutil)}
 
 /* ── Marca ────────────────────────────────────────────── */
-.barra{
-  border-bottom:1px solid var(--linea);
-  background:var(--fondo);
-}
+.barra{background:var(--oscuro); color:#fff}
 .barra .env{display:flex; align-items:center; justify-content:space-between; gap:16px; height:60px}
 .marca{
   font-family:var(--display); font-weight:900; font-size:19px;
-  letter-spacing:-.03em; text-decoration:none; color:var(--texto);
+  letter-spacing:-.03em; text-decoration:none; color:#fff;
   display:inline-flex; align-items:baseline; gap:.12em;
 }
-.marca .flecha{color:var(--acento); font-size:.8em; transform:translateY(-.12em)}
+.marca .flecha{color:var(--acento-claro); font-size:.8em; transform:translateY(-.12em)}
 .barra a.ig{
-  font-size:15px; text-decoration:none; color:var(--sutil); font-weight:500;
+  font-size:15px; text-decoration:none; color:#A39C93; font-weight:500;
   white-space:nowrap;
 }
-.barra a.ig:hover{color:var(--texto)}
+.barra a.ig:hover{color:#fff}
 
 /* ── Hero ─────────────────────────────────────────────── */
 .hero{
   position:relative; isolation:isolate; overflow:hidden;
-  background:var(--texto); color:#fff;
+  background:var(--oscuro); color:#fff;
   padding-block:clamp(26px,5vw,52px) clamp(44px,7vw,76px);
 }
 /* La foto no es un recuadro al lado del texto: es el ambiente del hero.
@@ -165,11 +174,11 @@ h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
 .btn:hover{background:var(--acento-hover)}
 .btn:active{transform:scale(.985)}
 .btn[disabled]{opacity:.62; cursor:default}
-.btn-negro{background:var(--texto)}
-.btn-negro:hover{background:#000}
+.btn-negro{background:var(--oscuro)}
+.btn-negro:hover{background:#100E0C}
 
 /* ── Fotos ────────────────────────────────────────────── */
-.foto{position:relative; overflow:hidden; background:#EFEDE9; margin:0}
+.foto{position:relative; overflow:hidden; background:var(--medio); margin:0}
 .foto img{width:100%; height:100%; object-fit:cover; display:block}
 
 /* El retrato del hero no termina en un borde: se disuelve en el fondo de
@@ -177,7 +186,7 @@ h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
 .pie{margin:12px 0 0; font-size:14.5px; color:var(--sutil)}
 
 /* ── Quién soy ────────────────────────────────────────── */
-.quien{background:#fff; border-block:1px solid var(--linea); padding:0}
+.quien{background:var(--panel); border-block:1px solid var(--linea); padding:0}
 .quien-grid{display:grid; gap:0}
 .quien .foto img{aspect-ratio:4/5; object-position:44% 28%}
 .quien-txt{padding:clamp(38px,7vw,72px) var(--pad)}
@@ -203,30 +212,23 @@ h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
 
 /* ── Ritmo de tono: la página alterna claro y oscuro para que
       no sea una sábana blanca de arriba abajo ──────────────── */
-.que-es{background:var(--texto); color:#fff}
-.que-es h2{color:#fff}
-.que-es .etiqueta{color:var(--acento-claro)}
-.que-es .tarjeta{background:#1A1A1A; border-color:#2E2E2E}
-.que-es .tarjeta h3{color:#fff}
-.que-es .tarjeta p{color:#C4C1BC}
-.que-es .tarjeta .num{color:var(--acento-claro)}
+.que-es{background:var(--medio); border-block:1px solid var(--linea-fuerte)}
+.que-es .tarjeta{background:var(--panel); border-color:var(--linea-fuerte)}
 
-.faq-seccion{background:#F2EFEA; border-block:1px solid #E6E1D9}
-.faq-seccion .faq{border-top-color:#DFD9D0}
-.faq-seccion details{border-bottom-color:#DFD9D0}
+.faq-seccion{background:var(--fondo)}
 
 /* ── Tarjetas ─────────────────────────────────────────── */
 .tarjetas{display:grid; gap:14px; margin-top:36px}
 @media (min-width:640px){ .tarjetas{grid-template-columns:1fr 1fr; gap:18px} }
 .tarjeta{
-  background:var(--tarjeta); border:1px solid var(--linea);
+  background:var(--panel); border:1px solid var(--linea);
   border-radius:14px; padding:26px 24px 28px;
 }
 .tarjeta .num{
   font-family:var(--display); font-weight:900; font-size:14px;
-  color:var(--acento); display:block; margin-bottom:12px; letter-spacing:.04em;
+  color:var(--acento-texto); display:block; margin-bottom:12px; letter-spacing:.04em;
 }
-.tarjeta p{margin:10px 0 0; font-size:16.5px; color:#333}
+.tarjeta p{margin:10px 0 0; font-size:16.5px; color:var(--texto-2)}
 
 /* ── FAQ ──────────────────────────────────────────────── */
 .faq{margin-top:36px; border-top:1px solid var(--linea)}
@@ -247,7 +249,7 @@ summary::after{
 }
 details[open] summary::after{transform:rotate(90deg); background:linear-gradient(var(--acento),var(--acento)) center/100% 2.5px no-repeat}
 summary:hover{color:var(--acento-texto)}
-.respuesta{padding:0 0 26px; max-width:66ch; color:#333}
+.respuesta{padding:0 0 26px; max-width:66ch; color:var(--texto-2)}
 .respuesta em{color:var(--sutil); font-size:15.5px}
 
 /* ── Equipo: banda con el texto sobre la foto ─────────── */
@@ -269,10 +271,10 @@ summary:hover{color:var(--acento-texto)}
 .equipo-banda .banda-txt{width:100%; padding-block:clamp(36px,6vw,60px)}
 .equipo-banda h2{color:#fff}
 .equipo-banda .etiqueta{color:var(--acento-claro)}
-.equipo-banda .dato{color:#EFEDE9}
+.equipo-banda .dato{color:#EBE7E0}
 .equipo-banda .dato b{color:#fff}
 /* Si la foto no cargara, la banda seguiría legible sobre negro. */
-.equipo-banda{background:#141414}
+.equipo-banda{background:var(--oscuro)}
 .dato{
   font-family:var(--display); font-weight:800;
   font-size:clamp(20px,4.8vw,24px); line-height:1.3; letter-spacing:-.02em;
@@ -281,7 +283,7 @@ summary:hover{color:var(--acento-texto)}
 .dato b{color:var(--acento-texto)}
 .testimonios{display:grid; gap:16px; margin-top:34px}
 @media (min-width:760px){ .testimonios{grid-template-columns:repeat(3,1fr)} }
-.testimonio{background:var(--fondo); border:1px solid var(--linea); border-radius:14px; overflow:hidden}
+.testimonio{background:var(--medio); border:1px solid var(--linea); border-radius:14px; overflow:hidden}
 .testimonio img{width:100%; aspect-ratio:1/1; object-fit:cover}
 .testimonio .txt{padding:20px}
 .testimonio .nombre{font-family:var(--display); font-weight:800; font-size:17px}
@@ -289,7 +291,7 @@ summary:hover{color:var(--acento-texto)}
 
 /* ── Formulario (vive en el hero, sobre fondo claro) ──── */
 .form-caja{
-  background:#fff; color:var(--texto);
+  background:var(--panel); color:var(--texto);
   border:1px solid var(--linea); border-radius:18px;
   padding:clamp(22px,5vw,34px);
   box-shadow:0 18px 44px rgba(17,17,17,.07);
@@ -301,7 +303,8 @@ summary:hover{color:var(--acento-texto)}
 .hero-firma{display:flex; align-items:center; gap:13px; margin-top:26px}
 .hero-firma .foto-mini{
   width:54px; height:54px; border-radius:50%; overflow:hidden; flex:none;
-  background:#2A2A2A; border:2px solid var(--acento);
+  background:var(--oscuro-2);
+  box-shadow:0 0 0 1px rgba(255,255,255,.18);
 }
 .hero-firma .foto-mini img{width:100%; height:100%; object-fit:cover}
 .hero-firma .txt{font-size:15px; color:#B6B3AE; line-height:1.45}
@@ -312,17 +315,11 @@ summary:hover{color:var(--acento-texto)}
 
 /* ── Cierre ───────────────────────────────────────────── */
 .cierre{
-  position:relative; isolation:isolate; overflow:hidden;
-  background:var(--texto); color:#fff; text-align:center; padding-block:var(--bloque);
+  background:var(--medio); border-top:1px solid var(--linea-fuerte);
+  text-align:center; padding-block:var(--bloque);
 }
-.cierre .fondo{position:absolute; inset:0; z-index:-2; opacity:.20}
-.cierre .fondo img{width:100%; height:100%; object-fit:cover; object-position:50% 0%; display:block}
-.cierre::after{
-  content:""; position:absolute; inset:0; z-index:-1;
-  background:radial-gradient(120% 90% at 50% 50%, rgba(17,17,17,.55) 0%, rgba(17,17,17,.94) 72%);
-}
-.cierre h2{color:#fff; text-wrap:balance}
-.cierre p{color:#C9C6C1; margin:16px auto 0; max-width:36ch; font-size:clamp(17px,4.2vw,19px)}
+.cierre h2{text-wrap:balance}
+.cierre p{color:var(--texto-2); margin:16px auto 0; max-width:36ch; font-size:clamp(17px,4.2vw,19px)}
 .cierre .btn{margin-top:28px; max-width:340px}
 
 /* ── Botón flotante de WhatsApp ───────────────────────── */
@@ -347,7 +344,7 @@ summary:hover{color:var(--acento-texto)}
 .campo .opcional{font-weight:600; color:var(--sutil); font-size:14px; letter-spacing:0}
 input[type=text],input[type=tel],select,textarea{
   width:100%; font-family:var(--cuerpo); font-size:17px; color:var(--texto);
-  background:#fff; border:1.5px solid #CFCCC7; border-radius:11px;
+  background:var(--campo); border:1.5px solid var(--linea-fuerte); border-radius:11px;
   padding:14px 15px; min-height:52px; line-height:1.4;
   appearance:none; -webkit-appearance:none;
   transition:border-color .15s ease;
@@ -358,8 +355,8 @@ select{
   background-repeat:no-repeat; background-position:right 16px center; padding-right:44px;
 }
 input:focus,select:focus,textarea:focus{border-color:var(--acento); outline-offset:1px}
-input[aria-invalid=true],select[aria-invalid=true]{border-color:#B4231A}
-.error{display:none; color:#B4231A; font-size:14.5px; font-weight:600; margin-top:7px}
+input[aria-invalid=true],select[aria-invalid=true]{border-color:var(--error)}
+.error{display:none; color:var(--error); font-size:14.5px; font-weight:600; margin-top:7px}
 .error.visible{display:block}
 
 .consentimiento{
@@ -378,13 +375,13 @@ fieldset{border:0; padding:0; margin:0 0 20px; min-width:0}
 legend{font-family:var(--display); font-weight:700; font-size:15px; margin-bottom:10px; padding:0; line-height:1.3}
 .opciones{display:flex; flex-direction:column; gap:8px}
 .opcion{display:flex; gap:12px; align-items:flex-start; padding:12px 14px;
-  border:1.5px solid #CFCCC7; border-radius:11px; cursor:pointer;
+  border:1.5px solid var(--linea-fuerte); border-radius:11px; cursor:pointer;
   transition:border-color .15s ease, background .15s ease}
-.opcion:hover{border-color:#A9A5A0}
-.opcion:has(input:checked){border-color:var(--acento); background:#FFF4EF}
+.opcion:hover{border-color:var(--sutil)}
+.opcion:has(input:checked){border-color:var(--acento); background:#FBEDE6}
 .opcion input{flex:none; width:22px; height:22px; margin:1px 0 0; accent-color:var(--acento); cursor:pointer}
 .opcion span{font-size:16px; line-height:1.42}
-.opciones[aria-invalid=true] .opcion{border-color:#B4231A}
+.opciones[aria-invalid=true] .opcion{border-color:var(--error)}
 .abeja{position:absolute; left:-9999px; opacity:0; height:0; width:0}
 
 /* Éxito */
@@ -393,20 +390,20 @@ legend{font-family:var(--display); font-weight:700; font-size:15px; margin-botto
 .exito h3{font-size:clamp(23px,5.6vw,28px); margin-bottom:12px}
 .exito p{color:#333}
 .exito .btn{margin-top:20px; background:#111}
-.exito .btn:hover{background:#000}
+.exito .btn:hover{background:#100E0C}
 .exito .aviso{font-size:14.5px; color:var(--sutil); margin-top:14px}
 .wa-icono{width:22px; height:22px; flex:none}
 
 /* ── Footer ───────────────────────────────────────────── */
-footer{padding-block:clamp(48px,9vw,72px) clamp(84px,11vw,96px); border-top:1px solid var(--linea)}
+footer{background:var(--fondo); padding-block:clamp(48px,9vw,72px) clamp(84px,11vw,96px); border-top:1px solid var(--linea)}
 .footer-nombre{font-family:var(--display); font-weight:800; font-size:19px}
 footer .contacto{margin:6px 0 26px; font-size:16px}
 .divulgacion{
-  max-width:62ch; font-size:15px; color:#3A3A3A; line-height:1.55;
+  max-width:62ch; font-size:15px; color:var(--texto-2); line-height:1.55;
   border-left:3px solid var(--linea); padding-left:16px; margin-bottom:22px;
 }
 .disclaimer{
-  max-width:62ch; font-size:15px; color:#3A3A3A; line-height:1.55;
+  max-width:62ch; font-size:15px; color:var(--texto-2); line-height:1.55;
   background:#fff; border:1px solid var(--linea); border-radius:12px; padding:16px 18px;
 }
 .legal{margin-top:26px; font-size:15px; display:flex; flex-wrap:wrap; gap:8px 22px; align-items:center}
@@ -731,9 +728,6 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 
 <!-- ══ CIERRE ══ -->
 <section class="cierre">
-  <span class="fondo" aria-hidden="true">
-    <img src="img/equipo-summit.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async">
-  </span>
   <div class="env">
     <h2>Si llegaste hasta aquí,<br>ya sabes la respuesta.</h2>
     <p>Toma menos de un minuto. Mi equipo de recursos humanos te contacta y te guía durante todo el proceso.</p>
