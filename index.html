@@ -35,6 +35,7 @@
   --acento:#E2571E;          /* botones y detalles */
   --acento-texto:#C0410F;    /* misma familia, contraste AA para texto chico */
   --acento-hover:#C4491A;
+  --acento-claro:#FF7A45;   /* acento legible sobre fondo oscuro */
   --sutil:#6B6B6B;
   --linea:#E2E0DC;
   --tarjeta:#FFFFFF;
@@ -103,18 +104,47 @@ p:last-child{margin-bottom:0}
 .barra a.ig:hover{color:var(--texto)}
 
 /* ── Hero ─────────────────────────────────────────────── */
-.hero{padding-block:clamp(30px,6vw,56px) clamp(48px,8vw,80px)}
+.hero{
+  position:relative; isolation:isolate; overflow:hidden;
+  background:var(--texto); color:#fff;
+  padding-block:clamp(26px,5vw,52px) clamp(44px,7vw,76px);
+}
+/* La foto no es un recuadro al lado del texto: es el ambiente del hero.
+   El velo la funde con el negro para que el texto se lea y el formulario flote. */
+.hero-fondo{position:absolute; inset:0 0 auto 0; height:clamp(430px,58vh,580px); z-index:-1}
+.hero-fondo img{width:100%; height:100%; object-fit:cover; object-position:50% 14%}
+/* El velo va sobre la foto y no sobre toda la sección: así el borde inferior
+   se funde con el negro en vez de cortarse en seco. */
+.hero-fondo::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(to bottom,
+    rgba(9,9,9,.74) 0%, rgba(9,9,9,.80) 38%,
+    rgba(9,9,9,.90) 66%, rgba(9,9,9,.99) 90%, var(--texto) 100%);
+}
+.hero h1{color:#fff}
 .hero-grid{display:grid; gap:clamp(32px,6vw,56px)}
 @media (min-width:940px){
-  .hero-grid{grid-template-columns:.96fr 1.04fr; align-items:start; gap:clamp(40px,5vw,64px)}
-  .hero .foto img{max-height:60vh}
+  .hero-grid{grid-template-columns:.94fr 1.06fr; align-items:start; gap:clamp(44px,5vw,72px)}
+  .hero-copy{padding-top:clamp(24px,4vw,56px)}
+  /* En pantalla ancha la foto ocupa la mitad derecha y el formulario flota
+     encima. El titular queda sobre negro liso, sin competir con la imagen. */
+  /* La foto cruza todo el hero: a la izquierda queda como textura apenas
+     visible detrás del titular, a la derecha respira alrededor del formulario.
+     Así ningún lado es negro plano. */
+  .hero-fondo{inset:0; width:100%; height:auto}
+  .hero-fondo img{object-position:50% 6%}
+  .hero-fondo::after{
+    background:linear-gradient(90deg,
+      rgba(9,9,9,.95) 0%, rgba(9,9,9,.93) 32%, rgba(9,9,9,.86) 48%,
+      rgba(9,9,9,.66) 68%, rgba(9,9,9,.52) 100%);
+  }
 }
 h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
 .hero .sub{
   font-size:clamp(18px,4.6vw,21px);
-  color:#2C2C2C; margin:22px 0 0; max-width:30ch;
+  color:#DEDBD6; margin:22px 0 0; max-width:30ch;
 }
-.hero .sub b{font-weight:700; color:var(--texto)}
+.hero .sub b{font-weight:700; color:#fff}
 .acciones{margin-top:30px}
 .microcopy{margin:14px 0 0; font-size:15px; color:var(--sutil)}
 .microcopy .punto{
@@ -139,23 +169,26 @@ h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
 .btn-negro:hover{background:#000}
 
 /* ── Fotos ────────────────────────────────────────────── */
-.foto{
-  position:relative; overflow:hidden; border-radius:14px;
-  background:#EFEDE9; border:1px solid var(--linea);
-}
-.foto img{width:100%; object-fit:cover}
-.foto-retrato img{aspect-ratio:3/4}
-.foto-ancha img{aspect-ratio:16/10; max-height:62vh}
-.foto::after{
-  content:""; position:absolute; inset:auto 0 0 0; height:2px; background:var(--acento);
-}
+.foto{position:relative; overflow:hidden; background:#EFEDE9; margin:0}
+.foto img{width:100%; height:100%; object-fit:cover; display:block}
+
+/* El retrato del hero no termina en un borde: se disuelve en el fondo de
+   la página. Es lo que separa una foto integrada de una foto pegada. */
 .pie{margin:12px 0 0; font-size:14.5px; color:var(--sutil)}
 
 /* ── Quién soy ────────────────────────────────────────── */
-.quien{background:#fff; border-block:1px solid var(--linea)}
-.quien-grid{display:grid; gap:clamp(28px,5vw,52px)}
-@media (min-width:860px){
-  .quien-grid{grid-template-columns:.85fr 1.15fr; align-items:start}
+.quien{background:#fff; border-block:1px solid var(--linea); padding:0}
+.quien-grid{display:grid; gap:0}
+.quien .foto img{aspect-ratio:4/5; object-position:44% 28%}
+.quien-txt{padding:clamp(38px,7vw,72px) var(--pad)}
+.quien-txt > *{max-width:58ch}
+@media (min-width:900px){
+  .quien-grid{grid-template-columns:minmax(0,44%) minmax(0,56%); align-items:stretch}
+  .quien .foto img{aspect-ratio:auto; min-height:100%}
+  .quien-txt{
+    display:flex; flex-direction:column; justify-content:center;
+    padding:clamp(56px,6vw,88px) clamp(40px,5vw,72px);
+  }
 }
 .quien blockquote{
   margin:0; font-size:clamp(18px,4.4vw,20px); line-height:1.6;
@@ -167,6 +200,20 @@ h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
 .quien blockquote p:last-of-type{
   border-left:3px solid var(--acento); padding-left:18px; font-weight:500;
 }
+
+/* ── Ritmo de tono: la página alterna claro y oscuro para que
+      no sea una sábana blanca de arriba abajo ──────────────── */
+.que-es{background:var(--texto); color:#fff}
+.que-es h2{color:#fff}
+.que-es .etiqueta{color:var(--acento-claro)}
+.que-es .tarjeta{background:#1A1A1A; border-color:#2E2E2E}
+.que-es .tarjeta h3{color:#fff}
+.que-es .tarjeta p{color:#C4C1BC}
+.que-es .tarjeta .num{color:var(--acento-claro)}
+
+.faq-seccion{background:#F2EFEA; border-block:1px solid #E6E1D9}
+.faq-seccion .faq{border-top-color:#DFD9D0}
+.faq-seccion details{border-bottom-color:#DFD9D0}
 
 /* ── Tarjetas ─────────────────────────────────────────── */
 .tarjetas{display:grid; gap:14px; margin-top:36px}
@@ -203,8 +250,27 @@ summary:hover{color:var(--acento-texto)}
 .respuesta{padding:0 0 26px; max-width:66ch; color:#333}
 .respuesta em{color:var(--sutil); font-size:15.5px}
 
-/* ── Equipo ───────────────────────────────────────────── */
-.equipo{background:#fff; border-block:1px solid var(--linea)}
+/* ── Equipo: banda con el texto sobre la foto ─────────── */
+.equipo-banda{
+  position:relative; isolation:isolate; overflow:hidden;
+  min-height:clamp(440px,74vh,600px);
+  display:flex; align-items:flex-end;
+}
+.equipo-banda img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2}
+.equipo-banda::after{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:linear-gradient(to top,
+    rgba(10,10,10,.97) 0%, rgba(10,10,10,.93) 26%,
+    rgba(10,10,10,.72) 50%, rgba(10,10,10,.34) 76%,
+    rgba(10,10,10,.10) 100%);
+}
+.equipo-banda .banda-txt{width:100%; padding-block:clamp(36px,6vw,60px)}
+.equipo-banda h2{color:#fff}
+.equipo-banda .etiqueta{color:var(--acento-claro)}
+.equipo-banda .dato{color:#EFEDE9}
+.equipo-banda .dato b{color:#fff}
+/* Si la foto no cargara, la banda seguiría legible sobre negro. */
+.equipo-banda{background:#141414}
 .dato{
   font-family:var(--display); font-weight:800;
   font-size:clamp(20px,4.8vw,24px); line-height:1.3; letter-spacing:-.02em;
@@ -233,24 +299,29 @@ summary:hover{color:var(--acento-texto)}
 .hero-firma{display:flex; align-items:center; gap:13px; margin-top:26px}
 .hero-firma .foto-mini{
   width:54px; height:54px; border-radius:50%; overflow:hidden; flex:none;
-  background:#EFEDE9; border:2px solid var(--acento);
+  background:#2A2A2A; border:2px solid var(--acento);
 }
 .hero-firma .foto-mini img{width:100%; height:100%; object-fit:cover}
-.hero-firma .txt{font-size:15px; color:var(--sutil); line-height:1.45}
-.hero-firma .txt b{display:block; color:var(--texto); font-family:var(--display); font-weight:800; font-size:16.5px}
+.hero-firma .txt{font-size:15px; color:#B6B3AE; line-height:1.45}
+.hero-firma .txt b{display:block; color:#fff; font-family:var(--display); font-weight:800; font-size:16.5px}
 
 /* El retrato grande solo cabe en escritorio; en celular manda el formulario. */
-.hero .foto-grande{display:none}
-@media (min-width:940px){
-  .hero .foto-grande{display:block; margin-top:34px}
-  .hero-firma .foto-mini{display:none}
-}
+
 
 /* ── Cierre ───────────────────────────────────────────── */
-.cierre{background:#fff; border-top:1px solid var(--linea); text-align:center; padding-block:var(--bloque)}
-.cierre h2{text-wrap:balance}
-.cierre p{color:var(--sutil); margin:16px auto 0; max-width:36ch; font-size:clamp(17px,4.2vw,19px)}
-.cierre .btn{margin-top:28px}
+.cierre{
+  position:relative; isolation:isolate; overflow:hidden;
+  background:var(--texto); color:#fff; text-align:center; padding-block:var(--bloque);
+}
+.cierre .fondo{position:absolute; inset:0; z-index:-2; opacity:.20}
+.cierre .fondo img{width:100%; height:100%; object-fit:cover; display:block}
+.cierre::after{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:radial-gradient(120% 90% at 50% 50%, rgba(17,17,17,.55) 0%, rgba(17,17,17,.94) 72%);
+}
+.cierre h2{color:#fff; text-wrap:balance}
+.cierre p{color:#C9C6C1; margin:16px auto 0; max-width:36ch; font-size:clamp(17px,4.2vw,19px)}
+.cierre .btn{margin-top:28px; max-width:340px}
 
 /* ── Botón flotante de WhatsApp ───────────────────────── */
 .wa-flotante{
@@ -367,14 +438,14 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
      scroll para llegar a él.
      ═══════════════════════════════════════════════════ -->
 <section class="hero">
+  <span class="hero-fondo" aria-hidden="true">
+    <img src="img/freddy-hero.jpg" alt="" width="900" height="1350" fetchpriority="high" decoding="async">
+  </span>
   <div class="env hero-grid">
-    <div>
+    <div class="hero-copy">
       <h1>¿Cansado de que tu trabajo tenga techo?</h1>
       <p class="sub">Te enseño cómo entrar a la industria de seguros de vida en Estados Unidos. <b>Sin título universitario. Sin inglés perfecto. Sin experiencia.</b></p>
 
-      <figure class="foto foto-retrato foto-grande reveal" data-foto style="margin:0">
-        <img src="img/freddy-hero.jpg" alt="Freddy Mota, General Agent en American Income Life" width="900" height="1200" fetchpriority="high" decoding="async">
-      </figure>
 
       <div class="hero-firma">
         <span class="foto-mini" data-foto>
@@ -503,12 +574,12 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 </section>
 
 <!-- ══ QUIÉN SOY ══ -->
-<section class="seccion quien">
-  <div class="env quien-grid">
-    <figure class="foto foto-retrato reveal" data-foto style="margin:0">
-      <img src="img/freddy-quien-soy.jpg" alt="Freddy Mota" width="900" height="1200" loading="lazy" decoding="async">
+<section class="quien">
+  <div class="quien-grid">
+    <figure class="foto reveal" data-foto>
+      <img src="img/freddy-quien-soy.jpg" alt="Freddy Mota con su equipo" width="900" height="1350" loading="lazy" decoding="async">
     </figure>
-    <div class="reveal">
+    <div class="quien-txt reveal">
       <p class="etiqueta">Quién soy</p>
       <blockquote>
         <p>Me llamo Freddy Mota. Llegué a Estados Unidos hace cuatro años.</p>
@@ -521,7 +592,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 </section>
 
 <!-- ══ QUÉ ES ESTO ══ -->
-<section class="seccion">
+<section class="seccion que-es">
   <div class="env">
     <div class="reveal">
       <p class="etiqueta">Qué es esto exactamente</p>
@@ -553,7 +624,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 </section>
 
 <!-- ══ FAQ ══ -->
-<section class="seccion" style="padding-top:0">
+<section class="seccion faq-seccion">
   <div class="env">
     <div class="reveal">
       <p class="etiqueta">Preguntas frecuentes</p>
@@ -619,18 +690,19 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 </section>
 
 <!-- ══ EQUIPO ══ -->
-<section class="seccion equipo">
-  <div class="env">
-    <div class="reveal">
+<section class="equipo-banda">
+  <img src="img/equipo-summit.jpg" alt="Reunión del equipo de 10k Month Group" width="1600" height="1067" loading="lazy" decoding="async">
+  <div class="banda-txt">
+    <div class="env reveal">
       <p class="etiqueta">El equipo</p>
       <h2>No vas a estar solo.</h2>
       <p class="dato">Entreno directamente a <b>25 agentes</b>, dentro de una agencia de <b>más de 200</b>.</p>
     </div>
+  </div>
+</section>
 
-    <figure class="foto foto-ancha reveal" data-foto style="margin:34px 0 0">
-      <img src="img/equipo-summit.jpg" alt="Reunión del equipo de 10k Month Group" width="1600" height="1000" loading="lazy" decoding="async">
-    </figure>
-
+<section class="seccion equipo-testimonios" hidden>
+  <div class="env">
     <!-- ═══════════════════════════════════════════════════════════════
          TESTIMONIOS — requieren CONSENTIMIENTO POR ESCRITO de cada
          persona antes de publicar foto y nombre. No inventar ninguno.
@@ -652,10 +724,14 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
     </div>
     -->
   </div>
+  </div>
 </section>
 
 <!-- ══ CIERRE ══ -->
 <section class="cierre">
+  <span class="fondo" aria-hidden="true">
+    <img src="img/equipo-summit.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async">
+  </span>
   <div class="env">
     <h2>Si llegaste hasta aquí,<br>ya sabes la respuesta.</h2>
     <p>Toma menos de un minuto. Mi equipo de recursos humanos te contacta y te guía durante todo el proceso.</p>
