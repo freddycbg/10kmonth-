@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>10k Month Group — Carrera en seguros de vida | Freddy Mota</title>
 <meta name="description" content="Te enseño cómo entrar a la industria de seguros de vida en Estados Unidos. Sin título universitario. Sin inglés perfecto. Sin experiencia.">
-<link rel="canonical" href="https://10kmonthgroup.com/">
+<link rel="canonical" href="https://10kmonthgroup.com/recruiting">
 <meta name="theme-color" content="#211E1B">
 
 <!-- Open Graph — el link se comparte por WhatsApp -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="10k Month Group">
-<meta property="og:url" content="https://10kmonthgroup.com/">
+<meta property="og:url" content="https://10kmonthgroup.com/recruiting">
 <meta property="og:title" content="¿Cansado de que tu trabajo tenga techo?">
 <meta property="og:description" content="Te enseño cómo entrar a la industria de seguros de vida en Estados Unidos. Sin título universitario. Sin inglés perfecto. Sin experiencia.">
 <meta property="og:image" content="https://10kmonthgroup.com/img/og.jpg">
@@ -947,7 +947,9 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
     var cuerpo = new URLSearchParams(datos).toString();
 
     // 1) Netlify Forms — es la fuente de verdad del lead
-    var envio = fetch(location.pathname, {
+    // Siempre a la raíz del sitio: es el destino que Netlify Forms espera,
+    // sin importar desde qué ruta se abrió la página.
+    var envio = fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: cuerpo

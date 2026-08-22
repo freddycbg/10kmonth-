@@ -200,31 +200,65 @@ controlarlo desde el código: se activa poniendo `LEAD_WEBHOOK_URL` en Site
 configuration → Environment variables. Si no la pones, no hace nada y el formulario
 funciona igual.)*
 
-### 3. El dominio
+### 3. El dominio, y la ruta /recruiting
 
-Cuando tengas `10kmonthgroup.com` listo en Spaceship:
+**Un dominio apunta a un solo sitio.** Si `10kmonthgroup.com` apunta a este proyecto de
+Netlify, este proyecto sirve todo el dominio, la raíz incluida. No se puede repartir
+"la raíz a un lado y /recruiting a otro" solo con DNS.
+
+Por eso el sitio está montado así: **la landing vive en la raíz y además responde en
+`/recruiting`**, mediante reescrituras declaradas en `netlify.toml`. Son de tipo 200,
+no redirecciones: la barra de direcciones se queda en `/recruiting`.
+
+Eso significa que **el link de la bio de Instagram puede ser
+`10kmonthgroup.com/recruiting` desde el primer día y no va a tener que cambiar nunca**,
+se decida lo que se decida sobre el resto del sitio.
+
+#### Conectar el dominio
 
 Netlify → **Domain management** → **Add a domain** → escribe el dominio.
-Netlify te dice exactamente qué registros crear. Normalmente:
+Netlify dice exactamente qué registros crear. Normalmente:
 
 | Tipo | Host | Valor |
 |---|---|---|
-| `A` | `@` | el IP que te muestre Netlify |
+| `A` | `@` | el IP que muestre el panel de Netlify |
 | `CNAME` | `www` | `TU-SITIO.netlify.app` |
 
-> **Usa el valor que te dé el panel de Netlify, no uno copiado de un tutorial.**
-> Ese IP lo pueden cambiar, y un dato viejo deja el sitio caído sin avisar.
+> **Usa el valor que dé el panel, no uno copiado de un tutorial.** Ese IP lo pueden
+> cambiar, y un dato viejo deja el sitio caído sin avisar.
 
-Esos registros se crean en **Spaceship → tu dominio → Advanced DNS**, después de borrar
-los de parking. Luego, en Netlify, activa **HTTPS (Let's Encrypt)**. Propaga en minutos,
-a veces hasta 24 horas.
+Se crean en **Spaceship → tu dominio → Advanced DNS**, borrando antes los de parking.
+Después, en Netlify, activa **HTTPS (Let's Encrypt)**. Propaga en minutos, a veces
+hasta 24 horas.
 
-Las rutas del sitio son relativas, así que funciona igual en la URL de `.netlify.app`
-que en el dominio propio. No hay que tocar nada al cambiarlo.
+#### Cuando exista el sitio principal
 
-**Un pendiente al momento de conectar el dominio:** las etiquetas de Open Graph y el
-`sitemap.xml` apuntan a `https://10kmonthgroup.com`. Si al final compras otro dominio,
-hay que cambiarlo en `index.html`, `sitemap.xml` y `robots.txt`.
+Hay dos caminos, según dónde se construya:
+
+**a) En este mismo repo.** El sitio principal se pone en la raíz y la landing se mueve
+a una carpeta `recruiting/`. Las rutas del sitio son relativas y ya está probado que
+funciona desde subcarpeta, así que la mudanza no requiere tocar el código: se mueven
+los archivos y se borran las reescrituras de `netlify.toml`, que dejan de hacer falta.
+El formulario sigue capturando igual, porque Netlify Forms es del sitio entero.
+
+**b) En otro proyecto de Netlify.** Ese otro se queda el dominio y hace proxy hacia
+este, con una regla en su propio `netlify.toml`:
+
+```toml
+[[redirects]]
+  from = "/recruiting/*"
+  to = "https://moonlit-brioche-f91905.netlify.app/:splat"
+  status = 200
+```
+
+> **Cuidado con esta opción:** el formulario haría POST al sitio principal, no a este,
+> y Netlify Forms no lo reconocería. Los leads se perderían **en silencio**, sin ningún
+> error visible. Si se toma este camino, hay que cambiar el destino del `fetch` en
+> `index.html` a la URL absoluta de este sitio, y volver a probar de punta a punta.
+
+**c) Si el sitio principal va en Wix, Squarespace o WordPress.com,** una ruta
+`/recruiting` no es viable: esas plataformas no permiten proxy. La salida limpia sería
+`recruiting.10kmonthgroup.com`, que funciona igual de bien y no rompe nada.
 
 ### 4. Probar antes de mandar tráfico
 

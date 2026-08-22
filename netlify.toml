@@ -4,6 +4,41 @@
   functions  = "netlify/functions"
   command    = ""
 
+# ── /recruiting ───────────────────────────────────────────────────────
+# La landing vive en la raíz, pero también responde en /recruiting.
+# Es una reescritura (status 200), no una redirección: la barra de
+# direcciones se queda en /recruiting y no parpadea.
+#
+# Sirve para poder poner 10kmonthgroup.com/recruiting en la bio de
+# Instagram desde hoy, y que ese link siga funcionando igual el día que
+# la raíz del dominio pase a ser el sitio principal.
+#
+# Las reglas específicas van primero: Netlify aplica la primera que calce.
+[[redirects]]
+  from = "/recruiting/privacidad.html"
+  to = "/privacidad.html"
+  status = 200
+
+[[redirects]]
+  from = "/recruiting/img/*"
+  to = "/img/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/recruiting/favicon.svg"
+  to = "/favicon.svg"
+  status = 200
+
+[[redirects]]
+  from = "/recruiting/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/recruiting"
+  to = "/index.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
