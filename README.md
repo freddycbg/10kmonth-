@@ -48,14 +48,23 @@ Y del checklist del brief, todavía sin verificar:
 Hay dos landings en el repo. Misma marca, mismo copy, mismos disclaimers, mismo
 formulario de cinco campos. Lo que cambia es **dónde vive el formulario**.
 
-| | `index.html` (A) | `prueba.html` (B) |
+**A es la versión elegida.** Después de comparar las dos, A se quedó con lo mejor
+de B: el formulario en el hero y el botón flotante de WhatsApp, pero conservando
+su fondo claro y su retrato grande.
+
+| | `index.html` (A) — **la elegida** | `prueba.html` (B) |
 |---|---|---|
-| Formulario | Al final de la página | **En el hero, sin hacer scroll** |
-| WhatsApp | Solo después de enviar | **Botón flotante siempre visible** |
-| Cifras (25 / 200+ / 5) | Dentro del texto | **Barra de datos arriba** |
-| "Cómo se entra" | No existe | **Tres pasos concretos** |
+| Formulario | **En el hero, sin hacer scroll** | En el hero, sin hacer scroll |
+| WhatsApp | **Botón flotante siempre visible** | Botón flotante siempre visible |
+| Cierre | **Botón "Pedir más información"** | Botón "Quiero información" |
 | Fondo del hero | Claro | Negro |
-| Recorrido | Convence, luego pide | Pide ya, y convence al que duda |
+| Cifras (25 / 200+ / 4) | Dentro del texto | Barra de datos arriba |
+| "Cómo se entra" | No existe | Tres pasos concretos |
+
+> **B ya casi no aporta.** Las dos diferencias que quedan son el hero negro, la barra
+> de cifras y la sección de tres pasos. Si te gustan esas dos secciones, lo sensato es
+> traerlas a A y borrar `prueba.html`; si no, borra `prueba.html` y quédate solo con A.
+> Mantener dos páginas casi iguales solo genera trabajo doble en cada cambio.
 
 B nació de mirar `velasquezfinancialgroup.com`, otra agencia de Carta que corre
 la misma jugada (link en bio de Instagram → landing en español). Lo que les
