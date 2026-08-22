@@ -20,8 +20,8 @@
 <meta property="og:locale" content="es_US">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -556,7 +556,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
           <p class="error" id="err-consentimiento" style="margin-top:-12px; margin-bottom:18px">Necesito tu permiso para poder contactarte.</p>
 
           <button type="submit" class="btn" id="enviar" style="max-width:none">Enviar</button>
-          <p class="nota-form">Tu información es solo para que mi equipo te contacte. No la vendo ni la comparto. <a href="/privacidad.html">Política de privacidad</a>.</p>
+          <p class="nota-form">Tu información es solo para que mi equipo te contacte. No la vendo ni la comparto. <a href="privacidad.html">Política de privacidad</a>.</p>
         </form>
 
         <div class="exito" id="exito" role="status" aria-live="polite">
@@ -747,7 +747,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
     <p class="disclaimer">Los resultados individuales varían. Esta no es una oferta de empleo asalariado ni una garantía de ingreso. Posición de contratista independiente por comisión.</p>
 
     <p class="legal">
-      <a href="/privacidad.html">Política de privacidad</a>
+      <a href="privacidad.html">Política de privacidad</a>
       <a href="https://instagram.com/freddyjmo" target="_blank" rel="noopener">Instagram @freddyjmo</a>
     </p>
     <p class="copy">&copy; <span id="anio">2026</span> 10k Month Group</p>
@@ -947,7 +947,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
     var cuerpo = new URLSearchParams(datos).toString();
 
     // 1) Netlify Forms — es la fuente de verdad del lead
-    var envio = fetch("/", {
+    var envio = fetch(location.pathname, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: cuerpo

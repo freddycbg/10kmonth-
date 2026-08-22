@@ -154,81 +154,85 @@ Súbelas antes de mandar tráfico.
 
 ## Despliegue en Netlify
 
-1. Conecta este repo en Netlify → **Add new site → Import an existing project**.
-2. Build command: **vacío**. Publish directory: **`.`** (ya está en `netlify.toml`).
-3. Deploy. Netlify te da una URL tipo `algo-random.netlify.app` — pruébala antes de tocar el DNS.
+Netlify se eligió sobre GitHub Pages por una sola razón: **Pages no puede recibir
+formularios.** Es alojamiento estático puro. La página se vería igual, la gente
+llegaría igual a WhatsApp, pero no habría correo, ni hoja de cálculo, ni registro
+de ningún lead. Netlify da lo mismo (gratis, dominio propio, SSL) y además captura.
 
-### DNS en Spaceship
+### 1. Crear la cuenta y conectar el repo
 
-En Spaceship → tu dominio → **Advanced DNS**, borra los registros de parking y crea:
+1. Entra a **[netlify.com](https://netlify.com)** → **Sign up** → **GitHub**.
+   Iniciar sesión con GitHub evita tener que conectar nada después.
+2. **Add new site** → **Import an existing project** → **GitHub** → autoriza el acceso
+   → elige el repo **`10kmonth-`**.
+3. En la pantalla de configuración:
+   - **Branch to deploy:** la rama donde vive el sitio
+   - **Build command:** *déjalo vacío*
+   - **Publish directory:** `.`
 
-| Tipo | Host | Valor | TTL |
-|---|---|---|---|
-| `A` | `@` | `75.2.60.5` | Automático |
-| `CNAME` | `www` | `TU-SITIO.netlify.app` | Automático |
+   Ya vienen puestos en `netlify.toml`, así que no deberías tener que tocarlos.
+4. **Deploy**. En menos de un minuto te da una URL tipo `algo-al-azar.netlify.app`.
+   **Pruébala antes de tocar el dominio.**
 
-> El `75.2.60.5` es el balanceador de Netlify. **Verifícalo** en el panel de Netlify
-> (Domain management → Add domain → te dice el valor exacto a usar) antes de escribirlo:
-> ese IP lo pueden cambiar y no quieres el sitio caído por copiar un dato viejo.
+### 2. Que los leads te lleguen
 
-Después, en Netlify → **Domain management** → agrega `10kmonthgroup.com` y activa
-**HTTPS (Let's Encrypt)**. Propaga en minutos, a veces hasta 24 horas.
+Netlify detecta el formulario solo, al leer el HTML publicado. No hay que configurar
+nada para que empiece a guardar: los envíos aparecen en **Forms → lead**. Gratis hasta
+100 al mes.
 
-Configura también `www` → redirige al dominio sin `www` (Netlify lo hace solo al
-marcar el dominio principal).
+Lo único que sí hay que activar es el aviso:
 
-**Dominios de redirección** (`10kalmes.com`, `tenkmonth.com`, `10kmonths.com`), si los
-registras: agrégalos en Netlify como *domain alias* con el mismo DNS, y Netlify los
-redirige a `10kmonthgroup.com`.
-
----
-
-## Cómo llegan los leads
-
-Tres capas, en este orden:
-
-**1. Netlify Forms — la fuente de verdad.**
-El formulario tiene `data-netlify="true"`, así que Netlify captura cada envío sin
-configurar nada. Se ven en Netlify → **Forms → lead**. Gratis hasta 100 envíos/mes.
-
-Activa la notificación por correo:
-Netlify → Forms → **Form notifications → Add notification → Email notification**
+**Site configuration → Forms → Form notifications → Add notification → Email notification**
 → destino `freddy@10kmonthgroup.com`.
 
-**2. Webhook a Zapier — para la Google Sheet y el SMS.**
-El sitio también manda cada lead en JSON a `/.netlify/functions/lead`, que lo reenvía
-a donde apunte la variable de entorno:
+> **Sobre el SMS del brief:** ya no hace falta. El propio flujo lo resuelve — el lead
+> te escribe **a ti por WhatsApp**, así que el teléfono te suena en el momento, con la
+> conversación ya abierta. El correo de Netlify queda como respaldo escrito.
 
-Netlify → Site settings → **Environment variables** → agrega:
+**Si además quieres la Google Sheet**, no necesitas la función ni variables de entorno:
+Netlify manda el lead a donde le digas.
+**Form notifications → Add notification → Outgoing webhook** → pega ahí la URL del
+*Catch Hook* de Zapier, y en Zapier el Zap es *Webhooks (Catch Hook)* → *Google Sheets:
+Create Row*.
 
-```
-LEAD_WEBHOOK_URL = https://hooks.zapier.com/hooks/catch/…
-```
+*(La función `netlify/functions/lead.js` hace lo mismo por si algún día prefieres
+controlarlo desde el código: se activa poniendo `LEAD_WEBHOOK_URL` en Site
+configuration → Environment variables. Si no la pones, no hace nada y el formulario
+funciona igual.)*
 
-Si la variable no está puesta, la función no hace nada y el formulario sigue funcionando igual.
-En Zapier, el Zap es: **Webhooks by Zapier (Catch Hook)** → *Google Sheets: Create Row* →
-*SMS by Zapier: Send SMS* a tu celular.
+### 3. El dominio
 
-> El SMS no es un lujo. El correo lo ves en dos horas; el lead se enfría en veinte minutos.
+Cuando tengas `10kmonthgroup.com` listo en Spaceship:
 
-**3. WhatsApp — el lead se contacta solo.**
-Al enviar, el usuario ve `Listo, [Nombre].` y a los 1.5 s se le abre WhatsApp con el
-mensaje ya escrito. Tú recibes un mensaje suyo, no al revés.
+Netlify → **Domain management** → **Add a domain** → escribe el dominio.
+Netlify te dice exactamente qué registros crear. Normalmente:
 
-### El detalle que hay que probar sí o sí
+| Tipo | Host | Valor |
+|---|---|---|
+| `A` | `@` | el IP que te muestre Netlify |
+| `CNAME` | `www` | `TU-SITIO.netlify.app` |
 
-El navegador embebido de Instagram **bloquea redirecciones automáticas seguido**.
-Por eso, junto al mensaje de éxito, siempre aparece un botón grande **"Abrir WhatsApp"**
-que ya funciona sin depender de la redirección. Ese botón es el que salva el lead.
+> **Usa el valor que te dé el panel de Netlify, no uno copiado de un tutorial.**
+> Ese IP lo pueden cambiar, y un dato viejo deja el sitio caído sin avisar.
 
-**Pruébalo desde Instagram de verdad**: pon el link en tu bio (o mándate un DM con él),
-ábrelo desde la app, llena el formulario y confirma que llegas a WhatsApp.
-En Chrome de escritorio siempre va a funcionar; ese no es el examen.
+Esos registros se crean en **Spaceship → tu dominio → Advanced DNS**, después de borrar
+los de parking. Luego, en Netlify, activa **HTTPS (Let's Encrypt)**. Propaga en minutos,
+a veces hasta 24 horas.
 
-Los datos que se guardan por lead: nombre, teléfono en formato `+1XXXXXXXXXX`, estado,
-ocupación, motivo, consentimiento, los cinco parámetros UTM y el referrer.
+Las rutas del sitio son relativas, así que funciona igual en la URL de `.netlify.app`
+que en el dominio propio. No hay que tocar nada al cambiarlo.
 
----
+**Un pendiente al momento de conectar el dominio:** las etiquetas de Open Graph y el
+`sitemap.xml` apuntan a `https://10kmonthgroup.com`. Si al final compras otro dominio,
+hay que cambiarlo en `index.html`, `sitemap.xml` y `robots.txt`.
+
+### 4. Probar antes de mandar tráfico
+
+- [ ] Llenar el formulario de verdad desde el celular
+- [ ] Confirmar que el lead aparece en **Netlify → Forms → lead**
+- [ ] Confirmar que llega el correo
+- [ ] Confirmar que abre WhatsApp con el mensaje ya escrito
+- [ ] **Repetirlo todo desde el navegador de Instagram**, en iPhone y en Android
 
 ## Tracking
 
