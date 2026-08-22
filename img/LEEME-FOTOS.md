@@ -7,7 +7,8 @@ Si falta alguno, el sitio oculta ese bloque solo, en vez de mostrar una imagen r
 
 | Archivo | Dónde sale | Formato | Cuál de tus fotos |
 |---|---|---|---|
-| `freddy-hero.jpg` | **Dos lugares a la vez:** el retrato grande del hero en escritorio, y el círculo junto a tu nombre en celular | vertical 3:4, ~900×1200 | La del **saco azul marino**, parado junto a la mesa larga con las lámparas de madera. Tu cara tiene que verse bien recortada en círculo, así que evita una foto donde salgas muy lejos. |
+| `freddy-hero.jpg` | Retrato grande del hero, solo en escritorio | vertical 3:4, ~900×1350 | La del **saco azul marino**, parado junto a la mesa larga con las lámparas de madera. |
+| `freddy-avatar.jpg` | El círculo junto a tu nombre, sobre todo en celular | **cuadrada**, 300×300 | Recorte de cara y hombros sacado de `freddy-hero.jpg`. En un círculo de 54 px el retrato completo no sirve: la cara queda del tamaño de un punto. Si algún día cambias la foto del hero, hay que rehacer este recorte. |
 | `freddy-quien-soy.jpg` | Sección "Quién soy" | vertical 3:4, ~900×1200 | La del **polo blanco y gorra, escribiendo en la libreta**. Se ve trabajando, no posando. (Alternativa: la del traje azul en la terraza.) |
 | `equipo-summit.jpg` | Sección "El equipo" | horizontal 16:10, ~1600×1000 | La **wide del Leadership Summit**, todo el equipo alrededor de la mesa. Esa foto sola prueba lo de los 25 agentes. |
 
