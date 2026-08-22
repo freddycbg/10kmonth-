@@ -1,30 +1,58 @@
 # Fotos — qué archivo va dónde
 
-Sube los archivos con **exactamente estos nombres** en esta carpeta.
-Si falta alguno, el sitio oculta ese hueco automáticamente en vez de mostrar
-una imagen rota (el brief dice: "si no hay foto real, mejor sin foto").
+Sube los archivos con **exactamente estos nombres**, en esta carpeta.
+Si falta alguno, el sitio oculta ese bloque solo, en vez de mostrar una imagen rota.
+
+## Los tres obligatorios
 
 | Archivo | Dónde sale | Formato | Cuál de tus fotos |
 |---|---|---|---|
-| `freddy-hero.jpg` | Hero, arriba de todo | vertical 3:4, ~900×1200 | La del **saco azul marino**, parado junto a la mesa larga con las lámparas de madera. Es la más limpia y la más "profesional pero no de estudio". |
-| `freddy-quien-soy.jpg` | Sección "Quién soy" | vertical 3:4, ~900×1200 | La del **polo blanco y gorra, escribiendo en la libreta**. Se ve trabajando, no posando — pega con el texto. (Alternativa: la del traje azul en la terraza.) |
+| `freddy-hero.jpg` | **Dos lugares a la vez:** el retrato grande del hero en escritorio, y el círculo junto a tu nombre en celular | vertical 3:4, ~900×1200 | La del **saco azul marino**, parado junto a la mesa larga con las lámparas de madera. Tu cara tiene que verse bien recortada en círculo, así que evita una foto donde salgas muy lejos. |
+| `freddy-quien-soy.jpg` | Sección "Quién soy" | vertical 3:4, ~900×1200 | La del **polo blanco y gorra, escribiendo en la libreta**. Se ve trabajando, no posando. (Alternativa: la del traje azul en la terraza.) |
 | `equipo-summit.jpg` | Sección "El equipo" | horizontal 16:10, ~1600×1000 | La **wide del Leadership Summit**, todo el equipo alrededor de la mesa. Esa foto sola prueba lo de los 25 agentes. |
-| `og.jpg` | Vista previa al compartir por WhatsApp | **1200×630 exactas** | Ver abajo. |
-| `apple-touch-icon.png` | Ícono al guardar en pantalla de inicio | 180×180 | Opcional. Fondo negro + "10k" en blanco. |
-| `equipo-1.jpg` … `equipo-3.jpg` | Testimonios | cuadradas ~800×800 | **Solo con consentimiento firmado.** Hoy están comentados en `index.html`. |
 
-## Antes de subirlas
+## Muy recomendado
 
-1. **Redimensiona.** Nada arriba de 1600px de ancho. Una foto de cámara pesa 6 MB
-   y mata la meta de "carga en menos de 2 segundos en 4G".
-2. **Comprime a ~200 KB o menos por foto.** Usa <https://squoosh.app> (gratis, en el navegador).
-   Calidad 75–80 en JPEG no se nota y baja el peso 10×.
-3. **Nombre exacto, minúsculas, sin acentos ni espacios.**
+| Archivo | Para qué | Formato |
+|---|---|---|
+| `og.jpg` | La vista previa cuando alguien comparte el link por WhatsApp. Sin ella el link se ve como un recuadro gris y parece spam. | **1200×630 exactas** |
+| `apple-touch-icon.png` | Ícono al guardar el sitio en la pantalla de inicio | 180×180 |
+
+## Solo con consentimiento firmado
+
+`equipo-1.jpg`, `equipo-2.jpg`, `equipo-3.jpg` — cuadradas, ~800×800.
+Hoy el bloque de testimonios está comentado en `index.html`. No lo descomentes
+hasta tener el permiso por escrito de cada persona.
+
+---
+
+## Antes de subirlas: comprímelas
+
+**Esto no es opcional.** Una foto de cámara pesa 6 MB. Tres de esas son 18 MB, y
+la meta es que la página cargue en menos de 2 segundos en 4G. Alguien en el
+navegador de Instagram con mala señal se va antes de ver nada.
+
+1. Entra a **<https://squoosh.app>** (gratis, funciona en el navegador, no instalas nada)
+2. Arrastra la foto
+3. A la derecha elige **MozJPEG**, calidad **75**
+4. En "Resize", pon el ancho: **900** para las verticales, **1600** para la horizontal
+5. Descárgala y renómbrala con el nombre exacto de la tabla
+
+Apunta a **200 KB o menos por foto**. A calidad 75 no se nota la diferencia y pesa
+diez veces menos.
+
+## Reglas de nombre
+
+- Todo en minúsculas
+- Sin acentos, sin espacios, sin ñ
+- Extensión `.jpg` (no `.jpeg`, no `.JPG`, no `.png`, no `.heic`)
+
+> **Si tus fotos son `.HEIC`** (lo normal si son de iPhone), squoosh.app las convierte
+> a JPEG solo con exportarlas. No hace falta nada más.
 
 ## La imagen de Open Graph (`og.jpg`)
 
-Es la que aparece cuando alguien manda el link por WhatsApp. Si no está, se ve un
-recuadro gris y el link parece spam. Hazla en Canva, 1200×630:
+Hazla en Canva, tamaño 1200×630:
 
 - Fondo negro `#111111`
 - Tu foto del saco azul recortada a la derecha
