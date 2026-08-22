@@ -98,6 +98,18 @@ p:last-child{margin-bottom:0}
 .sutil{color:var(--sutil)}
 
 /* ── Marca ────────────────────────────────────────────── */
+/* ── Banner de apertura ──────────────────────────────────
+   La imagen ya trae el titular compuesto dentro. El fondo de la
+   sección es exactamente el negro de sus bordes (#060606, leído
+   del archivo), para que la imagen se funda con la página en vez
+   de recortarse contra ella. */
+.banner{background:#060606; padding-bottom:clamp(30px,5vw,46px)}
+.banner h1{margin:0 auto; max-width:1200px}
+.banner img{width:100%; height:auto; display:block}
+.banner .env{text-align:center; padding-top:clamp(28px,4.5vw,40px)}
+.banner .btn{max-width:340px; margin-inline:auto}
+.banner .microcopy{margin:16px 0 0; font-size:15px; color:#9C958C}
+
 .barra{background:var(--oscuro); color:#fff}
 .barra .env{display:flex; align-items:center; justify-content:space-between; gap:16px; height:60px}
 .marca{
@@ -116,9 +128,11 @@ p:last-child{margin-bottom:0}
 .hero{
   position:relative; isolation:isolate; overflow:hidden;
   background:var(--oscuro); color:#fff;
-  min-height:clamp(560px,82vh,760px);
-  display:flex; align-items:center;
-  padding-block:clamp(48px,8vw,80px);
+  padding-block:clamp(40px,7vw,72px);
+}
+.hero h2{
+  font-size:clamp(31px,7.6vw,50px); font-weight:900; color:#fff;
+  line-height:1.04; letter-spacing:-.03em; text-wrap:balance;
 }
 /* La foto no es un recuadro al lado del texto: es el ambiente del hero.
    El velo la funde con el negro para que el texto se lea y el formulario flote. */
@@ -135,8 +149,7 @@ p:last-child{margin-bottom:0}
 .hero h1{color:#fff}
 .hero-grid{display:grid; gap:clamp(32px,6vw,56px)}
 @media (min-width:940px){
-  .hero-grid{grid-template-columns:1fr; align-items:center}
-  .hero-copy{max-width:20ch}
+  .hero-grid{grid-template-columns:.92fr 1.08fr; align-items:center; gap:clamp(44px,5vw,72px)}
   /* En pantalla ancha la foto ocupa la mitad derecha y el formulario flota
      encima. El titular queda sobre negro liso, sin competir con la imagen. */
   /* La foto cruza todo el hero: a la izquierda queda como textura apenas
@@ -298,7 +311,9 @@ summary:hover{color:var(--acento-texto)}
   padding:clamp(22px,5vw,34px);
   box-shadow:0 18px 44px rgba(17,17,17,.07);
 }
-.form-caja h2{font-size:clamp(24px,5.6vw,31px); margin-bottom:6px}
+/* La tarjeta vive dentro del bloque oscuro, que pinta su texto en blanco.
+   Sin esto el título saldría blanco sobre blanco. */
+.form-caja h2{font-size:clamp(24px,5.6vw,31px); margin-bottom:6px; color:var(--texto)}
 .form-caja .sub{font-size:15.5px; color:var(--sutil); margin:0 0 22px; max-width:none}
 
 /* Firma: quién es y quién te va a contactar */
@@ -440,31 +455,16 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
      El formulario vive aquí arriba: nadie tiene que hacer
      scroll para llegar a él.
      ═══════════════════════════════════════════════════ -->
-<section class="hero">
-  <span class="hero-fondo" aria-hidden="true">
-    <img src="img/freddy-hero.jpg" alt="" width="900" height="1350" fetchpriority="high" decoding="async">
-  </span>
-  <div class="env hero-grid">
-    <div class="hero-copy">
-      <h1>¿Cansado de que tu trabajo tenga techo?</h1>
-      <p class="sub">Te enseño cómo entrar a la industria de seguros de vida en Estados Unidos. <b>Sin título universitario. Sin inglés perfecto. Sin experiencia.</b></p>
-
-
-      <div class="acciones">
-        <a class="btn" href="#formulario" data-ir-form>Quiero información</a>
-      </div>
-
-      <div class="hero-firma">
-        <span class="foto-mini" data-foto>
-          <img src="img/freddy-avatar.jpg" alt="Freddy Mota" width="300" height="300" fetchpriority="high">
-        </span>
-        <span class="txt">
-          <b>Freddy Mota</b>
-          Te contacta mi equipo de recursos humanos. Normalmente en menos de una hora.
-        </span>
-      </div>
-    </div>
-
+<!-- ══ BANNER ══════════════════════════════════════════
+     El primer bloque es la imagen de marca, con el titular ya
+     compuesto dentro. El <h1> es la imagen: su texto alternativo
+     lleva el titular, así que no hace falta repetirlo debajo.
+     ═════════════════════════════════════════════════════ -->
+<section class="banner">
+  <h1><img src="img/og.jpg" alt="¿Cansado de que tu trabajo tenga techo? $10k↗ MONTH" width="1200" height="630" fetchpriority="high" decoding="async"></h1>
+  <div class="env">
+    <a class="btn" href="#formulario" data-ir-form>Quiero información</a>
+    <p class="microcopy">Te contacta mi equipo de recursos humanos. Normalmente en menos de una hora.</p>
   </div>
 </section>
 
@@ -622,12 +622,27 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
   </div>
 </section>
 
-<!-- ══ FORMULARIO — al final, cuando ya leyeron todo ══ -->
-<section class="cierre" id="formulario">
-  <div class="env">
-    <div class="cierre-intro reveal">
-      <h2>Si llegaste hasta aquí,<br>ya sabes la respuesta.</h2>
-      <p>Toma menos de un minuto. Mi equipo de recursos humanos te contacta y te guía durante todo el proceso.</p>
+<!-- ══ FORMULARIO — al final, junto al titular ══ -->
+<section class="hero" id="formulario">
+  <span class="hero-fondo" aria-hidden="true">
+    <img src="img/freddy-hero.jpg" alt="" width="900" height="1350" fetchpriority="high" decoding="async">
+  </span>
+  <div class="env hero-grid">
+    <div class="hero-copy">
+      <h2>¿Cansado de que tu trabajo tenga techo?</h2>
+      <p class="sub">Te enseño cómo entrar a la industria de seguros de vida en Estados Unidos. <b>Sin título universitario. Sin inglés perfecto. Sin experiencia.</b></p>
+
+
+
+      <div class="hero-firma">
+        <span class="foto-mini" data-foto>
+          <img src="img/freddy-avatar.jpg" alt="Freddy Mota" width="300" height="300" fetchpriority="high">
+        </span>
+        <span class="txt">
+          <b>Freddy Mota</b>
+          Te contacta mi equipo de recursos humanos. Normalmente en menos de una hora.
+        </span>
+      </div>
     </div>
 
     <div class="form-caja">
