@@ -27,6 +27,22 @@ hasta tener el permiso por escrito de cada persona.
 
 ---
 
+## Importante: cada foto necesita dos archivos
+
+La página sirve **WebP**, que pesa un tercio menos que JPEG. Por cada foto hay
+un `nombre.jpg` y un `nombre.webp`.
+
+**Tú solo subes el `.jpg`.** Avísame y yo genero el `.webp`. Si subes un `.jpg`
+sin su `.webp`, la página lo detecta y usa el JPEG igual — no se rompe nada,
+solo pesa más hasta que se convierta.
+
+> El `og.jpg` **tiene que seguir existiendo en JPEG** aunque también haya
+> `og.webp`: es la miniatura que usa WhatsApp al compartir el link, y ahí el
+> soporte de WebP es irregular. El `.webp` se usa solo para mostrarlo en la
+> página.
+
+---
+
 ## Antes de subirlas: comprímelas
 
 **Esto no es opcional.** Una foto de cámara pesa 6 MB. Tres de esas son 18 MB, y

@@ -25,7 +25,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&display=swap">
+<!-- La hoja de fuentes no bloquea el pintado: se carga como "print" y se
+     promueve a "all" al terminar. Si el host de Google tarda o no responde,
+     la página igual pinta con la pila de sistema en vez de quedarse en blanco. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&display=swap"
+      media="print" onload="this.media='all'; this.onload=null">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&display=swap"></noscript>
 
 <style>
 /* ── Tokens ───────────────────────────────────────────── */
@@ -77,6 +82,9 @@ body{
 }
 @media (min-width:800px){ body{font-size:18px} }
 img{max-width:100%; height:auto; display:block}
+/* picture desaparece del layout: el img queda como hijo directo y
+   todo el CSS de posicionamiento sigue aplicando igual. */
+picture{display:contents}
 a{color:var(--acento-texto)}
 
 :focus-visible{
@@ -465,7 +473,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
      lleva el titular, así que no hace falta repetirlo debajo.
      ═════════════════════════════════════════════════════ -->
 <section class="banner">
-  <h1><img src="img/og.jpg" alt="¿Cansado de que tu trabajo tenga techo? $10k↗ MONTH" width="1200" height="630" fetchpriority="high" decoding="async"></h1>
+  <h1><picture><source srcset="img/og.webp" type="image/webp"><img src="img/og.jpg" alt="¿Cansado de que tu trabajo tenga techo? $10k↗ MONTH" width="1200" height="630" fetchpriority="high" decoding="async"></picture></h1>
   <div class="env">
     <a class="btn" href="#formulario" data-ir-form>Quiero información</a>
     <p class="microcopy">Te contacta mi equipo de recursos humanos. Normalmente en menos de una hora.</p>
@@ -476,7 +484,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 <section class="quien">
   <div class="quien-grid">
     <figure class="foto reveal" data-foto>
-      <img src="img/freddy-quien-soy.jpg" alt="Freddy Mota con su equipo" width="900" height="1350" loading="lazy" decoding="async">
+      <picture><source srcset="img/freddy-quien-soy.webp" type="image/webp"><img src="img/freddy-quien-soy.jpg" alt="Freddy Mota con su equipo" width="900" height="1350" decoding="async"></picture>
     </figure>
     <div class="quien-txt reveal">
       <p class="etiqueta">Quién soy</p>
@@ -590,7 +598,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 
 <!-- ══ EQUIPO ══ -->
 <section class="equipo-banda">
-  <img src="img/equipo-summit.jpg" alt="Reunión del equipo de 10k Month Group" width="1600" height="1067" loading="lazy" decoding="async">
+  <picture><source srcset="img/equipo-summit.webp" type="image/webp"><img src="img/equipo-summit.jpg" alt="Reunión del equipo de 10k Month Group" width="1600" height="1067" loading="lazy" decoding="async"></picture>
   <div class="banda-txt">
     <div class="env reveal">
       <p class="etiqueta">El equipo</p>
@@ -612,7 +620,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
     <!--
     <div class="testimonios">
       <article class="testimonio reveal">
-        <img src="img/equipo-1.jpg" alt="NOMBRE" loading="lazy">
+        <picture><source srcset="img/equipo-1.webp" type="image/webp"><img src="img/equipo-1.jpg" alt="NOMBRE" loading="lazy"></picture>
         <div class="txt">
           <p class="nombre">NOMBRE</p>
           <p class="antes">Antes: OFICIO ANTERIOR · N meses en el equipo</p>
@@ -629,7 +637,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 <!-- ══ FORMULARIO — al final, junto al titular ══ -->
 <section class="hero" id="formulario">
   <span class="hero-fondo" aria-hidden="true">
-    <img src="img/freddy-hero.jpg" alt="" width="900" height="1350" fetchpriority="high" decoding="async">
+    <picture><source srcset="img/freddy-hero.webp" type="image/webp"><img src="img/freddy-hero.jpg" alt="" width="900" height="1350" loading="lazy" decoding="async"></picture>
   </span>
   <div class="env hero-grid">
     <div class="hero-copy">
@@ -640,7 +648,7 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 
       <div class="hero-firma">
         <span class="foto-mini" data-foto>
-          <img src="img/freddy-avatar.jpg" alt="Freddy Mota" width="300" height="300" fetchpriority="high">
+          <picture><source srcset="img/freddy-avatar.webp" type="image/webp"><img src="img/freddy-avatar.jpg" alt="Freddy Mota" width="300" height="300" loading="lazy"></picture>
         </span>
         <span class="txt">
           <b>Freddy Mota</b>
@@ -802,12 +810,30 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
   flotante.href = "https://wa.me/" + WA_NUMERO + "?text=" +
     encodeURIComponent("Hola, vi la página de 10k Month Group y quiero información sobre la carrera.");
 
-  /* ── Fotos que no existen: ocultar el hueco en vez de romper ── */
-  Array.prototype.forEach.call(document.querySelectorAll("[data-foto] img"), function(img){
-    function ocultar(){ var f = img.closest("[data-foto]"); if(f) f.style.display = "none"; }
-    img.addEventListener("error", ocultar);
-    if(img.complete && img.naturalWidth === 0) ocultar();
-  });
+  /* ── Imágenes que fallan ──────────────────────────────────
+     <picture> elige el formato por SOPORTE del navegador, no por
+     disponibilidad: si el .webp no está, el navegador NO cae solo al .jpg.
+     Aquí se hace a mano — primero se reintenta con el JPEG, y solo si ese
+     también falta se oculta el hueco en vez de dejar la imagen rota. */
+  function vigilar(img){
+    img.addEventListener("error", function(){
+      var padre = img.parentElement;
+      if (padre && padre.tagName === "PICTURE"){
+        var limpio = img.cloneNode(true);      // conserva el src .jpg y sus atributos
+        vigilar(limpio);
+        padre.replaceWith(limpio);
+        return;
+      }
+      // Sin ningún archivo disponible: la foto enmarcada se retira entera,
+      // la decorativa (alt vacío) se oculta, y la que aporta significado se
+      // deja para que el navegador muestre su texto alternativo.
+      var marco = img.closest("[data-foto]");
+      if (marco) marco.style.display = "none";
+      else if (!img.getAttribute("alt")) img.style.display = "none";
+    });
+    if (img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event("error"));
+  }
+  Array.prototype.forEach.call(document.images, vigilar);
 
   /* ── Aparición al hacer scroll ── */
   var reveals = document.querySelectorAll(".reveal");
