@@ -33,6 +33,10 @@
   /* Paleta cálida de rango corto. Nada de blanco puro contra negro puro:
      el salto entre secciones estrobeaba. Los neutros van sesgados hacia el
      naranja de marca, que es de donde salen los tonos de las fotos. */
+  /* Los colores de texto están calibrados contra --medio, que es la más
+     oscura de las tres superficies claras. Si pasan ahí, pasan en las tres.
+     Calibrarlos contra --fondo fue el error que dejó la etiqueta de sección
+     en 4.26:1 sobre --medio, por debajo del mínimo AA. */
   --fondo:#F3F0EA;          /* base */
   --panel:#FAF8F4;          /* superficies claras: tarjetas, formulario */
   --medio:#E8E2D8;          /* escalón intermedio, evita el salto a negro */
@@ -42,13 +46,13 @@
 
   --texto:#1A1714;
   --texto-2:#4A443D;        /* párrafos secundarios */
-  --sutil:#6E675F;
+  --sutil:#6A635C;
   --linea:#DDD6CA;
   --linea-fuerte:#CFC7B9;
 
   --acento:#E2571E;         /* botones y detalles */
   --acento-hover:#C8481A;
-  --acento-texto:#B8420F;   /* misma familia, contraste AA en texto chico */
+  --acento-texto:#B03F0E;   /* misma familia, contraste AA en texto chico */
   --acento-claro:#FF8A5C;   /* acento legible sobre fondo oscuro */
   --error:#A8281C;
 
