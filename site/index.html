@@ -1027,10 +1027,37 @@ footer .contacto a{display:inline-block; padding-block:4px}
     var datos = new FormData(form);
     var nombre = datos.get("nombre").trim();
     var estado = datos.get("estado");
-    datos.set("telefono", "+1" + digitos(tel.value));   // guardamos E.164, se ve mejor en la Sheet
+    var d10 = digitos(tel.value);
+    datos.set("telefono", "+1" + d10);   // E.164: los clientes de correo lo vuelven pulsable
     datos.set("nombre", nombre);
 
-    var cuerpo = new URLSearchParams(datos).toString();
+    // El lead, ya redactado, para que el correo se lea de un vistazo.
+    var legible = "+1 (" + d10.slice(0,3) + ") " + d10.slice(3,6) + "-" + d10.slice(6);
+    var lineas = [
+      "Nombre completo: " + nombre,
+      "Número de teléfono: " + legible,
+      "Estado donde vive: " + estado,
+      "Estatus legal: " + (datos.get("autorizacion") === "Sí"
+          ? "Sí puede trabajar legalmente en Estados Unidos"
+          : "No puede trabajar legalmente en Estados Unidos"),
+      "",
+      "Información adicional:",
+      "· Situación: " + datos.get("estatus"),
+      "· Trabaja actualmente en: " + (datos.get("ocupacion") || "").trim(),
+      "· Comentario: " + ((datos.get("motivo") || "").trim() || "no dejó ninguno")
+    ];
+    var origen = ["utm_source","utm_medium","utm_campaign","utm_content"]
+      .map(function(c){ return datos.get(c); }).filter(Boolean).join(" · ");
+    if(origen) lineas.push("· Llegó desde: " + origen);
+    datos.set("resumen", lineas.join("\n"));
+
+    // Los campos vacíos se quitan: si no, Netlify manda un bloque en blanco por
+    // cada UTM ausente y el correo queda lleno de huecos.
+    var limpios = new URLSearchParams();
+    datos.forEach(function(v, clave){
+      if(clave === "bot-field" || String(v).trim() !== "") limpios.append(clave, v);
+    });
+    var cuerpo = limpios.toString();
 
     // 1) Netlify Forms — es la fuente de verdad del lead
     // Siempre a la raíz del sitio: es el destino que Netlify Forms espera,
