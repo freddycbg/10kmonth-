@@ -446,9 +446,25 @@ footer .contacto{margin:6px 0 26px; font-size:16px}
 .reveal{opacity:0; transform:translateY(18px); transition:opacity .55s ease, transform .55s ease}
 .reveal.visible{opacity:1; transform:none}
 @media (prefers-reduced-motion:reduce){
+  /* Movimiento reducido significa menos desplazamiento, no cero señales.
+     Se retira todo lo que mueve cosas por la pantalla y se conservan las
+     transiciones de color, borde y opacidad: son las que confirman que un
+     toque registró, qué campo tiene el foco y qué opción está elegida.
+     Quitarlas dejaba a la persona sin respuesta a sus propias acciones. */
   html{scroll-behavior:auto}
+
+  /* El contenido aparece ya colocado, sin subir. */
   .reveal{opacity:1; transform:none; transition:none}
-  *{animation-duration:.001ms !important; transition-duration:.001ms !important}
+
+  /* Fuera las transformaciones espaciales. */
+  .btn:active,
+  .wa-flotante:hover,
+  .wa-flotante.oculto{transform:none}
+
+  /* El acordeón cambia de estado al instante: el signo ya se transforma
+     de cruz a raya por sí solo, sin depender del giro. */
+  summary::after,
+  details[open] summary::after{transition:none}
 }
 </style>
 </head>
