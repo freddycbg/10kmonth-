@@ -1,6 +1,10 @@
 # 10k Month Group — sitio estático, sin build.
 [build]
-  publish    = "."
+  # Solo se publica site/. El resto del repositorio — README, esta misma
+  # configuración, el código de la función y las skills de .claude — se
+  # queda fuera del despliegue. Con publish = "." todo eso quedaba
+  # accesible bajo el dominio.
+  publish    = "site"
   functions  = "netlify/functions"
   command    = ""
 

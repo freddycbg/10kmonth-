@@ -125,16 +125,25 @@ Carta qué es cierto y redacta la respuesta **con tu MGA** antes de publicar nad
 ## Estructura
 
 ```
-index.html              Versión A: la página completa, formulario al final.
-prueba.html             Versión B: formulario en el hero + WhatsApp flotante. noindex.
-privacidad.html         Política de privacidad (obligatoria por capturar teléfonos).
-netlify.toml            Config de despliegue y cabeceras. Sin build command.
+site/                   Lo ÚNICO que se publica. Netlify apunta aquí.
+  index.html            La página completa: HTML + CSS + JS en un archivo. Sin dependencias.
+  prueba.html           Versión B, del experimento A/B. noindex.
+  privacidad.html       Política de privacidad (obligatoria por capturar teléfonos).
+  img/                  Fotos. Ver img/LEEME-FOTOS.md.
+  favicon.svg · robots.txt · sitemap.xml
+
+netlify.toml            Config de despliegue, cabeceras y las reescrituras de /recruiting.
 netlify/functions/
-  lead.js               Reenvía el lead a un webhook externo (Zapier/CRM) si está configurado.
-img/                    Fotos. Ver img/LEEME-FOTOS.md — ahí dice qué archivo va dónde.
-favicon.svg
-robots.txt · sitemap.xml
+  lead.js               Reenvía el lead a un webhook externo si está configurado.
+README.md               Este archivo.
+.claude/                Skills de trabajo. No forma parte del sitio.
 ```
+
+> **Por qué el sitio vive en `site/` y no en la raíz:** Netlify publica el
+> directorio entero que se le indique. Con `publish = "."` quedaban accesibles
+> bajo el dominio el README con sus notas internas, la propia configuración del
+> despliegue, el código de la función y las skills. Aislar lo publicable en
+> `site/` lo resuelve de raíz, en vez de ir bloqueando rutas una por una.
 
 **Sin framework, sin npm install, sin build.** Para verlo local basta abrir `index.html`
 en el navegador, o `python3 -m http.server 8000` en esta carpeta.
