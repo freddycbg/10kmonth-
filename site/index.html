@@ -120,7 +120,6 @@ p:last-child{margin-bottom:0}
   letter-spacing:.13em; text-transform:uppercase;
   color:var(--acento-texto); margin:0 0 14px;
 }
-.sutil{color:var(--sutil)}
 
 /* ── Marca ────────────────────────────────────────────── */
 /* ── Banner de apertura ──────────────────────────────────
@@ -222,7 +221,6 @@ h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
 
 /* El retrato del hero no termina en un borde: se disuelve en el fondo de
    la página. Es lo que separa una foto integrada de una foto pegada. */
-.pie{margin:12px 0 0; font-size:14.5px; color:var(--sutil)}
 
 /* ── Quién soy ────────────────────────────────────────── */
 .quien{background:var(--panel); border-block:1px solid var(--linea); padding:0}
@@ -342,7 +340,6 @@ summary:hover{color:var(--acento-texto)}
 
 /* Firma: quién es y quién te va a contactar */
 .hero-firma{display:flex; align-items:center; gap:13px; margin-top:30px}
-.hero .acciones{margin-top:32px}
 .hero-firma .foto-mini{
   width:54px; height:54px; border-radius:50%; overflow:hidden; flex:none;
   background:var(--oscuro-2);
@@ -360,7 +357,6 @@ summary:hover{color:var(--acento-texto)}
   background:var(--medio); border-top:1px solid var(--linea-fuerte);
   padding-block:var(--bloque);
 }
-.cierre-intro{text-align:center}
 .cierre h2{text-wrap:balance}
 .cierre p{color:var(--texto-2); margin:16px auto 0; max-width:36ch; font-size:clamp(17px,4.2vw,19px)}
 .cierre .form-caja{margin:clamp(32px,5vw,48px) auto 0; max-width:560px}
@@ -432,8 +428,7 @@ legend{font-family:var(--display); font-weight:700; font-size:15px; margin-botto
 .exito.visible{display:block; text-align:left}
 .exito h3{font-size:clamp(23px,5.6vw,28px); margin-bottom:12px}
 .exito p{color:var(--texto-2)}
-.exito .btn{margin-top:20px; background:var(--oscuro)}
-.exito .btn:hover{background:var(--oscuro-presionado)}
+.exito .btn{margin-top:20px}   /* el color lo pone .btn-negro, que el enlace ya lleva */
 .exito .aviso{font-size:14.5px; color:var(--sutil); margin-top:14px}
 .wa-icono{width:22px; height:22px; flex:none}
 
@@ -441,9 +436,12 @@ legend{font-family:var(--display); font-weight:700; font-size:15px; margin-botto
 footer{background:var(--fondo); padding-block:clamp(48px,9vw,72px) clamp(84px,11vw,96px); border-top:1px solid var(--linea)}
 .footer-nombre{font-family:var(--display); font-weight:800; font-size:19px}
 footer .contacto{margin:6px 0 26px; font-size:16px}
+/* Enlace suelto, no dentro de una frase: le aplica el mínimo de 24px de
+   WCAG 2.5.8, y a 19px de alto no llegaba. */
+footer .contacto a{display:inline-block; padding-block:4px}
 .divulgacion{
   max-width:62ch; font-size:15px; color:var(--texto-2); line-height:1.55;
-  border-left:3px solid var(--linea); padding-left:16px; margin-bottom:22px;
+  margin-bottom:22px;
 }
 .disclaimer{
   max-width:62ch; font-size:15px; color:var(--texto-2); line-height:1.55;
