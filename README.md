@@ -48,86 +48,15 @@ Y del checklist del brief, todavía sin verificar:
 Hay dos landings en el repo. Misma marca, mismo copy, mismos disclaimers, mismo
 formulario de cinco campos. Lo que cambia es **dónde vive el formulario**.
 
-**A es la versión elegida.** Después de comparar las dos, A se quedó con lo mejor
-de B: el formulario en el hero y el botón flotante de WhatsApp, pero conservando
-su fondo claro y su retrato grande.
-
-| | `index.html` (A) — **la elegida** | `prueba.html` (B) |
-|---|---|---|
-| Formulario | **En el hero, sin hacer scroll** | En el hero, sin hacer scroll |
-| WhatsApp | **Botón flotante siempre visible** | Botón flotante siempre visible |
-| Cierre | **Botón "Pedir más información"** | Botón "Quiero información" |
-| Fondo del hero | Claro | Negro |
-| Cifras (25 / 200+ / 4) | Dentro del texto | Barra de datos arriba |
-| "Cómo se entra" | No existe | Tres pasos concretos |
-
-> **B ya casi no aporta.** Las dos diferencias que quedan son el hero negro, la barra
-> de cifras y la sección de tres pasos. Si te gustan esas dos secciones, lo sensato es
-> traerlas a A y borrar `prueba.html`; si no, borra `prueba.html` y quédate solo con A.
-> Mantener dos páginas casi iguales solo genera trabajo doble en cada cambio.
-
-B nació de mirar `velasquezfinancialgroup.com`, otra agencia de Carta que corre
-la misma jugada (link en bio de Instagram → landing en español). Lo que les
-funciona bien y B les copia: el formulario arriba y el WhatsApp flotante.
-
-Lo que **no** se copió, a propósito:
-
-- Su sitio no tiene SSL — Chrome muestra "Not secure". Eso solo destruye confianza.
-- Su botón dice "Submit" en una página en español.
-- Su campo "Tu mensaje o consulta" es obligatorio. Es fricción pura.
-- Mezclan voseo ("Construí", "Formá parte") con tuteo.
-- Usan fotos de banco de imágenes en la sección de pasos.
-- No tienen ni una FAQ, ni disclaimer de ingresos, ni casilla de consentimiento,
-  ni política de privacidad. Eso no es un estilo distinto: es un hueco de compliance.
-
-### Cómo elegir entre las dos
-
-Cada lead que entra lleva un campo **`variante`** (`A` o `B`) y los eventos de
-tracking van etiquetados igual. Así se puede comparar de verdad en vez de a ojo.
-
-Para probarlas de a de veras, alterna el link de la bio de Instagram cada semana
-y compara **leads por semana**, no impresiones:
-
-```
-https://10kmonthgroup.com/?utm_campaign=semana1        (versión A)
-https://10kmonthgroup.com/prueba.html?utm_campaign=semana2   (versión B)
-```
-
-`prueba.html` lleva `noindex` para que Google no la trate como contenido duplicado.
-Cuando decidas cuál se queda, la ganadora pasa a ser `index.html` y la otra se borra.
-
-### La decisión de fondo, que no es de diseño
-
-B es más agresiva: pide los datos antes de haberse ganado nada. Va a traer **más
-leads y más fríos**. A convence primero y filtra sola: **menos leads, más tibios**.
-
-Cuál conviene depende de una sola cosa: **a cuántas personas puedes atender tú,
-personalmente, el mismo día.** Si B te trae el triple de leads y contestas la
-mitad, B te está haciendo daño, no bien.
-
-El botón flotante de WhatsApp tiene el mismo filo: quien lo usa se te va directo
-al chat **sin dejar el lead en la Google Sheet**. Ganas velocidad, pierdes registro.
-Sus eventos van marcados como `via: "flotante"` para que puedas medir cuánta gente
-se va por ahí.
-
-### Pendiente que salió de mirar a la competencia
-
-Su formulario pregunta **"¿Puedes trabajar legalmente en EEUU?"** e incluye la opción
-*"Tengo un número ITIN y una licencia de conducir válida"*. Si en Carta existe ese
-camino, es la objeción más grande que tu página **no** responde hoy.
-
-En `prueba.html` hay una FAQ **"¿Necesito papeles?"** comentada y vacía a propósito.
-Preguntar o describir estatus migratorio tiene implicaciones legales: confirma con
-Carta qué es cierto y redacta la respuesta **con tu MGA** antes de publicar nada ahí.
-
----
+La página es una sola: `site/index.html`. Hubo un experimento A/B con una
+versión alternativa (`prueba.html`), que se retiró cuando A quedó elegida y
+la B dejó de mantenerse al día.
 
 ## Estructura
 
 ```
 site/                   Lo ÚNICO que se publica. Netlify apunta aquí.
   index.html            La página completa: HTML + CSS + JS en un archivo. Sin dependencias.
-  prueba.html           Versión B, del experimento A/B. noindex.
   privacidad.html       Política de privacidad (obligatoria por capturar teléfonos).
   img/                  Fotos. Ver img/LEEME-FOTOS.md.
   favicon.svg · robots.txt · sitemap.xml
