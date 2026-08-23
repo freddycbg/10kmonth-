@@ -694,16 +694,22 @@ footer .contacto a{display:inline-block; padding-block:4px}
         <p class="sub">Toma menos de un minuto. Mi equipo de recursos humanos te contacta y te guía durante todo el proceso.</p>
 
         <input type="hidden" name="form-name" value="lead">
-        <input type="hidden" name="variante" value="A">
+
+        <!-- Netlify no deja personalizar su plantilla de correo: lista un
+             bloque por cada campo DECLARADO aquí, tenga valor o no. Por eso
+             el aviso se arma desde el HTML, no desde lo que se envía.
+             Este campo lleva el lead ya redactado; su rótulo en el correo
+             sale del texto de la <label>. Es <textarea> a propósito, para
+             que respete los saltos de línea. -->
+        <label class="abeja" for="resumen">Recluta</label>
+        <textarea class="abeja" id="resumen" name="resumen" tabindex="-1" readonly></textarea>
         <p class="abeja"><label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
-        <!-- UTMs del link de Instagram -->
-        <input type="hidden" name="utm_source"   id="utm_source">
-        <input type="hidden" name="utm_medium"   id="utm_medium">
-        <input type="hidden" name="utm_campaign" id="utm_campaign">
-        <input type="hidden" name="utm_content"  id="utm_content">
-        <input type="hidden" name="utm_term"     id="utm_term">
-        <input type="hidden" name="referrer"     id="referrer">
+
+        <!-- Antes eran seis UTM más el referrer, cada uno declarado por
+             separado: siete bloques en blanco en cada correo cuando el lead
+             entraba directo. Ahora es un solo campo, y siempre con valor. -->
+        <input type="hidden" name="origen" id="origen">
 
         <div class="campo">
           <label for="nombre">Nombre completo</label>
@@ -880,7 +886,10 @@ footer .contacto a{display:inline-block; padding-block:4px}
     Array.prototype.forEach.call(reveals, function(el){ io.observe(el); });
   }
 
-  /* ── UTMs: se conservan aunque el usuario navegue dentro del sitio ── */
+  /* ── Origen del visitante, en un solo campo ──────────────────────────
+     Se conserva durante toda la visita aunque navegue dentro del sitio.
+     Antes eran seis campos separados y cada uno dejaba un bloque en blanco
+     en el correo cuando el lead entraba directo. */
   var CLAVES = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"];
   var guardadas = {};
   try { guardadas = JSON.parse(sessionStorage.getItem("utm") || "{}"); } catch(e){}
@@ -888,11 +897,13 @@ footer .contacto a{display:inline-block; padding-block:4px}
   CLAVES.forEach(function(k){
     var v = params.get(k);
     if(v) guardadas[k] = v.slice(0,120);
-    var input = document.getElementById(k);
-    if(input) input.value = guardadas[k] || "";
   });
   try { sessionStorage.setItem("utm", JSON.stringify(guardadas)); } catch(e){}
-  document.getElementById("referrer").value = (document.referrer || "").slice(0,200);
+
+  var partes = CLAVES.map(function(k){ return guardadas[k]; }).filter(Boolean);
+  document.getElementById("origen").value = partes.length
+    ? partes.join(" \u00b7 ")
+    : "Directo, sin campa\u00f1a";
 
   /* ── Scroll suave al formulario + foco en el primer campo ── */
   var irForm = document.querySelector("[data-ir-form]");
@@ -1046,18 +1057,10 @@ footer .contacto a{display:inline-block; padding-block:4px}
       "· Trabaja actualmente en: " + (datos.get("ocupacion") || "").trim(),
       "· Comentario: " + ((datos.get("motivo") || "").trim() || "no dejó ninguno")
     ];
-    var origen = ["utm_source","utm_medium","utm_campaign","utm_content"]
-      .map(function(c){ return datos.get(c); }).filter(Boolean).join(" · ");
-    if(origen) lineas.push("· Llegó desde: " + origen);
+    lineas.push("· Llegó desde: " + datos.get("origen"));
     datos.set("resumen", lineas.join("\n"));
 
-    // Los campos vacíos se quitan: si no, Netlify manda un bloque en blanco por
-    // cada UTM ausente y el correo queda lleno de huecos.
-    var limpios = new URLSearchParams();
-    datos.forEach(function(v, clave){
-      if(clave === "bot-field" || String(v).trim() !== "") limpios.append(clave, v);
-    });
-    var cuerpo = limpios.toString();
+    var cuerpo = new URLSearchParams(datos).toString();
 
     // 1) Netlify Forms — es la fuente de verdad del lead
     // Siempre a la raíz del sitio: es el destino que Netlify Forms espera,
