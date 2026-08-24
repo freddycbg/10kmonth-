@@ -426,7 +426,6 @@ legend{font-family:var(--display); font-weight:700; font-size:15px; margin-botto
 .opcion input{flex:none; width:22px; height:22px; margin:1px 0 0; accent-color:var(--acento); cursor:pointer}
 .opcion span{font-size:16px; line-height:1.42}
 .opciones[aria-invalid=true] .opcion{border-color:var(--error)}
-.abeja{position:absolute; left:-9999px; opacity:0; height:0; width:0}
 
 /* Éxito */
 .exito{display:none}
@@ -666,6 +665,23 @@ footer .contacto a{display:inline-block; padding-block:4px}
 </section>
 
 <!-- ══ FORMULARIO — al final, junto al titular ══ -->
+<!-- ═══ Lo que Netlify lee al desplegar ══════════════════════════════
+     Netlify arma el aviso por correo listando TODOS los campos declarados,
+     así que declarar los del formulario visible hacía que cada dato saliera
+     dos veces: una en el resumen y otra suelta debajo.
+     Este formulario no se muestra ni se usa: solo declara qué se guarda y
+     con qué rótulo. El de abajo es la interfaz, y el envío lo hace el
+     JavaScript con estos nombres.
+     ══════════════════════════════════════════════════════════════════ -->
+<form name="lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="lead">
+  <input name="bot-field">
+  <label for="decl-resumen">Recluta</label>
+  <textarea id="decl-resumen" name="resumen"></textarea>
+  <label for="decl-consentimiento">Autoriza que lo contacten</label>
+  <input id="decl-consentimiento" name="consentimiento">
+</form>
+
 <section class="hero" id="formulario">
   <span class="hero-fondo" aria-hidden="true">
     <picture><source srcset="img/freddy-hero.webp" type="image/webp"><img src="img/freddy-hero.jpg" alt="" width="900" height="1350" loading="lazy" decoding="async"></picture>
@@ -689,27 +705,9 @@ footer .contacto a{display:inline-block; padding-block:4px}
     </div>
 
     <div class="form-caja">
-      <form id="lead" name="lead" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <form id="lead" method="POST" action="/" novalidate>
         <h2>Cuéntame de ti</h2>
         <p class="sub">Toma menos de un minuto. Mi equipo de recursos humanos te contacta y te guía durante todo el proceso.</p>
-
-        <input type="hidden" name="form-name" value="lead">
-
-        <!-- Netlify no deja personalizar su plantilla de correo: lista un
-             bloque por cada campo DECLARADO aquí, tenga valor o no. Por eso
-             el aviso se arma desde el HTML, no desde lo que se envía.
-             Este campo lleva el lead ya redactado; su rótulo en el correo
-             sale del texto de la <label>. Es <textarea> a propósito, para
-             que respete los saltos de línea. -->
-        <label class="abeja" for="resumen">Recluta</label>
-        <textarea class="abeja" id="resumen" name="resumen" tabindex="-1" readonly></textarea>
-        <p class="abeja"><label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-
-        <!-- Antes eran seis UTM más el referrer, cada uno declarado por
-             separado: siete bloques en blanco en cada correo cuando el lead
-             entraba directo. Ahora es un solo campo, y siempre con valor. -->
-        <input type="hidden" name="origen" id="origen">
 
         <div class="campo">
           <label for="nombre">Nombre completo</label>
@@ -901,9 +899,7 @@ footer .contacto a{display:inline-block; padding-block:4px}
   try { sessionStorage.setItem("utm", JSON.stringify(guardadas)); } catch(e){}
 
   var partes = CLAVES.map(function(k){ return guardadas[k]; }).filter(Boolean);
-  document.getElementById("origen").value = partes.length
-    ? partes.join(" \u00b7 ")
-    : "Directo, sin campa\u00f1a";
+  var ORIGEN = partes.length ? partes.join(" \u00b7 ") : "Directo, sin campa\u00f1a";
 
   /* ── Scroll suave al formulario + foco en el primer campo ── */
   var irForm = document.querySelector("[data-ir-form]");
@@ -1039,7 +1035,7 @@ footer .contacto a{display:inline-block; padding-block:4px}
     var nombre = datos.get("nombre").trim();
     var estado = datos.get("estado");
     var d10 = digitos(tel.value);
-    datos.set("telefono", "+1" + d10);   // E.164: los clientes de correo lo vuelven pulsable
+    datos.set("telefono", "+1" + d10);   // E.164 para el webhook/CRM
     datos.set("nombre", nombre);
 
     // El lead, ya redactado, para que el correo se lea de un vistazo.
@@ -1057,10 +1053,15 @@ footer .contacto a{display:inline-block; padding-block:4px}
       "· Trabaja actualmente en: " + (datos.get("ocupacion") || "").trim(),
       "· Comentario: " + ((datos.get("motivo") || "").trim() || "no dejó ninguno")
     ];
-    lineas.push("· Llegó desde: " + datos.get("origen"));
-    datos.set("resumen", lineas.join("\n"));
+    lineas.push("· Llegó desde: " + ORIGEN);
 
-    var cuerpo = new URLSearchParams(datos).toString();
+    /* Se envía solo lo que el formulario oculto declara. Mandar además cada
+       campo suelto hacía que el correo repitiera todos los datos debajo. */
+    var cuerpo = new URLSearchParams({
+      "form-name": "lead",
+      resumen: lineas.join("\n"),
+      consentimiento: datos.get("consentimiento") === "si" ? "Sí" : "No"
+    }).toString();
 
     // 1) Netlify Forms — es la fuente de verdad del lead
     // Siempre a la raíz del sitio: es el destino que Netlify Forms espera,
