@@ -1,0 +1,1121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>10k Month Group — Carrera en seguros de vida | Freddy Mota</title>
+<meta name="description" content="Te enseño cómo entrar a la industria de seguros de vida en Estados Unidos. Sin título universitario. Sin inglés perfecto. Sin experiencia.">
+<link rel="canonical" href="https://10kmonthgroup.com/recruiting">
+<!-- Debe seguir a --oscuro. Es HTML, no admite var(): si cambia el token,
+     cambiar también este valor a mano. -->
+<meta name="theme-color" content="#211E1B">
+
+<!-- Open Graph — el link se comparte por WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="10k Month Group">
+<meta property="og:url" content="https://10kmonthgroup.com/recruiting">
+<meta property="og:title" content="¿Cansado de que tu trabajo tenga techo?">
+<meta property="og:description" content="Te enseño cómo entrar a la industria de seguros de vida en Estados Unidos. Sin título universitario. Sin inglés perfecto. Sin experiencia.">
+<meta property="og:image" content="https://10kmonthgroup.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- La hoja de fuentes no bloquea el pintado: se carga como "print" y se
+     promueve a "all" al terminar. Si el host de Google tarda o no responde,
+     la página igual pinta con la pila de sistema en vez de quedarse en blanco. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&display=swap"
+      media="print" onload="this.media='all'; this.onload=null">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&display=swap"></noscript>
+
+<style>
+/* ── Tokens ───────────────────────────────────────────── */
+:root{
+  /* Paleta cálida de rango corto. Nada de blanco puro contra negro puro:
+     el salto entre secciones estrobeaba. Los neutros van sesgados hacia el
+     naranja de marca, que es de donde salen los tonos de las fotos. */
+  /* Los colores de texto están calibrados contra --medio, que es la más
+     oscura de las tres superficies claras. Si pasan ahí, pasan en las tres.
+     Calibrarlos contra --fondo fue el error que dejó la etiqueta de sección
+     en 4.26:1 sobre --medio, por debajo del mínimo AA. */
+  --fondo:#F3F0EA;          /* base */
+  --panel:#FAF8F4;          /* superficies claras: tarjetas, formulario */
+  --medio:#E8E2D8;          /* escalón intermedio, evita el salto a negro */
+  --campo:#FFFDFA;          /* dentro de los campos del formulario */
+  --oscuro:#211E1B;         /* negro cálido, no #000 */
+  --oscuro-2:#2E2A26;
+
+  --texto:#1A1714;
+  --texto-2:#4A443D;        /* párrafos secundarios */
+  --sutil:#6A635C;
+  --linea:#DDD6CA;
+  --linea-fuerte:#CFC7B9;
+
+  --acento:#E2571E;         /* botones y detalles */
+  --acento-hover:#C8481A;
+  --acento-texto:#B03F0E;   /* misma familia, contraste AA en texto chico */
+  --acento-claro:#FF8A5C;   /* acento legible sobre fondo oscuro */
+  --error:#A8281C;
+
+  /* Texto sobre superficies oscuras. Antes había cinco valores distintos
+     repartidos para dos trabajos; ahora son dos roles con nombre. */
+  --sobre-oscuro:#FFFFFF;     /* principal */
+  --sobre-oscuro-2:#DFDAD3;   /* secundario: subtítulos, cifras */
+  --sobre-oscuro-3:#A8A199;   /* apagado: firmas, microcopy, enlaces de barra */
+
+  --negro-banner:#060606;     /* el negro exacto del borde de og.jpg: la imagen
+                                 debe fundirse con la sección, no recortarse */
+  --oscuro-presionado:#100E0C;/* estado presionado sobre superficies oscuras */
+  --whatsapp:#25D366;         /* verde de marca de WhatsApp, no de esta paleta */
+
+  --display:'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --cuerpo:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --ancho:1080px;
+  --pad:clamp(20px, 5.5vw, 40px);
+  --bloque:clamp(64px, 12vw, 112px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{color-scheme:light; -webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--fondo);
+  color:var(--texto);
+  font-family:var(--cuerpo);
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+@media (min-width:800px){ body{font-size:18px} }
+img{max-width:100%; height:auto; display:block}
+/* picture desaparece del layout: el img queda como hijo directo y
+   todo el CSS de posicionamiento sigue aplicando igual. */
+picture{display:contents}
+a{color:var(--acento-texto)}
+
+:focus-visible{
+  outline:3px solid var(--acento);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+.env{width:100%; max-width:var(--ancho); margin-inline:auto; padding-inline:var(--pad)}
+.seccion{padding-block:var(--bloque)}
+
+h1,h2,h3{font-family:var(--display); font-weight:800; line-height:1.04; letter-spacing:-.025em; margin:0}
+h2{font-size:clamp(30px,7.4vw,50px)}
+h3{font-size:20px; line-height:1.25; letter-spacing:-.015em}
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+
+/* Excepción deliberada: los manuales de estilo desaconsejan la etiquetita
+   sobre el titular. Aquí se conserva por decisión del cliente — en una
+   página larga que se recorre con el pulgar hacen de señal de ubicación, y
+   son la única presencia del naranja fuera de los botones. No es un
+   descuido; no hace falta volver a levantarlo en cada revisión. */
+.etiqueta{
+  font-family:var(--display); font-weight:700; font-size:13px;
+  letter-spacing:.13em; text-transform:uppercase;
+  color:var(--acento-texto); margin:0 0 14px;
+}
+
+/* ── Marca ────────────────────────────────────────────── */
+/* ── Banner de apertura ──────────────────────────────────
+   La imagen ya trae el titular compuesto dentro. El fondo de la
+   sección usa --negro-banner, leído del borde del propio archivo,
+   para que la imagen se funda con la página en vez de recortarse. */
+.banner{background:var(--negro-banner); padding-bottom:clamp(30px,5vw,46px)}
+.banner h1{margin:0 auto; max-width:1200px}
+.banner img{width:100%; height:auto; display:block}
+.banner .env{text-align:center; padding-top:clamp(28px,4.5vw,40px)}
+.banner .btn{max-width:340px; margin-inline:auto}
+.banner .microcopy{margin:16px 0 0; font-size:15px; color:var(--sobre-oscuro-3)}
+
+.barra{background:var(--oscuro); color:#fff}
+.barra .env{display:flex; align-items:center; justify-content:space-between; gap:16px; height:60px}
+.marca{
+  font-family:var(--display); font-weight:900; font-size:19px;
+  letter-spacing:-.03em; text-decoration:none; color:var(--sobre-oscuro);
+  display:inline-flex; align-items:baseline; gap:.12em;
+}
+.marca .flecha{color:var(--acento-claro); font-size:.8em; transform:translateY(-.12em)}
+.barra a.ig{
+  font-size:15px; text-decoration:none; color:var(--sobre-oscuro-3); font-weight:500;
+  white-space:nowrap;
+}
+.barra a.ig:hover{color:var(--sobre-oscuro)}
+
+/* ── Hero ─────────────────────────────────────────────── */
+.hero{
+  position:relative; isolation:isolate; overflow:hidden;
+  background:var(--oscuro); color:#fff;
+  padding-block:clamp(40px,7vw,72px);
+}
+.hero h2{
+  font-size:clamp(31px,7.6vw,50px); font-weight:900; color:var(--sobre-oscuro);
+  line-height:1.04; letter-spacing:-.03em; text-wrap:balance;
+}
+/* La foto no es un recuadro al lado del texto: es el ambiente del hero.
+   El velo la funde con el negro para que el texto se lea y el formulario flote. */
+.hero-fondo{position:absolute; inset:0; z-index:-1}
+.hero-fondo img{width:100%; height:100%; object-fit:cover; object-position:50% 14%}
+/* El velo va sobre la foto y no sobre toda la sección: así el borde inferior
+   se funde con el negro en vez de cortarse en seco. */
+.hero-fondo::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(to bottom,
+    rgba(9,9,9,.74) 0%, rgba(9,9,9,.80) 38%,
+    rgba(9,9,9,.90) 66%, rgba(9,9,9,.99) 90%, var(--texto) 100%);
+}
+.hero h1{color:var(--sobre-oscuro)}
+.hero-grid{display:grid; gap:clamp(32px,6vw,56px)}
+@media (min-width:940px){
+  .hero-grid{grid-template-columns:.92fr 1.08fr; align-items:center; gap:clamp(44px,5vw,72px)}
+  /* En pantalla ancha la foto ocupa la mitad derecha y el formulario flota
+     encima. El titular queda sobre negro liso, sin competir con la imagen. */
+  /* La foto cruza todo el hero: a la izquierda queda como textura apenas
+     visible detrás del titular, a la derecha respira alrededor del formulario.
+     Así ningún lado es negro plano. */
+  .hero-fondo{inset:0; width:100%; height:auto}
+  .hero-fondo img{object-position:50% 6%}
+  .hero-fondo::after{
+    background:linear-gradient(90deg,
+      rgba(9,9,9,.95) 0%, rgba(9,9,9,.93) 32%, rgba(9,9,9,.86) 48%,
+      rgba(9,9,9,.66) 68%, rgba(9,9,9,.52) 100%);
+  }
+}
+h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
+.hero .sub{
+  font-size:clamp(18px,4.6vw,21px);
+  color:var(--sobre-oscuro-2); margin:22px 0 0; max-width:30ch;
+}
+.hero .sub b{font-weight:700; color:var(--sobre-oscuro)}
+.acciones{margin-top:30px}
+.microcopy{margin:14px 0 0; font-size:15px; color:var(--sutil)}
+.microcopy .punto{
+  display:inline-block; width:8px; height:8px; border-radius:50%;
+  background:var(--acento); margin-right:8px; vertical-align:baseline;
+}
+
+/* ── Botones ──────────────────────────────────────────── */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  font-family:var(--display); font-weight:800; font-size:19px; letter-spacing:-.01em;
+  background:var(--acento); color:#fff; text-decoration:none;
+  padding:17px 34px; border:0; border-radius:999px; cursor:pointer;
+  min-height:56px; width:100%; max-width:340px;
+  transition:background .15s ease, transform .12s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn:hover{background:var(--acento-hover)}
+.btn:active{transform:scale(.985)}
+.btn[disabled]{opacity:.62; cursor:default}
+.btn-negro{background:var(--oscuro)}
+.btn-negro:hover{background:var(--oscuro-presionado)}
+
+/* ── Fotos ────────────────────────────────────────────── */
+.foto{position:relative; overflow:hidden; background:var(--medio); margin:0}
+.foto img{width:100%; height:100%; object-fit:cover; display:block}
+
+/* El retrato del hero no termina en un borde: se disuelve en el fondo de
+   la página. Es lo que separa una foto integrada de una foto pegada. */
+
+/* ── Quién soy ────────────────────────────────────────── */
+.quien{background:var(--panel); border-block:1px solid var(--linea); padding:0}
+.quien-grid{display:grid; gap:0}
+.quien .foto img{aspect-ratio:4/5; object-position:44% 28%}
+.quien-txt{padding:clamp(38px,7vw,72px) var(--pad)}
+.quien-txt > *{max-width:58ch}
+@media (min-width:900px){
+  .quien-grid{grid-template-columns:minmax(0,44%) minmax(0,56%); align-items:stretch}
+  .quien .foto img{aspect-ratio:auto; min-height:100%}
+  .quien-txt{
+    display:flex; flex-direction:column; justify-content:center;
+    padding:clamp(56px,6vw,88px) clamp(40px,5vw,72px);
+  }
+}
+.quien blockquote{
+  margin:0; font-size:clamp(18px,4.4vw,20px); line-height:1.6;
+}
+.quien blockquote p:first-of-type{
+  font-family:var(--display); font-weight:700; font-size:clamp(22px,5.4vw,27px);
+  line-height:1.28; letter-spacing:-.02em; margin-bottom:.7em;
+}
+.quien blockquote p:last-of-type{
+  border-left:3px solid var(--acento); padding-left:18px; font-weight:500;
+}
+
+/* ── Ritmo de tono: la página alterna claro y oscuro para que
+      no sea una sábana blanca de arriba abajo ──────────────── */
+.que-es{background:var(--medio); border-block:1px solid var(--linea-fuerte)}
+.que-es .tarjeta{background:var(--panel); border-color:var(--linea-fuerte)}
+
+.faq-seccion{background:var(--fondo)}
+
+/* ── Tarjetas ─────────────────────────────────────────── */
+.tarjetas{display:grid; gap:14px; margin-top:36px}
+@media (min-width:640px){ .tarjetas{grid-template-columns:1fr 1fr; gap:18px} }
+.tarjeta{
+  background:var(--panel); border:1px solid var(--linea);
+  border-radius:14px; padding:26px 24px 28px;
+}
+.tarjeta .num{
+  font-family:var(--display); font-weight:900; font-size:14px;
+  color:var(--acento-texto); display:block; margin-bottom:12px; letter-spacing:.04em;
+}
+.tarjeta p{margin:10px 0 0; font-size:16.5px; color:var(--texto-2)}
+
+/* ── FAQ ──────────────────────────────────────────────── */
+.faq{margin-top:36px; border-top:1px solid var(--linea)}
+details{border-bottom:1px solid var(--linea)}
+summary{
+  list-style:none; cursor:pointer; padding:22px 44px 22px 0; position:relative;
+  font-family:var(--display); font-weight:700; font-size:clamp(18px,4.5vw,21px);
+  line-height:1.3; letter-spacing:-.015em;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:""; position:absolute; right:4px; top:50%;
+  width:15px; height:15px; margin-top:-7px;
+  background:
+    linear-gradient(var(--acento),var(--acento)) center/100% 2.5px no-repeat,
+    linear-gradient(var(--acento),var(--acento)) center/2.5px 100% no-repeat;
+  transition:transform .2s ease;
+}
+details[open] summary::after{transform:rotate(90deg); background:linear-gradient(var(--acento),var(--acento)) center/100% 2.5px no-repeat}
+summary:hover{color:var(--acento-texto)}
+.respuesta{padding:0 0 26px; max-width:66ch; color:var(--texto-2)}
+.respuesta em{color:var(--sutil); font-size:15.5px}
+
+/* ── Equipo: banda con el texto sobre la foto ─────────── */
+.equipo-banda{
+  position:relative; isolation:isolate; overflow:hidden;
+  min-height:clamp(440px,74vh,600px);
+  display:flex; align-items:flex-end;
+}
+/* Anclada arriba: Freddy está en la parte alta de la foto, así que el
+   recorte se come el suelo vacío de abajo y no a él. */
+.equipo-banda img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 0%; z-index:-2}
+.equipo-banda::after{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:linear-gradient(to top,
+    rgba(10,10,10,.97) 0%, rgba(10,10,10,.93) 26%,
+    rgba(10,10,10,.72) 50%, rgba(10,10,10,.34) 76%,
+    rgba(10,10,10,.10) 100%);
+}
+.equipo-banda .banda-txt{width:100%; padding-block:clamp(36px,6vw,60px)}
+.equipo-banda h2{color:var(--sobre-oscuro)}
+.equipo-banda .etiqueta{color:var(--acento-claro)}
+.equipo-banda .dato{color:var(--sobre-oscuro-2)}
+.equipo-banda .dato b{color:var(--sobre-oscuro)}
+/* Si la foto no cargara, la banda seguiría legible sobre negro. */
+.equipo-banda{background:var(--oscuro)}
+.dato{
+  font-family:var(--display); font-weight:800;
+  font-size:clamp(20px,4.8vw,24px); line-height:1.3; letter-spacing:-.02em;
+  margin:28px 0 0; max-width:24ch;
+}
+.dato b{color:var(--acento-texto)}
+.testimonios{display:grid; gap:16px; margin-top:34px}
+@media (min-width:760px){ .testimonios{grid-template-columns:repeat(3,1fr)} }
+.testimonio{background:var(--medio); border:1px solid var(--linea); border-radius:14px; overflow:hidden}
+.testimonio img{width:100%; aspect-ratio:1/1; object-fit:cover}
+.testimonio .txt{padding:20px}
+.testimonio .nombre{font-family:var(--display); font-weight:800; font-size:17px}
+.testimonio .antes{font-size:14.5px; color:var(--sutil); margin:2px 0 12px}
+
+/* ── Formulario (vive en el hero, sobre fondo claro) ──── */
+.form-caja{
+  background:var(--panel); color:var(--texto);
+  border:1px solid var(--linea); border-radius:18px;
+  padding:clamp(22px,5vw,34px);
+  box-shadow:0 18px 44px rgba(17,17,17,.07);
+}
+/* La tarjeta vive dentro del bloque oscuro, que pinta su texto en blanco.
+   Sin esto el título saldría blanco sobre blanco. */
+.form-caja h2{font-size:clamp(24px,5.6vw,31px); margin-bottom:6px; color:var(--texto)}
+.form-caja .sub{font-size:15.5px; color:var(--sutil); margin:0 0 22px; max-width:none}
+
+/* Firma: quién es y quién te va a contactar */
+.hero-firma{display:flex; align-items:center; gap:13px; margin-top:30px}
+.hero-firma .foto-mini{
+  width:54px; height:54px; border-radius:50%; overflow:hidden; flex:none;
+  background:var(--oscuro-2);
+  box-shadow:0 0 0 1px rgba(255,255,255,.18);
+}
+.hero-firma .foto-mini img{width:100%; height:100%; object-fit:cover}
+.hero-firma .txt{font-size:15px; color:var(--sobre-oscuro-3); line-height:1.45}
+.hero-firma .txt b{display:block; color:var(--sobre-oscuro); font-family:var(--display); font-weight:800; font-size:16.5px}
+
+/* El retrato grande solo cabe en escritorio; en celular manda el formulario. */
+
+
+/* ── Cierre ───────────────────────────────────────────── */
+.cierre{
+  background:var(--medio); border-top:1px solid var(--linea-fuerte);
+  padding-block:var(--bloque);
+}
+.cierre h2{text-wrap:balance}
+.cierre p{color:var(--texto-2); margin:16px auto 0; max-width:36ch; font-size:clamp(17px,4.2vw,19px)}
+.cierre .form-caja{margin:clamp(32px,5vw,48px) auto 0; max-width:560px}
+
+/* ── Botón flotante de WhatsApp ───────────────────────── */
+.wa-flotante{
+  position:fixed; right:16px; bottom:16px; z-index:50;
+  width:60px; height:60px; border-radius:50%; background:var(--whatsapp); color:var(--sobre-oscuro);
+  display:flex; align-items:center; justify-content:center; text-decoration:none;
+  box-shadow:0 6px 22px rgba(0,0,0,.28);
+  transition:transform .18s ease, opacity .18s ease;
+}
+.wa-flotante:hover{transform:scale(1.06)}
+.wa-flotante svg{width:32px; height:32px}
+/* Mientras el formulario está en pantalla estorba y compite con el botón Enviar. */
+.wa-flotante.oculto{opacity:0; transform:scale(.7); pointer-events:none}
+@supports(padding:max(0px)){ .wa-flotante{bottom:max(16px, env(safe-area-inset-bottom))} }
+
+.campo{margin-bottom:20px}
+.campo label{
+  display:block; font-family:var(--display); font-weight:700;
+  font-size:15.5px; margin-bottom:8px; letter-spacing:-.005em;
+}
+.campo .opcional{font-weight:600; color:var(--sutil); font-size:14px; letter-spacing:0}
+input[type=text],input[type=tel],select,textarea{
+  width:100%; font-family:var(--cuerpo); font-size:17px; color:var(--texto);
+  background:var(--campo); border:1.5px solid var(--linea-fuerte); border-radius:11px;
+  padding:14px 15px; min-height:52px; line-height:1.4;
+  appearance:none; -webkit-appearance:none;
+  transition:border-color .15s ease;
+}
+textarea{min-height:88px; resize:vertical}
+select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23111' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 16px center; padding-right:44px;
+}
+input:focus,select:focus,textarea:focus{border-color:var(--acento); outline-offset:1px}
+input[aria-invalid=true],select[aria-invalid=true]{border-color:var(--error)}
+.error{display:none; color:var(--error); font-size:14.5px; font-weight:600; margin-top:7px}
+.error.visible{display:block}
+
+.consentimiento{
+  display:flex; gap:13px; align-items:flex-start;
+  background:var(--fondo); border:1px solid var(--linea);
+  border-radius:12px; padding:16px; margin:26px 0 20px;
+}
+.consentimiento input[type=checkbox]{
+  flex:none; width:24px; height:24px; margin:1px 0 0; accent-color:var(--acento); cursor:pointer;
+}
+.consentimiento label{font-size:15.5px; line-height:1.5; cursor:pointer}
+.nota-form{font-size:14px; color:var(--sutil); margin-top:16px; line-height:1.5}
+
+/* Grupos de opción */
+fieldset{border:0; padding:0; margin:0 0 20px; min-width:0}
+legend{font-family:var(--display); font-weight:700; font-size:15px; margin-bottom:10px; padding:0; line-height:1.3}
+.opciones{display:flex; flex-direction:column; gap:8px}
+.opcion{display:flex; gap:12px; align-items:flex-start; padding:12px 14px;
+  border:1.5px solid var(--linea-fuerte); border-radius:11px; cursor:pointer;
+  transition:border-color .15s ease, background .15s ease}
+.opcion:hover{border-color:var(--sutil)}
+.opcion:has(input:checked){border-color:var(--acento); background:#FBEDE6}
+.opcion input{flex:none; width:22px; height:22px; margin:1px 0 0; accent-color:var(--acento); cursor:pointer}
+.opcion span{font-size:16px; line-height:1.42}
+.opciones[aria-invalid=true] .opcion{border-color:var(--error)}
+
+/* Éxito */
+.exito{display:none}
+.exito.visible{display:block; text-align:left}
+.exito h3{font-size:clamp(23px,5.6vw,28px); margin-bottom:12px}
+.exito p{color:var(--texto-2)}
+.exito .btn{margin-top:20px}   /* el color lo pone .btn-negro, que el enlace ya lleva */
+.exito .aviso{font-size:14.5px; color:var(--sutil); margin-top:14px}
+.wa-icono{width:22px; height:22px; flex:none}
+
+/* ── Footer ───────────────────────────────────────────── */
+footer{background:var(--fondo); padding-block:clamp(48px,9vw,72px) clamp(84px,11vw,96px); border-top:1px solid var(--linea)}
+.footer-nombre{font-family:var(--display); font-weight:800; font-size:19px}
+footer .contacto{margin:6px 0 26px; font-size:16px}
+/* Enlace suelto, no dentro de una frase: le aplica el mínimo de 24px de
+   WCAG 2.5.8, y a 19px de alto no llegaba. */
+footer .contacto a{display:inline-block; padding-block:4px}
+.divulgacion{
+  max-width:62ch; font-size:15px; color:var(--texto-2); line-height:1.55;
+  margin-bottom:22px;
+}
+.disclaimer{
+  max-width:62ch; font-size:15px; color:var(--texto-2); line-height:1.55;
+  background:#fff; border:1px solid var(--linea); border-radius:12px; padding:16px 18px;
+}
+.legal{margin-top:26px; font-size:15px; display:flex; flex-wrap:wrap; gap:8px 22px; align-items:center}
+.legal a{color:var(--sutil)}
+.legal a:hover{color:var(--texto)}
+.copy{margin-top:22px; font-size:14px; color:var(--sutil)}
+
+/* ── Movimiento ───────────────────────────────────────── */
+.reveal{opacity:0; transform:translateY(18px); transition:opacity .55s ease, transform .55s ease}
+.reveal.visible{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){
+  /* Movimiento reducido significa menos desplazamiento, no cero señales.
+     Se retira todo lo que mueve cosas por la pantalla y se conservan las
+     transiciones de color, borde y opacidad: son las que confirman que un
+     toque registró, qué campo tiene el foco y qué opción está elegida.
+     Quitarlas dejaba a la persona sin respuesta a sus propias acciones. */
+  html{scroll-behavior:auto}
+
+  /* El contenido aparece ya colocado, sin subir. */
+  .reveal{opacity:1; transform:none; transition:none}
+
+  /* Fuera las transformaciones espaciales. */
+  .btn:active,
+  .wa-flotante:hover,
+  .wa-flotante.oculto{transform:none}
+
+  /* El acordeón cambia de estado al instante: el signo ya se transforma
+     de cruz a raya por sí solo, sin depender del giro. */
+  summary::after,
+  details[open] summary::after{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="env">
+    <a class="marca" href="#top">$10k<span class="flecha" aria-hidden="true">&#8599;</span> MONTH</a>
+    <a class="ig" href="https://instagram.com/freddyjmo" target="_blank" rel="noopener">@freddyjmo</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ══ HERO + FORMULARIO ══════════════════════════════
+     El formulario vive aquí arriba: nadie tiene que hacer
+     scroll para llegar a él.
+     ═══════════════════════════════════════════════════ -->
+<!-- ══ BANNER ══════════════════════════════════════════
+     El primer bloque es la imagen de marca, con el titular ya
+     compuesto dentro. El <h1> es la imagen: su texto alternativo
+     lleva el titular, así que no hace falta repetirlo debajo.
+     ═════════════════════════════════════════════════════ -->
+<section class="banner">
+  <h1><picture><source srcset="img/og.webp" type="image/webp"><img src="img/og.jpg" alt="¿Cansado de que tu trabajo tenga techo? $10k↗ MONTH" width="1200" height="630" fetchpriority="high" decoding="async"></picture></h1>
+  <div class="env">
+    <a class="btn" href="#formulario" data-ir-form>Quiero información</a>
+    <p class="microcopy">Te contacta mi equipo de recursos humanos. Normalmente en menos de una hora.</p>
+  </div>
+</section>
+
+<!-- ══ QUIÉN SOY ══ -->
+<section class="quien">
+  <div class="quien-grid">
+    <figure class="foto reveal" data-foto>
+      <picture><source srcset="img/freddy-quien-soy.webp" type="image/webp"><img src="img/freddy-quien-soy.jpg" alt="Freddy Mota con su equipo" width="900" height="1350" decoding="async"></picture>
+    </figure>
+    <div class="quien-txt reveal">
+      <p class="etiqueta">Quién soy</p>
+      <blockquote>
+        <p>Me llamo Freddy Mota. Llegué a Estados Unidos hace cuatro años.</p>
+        <p>Empecé en construcción. Cuando vi que el sueldo no alcanzaba, me metí a hacer delivery — de todo, lo que saliera. Después junté lo suficiente para abrir mi propia empresa de limpieza.</p>
+        <p>Hace un año se me presentó la oportunidad de entrar a esta industria, y eso cambió mi techo por completo. Hoy soy General Agent en American Income Life y entreno directamente a 25 agentes, dentro de una agencia de más de 200.</p>
+        <p>No estoy buscando gente que quiera dinero rápido. Estoy buscando gente que ya trabaja duro y solamente está en el lugar equivocado. Yo estuve ahí.</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUÉ ES ESTO ══ -->
+<section class="seccion que-es">
+  <div class="env">
+    <div class="reveal">
+      <p class="etiqueta">Qué es esto exactamente</p>
+      <h2>Sin adornos:<br>así funciona.</h2>
+    </div>
+    <div class="tarjetas">
+      <article class="tarjeta reveal">
+        <span class="num">01</span>
+        <h3>Comisiones, no sueldo</h3>
+        <p>Ganas por lo que produces. No hay tope arriba — tampoco hay piso.</p>
+      </article>
+      <article class="tarjeta reveal">
+        <span class="num">02</span>
+        <h3>Nosotros ponemos los clientes</h3>
+        <p>No vendes a tu familia ni a tus amigos. Trabajas referidos que genera la agencia.</p>
+      </article>
+      <article class="tarjeta reveal">
+        <span class="num">03</span>
+        <h3>Entrenamiento desde cero</h3>
+        <p>Nadie llega sabiendo. Te acompaño desde el primer día hasta tu primera venta.</p>
+      </article>
+      <article class="tarjeta reveal">
+        <span class="num">04</span>
+        <h3>Camino de crecimiento</h3>
+        <p>La estructura de la compañía está diseñada para que subas y formes tu propio equipo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="seccion faq-seccion">
+  <div class="env">
+    <div class="reveal">
+      <p class="etiqueta">Preguntas frecuentes</p>
+      <h2>Lo que todos<br>me preguntan.</h2>
+    </div>
+
+    <div class="faq reveal">
+
+      <details>
+        <summary>¿Necesito experiencia o título?</summary>
+        <div class="respuesta">
+          <p>No. Nadie llega sabiendo. Lo que sí necesitas es la licencia de seguros de vida de tu estado, y eso se saca en semanas, no en años.</p>
+          <p>El proceso general: tener 18 años o más, completar el curso de pre-licencia que pida tu estado (algunos ya no lo exigen), pasar el examen estatal, y en la mayoría de los estados, huellas digitales y verificación de antecedentes. Los costos y horas varían por estado.</p>
+          <p>Mi equipo de recursos humanos te acompaña y te guía en todo el proceso.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Necesito hablar inglés?</summary>
+        <div class="respuesta">
+          <p>Para trabajar, no. Nuestros clientes son familias latinas y las presentaciones son en español.</p>
+          <p>Para el examen de licencia depende de tu estado: 22 estados ofrecen el examen en español. En los que no, existen formularios de ESL que te dan tiempo adicional. Dinos en qué estado vives y te decimos exactamente cómo está el tuyo.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Esto es piramidal?</summary>
+        <div class="respuesta">
+          <p>No. Aquí se gana vendiendo un producto real a familias reales — pólizas de seguro de vida de una compañía con décadas en el mercado. No se gana por reclutar, y nadie paga por entrar.</p>
+          <p>Si algún día formas tu propio equipo, eso viene después y es parte de la estructura de carrera de la compañía, no el negocio en sí.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Es medio tiempo o tiempo completo?</summary>
+        <div class="respuesta">
+          <p>Yo trabajo en esto tiempo completo, y ese es el objetivo para todos.</p>
+          <p>Si hoy tienes un empleo, puedes empezar medio tiempo mientras haces la transición. Pero seamos claros: esto no es un negocio mágico que te hace millonario de la noche a la mañana. Requiere tu tiempo y tu disposición desde el primer día.</p>
+          <p>Lo que sí necesitas es disponibilidad cuando las familias están en casa — tardes y fines de semana. Si no tienes esas horas, esto no te va a funcionar por más ganas que le pongas.</p>
+        </div>
+      </details>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           ⚠️  BLOQUEADOR: esta pregunta NO se publica sin aprobación
+           escrita de compliance (ver README → "Antes de publicar").
+           El texto ya está en su versión conservadora: cero cifras de
+           ingreso, cero proyecciones, disclaimer incluido.
+           Si compliance la RECHAZA: borra este bloque completo.
+           Si la APRUEBA: quita el atributo data-compliance="pendiente".
+           ═══════════════════════════════════════════════════════════ -->
+      <details data-compliance="pendiente">
+        <summary>¿Cuánto se puede ganar?</summary>
+        <div class="respuesta">
+          <p>Aquí no se trabaja por sueldo ni por hora. Se gana por comisión sobre cada venta, más renovaciones sobre las pólizas que siguen activas.</p>
+          <p>No existe un tope de lo que puedes ganar. Tampoco existe un piso garantizado. Hay meses fuertes y meses flojos, sobre todo al principio.</p>
+          <p>Cuánto ganes depende de cuántas citas trabajes y cuántas cierres. Yo te enseño exactamente cómo se hace. El trabajo lo pones tú.</p>
+          <p><em>Los resultados individuales varían. Esto no es una garantía de ingreso.</em></p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ EQUIPO ══ -->
+<section class="equipo-banda">
+  <picture><source srcset="img/equipo-summit.webp" type="image/webp"><img src="img/equipo-summit.jpg" alt="Reunión del equipo de 10k Month Group" width="1600" height="1067" loading="lazy" decoding="async"></picture>
+  <div class="banda-txt">
+    <div class="env reveal">
+      <p class="etiqueta">El equipo</p>
+      <h2>No vas a estar solo.</h2>
+      <p class="dato">Entreno directamente a <b>25 agentes</b>, dentro de una agencia de <b>más de 200</b>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion equipo-testimonios" hidden>
+  <div class="env">
+    <!-- ═══════════════════════════════════════════════════════════════
+         TESTIMONIOS — requieren CONSENTIMIENTO POR ESCRITO de cada
+         persona antes de publicar foto y nombre. No inventar ninguno.
+         Cuando tengas los tres firmados: descomenta este bloque, sube
+         img/equipo-1.jpg … equipo-3.jpg (cuadradas, ~800×800) y llena
+         los datos reales.
+         ═══════════════════════════════════════════════════════════ -->
+    <!--
+    <div class="testimonios">
+      <article class="testimonio reveal">
+        <picture><source srcset="img/equipo-1.webp" type="image/webp"><img src="img/equipo-1.jpg" alt="NOMBRE" loading="lazy"></picture>
+        <div class="txt">
+          <p class="nombre">NOMBRE</p>
+          <p class="antes">Antes: OFICIO ANTERIOR · N meses en el equipo</p>
+          <p>&ldquo;FRASE SUYA, TEXTUAL.&rdquo;</p>
+        </div>
+      </article>
+      … repetir ×3 …
+    </div>
+    -->
+  </div>
+  </div>
+</section>
+
+<!-- ══ FORMULARIO — al final, junto al titular ══ -->
+<!-- ═══ Lo que Netlify lee al desplegar ══════════════════════════════
+     Netlify arma el aviso por correo listando TODOS los campos declarados,
+     así que declarar los del formulario visible hacía que cada dato saliera
+     dos veces: una en el resumen y otra suelta debajo.
+     Este formulario no se muestra ni se usa: solo declara qué se guarda y
+     con qué rótulo. El de abajo es la interfaz, y el envío lo hace el
+     JavaScript con estos nombres.
+     ══════════════════════════════════════════════════════════════════ -->
+<form name="lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="lead">
+  <input name="bot-field">
+  <label for="decl-resumen">Recluta</label>
+  <textarea id="decl-resumen" name="resumen"></textarea>
+  <label for="decl-consentimiento">Autoriza que lo contacten</label>
+  <input id="decl-consentimiento" name="consentimiento">
+</form>
+
+<section class="hero" id="formulario">
+  <span class="hero-fondo" aria-hidden="true">
+    <picture><source srcset="img/freddy-hero.webp" type="image/webp"><img src="img/freddy-hero.jpg" alt="" width="900" height="1350" loading="lazy" decoding="async"></picture>
+  </span>
+  <div class="env hero-grid">
+    <div class="hero-copy">
+      <h2>¿Cansado de que tu trabajo tenga techo?</h2>
+      <p class="sub">Te enseño cómo entrar a la industria de seguros de vida en Estados Unidos. <b>Sin título universitario. Sin inglés perfecto. Sin experiencia.</b></p>
+
+
+
+      <div class="hero-firma">
+        <span class="foto-mini" data-foto>
+          <picture><source srcset="img/freddy-avatar.webp" type="image/webp"><img src="img/freddy-avatar.jpg" alt="Freddy Mota" width="300" height="300" loading="lazy"></picture>
+        </span>
+        <span class="txt">
+          <b>Freddy Mota</b>
+          Te contacta mi equipo de recursos humanos. Normalmente en menos de una hora.
+        </span>
+      </div>
+    </div>
+
+    <div class="form-caja">
+      <form id="lead" method="POST" action="/" novalidate>
+        <h2>Cuéntame de ti</h2>
+        <p class="sub">Toma menos de un minuto. Mi equipo de recursos humanos te contacta y te guía durante todo el proceso.</p>
+
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required
+                 aria-describedby="err-nombre" enterkeyhint="next">
+          <p class="error" id="err-nombre">Escribe tu nombre.</p>
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" inputmode="numeric" autocomplete="tel-national"
+                 placeholder="(801) 555-1234" maxlength="14" required
+                 aria-describedby="err-telefono" enterkeyhint="next">
+          <p class="error" id="err-telefono">Necesito un número de 10 dígitos de Estados Unidos.</p>
+        </div>
+
+        <div class="campo">
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado" required aria-describedby="err-estado">
+            <option value="" selected disabled>Selecciona tu estado</option>
+            <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+            <option>Arkansas</option><option>California</option><option>Carolina del Norte</option>
+            <option>Carolina del Sur</option><option>Colorado</option><option>Connecticut</option>
+            <option>Dakota del Norte</option><option>Dakota del Sur</option><option>Delaware</option>
+            <option>Distrito de Columbia (DC)</option><option>Florida</option><option>Georgia</option>
+            <option>Hawái</option><option>Idaho</option><option>Illinois</option>
+            <option>Indiana</option><option>Iowa</option><option>Kansas</option>
+            <option>Kentucky</option><option>Luisiana</option><option>Maine</option>
+            <option>Maryland</option><option>Massachusetts</option><option>Michigan</option>
+            <option>Minnesota</option><option>Misisipi</option><option>Misuri</option>
+            <option>Montana</option><option>Nebraska</option><option>Nevada</option>
+            <option>Nueva Jersey</option><option>Nueva York</option><option>Nuevo Hampshire</option>
+            <option>Nuevo México</option><option>Ohio</option><option>Oklahoma</option>
+            <option>Oregón</option><option>Pensilvania</option><option>Rhode Island</option>
+            <option>Tennessee</option><option>Texas</option><option>Utah</option>
+            <option>Vermont</option><option>Virginia</option><option>Virginia Occidental</option>
+            <option>Washington</option><option>Wisconsin</option><option>Wyoming</option>
+          </select>
+          <p class="error" id="err-estado">Selecciona tu estado.</p>
+        </div>
+
+
+        <fieldset>
+          <legend>¿Puedes trabajar legalmente en Estados Unidos?</legend>
+          <div class="opciones" id="grupo-autorizacion" role="radiogroup" aria-describedby="err-autorizacion">
+            <label class="opcion"><input type="radio" name="autorizacion" value="Sí" required><span>Sí</span></label>
+            <label class="opcion"><input type="radio" name="autorizacion" value="No"><span>No</span></label>
+          </div>
+          <p class="error" id="err-autorizacion">Selecciona una opción.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Selecciona la opción que aplique para ti</legend>
+          <div class="opciones" id="grupo-estatus" role="radiogroup" aria-describedby="err-estatus">
+            <label class="opcion"><input type="radio" name="estatus" value="Ciudadano o residente legal" required><span>Soy ciudadano o residente legal</span></label>
+            <label class="opcion"><input type="radio" name="estatus" value="Permiso de trabajo vigente"><span>Tengo un permiso de trabajo vigente</span></label>
+            <label class="opcion"><input type="radio" name="estatus" value="ITIN y licencia de conducir"><span>Tengo un número ITIN y una licencia de conducir válida</span></label>
+            <label class="opcion"><input type="radio" name="estatus" value="Ninguna de las anteriores"><span>Ninguna de las anteriores</span></label>
+          </div>
+          <p class="error" id="err-estatus">Selecciona la opción que aplique para ti.</p>
+        </fieldset>
+
+        <div class="campo">
+          <label for="ocupacion">¿Qué haces actualmente?</label>
+          <input type="text" id="ocupacion" name="ocupacion" required
+                 placeholder="Construcción, restaurante, delivery…"
+                 aria-describedby="err-ocupacion" enterkeyhint="next">
+          <p class="error" id="err-ocupacion">Cuéntame a qué te dedicas hoy.</p>
+        </div>
+
+        <div class="campo">
+          <label for="motivo">¿Por qué te interesa? <span class="opcional">(opcional)</span></label>
+          <textarea id="motivo" name="motivo" rows="3" enterkeyhint="done"></textarea>
+        </div>
+
+        <div class="consentimiento">
+          <input type="checkbox" id="consentimiento" name="consentimiento" value="si" required
+                 aria-describedby="err-consentimiento">
+          <label for="consentimiento">Acepto que Freddy Mota y su equipo me contacten por teléfono, mensaje de texto o WhatsApp.</label>
+        </div>
+        <p class="error" id="err-consentimiento" style="margin-top:-12px; margin-bottom:18px">Necesito tu permiso para poder contactarte.</p>
+
+        <button type="submit" class="btn" id="enviar" style="max-width:none">Enviar</button>
+        <p class="nota-form">Tu información es solo para que mi equipo te contacte. No la vendo ni la comparto. <a href="privacidad.html">Política de privacidad</a>.</p>
+      </form>
+
+      <div class="exito" id="exito" role="status" aria-live="polite">
+        <h3 id="exito-titulo">Listo.</h3>
+        <p id="exito-texto">Mi equipo te está escribiendo por WhatsApp ahora mismo.</p>
+        <a class="btn btn-negro" id="wa-link" href="#" style="max-width:none">
+          <svg class="wa-icono" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.03 1.01-1.03 2.46 1.06 2.85 1.2 3.05c.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.62.71.22 1.35.19 1.86.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.8h-.02c-1.75 0-3.47-.47-4.97-1.36l-.36-.21-3.7.97.99-3.6-.23-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88M20.52 3.45A11.78 11.78 0 0 0 12.05 0C5.5 0 .17 5.33.17 11.88c0 2.09.55 4.14 1.59 5.94L.07 24l6.34-1.66a11.85 11.85 0 0 0 5.64 1.44h.01c6.54 0 11.87-5.33 11.87-11.88 0-3.17-1.24-6.15-3.48-8.39"/></svg>
+          Abrir WhatsApp
+        </a>
+        <p class="aviso">Si el botón no abre solo, tócalo. Instagram a veces bloquea la redirección automática.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="env">
+    <p class="footer-nombre">Freddy Mota · General Agent</p>
+    <p class="contacto"><a href="mailto:freddy@10kmonthgroup.com">freddy@10kmonthgroup.com</a></p>
+
+    <p class="divulgacion">10k Month Group es la marca personal de Freddy Mota, General Agent en American Income Life a través de Carta Business Group. No es una agencia independiente.</p>
+
+    <p class="disclaimer">Los resultados individuales varían. Esta no es una oferta de empleo asalariado ni una garantía de ingreso. Posición de contratista independiente por comisión.</p>
+
+    <p class="legal">
+      <a href="privacidad.html">Política de privacidad</a>
+      <a href="https://instagram.com/freddyjmo" target="_blank" rel="noopener">Instagram @freddyjmo</a>
+    </p>
+    <p class="copy">&copy; <span id="anio">2026</span> 10k Month Group</p>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp. Ojo: quien lo usa NO deja lead en la Sheet. -->
+<a class="wa-flotante" id="wa-flotante" href="#" aria-label="Escríbeme por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.03 1.01-1.03 2.46 1.06 2.85 1.2 3.05c.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.62.71.22 1.35.19 1.86.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.8h-.02c-1.75 0-3.47-.47-4.97-1.36l-.36-.21-3.7.97.99-3.6-.23-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88M20.52 3.45A11.78 11.78 0 0 0 12.05 0C5.5 0 .17 5.33.17 11.88c0 2.09.55 4.14 1.59 5.94L.07 24l6.34-1.66a11.85 11.85 0 0 0 5.64 1.44h.01c6.54 0 11.87-5.33 11.87-11.88 0-3.17-1.24-6.15-3.48-8.39"/></svg>
+</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var WA_NUMERO = "13855383938";
+  var WEBHOOK   = "/.netlify/functions/lead"; // reenvía a Zapier si LEAD_WEBHOOK_URL está puesto
+  var VARIANTE  = "A";
+
+  document.getElementById("anio").textContent = new Date().getFullYear();
+
+  var flotante = document.getElementById("wa-flotante");
+  flotante.href = "https://wa.me/" + WA_NUMERO + "?text=" +
+    encodeURIComponent("Hola, vi la página de 10k Month Group y quiero información sobre la carrera.");
+
+  /* ── Imágenes que fallan ──────────────────────────────────
+     <picture> elige el formato por SOPORTE del navegador, no por
+     disponibilidad: si el .webp no está, el navegador NO cae solo al .jpg.
+     Aquí se hace a mano — primero se reintenta con el JPEG, y solo si ese
+     también falta se oculta el hueco en vez de dejar la imagen rota. */
+  function vigilar(img){
+    img.addEventListener("error", function(){
+      var padre = img.parentElement;
+      if (padre && padre.tagName === "PICTURE"){
+        var limpio = img.cloneNode(true);      // conserva el src .jpg y sus atributos
+        vigilar(limpio);
+        padre.replaceWith(limpio);
+        return;
+      }
+      // Sin ningún archivo disponible: la foto enmarcada se retira entera,
+      // la decorativa (alt vacío) se oculta, y la que aporta significado se
+      // deja para que el navegador muestre su texto alternativo.
+      var marco = img.closest("[data-foto]");
+      if (marco) marco.style.display = "none";
+      else if (!img.getAttribute("alt")) img.style.display = "none";
+    });
+    if (img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event("error"));
+  }
+  Array.prototype.forEach.call(document.images, vigilar);
+
+  /* ── Aparición al hacer scroll ── */
+  var reveals = document.querySelectorAll(".reveal");
+  var reduce  = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce || !("IntersectionObserver" in window)){
+    Array.prototype.forEach.call(reveals, function(el){ el.classList.add("visible"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add("visible"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    Array.prototype.forEach.call(reveals, function(el){ io.observe(el); });
+  }
+
+  /* ── Origen del visitante, en un solo campo ──────────────────────────
+     Se conserva durante toda la visita aunque navegue dentro del sitio.
+     Antes eran seis campos separados y cada uno dejaba un bloque en blanco
+     en el correo cuando el lead entraba directo. */
+  var CLAVES = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"];
+  var guardadas = {};
+  try { guardadas = JSON.parse(sessionStorage.getItem("utm") || "{}"); } catch(e){}
+  var params = new URLSearchParams(location.search);
+  CLAVES.forEach(function(k){
+    var v = params.get(k);
+    if(v) guardadas[k] = v.slice(0,120);
+  });
+  try { sessionStorage.setItem("utm", JSON.stringify(guardadas)); } catch(e){}
+
+  var partes = CLAVES.map(function(k){ return guardadas[k]; }).filter(Boolean);
+  var ORIGEN = partes.length ? partes.join(" \u00b7 ") : "Directo, sin campa\u00f1a";
+
+  /* ── Scroll suave al formulario + foco en el primer campo ── */
+  var irForm = document.querySelector("[data-ir-form]");
+  irForm.addEventListener("click", function(ev){
+    ev.preventDefault();
+    var destino = document.getElementById("formulario");
+    destino.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+    setTimeout(function(){ document.getElementById("nombre").focus({ preventScroll:true }); }, reduce ? 0 : 600);
+  });
+
+  /* ── Teléfono: formato (801) 555-1234 ── */
+  var tel = document.getElementById("telefono");
+  function formatear(v){
+    var d = v.replace(/\D/g,"");
+    if(d.length && d[0] === "1") d = d.slice(1);   // quita el 1 de país
+    d = d.slice(0,10);
+    if(d.length <= 3)  return d.length ? "(" + d : "";
+    if(d.length <= 6)  return "(" + d.slice(0,3) + ") " + d.slice(3);
+    return "(" + d.slice(0,3) + ") " + d.slice(3,6) + "-" + d.slice(6);
+  }
+  tel.addEventListener("input", function(){
+    var alFinal = tel.selectionStart === tel.value.length;
+    tel.value = formatear(tel.value);
+    if(alFinal) tel.setSelectionRange(tel.value.length, tel.value.length);
+  });
+
+  /* ── Validación ── */
+  var form   = document.getElementById("lead");
+  var boton  = document.getElementById("enviar");
+
+  function marcar(id, malo, mensaje){
+    var campo = document.getElementById(id);
+    var err   = document.getElementById("err-" + id);
+    if(campo.type !== "checkbox") campo.setAttribute("aria-invalid", malo ? "true" : "false");
+    if(err){
+      err.classList.toggle("visible", malo);
+      if(mensaje) err.textContent = mensaje;
+    }
+    return !malo;
+  }
+
+  function digitos(v){ return v.replace(/\D/g,""); }
+
+  function valorRadio(nombre){
+    var el = form.querySelector('input[name="' + nombre + '"]:checked');
+    return el ? el.value : "";
+  }
+  function marcarGrupo(nombre, malo){
+    var err = document.getElementById("err-" + nombre);
+    var grupo = document.getElementById("grupo-" + nombre);
+    if(err) err.classList.toggle("visible", malo);
+    if(grupo) grupo.setAttribute("aria-invalid", malo ? "true" : "false");
+    return !malo;
+  }
+  ["autorizacion","estatus"].forEach(function(n){
+    Array.prototype.forEach.call(form.querySelectorAll('input[name="' + n + '"]'), function(r){
+      r.addEventListener("change", function(){ marcarGrupo(n, false); });
+    });
+  });
+
+
+  function validarTelefono(){
+    var d = digitos(tel.value);
+    if(d.length !== 10)              return marcar("telefono", true, "Necesito un número de 10 dígitos de Estados Unidos.");
+    if(/^[01]/.test(d))              return marcar("telefono", true, "El área no puede empezar con 0 ni con 1.");
+    if(/^[01]/.test(d.slice(3,4)))   return marcar("telefono", true, "Revisa el número, algo no cuadra.");
+    return marcar("telefono", false);
+  }
+
+  function validar(){
+    var ok = true;
+    ok = marcar("nombre", document.getElementById("nombre").value.trim().length < 2) && ok;
+    ok = validarTelefono() && ok;
+    ok = marcar("estado", !document.getElementById("estado").value) && ok;
+    ok = marcar("ocupacion", document.getElementById("ocupacion").value.trim().length < 2) && ok;
+    ok = marcarGrupo("autorizacion", !valorRadio("autorizacion")) && ok;
+    ok = marcarGrupo("estatus", !valorRadio("estatus")) && ok;
+    ok = marcar("consentimiento", !document.getElementById("consentimiento").checked) && ok;
+    return ok;
+  }
+
+  /* Solo LIMPIAMOS el error del campo que se está escribiendo, mientras se escribe.
+     Nunca revalidamos el formulario entero al salir de un campo: eso hacía aparecer
+     y desaparecer mensajes de otros campos, la página se movía bajo el dedo, y el
+     siguiente toque caía fuera del control al que apuntaba la persona. */
+  ["nombre","ocupacion"].forEach(function(id){
+    document.getElementById(id).addEventListener("input", function(){
+      if(this.getAttribute("aria-invalid") === "true" && this.value.trim().length >= 2) marcar(id, false);
+    });
+  });
+  tel.addEventListener("input", function(){
+    if(tel.getAttribute("aria-invalid") === "true" && digitos(tel.value).length === 10) validarTelefono();
+  });
+  document.getElementById("estado").addEventListener("change", function(){ marcar("estado", !this.value); });
+  document.getElementById("consentimiento").addEventListener("change", function(){ marcar("consentimiento", !this.checked); });
+
+  /* ── Eventos de tracking (los recoge GA/Meta si algún día se instalan) ── */
+  function evento(nombre, datos){
+    datos = Object.assign({ variante: VARIANTE }, datos || {});
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: nombre }, datos));
+    if(typeof window.gtag === "function") window.gtag("event", nombre, datos);
+    if(typeof window.fbq === "function")  window.fbq("trackCustom", nombre, datos);
+  }
+
+  flotante.addEventListener("click", function(){ evento("whatsapp_abierto", { via: "flotante" }); });
+
+  /* El flotante se esconde mientras el formulario esté a la vista: ahí el botón
+     Enviar es la acción que queremos, y el flotante lo tapaba. */
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(entries){
+      flotante.classList.toggle("oculto", entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(document.getElementById("formulario"));
+  }
+
+  /* ── Envío ── */
+  form.addEventListener("submit", function(ev){
+    ev.preventDefault();
+
+    if(!validar()){
+      var malo = form.querySelector('[aria-invalid="true"]');
+      var primero = malo && malo.classList.contains("opciones") ? malo.querySelector("input")
+                  : malo ? malo
+                  : (!document.getElementById("consentimiento").checked ? document.getElementById("consentimiento") : null);
+      if(primero) primero.focus();
+      return;
+    }
+
+    boton.disabled = true;
+    boton.textContent = "Enviando…";
+
+    var datos = new FormData(form);
+    var nombre = datos.get("nombre").trim();
+    var estado = datos.get("estado");
+    var d10 = digitos(tel.value);
+    datos.set("telefono", "+1" + d10);   // E.164 para el webhook/CRM
+    datos.set("nombre", nombre);
+
+    // El lead, ya redactado, para que el correo se lea de un vistazo.
+    var legible = "+1 (" + d10.slice(0,3) + ") " + d10.slice(3,6) + "-" + d10.slice(6);
+    var lineas = [
+      "Nombre completo: " + nombre,
+      "Número de teléfono: " + legible,
+      "Estado donde vive: " + estado,
+      "Estatus legal: " + (datos.get("autorizacion") === "Sí"
+          ? "Sí puede trabajar legalmente en Estados Unidos"
+          : "No puede trabajar legalmente en Estados Unidos"),
+      "",
+      "Información adicional:",
+      "· Situación: " + datos.get("estatus"),
+      "· Trabaja actualmente en: " + (datos.get("ocupacion") || "").trim(),
+      "· Comentario: " + ((datos.get("motivo") || "").trim() || "no dejó ninguno")
+    ];
+    lineas.push("· Llegó desde: " + ORIGEN);
+
+    /* Se envía solo lo que el formulario oculto declara. Mandar además cada
+       campo suelto hacía que el correo repitiera todos los datos debajo. */
+    var cuerpo = new URLSearchParams({
+      "form-name": "lead",
+      resumen: lineas.join("\n"),
+      consentimiento: datos.get("consentimiento") === "si" ? "Sí" : "No"
+    }).toString();
+
+    // 1) Netlify Forms — es la fuente de verdad del lead
+    // Siempre a la raíz del sitio: es el destino que Netlify Forms espera,
+    // sin importar desde qué ruta se abrió la página.
+    var envio = fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: cuerpo
+    });
+
+    // 2) Webhook opcional (Zapier / CRM). Nunca bloquea al usuario.
+    fetch(WEBHOOK, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(Object.fromEntries(datos))
+    }).catch(function(){});
+
+    envio.then(function(r){
+      if(!r.ok) throw new Error("HTTP " + r.status);
+      terminar(nombre, estado, true);
+    }).catch(function(){
+      // Aunque falle la red no perdemos al lead: lo mandamos igual a WhatsApp.
+      terminar(nombre, estado, false);
+    });
+  });
+
+  function terminar(nombre, estado, guardado){
+    var primerNombre = nombre.split(/\s+/)[0];
+    var texto = "Hola, soy " + nombre + " de " + estado +
+                ". Acabo de llenar el formulario en 10kmonthgroup.com y quiero información sobre la carrera.";
+    var url = "https://wa.me/" + WA_NUMERO + "?text=" + encodeURIComponent(texto);
+
+    var link = document.getElementById("wa-link");
+    link.href = url;
+
+    document.getElementById("exito-titulo").textContent = "Listo, " + primerNombre + ".";
+    document.getElementById("exito-texto").textContent  = "Mi equipo te está escribiendo por WhatsApp ahora mismo.";
+
+    form.style.display = "none";
+    document.getElementById("exito").classList.add("visible");
+    link.focus({ preventScroll:true });
+
+    evento("lead_enviado", { estado: estado, guardado: guardado });
+
+    // Redirección automática. En el navegador de Instagram se bloquea seguido —
+    // por eso el botón de arriba es obligatorio y ya está visible.
+    setTimeout(function(){
+      evento("whatsapp_abierto", { via: "automatico" });
+      try { window.location.href = url; } catch(e){}
+    }, 1500);
+
+    link.addEventListener("click", function(){ evento("whatsapp_abierto", { via: "boton" }); });
+  }
+})();
+</script>
+</body>
+</html>
