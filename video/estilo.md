@@ -134,4 +134,5 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
 
 ## Preferencias aprendidas (correcciones aprobadas)
 
-_(vacío: se irá llenando con cada corrección que te guste)_
+- **Formato final: siempre vertical 9:16, 1080×1920 a 30 fps.** Nunca horizontal, aunque la referencia lo sea.
+  Si el material de origen no es 9:16, se recorta o se reencuadra a 9:16; no se añaden barras negras.
