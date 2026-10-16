@@ -115,9 +115,9 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
 
 ---
 
-## 9. Adaptación a vertical 1080×1920, 30 fps (valores del borrador 1)
+## 9. Adaptación a vertical 1080×1920, 30 fps (valores vigentes, borrador 2)
 
-> La referencia es horizontal. Estos son los valores que usa el borrador 1, pendientes de que los apruebes.
+> La referencia es horizontal. Estos son los valores que usa el borrador 2.
 > Están en `scripts/build_edit.py` y `src/Edit/`.
 
 - **Subtítulos:** Open Sans SemiBold Italic (600), blanco, sombra `0 2px 6px rgba(0,0,0,.6)`, cuerpo de **62 px**,
@@ -131,13 +131,11 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
   con la cara en (60 %, 30 %). Se alternan en cada corte de silencio y en cada entrada o salida de b-roll,
   con un mínimo de **1.8 s** por plano (oculta los saltos del corte de silencios).
 - **Movimiento:** acercamiento lento continuo del **100 % al 104 %** por plano.
-- **Color (A-roll):** `curves 0.25→0.40, 0.5→0.66, blanco→0.92` · `saturación ×0.62` · `colorbalance R−0.03 / B+0.02`.
-  Resultado: luminancia 67→95, negros 7, blancos 214, R−B +8.5→−0.7. El set es oscuro (madera), así que
-  no se fuerza la luminancia de la referencia (139): el vídeo quedaría lavado.
+- **Color (A-roll):** **sin filtro ni corrección de color**: colores originales de la cámara (ver Preferencias).
 - **B-roll:** literal a la frase, cortado de la primera a la última palabra de esa frase (+0.15 s), sin audio,
   reencuadrado a 1080×1920. El aeropuerto (120 fps) va a 0.5×.
 - **Audio:** voz con paso alto a 80 Hz y compresión 3:1, a −16 LUFS. La música se ajusta a la duración con
-  `atempo`, va a ×0.18 bajo la voz (≈ 8 dB por debajo), sube a ×0.4 al terminar de hablar y se funde 1.5 s
+  `atempo`, va a ×0.13 bajo la voz (≈ 11 dB por debajo), sube a ×0.28 al terminar de hablar y se funde 1.5 s
   al final. El máster va a **−14 LUFS / −1 dBTP**.
 
 ---
@@ -149,3 +147,8 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
 - **Subtítulos: los mismos que la referencia** (§2): frases cortas en una línea, Open Sans SemiBold Italic
   blanca con sombra, sin animación y sin palabra destacada. La sincronía palabra a palabra se usa para
   calcular cuándo entra y sale cada bloque, no para animar palabras sueltas.
+- **Color: nada de filtros.** Los colores tienen que verse naturales, tal como salen de la cámara.
+  No se aplican curvas, saturación, balance de blancos ni LUTs al A-roll, aunque la referencia sea
+  más luminosa. (Borrador 1: el ajuste de luz y tono se veía artificial.)
+- **Música más baja:** ×0.13 bajo la voz (≈ 11 dB por debajo de la voz, unos 3 dB menos que la referencia)
+  y ×0.28 en el cierre. La voz siempre manda; la música es un fondo que apenas se nota.

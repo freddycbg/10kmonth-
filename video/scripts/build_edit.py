@@ -21,11 +21,8 @@ FPS = 30
 W, H = 1080, 1920
 
 # --- Estilo (ver estilo.md) -------------------------------------------------
-GRADE = (
-    "curves=all='0/0 0.05/0.055 0.25/0.40 0.5/0.66 0.8/0.88 1/0.92',"
-    "eq=saturation=0.62,"
-    "colorbalance=rs=-0.03:bs=0.02:rm=-0.03:bm=0.02"
-)
+# Sin corrección de color: colores naturales de la cámara (preferencia aprobada, estilo.md).
+GRADE = "null"
 VOICE = "highpass=f=80,acompressor=threshold=-24dB:ratio=3:attack=5:release=120:makeup=4"
 TAIL_SECONDS = 1.2  # plano final que se conserva tras la última palabra
 

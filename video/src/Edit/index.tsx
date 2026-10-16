@@ -12,9 +12,9 @@ import edit from "./edit.json";
 
 // La línea de tiempo se genera con scripts/build_edit.py (edit.json). Ver estilo.md.
 
-// Música unos 8 dB por debajo de la voz; sube al terminar de hablar (estilo.md §8).
-const MUSIC_UNDER_VOICE = 0.18;
-const MUSIC_END = 0.4;
+// Música unos 11 dB por debajo de la voz; sube al terminar de hablar (estilo.md, preferencias).
+const MUSIC_UNDER_VOICE = 0.13;
+const MUSIC_END = 0.28;
 
 export const Edit: React.FC = () => {
   const { fps } = useVideoConfig();
