@@ -1,0 +1,22 @@
+{
+  "source": "input/mi-video.mov",
+  "transcript": "input/transcript.json",
+  "keep": "input/keep.json",
+  "music": "input/music.mp3",
+  "rebuild_aroll": true,
+  "fixes": [
+    { "find": ["he", "estado", "en", "Suátegui."], "replace": ["del", "estado", "Anzoátegui."] },
+    { "find": ["contadoría"], "replace": ["contaduría"] },
+    { "find": ["100", "%"], "replace": ["100%"] }
+  ],
+  "broll": [
+    { "id": "b3", "file": "input/broll/b3.mp4", "trim": 3.0, "phrase": "soy de Venezuela, del estado Anzoátegui." },
+    { "id": "b7", "file": "input/broll/b7.mp4", "trim": 0.0, "phrase": "Luego de allí me casé" },
+    { "id": "b2", "file": "input/broll/b2.mp4", "trim": 1.0, "phrase": "y tuvimos nuestro primer hijo." },
+    { "id": "b1", "file": "input/broll/b1.mp4", "trim": 0.0, "speed": 0.5, "phrase": "Tomamos la decisión de poder salir de Venezuela" },
+    { "id": "b6", "file": "input/broll/b6.mp4", "trim": 0.0, "phrase": "y llegamos aquí a los Estados Unidos." },
+    { "id": "b5", "file": "input/broll/b5.mp4", "trim": 1.0, "phrase": "me dedicaba a hacer deliveries, a entregar paquetes de Amazon" },
+    { "id": "b4", "file": "input/broll/b4.mp4", "trim": 0.0, "phrase": "los costos y los gastos completamente de mi bolsillo." },
+    { "id": "b4", "file": "input/broll/b4.mp4", "trim": 9.0, "phrase": "mi cheque del 100% proviene de esta oportunidad." }
+  ]
+}

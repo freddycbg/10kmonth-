@@ -5,3 +5,8 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Medios generados por scripts/build_edit.py (pesados, no se versionan)
+public/media/
+out/
+input/

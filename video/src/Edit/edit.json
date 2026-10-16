@@ -1,0 +1,1024 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 5431,
+ "lastWordFrame": 5412,
+ "face": {
+  "x": 0.72,
+  "y": 0.31
+ },
+ "closeScale": 1.45,
+ "shots": [
+  {
+   "from": 0,
+   "durationInFrames": 98,
+   "framing": "ancho"
+  },
+  {
+   "from": 98,
+   "durationInFrames": 234,
+   "framing": "cerrado"
+  },
+  {
+   "from": 332,
+   "durationInFrames": 159,
+   "framing": "ancho"
+  },
+  {
+   "from": 491,
+   "durationInFrames": 173,
+   "framing": "cerrado"
+  },
+  {
+   "from": 664,
+   "durationInFrames": 135,
+   "framing": "ancho"
+  },
+  {
+   "from": 799,
+   "durationInFrames": 202,
+   "framing": "cerrado"
+  },
+  {
+   "from": 1001,
+   "durationInFrames": 68,
+   "framing": "ancho"
+  },
+  {
+   "from": 1069,
+   "durationInFrames": 56,
+   "framing": "cerrado"
+  },
+  {
+   "from": 1125,
+   "durationInFrames": 104,
+   "framing": "ancho"
+  },
+  {
+   "from": 1229,
+   "durationInFrames": 60,
+   "framing": "cerrado"
+  },
+  {
+   "from": 1289,
+   "durationInFrames": 87,
+   "framing": "ancho"
+  },
+  {
+   "from": 1376,
+   "durationInFrames": 83,
+   "framing": "cerrado"
+  },
+  {
+   "from": 1459,
+   "durationInFrames": 73,
+   "framing": "ancho"
+  },
+  {
+   "from": 1532,
+   "durationInFrames": 55,
+   "framing": "cerrado"
+  },
+  {
+   "from": 1587,
+   "durationInFrames": 123,
+   "framing": "ancho"
+  },
+  {
+   "from": 1710,
+   "durationInFrames": 112,
+   "framing": "cerrado"
+  },
+  {
+   "from": 1822,
+   "durationInFrames": 81,
+   "framing": "ancho"
+  },
+  {
+   "from": 1903,
+   "durationInFrames": 108,
+   "framing": "cerrado"
+  },
+  {
+   "from": 2011,
+   "durationInFrames": 55,
+   "framing": "ancho"
+  },
+  {
+   "from": 2066,
+   "durationInFrames": 134,
+   "framing": "cerrado"
+  },
+  {
+   "from": 2200,
+   "durationInFrames": 76,
+   "framing": "ancho"
+  },
+  {
+   "from": 2276,
+   "durationInFrames": 295,
+   "framing": "cerrado"
+  },
+  {
+   "from": 2571,
+   "durationInFrames": 82,
+   "framing": "ancho"
+  },
+  {
+   "from": 2653,
+   "durationInFrames": 59,
+   "framing": "cerrado"
+  },
+  {
+   "from": 2712,
+   "durationInFrames": 80,
+   "framing": "ancho"
+  },
+  {
+   "from": 2792,
+   "durationInFrames": 78,
+   "framing": "cerrado"
+  },
+  {
+   "from": 2870,
+   "durationInFrames": 81,
+   "framing": "ancho"
+  },
+  {
+   "from": 2951,
+   "durationInFrames": 55,
+   "framing": "cerrado"
+  },
+  {
+   "from": 3006,
+   "durationInFrames": 63,
+   "framing": "ancho"
+  },
+  {
+   "from": 3069,
+   "durationInFrames": 90,
+   "framing": "cerrado"
+  },
+  {
+   "from": 3159,
+   "durationInFrames": 124,
+   "framing": "ancho"
+  },
+  {
+   "from": 3283,
+   "durationInFrames": 164,
+   "framing": "cerrado"
+  },
+  {
+   "from": 3447,
+   "durationInFrames": 122,
+   "framing": "ancho"
+  },
+  {
+   "from": 3569,
+   "durationInFrames": 60,
+   "framing": "cerrado"
+  },
+  {
+   "from": 3629,
+   "durationInFrames": 75,
+   "framing": "ancho"
+  },
+  {
+   "from": 3704,
+   "durationInFrames": 73,
+   "framing": "cerrado"
+  },
+  {
+   "from": 3777,
+   "durationInFrames": 81,
+   "framing": "ancho"
+  },
+  {
+   "from": 3858,
+   "durationInFrames": 78,
+   "framing": "cerrado"
+  },
+  {
+   "from": 3936,
+   "durationInFrames": 57,
+   "framing": "ancho"
+  },
+  {
+   "from": 3993,
+   "durationInFrames": 57,
+   "framing": "cerrado"
+  },
+  {
+   "from": 4050,
+   "durationInFrames": 97,
+   "framing": "ancho"
+  },
+  {
+   "from": 4147,
+   "durationInFrames": 82,
+   "framing": "cerrado"
+  },
+  {
+   "from": 4229,
+   "durationInFrames": 210,
+   "framing": "ancho"
+  },
+  {
+   "from": 4439,
+   "durationInFrames": 110,
+   "framing": "cerrado"
+  },
+  {
+   "from": 4549,
+   "durationInFrames": 132,
+   "framing": "ancho"
+  },
+  {
+   "from": 4681,
+   "durationInFrames": 147,
+   "framing": "cerrado"
+  },
+  {
+   "from": 4828,
+   "durationInFrames": 78,
+   "framing": "ancho"
+  },
+  {
+   "from": 4906,
+   "durationInFrames": 154,
+   "framing": "cerrado"
+  },
+  {
+   "from": 5060,
+   "durationInFrames": 75,
+   "framing": "ancho"
+  },
+  {
+   "from": 5135,
+   "durationInFrames": 69,
+   "framing": "cerrado"
+  },
+  {
+   "from": 5204,
+   "durationInFrames": 163,
+   "framing": "ancho"
+  },
+  {
+   "from": 5367,
+   "durationInFrames": 64,
+   "framing": "cerrado"
+  }
+ ],
+ "broll": [
+  {
+   "name": "B-roll b3: soy de Venezuela, del estado Anzoátegui.",
+   "src": "media/b3.mp4",
+   "from": 101,
+   "durationInFrames": 50,
+   "trimBefore": 90
+  },
+  {
+   "name": "B-roll b7: Luego de allí me casé",
+   "src": "media/b7.mp4",
+   "from": 1039,
+   "durationInFrames": 35,
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll b2: y tuvimos nuestro primer hijo.",
+   "src": "media/b2.mp4",
+   "from": 1069,
+   "durationInFrames": 56,
+   "trimBefore": 30
+  },
+  {
+   "name": "B-roll b1: Tomamos la decisión de poder salir de Ve",
+   "src": "media/b1.mp4",
+   "from": 1459,
+   "durationInFrames": 78,
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll b6: y llegamos aquí a los Estados Unidos.",
+   "src": "media/b6.mp4",
+   "from": 1532,
+   "durationInFrames": 55,
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll b5: me dedicaba a hacer deliveries, a entreg",
+   "src": "media/b5.mp4",
+   "from": 1950,
+   "durationInFrames": 111,
+   "trimBefore": 30
+  },
+  {
+   "name": "B-roll b4: los costos y los gastos completamente de",
+   "src": "media/b4.mp4",
+   "from": 3077,
+   "durationInFrames": 87,
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll b4: mi cheque del 100% proviene de esta opor",
+   "src": "media/b4.mp4",
+   "from": 4828,
+   "durationInFrames": 78,
+   "trimBefore": 270
+  }
+ ],
+ "captions": [
+  {
+   "text": "Mi nombre es Jorge Moreno,",
+   "from": 0,
+   "durationInFrames": 55
+  },
+  {
+   "text": "tengo 29 años de edad,",
+   "from": 55,
+   "durationInFrames": 46
+  },
+  {
+   "text": "soy de Venezuela,",
+   "from": 101,
+   "durationInFrames": 25
+  },
+  {
+   "text": "del estado Anzoátegui.",
+   "from": 126,
+   "durationInFrames": 27
+  },
+  {
+   "text": "En Venezuela me dedicaba",
+   "from": 153,
+   "durationInFrames": 56
+  },
+  {
+   "text": "a la reparación de celulares",
+   "from": 209,
+   "durationInFrames": 48
+  },
+  {
+   "text": "y computadoras por dos años.",
+   "from": 257,
+   "durationInFrames": 58
+  },
+  {
+   "text": "Estuve en un negocio junto",
+   "from": 315,
+   "durationInFrames": 44
+  },
+  {
+   "text": "con mi hermano.",
+   "from": 359,
+   "durationInFrames": 25
+  },
+  {
+   "text": "Tuvimos que cerrar",
+   "from": 384,
+   "durationInFrames": 28
+  },
+  {
+   "text": "por diferentes situaciones",
+   "from": 412,
+   "durationInFrames": 55
+  },
+  {
+   "text": "del país y se puso más",
+   "from": 467,
+   "durationInFrames": 83
+  },
+  {
+   "text": "difícil para nosotros",
+   "from": 550,
+   "durationInFrames": 29
+  },
+  {
+   "text": "conseguir los insumos",
+   "from": 579,
+   "durationInFrames": 30
+  },
+  {
+   "text": "para seguir continuando",
+   "from": 609,
+   "durationInFrames": 29
+  },
+  {
+   "text": "nuestro negocio",
+   "from": 638,
+   "durationInFrames": 22
+  },
+  {
+   "text": "y no había oportunidad",
+   "from": 660,
+   "durationInFrames": 29
+  },
+  {
+   "text": "de crecimiento.",
+   "from": 689,
+   "durationInFrames": 24
+  },
+  {
+   "text": "También en Venezuela estaba",
+   "from": 713,
+   "durationInFrames": 34
+  },
+  {
+   "text": "estudiando contaduría pública",
+   "from": 747,
+   "durationInFrames": 45
+  },
+  {
+   "text": "y también me dedicaba",
+   "from": 792,
+   "durationInFrames": 40
+  },
+  {
+   "text": "al sector financiero",
+   "from": 832,
+   "durationInFrames": 53
+  },
+  {
+   "text": "pero no logré ejercer",
+   "from": 885,
+   "durationInFrames": 39
+  },
+  {
+   "text": "lo suficiente como para tener",
+   "from": 924,
+   "durationInFrames": 39
+  },
+  {
+   "text": "una experiencia sólida dentro",
+   "from": 963,
+   "durationInFrames": 50
+  },
+  {
+   "text": "de la industria.",
+   "from": 1013,
+   "durationInFrames": 26
+  },
+  {
+   "text": "Luego de allí me casé",
+   "from": 1039,
+   "durationInFrames": 30
+  },
+  {
+   "text": "y tuvimos nuestro primer hijo.",
+   "from": 1069,
+   "durationInFrames": 66
+  },
+  {
+   "text": "Las situaciones empezaron",
+   "from": 1135,
+   "durationInFrames": 27
+  },
+  {
+   "text": "a ponerse mucho más difíciles",
+   "from": 1162,
+   "durationInFrames": 43
+  },
+  {
+   "text": "para nosotros",
+   "from": 1205,
+   "durationInFrames": 18
+  },
+  {
+   "text": "porque no podíamos conseguir",
+   "from": 1223,
+   "durationInFrames": 57
+  },
+  {
+   "text": "que pudiéramos seguir adelante",
+   "from": 1280,
+   "durationInFrames": 55
+  },
+  {
+   "text": "con todos los gastos",
+   "from": 1335,
+   "durationInFrames": 38
+  },
+  {
+   "text": "y también todas las cosas",
+   "from": 1373,
+   "durationInFrames": 38
+  },
+  {
+   "text": "que requerían tener un hijo",
+   "from": 1411,
+   "durationInFrames": 35
+  },
+  {
+   "text": "en el país.",
+   "from": 1446,
+   "durationInFrames": 13
+  },
+  {
+   "text": "Tomamos la decisión de poder",
+   "from": 1459,
+   "durationInFrames": 35
+  },
+  {
+   "text": "salir de Venezuela",
+   "from": 1494,
+   "durationInFrames": 38
+  },
+  {
+   "text": "y llegamos aquí",
+   "from": 1532,
+   "durationInFrames": 27
+  },
+  {
+   "text": "a los Estados Unidos.",
+   "from": 1559,
+   "durationInFrames": 26
+  },
+  {
+   "text": "Una vez llegamos aquí",
+   "from": 1585,
+   "durationInFrames": 25
+  },
+  {
+   "text": "a los Estados Unidos tuvimos",
+   "from": 1610,
+   "durationInFrames": 39
+  },
+  {
+   "text": "la oportunidad de empezar",
+   "from": 1649,
+   "durationInFrames": 38
+  },
+  {
+   "text": "a trabajar.",
+   "from": 1687,
+   "durationInFrames": 28
+  },
+  {
+   "text": "Comencé trabajando",
+   "from": 1715,
+   "durationInFrames": 19
+  },
+  {
+   "text": "en el almacén,",
+   "from": 1734,
+   "durationInFrames": 48
+  },
+  {
+   "text": "todo lo que viene siendo",
+   "from": 1782,
+   "durationInFrames": 28
+  },
+  {
+   "text": "distribución de alimentos",
+   "from": 1810,
+   "durationInFrames": 49
+  },
+  {
+   "text": "como por dos años",
+   "from": 1859,
+   "durationInFrames": 39
+  },
+  {
+   "text": "y también en mi tiempo extra",
+   "from": 1898,
+   "durationInFrames": 52
+  },
+  {
+   "text": "me dedicaba",
+   "from": 1950,
+   "durationInFrames": 21
+  },
+  {
+   "text": "a hacer deliveries,",
+   "from": 1971,
+   "durationInFrames": 44
+  },
+  {
+   "text": "a entregar paquetes de Amazon",
+   "from": 2015,
+   "durationInFrames": 42
+  },
+  {
+   "text": "y tenía dos trabajos",
+   "from": 2057,
+   "durationInFrames": 41
+  },
+  {
+   "text": "a la vez.",
+   "from": 2098,
+   "durationInFrames": 17
+  },
+  {
+   "text": "Ambos, mi esposa",
+   "from": 2115,
+   "durationInFrames": 34
+  },
+  {
+   "text": "y yo estábamos juntos",
+   "from": 2149,
+   "durationInFrames": 25
+  },
+  {
+   "text": "trabajando y nos organizamos",
+   "from": 2174,
+   "durationInFrames": 61
+  },
+  {
+   "text": "para poder cuidar al niño.",
+   "from": 2235,
+   "durationInFrames": 41
+  },
+  {
+   "text": "Para nosotros fue un proceso",
+   "from": 2276,
+   "durationInFrames": 72
+  },
+  {
+   "text": "de aprendizaje",
+   "from": 2348,
+   "durationInFrames": 38
+  },
+  {
+   "text": "porque era un país diferente,",
+   "from": 2386,
+   "durationInFrames": 49
+  },
+  {
+   "text": "un idioma distinto",
+   "from": 2448,
+   "durationInFrames": 29
+  },
+  {
+   "text": "y empezamos a adecuarnos",
+   "from": 2477,
+   "durationInFrames": 42
+  },
+  {
+   "text": "a todas las situaciones",
+   "from": 2519,
+   "durationInFrames": 30
+  },
+  {
+   "text": "de este país.",
+   "from": 2549,
+   "durationInFrames": 19
+  },
+  {
+   "text": "Luego nos enteramos que íbamos",
+   "from": 2568,
+   "durationInFrames": 43
+  },
+  {
+   "text": "a ser padres nuevamente,",
+   "from": 2611,
+   "durationInFrames": 42
+  },
+  {
+   "text": "pero esta vez de unos gemelos.",
+   "from": 2653,
+   "durationInFrames": 61
+  },
+  {
+   "text": "Para nosotros fue",
+   "from": 2714,
+   "durationInFrames": 28
+  },
+  {
+   "text": "una gran bendición,",
+   "from": 2742,
+   "durationInFrames": 50
+  },
+  {
+   "text": "pero también un gran",
+   "from": 2792,
+   "durationInFrames": 26
+  },
+  {
+   "text": "compromiso",
+   "from": 2818,
+   "durationInFrames": 17
+  },
+  {
+   "text": "que se venía adelante.",
+   "from": 2835,
+   "durationInFrames": 35
+  },
+  {
+   "text": "Mi esposa tuvo que dejar",
+   "from": 2870,
+   "durationInFrames": 57
+  },
+  {
+   "text": "de trabajar y fue mucho más",
+   "from": 2927,
+   "durationInFrames": 48
+  },
+  {
+   "text": "difícil para mí poder avanzar",
+   "from": 2975,
+   "durationInFrames": 54
+  },
+  {
+   "text": "porque tenía que cubrir",
+   "from": 3029,
+   "durationInFrames": 36
+  },
+  {
+   "text": "también los costos",
+   "from": 3065,
+   "durationInFrames": 35
+  },
+  {
+   "text": "y los gastos completamente",
+   "from": 3100,
+   "durationInFrames": 36
+  },
+  {
+   "text": "de mi bolsillo.",
+   "from": 3136,
+   "durationInFrames": 24
+  },
+  {
+   "text": "Luego de eso empecé a buscar",
+   "from": 3160,
+   "durationInFrames": 69
+  },
+  {
+   "text": "otras alternativas de trabajo.",
+   "from": 3229,
+   "durationInFrames": 54
+  },
+  {
+   "text": "En un momento llegó",
+   "from": 3283,
+   "durationInFrames": 35
+  },
+  {
+   "text": "una persona y me comentó",
+   "from": 3318,
+   "durationInFrames": 52
+  },
+  {
+   "text": "acerca de esta gran",
+   "from": 3370,
+   "durationInFrames": 26
+  },
+  {
+   "text": "oportunidad en el sector",
+   "from": 3396,
+   "durationInFrames": 30
+  },
+  {
+   "text": "financiero y fue ahí,",
+   "from": 3426,
+   "durationInFrames": 47
+  },
+  {
+   "text": "en uno de los peores momentos",
+   "from": 3473,
+   "durationInFrames": 36
+  },
+  {
+   "text": "de mi vida,",
+   "from": 3509,
+   "durationInFrames": 24
+  },
+  {
+   "text": "económicamente hablando,",
+   "from": 3533,
+   "durationInFrames": 39
+  },
+  {
+   "text": "fue donde tomé la decisión",
+   "from": 3572,
+   "durationInFrames": 36
+  },
+  {
+   "text": "de estudiar y de prepararme",
+   "from": 3608,
+   "durationInFrames": 44
+  },
+  {
+   "text": "para poder sacar una licencia",
+   "from": 3652,
+   "durationInFrames": 46
+  },
+  {
+   "text": "financiera para trabajar",
+   "from": 3698,
+   "durationInFrames": 47
+  },
+  {
+   "text": "en los Estados Unidos.",
+   "from": 3745,
+   "durationInFrames": 33
+  },
+  {
+   "text": "No fue fácil para mí",
+   "from": 3778,
+   "durationInFrames": 28
+  },
+  {
+   "text": "porque tuve que trabajar",
+   "from": 3806,
+   "durationInFrames": 42
+  },
+  {
+   "text": "en dos trabajos,",
+   "from": 3848,
+   "durationInFrames": 42
+  },
+  {
+   "text": "a la par tenía que estudiar",
+   "from": 3890,
+   "durationInFrames": 42
+  },
+  {
+   "text": "y estuve preparándome por casi",
+   "from": 3932,
+   "durationInFrames": 70
+  },
+  {
+   "text": "tres meses hasta que logré",
+   "from": 4002,
+   "durationInFrames": 43
+  },
+  {
+   "text": "presentar el examen.",
+   "from": 4045,
+   "durationInFrames": 47
+  },
+  {
+   "text": "No lo pasé a la primera,",
+   "from": 4092,
+   "durationInFrames": 54
+  },
+  {
+   "text": "sino que seguí estudiando",
+   "from": 4146,
+   "durationInFrames": 41
+  },
+  {
+   "text": "hasta que logré conseguir",
+   "from": 4187,
+   "durationInFrames": 35
+  },
+  {
+   "text": "la licencia del Estado.",
+   "from": 4222,
+   "durationInFrames": 56
+  },
+  {
+   "text": "Una vez empecé a trabajar",
+   "from": 4278,
+   "durationInFrames": 50
+  },
+  {
+   "text": "en esto,",
+   "from": 4328,
+   "durationInFrames": 29
+  },
+  {
+   "text": "yo me dedicaba a las dos",
+   "from": 4357,
+   "durationInFrames": 42
+  },
+  {
+   "text": "cosas al mismo tiempo.",
+   "from": 4399,
+   "durationInFrames": 44
+  },
+  {
+   "text": "Trabajaba en el almacén",
+   "from": 4443,
+   "durationInFrames": 31
+  },
+  {
+   "text": "en la mañana y salía",
+   "from": 4474,
+   "durationInFrames": 39
+  },
+  {
+   "text": "a mis citas en la tarde.",
+   "from": 4513,
+   "durationInFrames": 36
+  },
+  {
+   "text": "Junto con el acompañamiento,",
+   "from": 4549,
+   "durationInFrames": 50
+  },
+  {
+   "text": "el entrenamiento",
+   "from": 4599,
+   "durationInFrames": 24
+  },
+  {
+   "text": "y el apoyo",
+   "from": 4623,
+   "durationInFrames": 26
+  },
+  {
+   "text": "de mis supervisores,",
+   "from": 4649,
+   "durationInFrames": 35
+  },
+  {
+   "text": "logré seguir adelante",
+   "from": 4697,
+   "durationInFrames": 29
+  },
+  {
+   "text": "con el sector financiero.",
+   "from": 4726,
+   "durationInFrames": 50
+  },
+  {
+   "text": "Y al día de hoy puedo",
+   "from": 4776,
+   "durationInFrames": 30
+  },
+  {
+   "text": "decir que mi cheque del 100%",
+   "from": 4806,
+   "durationInFrames": 59
+  },
+  {
+   "text": "proviene de esta oportunidad.",
+   "from": 4865,
+   "durationInFrames": 42
+  },
+  {
+   "text": "Hoy en día puedo decir",
+   "from": 4907,
+   "durationInFrames": 28
+  },
+  {
+   "text": "que mi situación financiera",
+   "from": 4935,
+   "durationInFrames": 45
+  },
+  {
+   "text": "y mi mentalidad es mucho",
+   "from": 4980,
+   "durationInFrames": 42
+  },
+  {
+   "text": "más fuerte.",
+   "from": 5022,
+   "durationInFrames": 13
+  },
+  {
+   "text": "Y si tú estás",
+   "from": 5035,
+   "durationInFrames": 34
+  },
+  {
+   "text": "en la misma situación",
+   "from": 5069,
+   "durationInFrames": 28
+  },
+  {
+   "text": "y quieres la oportunidad",
+   "from": 5097,
+   "durationInFrames": 59
+  },
+  {
+   "text": "de poder salir adelante,",
+   "from": 5156,
+   "durationInFrames": 48
+  },
+  {
+   "text": "no dudes en escribirme.",
+   "from": 5204,
+   "durationInFrames": 46
+  },
+  {
+   "text": "Tanto yo como mi equipo",
+   "from": 5250,
+   "durationInFrames": 35
+  },
+  {
+   "text": "de recursos humanos estará",
+   "from": 5285,
+   "durationInFrames": 36
+  },
+  {
+   "text": "listo para trabajar contigo",
+   "from": 5321,
+   "durationInFrames": 42
+  },
+  {
+   "text": "y poder brindarte",
+   "from": 5363,
+   "durationInFrames": 31
+  },
+  {
+   "text": "esta oportunidad.",
+   "from": 5394,
+   "durationInFrames": 24
+  }
+ ]
+}

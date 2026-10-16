@@ -115,20 +115,30 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
 
 ---
 
-## 9. Adaptación a vertical 1080×1920, 30 fps
+## 9. Adaptación a vertical 1080×1920, 30 fps (valores del borrador 1)
 
-> La referencia es horizontal. Estos valores son la traducción propuesta, **[SUPOSICIÓN]** hasta que se aprueben.
+> La referencia es horizontal. Estos son los valores que usa el borrador 1, pendientes de que los apruebes.
+> Están en `scripts/build_edit.py` y `src/Edit/`.
 
-- **Subtítulos:** Open Sans SemiBold Italic, blanco con la misma sombra. Cuerpo de **64 px**
-  (de 33 px @720p escalado al ancho de un móvil vertical, para que se lea igual en pantalla),
-  ancho máximo de **860 px (80 %)**, 1 línea, máximo 5 palabras por bloque.
-  Base a **~620 px del borde inferior** (≈ un tercio inferior), para no chocar con la interfaz de TikTok y Reels.
-- **Encuadres de la entrevista:** "ancho" = el plano original; "cerrado" = recorte digital al **125 %**
-  centrado en la cara (simula la segunda cámara). Se alternan en cada corte.
-- **Movimiento:** acercamiento muy lento continuo del **100 % al 104 %** por plano, para imitar el slider.
-- **Color:** subir la luminancia media hacia ~130/255, bajar la saturación hacia ~18 % y neutralizar
-  el tono cálido (R−B de +12 hacia +2).
-- **Audio:** normalizar a −14 LUFS.
+- **Subtítulos:** Open Sans SemiBold Italic (600), blanco, sombra `0 2px 6px rgba(0,0,0,.6)`, cuerpo de **62 px**,
+  1 línea de **máx. 30 caracteres y 6 palabras**, base a **440 px del borde inferior** (fuera de la interfaz
+  de TikTok y Reels). Los bloques cortan en punto, en coma (si el bloque tiene ≥ 8 caracteres) y antes de
+  y/pero/porque (si tiene ≥ 14 caracteres). Nunca terminan en palabra débil (de, la, y, pero, no…) ni dejan
+  una palabra huérfana. Cada bloque empieza con su primera palabra y dura hasta el siguiente.
+- **Silencios:** se cortan los silencios ≥ 0.3 s (audio < −40 dB) y se dejan 0.08 s tras la voz
+  y 0.10 s antes. Se conservan 1.2 s de plano tras la última palabra.
+- **Encuadres de la entrevista:** "ancho" = el plano original; "cerrado" = recorte digital al **145 %**
+  con la cara en (60 %, 30 %). Se alternan en cada corte de silencio y en cada entrada o salida de b-roll,
+  con un mínimo de **1.8 s** por plano (oculta los saltos del corte de silencios).
+- **Movimiento:** acercamiento lento continuo del **100 % al 104 %** por plano.
+- **Color (A-roll):** `curves 0.25→0.40, 0.5→0.66, blanco→0.92` · `saturación ×0.62` · `colorbalance R−0.03 / B+0.02`.
+  Resultado: luminancia 67→95, negros 7, blancos 214, R−B +8.5→−0.7. El set es oscuro (madera), así que
+  no se fuerza la luminancia de la referencia (139): el vídeo quedaría lavado.
+- **B-roll:** literal a la frase, cortado de la primera a la última palabra de esa frase (+0.15 s), sin audio,
+  reencuadrado a 1080×1920. El aeropuerto (120 fps) va a 0.5×.
+- **Audio:** voz con paso alto a 80 Hz y compresión 3:1, a −16 LUFS. La música se ajusta a la duración con
+  `atempo`, va a ×0.18 bajo la voz (≈ 8 dB por debajo), sube a ×0.4 al terminar de hablar y se funde 1.5 s
+  al final. El máster va a **−14 LUFS / −1 dBTP**.
 
 ---
 
@@ -136,3 +146,6 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
 
 - **Formato final: siempre vertical 9:16, 1080×1920 a 30 fps.** Nunca horizontal, aunque la referencia lo sea.
   Si el material de origen no es 9:16, se recorta o se reencuadra a 9:16; no se añaden barras negras.
+- **Subtítulos: los mismos que la referencia** (§2): frases cortas en una línea, Open Sans SemiBold Italic
+  blanca con sombra, sin animación y sin palabra destacada. La sincronía palabra a palabra se usa para
+  calcular cuándo entra y sale cada bloque, no para animar palabras sueltas.
