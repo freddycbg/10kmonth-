@@ -8,6 +8,7 @@ import {
 } from "remotion";
 import { ARoll } from "./ARoll";
 import { Caption } from "./Caption";
+import { ImageBroll } from "./ImageBroll";
 import edit from "./edit.json";
 
 // La línea de tiempo se genera con scripts/build_edit.py (edit.json). Ver estilo.md.
@@ -31,13 +32,22 @@ export const Edit: React.FC = () => {
           durationInFrames={b.durationInFrames}
           premountFor={fps}
         >
-          <Video
-            src={staticFile(b.src)}
-            trimBefore={b.trimBefore}
-            muted
-            objectFit="cover"
-            style={{ width: "100%", height: "100%" }}
-          />
+          {b.type === "image" && b.pan ? (
+            <ImageBroll
+              src={b.src}
+              imageWidth={b.imageWidth ?? 0}
+              imageHeight={b.imageHeight ?? 0}
+              pan={b.pan}
+            />
+          ) : (
+            <Video
+              src={staticFile(b.src)}
+              trimBefore={b.trimBefore ?? 0}
+              muted
+              objectFit="cover"
+              style={{ width: "100%", height: "100%" }}
+            />
+          )}
         </Sequence>
       ))}
 

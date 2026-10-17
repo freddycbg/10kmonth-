@@ -5,18 +5,191 @@
   "music": "input/music.mp3",
   "rebuild_aroll": true,
   "fixes": [
-    { "find": ["he", "estado", "en", "Suátegui."], "replace": ["del", "estado", "Anzoátegui."] },
-    { "find": ["contadoría"], "replace": ["contaduría"] },
-    { "find": ["100", "%"], "replace": ["100%"] }
+    {
+      "find": [
+        "he",
+        "estado",
+        "en",
+        "Suátegui."
+      ],
+      "replace": [
+        "del",
+        "estado",
+        "Anzoátegui."
+      ]
+    },
+    {
+      "find": [
+        "contadoría"
+      ],
+      "replace": [
+        "contaduría"
+      ]
+    },
+    {
+      "find": [
+        "100",
+        "%"
+      ],
+      "replace": [
+        "100%"
+      ]
+    }
   ],
   "broll": [
-    { "id": "b3", "file": "input/broll/b3.mp4", "trim": 3.0, "phrase": "soy de Venezuela, del estado Anzoátegui." },
-    { "id": "b7", "file": "input/broll/b7.mp4", "trim": 0.0, "phrase": "Luego de allí me casé" },
-    { "id": "b2", "file": "input/broll/b2.mp4", "trim": 1.0, "phrase": "y tuvimos nuestro primer hijo." },
-    { "id": "b1", "file": "input/broll/b1.mp4", "trim": 0.0, "speed": 0.5, "phrase": "Tomamos la decisión de poder salir de Venezuela" },
-    { "id": "b6", "file": "input/broll/b6.mp4", "trim": 0.0, "phrase": "y llegamos aquí a los Estados Unidos." },
-    { "id": "b5", "file": "input/broll/b5.mp4", "trim": 1.0, "phrase": "me dedicaba a hacer deliveries, a entregar paquetes de Amazon" },
-    { "id": "b4", "file": "input/broll/b4.mp4", "trim": 0.0, "phrase": "los costos y los gastos completamente de mi bolsillo." },
-    { "id": "b4", "file": "input/broll/b4.mp4", "trim": 9.0, "phrase": "mi cheque del 100% proviene de esta oportunidad." }
+    {
+      "id": "b3",
+      "file": "input/broll/b3.mp4",
+      "trim": 3.0,
+      "phrase": "soy de Venezuela, del estado Anzoátegui."
+    },
+    {
+      "id": "b7",
+      "file": "input/broll/b7.mp4",
+      "trim": 0.0,
+      "phrase": "Luego de allí me casé"
+    },
+    {
+      "id": "hijo_hombros",
+      "file": "input/drive/20251129_150135.mp4",
+      "trim": 80.0,
+      "phrase": "y tuvimos nuestro primer hijo."
+    },
+    {
+      "id": "b1",
+      "file": "input/broll/b1.mp4",
+      "trim": 0.0,
+      "speed": 0.5,
+      "phrase": "Tomamos la decisión de poder salir de Venezuela"
+    },
+    {
+      "id": "b6",
+      "file": "input/broll/b6.mp4",
+      "trim": 0.0,
+      "phrase": "y llegamos aquí a los Estados Unidos."
+    },
+    {
+      "id": "almacen_carga",
+      "file": "input/drive/20260402_091605.mp4",
+      "trim": 15.0,
+      "phrase": "Comencé trabajando en el almacén,"
+    },
+    {
+      "id": "almacen_alimentos",
+      "file": "input/drive/20260320_092355.mp4",
+      "trim": 1.0,
+      "phrase": "todo lo que viene siendo distribución de alimentos"
+    },
+    {
+      "id": "b5",
+      "file": "input/broll/b5.mp4",
+      "trim": 1.0,
+      "phrase": "me dedicaba a hacer deliveries, a entregar paquetes de Amazon"
+    },
+    {
+      "id": "almacen_noche",
+      "file": "input/drive/20260515_105947.mp4",
+      "trim": 108.0,
+      "phrase": "y tenía dos trabajos a la vez."
+    },
+    {
+      "id": "portabebes",
+      "file": "input/drive/20251129_150135.mp4",
+      "trim": 2.0,
+      "phrase": "nos organizamos para poder cuidar al niño."
+    },
+    {
+      "id": "foto_hospital",
+      "image": "input/drive/20251103_083400.jpg",
+      "pan": {
+        "from": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "to": [
+          0.33,
+          0.5,
+          1.08
+        ]
+      },
+      "phrase": "pero esta vez de unos gemelos."
+    },
+    {
+      "id": "foto_gemelos",
+      "image": "input/drive/20260309_172616.jpg",
+      "pan": {
+        "from": [
+          0.32,
+          0.5,
+          1.02
+        ],
+        "to": [
+          0.7,
+          0.5,
+          1.02
+        ]
+      },
+      "phrase": "Para nosotros fue una gran bendición,"
+    },
+    {
+      "id": "biberones",
+      "file": "input/drive/20251122_170408.mp4",
+      "trim": 2.0,
+      "phrase": "pero también un gran compromiso que se venía adelante."
+    },
+    {
+      "id": "esposa_carrito",
+      "file": "input/drive/20251201_134608.mp4",
+      "trim": 5.0,
+      "phrase": "Mi esposa tuvo que dejar de trabajar"
+    },
+    {
+      "id": "b4",
+      "file": "input/broll/b4.mp4",
+      "trim": 0.0,
+      "phrase": "los costos y los gastos completamente de mi bolsillo."
+    },
+    {
+      "id": "almacen_noche",
+      "file": "input/drive/20260515_105947.mp4",
+      "trim": 280.0,
+      "phrase": "porque tuve que trabajar en dos trabajos,"
+    },
+    {
+      "id": "almacen_camina",
+      "file": "input/drive/20260402_091605.mp4",
+      "trim": 170.0,
+      "phrase": "Trabajaba en el almacén en la mañana"
+    },
+    {
+      "id": "b4",
+      "file": "input/broll/b4.mp4",
+      "trim": 9.0,
+      "phrase": "mi cheque del 100% proviene de esta oportunidad."
+    },
+    {
+      "id": "hermanos",
+      "file": "input/drive/20260404_144507.mp4",
+      "trim": 14.0,
+      "phrase": "Hoy en día puedo decir que mi situación financiera"
+    },
+    {
+      "id": "foto_familia",
+      "image": "input/drive/20260325_153844.jpg",
+      "pan": {
+        "from": [
+          0.2,
+          0.55,
+          1.0
+        ],
+        "to": [
+          0.62,
+          0.5,
+          1.0
+        ]
+      },
+      "phrase": "y mi mentalidad es mucho más fuerte."
+    }
   ]
 }

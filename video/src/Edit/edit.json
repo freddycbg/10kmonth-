@@ -87,147 +87,157 @@
   },
   {
    "from": 1710,
-   "durationInFrames": 112,
+   "durationInFrames": 72,
    "framing": "cerrado"
   },
   {
-   "from": 1822,
-   "durationInFrames": 81,
+   "from": 1782,
+   "durationInFrames": 82,
    "framing": "ancho"
   },
   {
-   "from": 1903,
-   "durationInFrames": 108,
+   "from": 1864,
+   "durationInFrames": 86,
    "framing": "cerrado"
+  },
+  {
+   "from": 1950,
+   "durationInFrames": 61,
+   "framing": "ancho"
   },
   {
    "from": 2011,
    "durationInFrames": 55,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 2066,
    "durationInFrames": 134,
-   "framing": "cerrado"
-  },
-  {
-   "from": 2200,
-   "durationInFrames": 76,
    "framing": "ancho"
   },
   {
-   "from": 2276,
-   "durationInFrames": 295,
+   "from": 2200,
+   "durationInFrames": 75,
    "framing": "cerrado"
+  },
+  {
+   "from": 2275,
+   "durationInFrames": 296,
+   "framing": "ancho"
   },
   {
    "from": 2571,
    "durationInFrames": 82,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 2653,
    "durationInFrames": 59,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 2712,
    "durationInFrames": 80,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 2792,
    "durationInFrames": 78,
-   "framing": "cerrado"
-  },
-  {
-   "from": 2870,
-   "durationInFrames": 81,
    "framing": "ancho"
   },
   {
-   "from": 2951,
-   "durationInFrames": 55,
+   "from": 2870,
+   "durationInFrames": 77,
    "framing": "cerrado"
+  },
+  {
+   "from": 2947,
+   "durationInFrames": 59,
+   "framing": "ancho"
   },
   {
    "from": 3006,
    "durationInFrames": 63,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3069,
    "durationInFrames": 90,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 3159,
    "durationInFrames": 124,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3283,
    "durationInFrames": 164,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 3447,
    "durationInFrames": 122,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3569,
    "durationInFrames": 60,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 3629,
    "durationInFrames": 75,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3704,
    "durationInFrames": 73,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 3777,
    "durationInFrames": 81,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3858,
    "durationInFrames": 78,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 3936,
    "durationInFrames": 57,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3993,
    "durationInFrames": 57,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 4050,
    "durationInFrames": 97,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 4147,
    "durationInFrames": 82,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 4229,
    "durationInFrames": 210,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 4439,
-   "durationInFrames": 110,
+   "durationInFrames": 56,
+   "framing": "ancho"
+  },
+  {
+   "from": 4495,
+   "durationInFrames": 54,
    "framing": "cerrado"
   },
   {
@@ -242,91 +252,239 @@
   },
   {
    "from": 4828,
-   "durationInFrames": 78,
+   "durationInFrames": 79,
    "framing": "ancho"
   },
   {
-   "from": 4906,
-   "durationInFrames": 154,
+   "from": 4907,
+   "durationInFrames": 73,
    "framing": "cerrado"
   },
   {
-   "from": 5060,
-   "durationInFrames": 75,
+   "from": 4980,
+   "durationInFrames": 59,
    "framing": "ancho"
   },
   {
-   "from": 5135,
-   "durationInFrames": 69,
+   "from": 5039,
+   "durationInFrames": 67,
    "framing": "cerrado"
+  },
+  {
+   "from": 5106,
+   "durationInFrames": 98,
+   "framing": "ancho"
   },
   {
    "from": 5204,
    "durationInFrames": 163,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 5367,
    "durationInFrames": 64,
-   "framing": "cerrado"
+   "framing": "ancho"
   }
  ],
  "broll": [
   {
    "name": "B-roll b3: soy de Venezuela, del estado Anzoátegui.",
-   "src": "media/b3.mp4",
    "from": 101,
    "durationInFrames": 50,
-   "trimBefore": 90
-  },
-  {
-   "name": "B-roll b7: Luego de allí me casé",
-   "src": "media/b7.mp4",
-   "from": 1039,
-   "durationInFrames": 35,
+   "type": "video",
+   "src": "media/b3_3.mp4",
    "trimBefore": 0
   },
   {
-   "name": "B-roll b2: y tuvimos nuestro primer hijo.",
-   "src": "media/b2.mp4",
+   "name": "B-roll b7: Luego de allí me casé",
+   "from": 1039,
+   "durationInFrames": 30,
+   "type": "video",
+   "src": "media/b7_0.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll hijo_hombros: y tuvimos nuestro primer hijo.",
    "from": 1069,
    "durationInFrames": 56,
-   "trimBefore": 30
+   "type": "video",
+   "src": "media/hijo_hombros_80.mp4",
+   "trimBefore": 0
   },
   {
    "name": "B-roll b1: Tomamos la decisión de poder salir de Ve",
-   "src": "media/b1.mp4",
    "from": 1459,
-   "durationInFrames": 78,
+   "durationInFrames": 73,
+   "type": "video",
+   "src": "media/b1_0.mp4",
    "trimBefore": 0
   },
   {
    "name": "B-roll b6: y llegamos aquí a los Estados Unidos.",
-   "src": "media/b6.mp4",
    "from": 1532,
    "durationInFrames": 55,
+   "type": "video",
+   "src": "media/b6_0.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll almacen_carga: Comencé trabajando en el almacén,",
+   "from": 1715,
+   "durationInFrames": 67,
+   "type": "video",
+   "src": "media/almacen_carga_15.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll almacen_alimentos: todo lo que viene siendo distribución de",
+   "from": 1782,
+   "durationInFrames": 82,
+   "type": "video",
+   "src": "media/almacen_alimentos_1.mp4",
    "trimBefore": 0
   },
   {
    "name": "B-roll b5: me dedicaba a hacer deliveries, a entreg",
-   "src": "media/b5.mp4",
    "from": 1950,
-   "durationInFrames": 111,
-   "trimBefore": 30
+   "durationInFrames": 107,
+   "type": "video",
+   "src": "media/b5_1.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll almacen_noche: y tenía dos trabajos a la vez.",
+   "from": 2057,
+   "durationInFrames": 58,
+   "type": "video",
+   "src": "media/almacen_noche_108.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll portabebes: nos organizamos para poder cuidar al niñ",
+   "from": 2205,
+   "durationInFrames": 70,
+   "type": "video",
+   "src": "media/portabebes_2.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll foto_hospital: pero esta vez de unos gemelos.",
+   "from": 2653,
+   "durationInFrames": 61,
+   "type": "image",
+   "src": "media/foto_hospital.jpg",
+   "imageWidth": 1352,
+   "imageHeight": 2400,
+   "pan": {
+    "from": [
+     0.25,
+     0.5,
+     1.0
+    ],
+    "to": [
+     0.33,
+     0.5,
+     1.08
+    ]
+   }
+  },
+  {
+   "name": "B-roll foto_gemelos: Para nosotros fue una gran bendición,",
+   "from": 2714,
+   "durationInFrames": 78,
+   "type": "image",
+   "src": "media/foto_gemelos.jpg",
+   "imageWidth": 1800,
+   "imageHeight": 2400,
+   "pan": {
+    "from": [
+     0.32,
+     0.5,
+     1.02
+    ],
+    "to": [
+     0.7,
+     0.5,
+     1.02
+    ]
+   }
+  },
+  {
+   "name": "B-roll biberones: pero también un gran compromiso que se v",
+   "from": 2792,
+   "durationInFrames": 78,
+   "type": "video",
+   "src": "media/biberones_2.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll esposa_carrito: Mi esposa tuvo que dejar de trabajar",
+   "from": 2870,
+   "durationInFrames": 77,
+   "type": "video",
+   "src": "media/esposa_carrito_5.mp4",
+   "trimBefore": 0
   },
   {
    "name": "B-roll b4: los costos y los gastos completamente de",
-   "src": "media/b4.mp4",
    "from": 3077,
    "durationInFrames": 87,
+   "type": "video",
+   "src": "media/b4_0.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll almacen_noche: porque tuve que trabajar en dos trabajos",
+   "from": 3806,
+   "durationInFrames": 87,
+   "type": "video",
+   "src": "media/almacen_noche_280.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll almacen_camina: Trabajaba en el almacén en la mañana",
+   "from": 4443,
+   "durationInFrames": 52,
+   "type": "video",
+   "src": "media/almacen_camina_170.mp4",
    "trimBefore": 0
   },
   {
    "name": "B-roll b4: mi cheque del 100% proviene de esta opor",
-   "src": "media/b4.mp4",
    "from": 4828,
-   "durationInFrames": 78,
-   "trimBefore": 270
+   "durationInFrames": 79,
+   "type": "video",
+   "src": "media/b4_9.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll hermanos: Hoy en día puedo decir que mi situación ",
+   "from": 4907,
+   "durationInFrames": 73,
+   "type": "video",
+   "src": "media/hermanos_14.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll foto_familia: y mi mentalidad es mucho más fuerte.",
+   "from": 4980,
+   "durationInFrames": 59,
+   "type": "image",
+   "src": "media/foto_familia.jpg",
+   "imageWidth": 1800,
+   "imageHeight": 2400,
+   "pan": {
+    "from": [
+     0.2,
+     0.55,
+     1.0
+    ],
+    "to": [
+     0.62,
+     0.5,
+     1.0
+    ]
+   }
   }
  ],
  "captions": [

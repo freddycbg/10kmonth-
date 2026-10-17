@@ -132,8 +132,12 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
   con un mínimo de **1.8 s** por plano (oculta los saltos del corte de silencios).
 - **Movimiento:** acercamiento lento continuo del **100 % al 104 %** por plano.
 - **Color (A-roll):** **sin filtro ni corrección de color**: colores originales de la cámara (ver Preferencias).
-- **B-roll:** literal a la frase, cortado de la primera a la última palabra de esa frase (+0.15 s), sin audio,
-  reencuadrado a 1080×1920. El aeropuerto (120 fps) va a 0.5×.
+- **B-roll:** literal a la frase, cortado de la primera a la última palabra de esa frase (+0.15 s; si choca con
+  el siguiente b-roll, termina donde empieza ese), sin audio, reencuadrado a 1080×1920 y sin filtro de color.
+  Solo se convierte el trozo usado de cada clip. El aeropuerto de stock (120 fps) va a 0.5×.
+  Cobertura del borrador 3: 20 inserciones, el 26 % del vídeo.
+- **Fotos como b-roll:** se recortan a vertical ("cover") con un paneo lento de un sujeto a otro
+  (p. ej. de un gemelo al otro) y/o un zoom del 100 al 108 % durante la frase.
 - **Audio:** voz con paso alto a 80 Hz y compresión 3:1, a −16 LUFS. La música se ajusta a la duración con
   `atempo`, va a ×0.13 bajo la voz (≈ 11 dB por debajo), sube a ×0.28 al terminar de hablar y se funde 1.5 s
   al final. El máster va a **−14 LUFS / −1 dBTP**.
@@ -152,3 +156,6 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
   más luminosa. (Borrador 1: el ajuste de luz y tono se veía artificial.)
 - **Música más baja:** ×0.13 bajo la voz (≈ 11 dB por debajo de la voz, unos 3 dB menos que la referencia)
   y ×0.28 en el cierre. La voz siempre manda; la música es un fondo que apenas se nota.
+- **B-roll propio primero:** se usa el material real del protagonista (almacén, familia, hijos, fotos)
+  siempre que exista para esa frase; el stock solo cubre lo que no hay (ciudad, aeropuerto, bandera,
+  delivery, dinero, boda). El material propio va en la carpeta de Drive que pase el cliente.

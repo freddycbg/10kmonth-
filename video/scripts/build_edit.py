@@ -112,23 +112,39 @@ def main(cfg_path):
         first, last = find_phrase(words, b["phrase"])
         start = snap(words[first]["os"] - b.get("lead", 0.0))
         end = snap(words[last]["oe"] + b.get("hold", 0.15))
-        name = f"{b['id']}.mp4"
-        dst = os.path.join(media, name)
-        if not os.path.exists(dst):
-            conform_broll(b["file"], dst, b.get("speed", 1.0))
-        broll_out.append(
-            {
-                "name": f"B-roll {b['id']}: {b['phrase'][:40]}",
-                "src": f"media/{name}",
-                "from": round(start * FPS),
-                "durationInFrames": round((end - start) * FPS),
-                "trimBefore": round(b.get("trim", 0.0) * FPS),
-            }
-        )
+        dur = end - start
+        item = {
+            "name": f"B-roll {b['id']}: {b['phrase'][:40]}",
+            "from": round(start * FPS),
+            "durationInFrames": round(dur * FPS),
+        }
+        if "image" in b:
+            # Foto: se reduce a 2400 px de alto y se anima en Remotion (paneo/zoom lento).
+            name = f"{b['id']}.jpg"
+            dst = os.path.join(media, name)
+            if not os.path.exists(dst):
+                run(["ffmpeg", "-v", "error", "-y", "-i", b["image"], "-vf", "scale=-2:2400",
+                     "-q:v", "3", dst])
+            iw, ih = map(int, subprocess.run(
+                ["ffprobe", "-v", "error", "-show_entries", "stream=width,height", "-of", "csv=p=0", dst],
+                capture_output=True, text=True, check=True).stdout.strip().split(","))
+            item.update({"type": "image", "src": f"media/{name}", "imageWidth": iw, "imageHeight": ih,
+                         "pan": b.get("pan", {"from": [0.5, 0.5, 1.0], "to": [0.5, 0.5, 1.06]})})
+        else:
+            # Vídeo: solo se convierte el trozo que se usa (los originales 4K pueden durar minutos).
+            trim, speed = b.get("trim", 0.0), b.get("speed", 1.0)
+            name = f"{b['id']}_{trim:g}.mp4"
+            dst = os.path.join(media, name)
+            if not os.path.exists(dst):
+                conform_broll(b["file"], dst, speed, trim, dur * speed + 1.0)
+            item.update({"type": "video", "src": f"media/{name}", "trimBefore": 0})
+        broll_out.append(item)
     # Si dos b-roll quedan casi pegados, se unen sin hueco de entrevista intermedio.
     for a, b in zip(broll_out, broll_out[1:]):
         gap = b["from"] - (a["from"] + a["durationInFrames"])
         if 0 < gap <= round(0.6 * FPS):
+            a["durationInFrames"] += gap
+        elif gap < 0:  # se solapan: el primero termina donde empieza el siguiente
             a["durationInFrames"] += gap
 
     # --- Planos de entrevista (encuadre ancho/cerrado) ------------------------
@@ -328,14 +344,15 @@ def build_aroll(src, segs, dst):
     os.rmdir(tmp)
 
 
-def conform_broll(src, dst, speed):
+def conform_broll(src, dst, speed, start, length):
     vf = (
-        f"setpts={1 / speed:.4f}*PTS,fps={FPS},"
+        f"setpts={1 / speed:.4f}*(PTS-STARTPTS),fps={FPS},"
         f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H},format=yuv420p"
     )
     run([
-        "ffmpeg", "-v", "error", "-y", "-i", src, "-an", "-vf", vf, "-c:v", "libx264",
-        "-preset", "medium", "-crf", "18", "-g", "15", "-movflags", "+faststart", dst,
+        "ffmpeg", "-v", "error", "-y", "-ss", f"{start:.3f}", "-t", f"{length:.3f}", "-i", src,
+        "-an", "-vf", vf, "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-g", "15",
+        "-movflags", "+faststart", dst,
     ])
 
 
