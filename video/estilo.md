@@ -156,6 +156,9 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
   más luminosa. (Borrador 1: el ajuste de luz y tono se veía artificial.)
 - **Música más baja:** ×0.13 bajo la voz (≈ 11 dB por debajo de la voz, unos 3 dB menos que la referencia)
   y ×0.28 en el cierre. La voz siempre manda; la música es un fondo que apenas se nota.
+- **Entrega:** MP4 H.264 (High, 4.1, yuv420p) + **AAC-LC 44.1 kHz estéreo 192 kbps**, `faststart`, −14 LUFS.
+  Se envía como **descarga** (no en el visor del chat) y de **un archivo a la vez**. El render a 48 kHz
+  enviado al visor se escuchó mudo en el dispositivo del cliente; esta configuración sí funcionó.
 - **B-roll propio primero:** se usa el material real del protagonista (almacén, familia, hijos, fotos)
   siempre que exista para esa frase; el stock solo cubre lo que no hay (ciudad, aeropuerto, bandera,
   delivery, dinero, boda, manifestación, reparación de móviles). El material propio va en la carpeta de Drive que pase el cliente.
