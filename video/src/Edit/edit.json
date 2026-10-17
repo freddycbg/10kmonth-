@@ -17,17 +17,27 @@
   },
   {
    "from": 98,
-   "durationInFrames": 234,
+   "durationInFrames": 70,
    "framing": "cerrado"
   },
   {
-   "from": 332,
-   "durationInFrames": 159,
+   "from": 168,
+   "durationInFrames": 118,
    "framing": "ancho"
   },
   {
-   "from": 491,
-   "durationInFrames": 173,
+   "from": 286,
+   "durationInFrames": 98,
+   "framing": "cerrado"
+  },
+  {
+   "from": 384,
+   "durationInFrames": 105,
+   "framing": "ancho"
+  },
+  {
+   "from": 489,
+   "durationInFrames": 175,
    "framing": "cerrado"
   },
   {
@@ -167,12 +177,12 @@
   },
   {
    "from": 3159,
-   "durationInFrames": 124,
+   "durationInFrames": 122,
    "framing": "cerrado"
   },
   {
-   "from": 3283,
-   "durationInFrames": 164,
+   "from": 3281,
+   "durationInFrames": 166,
    "framing": "ancho"
   },
   {
@@ -290,9 +300,25 @@
   {
    "name": "B-roll b3: soy de Venezuela, del estado Anzoátegui.",
    "from": 101,
-   "durationInFrames": 50,
+   "durationInFrames": 67,
    "type": "video",
    "src": "media/b3_3.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll b9: me dedicaba a la reparación de celulares",
+   "from": 168,
+   "durationInFrames": 118,
+   "type": "video",
+   "src": "media/b9_2.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll b10: Tuvimos que cerrar por diferentes situac",
+   "from": 384,
+   "durationInFrames": 105,
+   "type": "video",
+   "src": "media/b10_3.mp4",
    "trimBefore": 0
   },
   {
@@ -428,9 +454,17 @@
   {
    "name": "B-roll b4: los costos y los gastos completamente de",
    "from": 3077,
-   "durationInFrames": 87,
+   "durationInFrames": 83,
    "type": "video",
    "src": "media/b4_0.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll b8: Luego de eso empecé a buscar otras alter",
+   "from": 3160,
+   "durationInFrames": 121,
+   "type": "video",
+   "src": "media/b8_0.5.mp4",
    "trimBefore": 0
   },
   {

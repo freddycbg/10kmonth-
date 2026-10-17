@@ -135,7 +135,7 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
 - **B-roll:** literal a la frase, cortado de la primera a la última palabra de esa frase (+0.15 s; si choca con
   el siguiente b-roll, termina donde empieza ese), sin audio, reencuadrado a 1080×1920 y sin filtro de color.
   Solo se convierte el trozo usado de cada clip. El aeropuerto de stock (120 fps) va a 0.5×.
-  Cobertura del borrador 3: 20 inserciones, el 26 % del vídeo.
+  Cobertura del borrador 4: 23 inserciones, el 32 % del vídeo (referencia: 40 %).
 - **Fotos como b-roll:** se recortan a vertical ("cover") con un paneo lento de un sujeto a otro
   (p. ej. de un gemelo al otro) y/o un zoom del 100 al 108 % durante la frase.
 - **Audio:** voz con paso alto a 80 Hz y compresión 3:1, a −16 LUFS. La música se ajusta a la duración con
@@ -158,4 +158,4 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
   y ×0.28 en el cierre. La voz siempre manda; la música es un fondo que apenas se nota.
 - **B-roll propio primero:** se usa el material real del protagonista (almacén, familia, hijos, fotos)
   siempre que exista para esa frase; el stock solo cubre lo que no hay (ciudad, aeropuerto, bandera,
-  delivery, dinero, boda). El material propio va en la carpeta de Drive que pase el cliente.
+  delivery, dinero, boda, manifestación, reparación de móviles). El material propio va en la carpeta de Drive que pase el cliente.

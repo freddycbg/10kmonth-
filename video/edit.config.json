@@ -44,6 +44,18 @@
       "phrase": "soy de Venezuela, del estado Anzoátegui."
     },
     {
+      "id": "b9",
+      "file": "input/broll/b9.mp4",
+      "trim": 2.0,
+      "phrase": "me dedicaba a la reparación de celulares y computadoras"
+    },
+    {
+      "id": "b10",
+      "file": "input/broll/b10.mp4",
+      "trim": 3.0,
+      "phrase": "Tuvimos que cerrar por diferentes situaciones del país"
+    },
+    {
       "id": "b7",
       "file": "input/broll/b7.mp4",
       "trim": 0.0,
@@ -149,6 +161,12 @@
       "file": "input/broll/b4.mp4",
       "trim": 0.0,
       "phrase": "los costos y los gastos completamente de mi bolsillo."
+    },
+    {
+      "id": "b8",
+      "file": "input/broll/b8.mp4",
+      "trim": 0.5,
+      "phrase": "Luego de eso empecé a buscar otras alternativas de trabajo."
     },
     {
       "id": "almacen_noche",
