@@ -77,6 +77,25 @@
   --display:'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --cuerpo:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
+  /* Escala de texto: cuatro pasos, cada uno ~13% mayor que el anterior.
+     Antes había once tamaños sueltos entre 13 y 20 px, tan parecidos
+     entre sí que ninguno destacaba: la página entera pesaba igual. */
+  --t-xs:13.5px;   /* letra chica: avisos legales, el año en el pie */
+  --t-sm:15px;     /* apoyo: microcopy, etiquetas de campo, errores */
+  --t-md:17px;     /* cuerpo secundario y texto dentro de los campos */
+  --t-lg:19px;     /* botones, nombres, la marca de la barra */
+
+  /* Escala de titulares. Van en clamp porque crecen con la pantalla;
+     el salto entre pasos es grande a propósito. */
+  /* El piso va por encima del cuerpo a propósito: con 18 px la entradilla
+     medía lo mismo que un párrafo en celular y dejaba de leerse como
+     entradilla. */
+  --d-xs:clamp(19.5px,4.6vw,21px); /* entradilla, pregunta del FAQ */
+  --d-sm:clamp(20px,4.8vw,24px);   /* dato destacado */
+  --d-md:clamp(23px,5.6vw,28px);   /* titular de tarjeta o de bloque */
+  --d-lg:clamp(30px,7.4vw,50px);   /* titular de sección */
+  --d-xl:clamp(38px,9.6vw,68px);   /* h1 */
+
   --ancho:1080px;
   --pad:clamp(20px, 5.5vw, 40px);
   --bloque:clamp(64px, 12vw, 112px);
@@ -88,12 +107,15 @@ body{
   background:var(--fondo);
   color:var(--texto);
   font-family:var(--cuerpo);
-  font-size:17px;
+  font-size:var(--t-md);
   line-height:1.62;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
-@media (min-width:800px){ body{font-size:18px} }
+/* El cuerpo crece en pantalla ancha, y --t-md crece con él: son el mismo
+   escalón. Tenerlos en 17 y 18 era un paso de 6%, invisible como jerarquía
+   y una medida más que mantener. */
+@media (min-width:800px){ :root{--t-md:18px} }
 img{max-width:100%; height:auto; display:block}
 /* picture desaparece del layout: el img queda como hijo directo y
    todo el CSS de posicionamiento sigue aplicando igual. */
@@ -110,21 +132,10 @@ a{color:var(--acento-texto)}
 .seccion{padding-block:var(--bloque)}
 
 h1,h2,h3{font-family:var(--display); font-weight:800; line-height:1.04; letter-spacing:-.025em; margin:0}
-h2{font-size:clamp(30px,7.4vw,50px)}
-h3{font-size:20px; line-height:1.25; letter-spacing:-.015em}
+h2{font-size:var(--d-lg)}
+h3{font-size:var(--d-sm); line-height:1.25; letter-spacing:-.015em}
 p{margin:0 0 1.05em}
 p:last-child{margin-bottom:0}
-
-/* Excepción deliberada: los manuales de estilo desaconsejan la etiquetita
-   sobre el titular. Aquí se conserva por decisión del cliente — en una
-   página larga que se recorre con el pulgar hacen de señal de ubicación, y
-   son la única presencia del naranja fuera de los botones. No es un
-   descuido; no hace falta volver a levantarlo en cada revisión. */
-.etiqueta{
-  font-family:var(--display); font-weight:700; font-size:13px;
-  letter-spacing:.13em; text-transform:uppercase;
-  color:var(--acento-texto); margin:0 0 14px;
-}
 
 /* ── Marca ────────────────────────────────────────────── */
 /* ── Banner de apertura ──────────────────────────────────
@@ -180,30 +191,33 @@ p:last-child{margin-bottom:0}
 .banner-txt .flecha{font-size:.78em}
 .banner .env{text-align:center; padding-top:clamp(22px,3.6vw,34px)}
 .banner .btn{max-width:340px; margin-inline:auto}
-.banner .microcopy{margin:16px 0 0; font-size:15px; color:var(--sobre-oscuro-3)}
+.banner .microcopy{margin:16px 0 0; font-size:var(--t-sm); color:var(--sobre-oscuro-3)}
 
 .barra{background:var(--oscuro); color:#fff}
 .barra .env{display:flex; align-items:center; justify-content:space-between; gap:16px; height:60px}
 .marca{
-  font-family:var(--display); font-weight:900; font-size:19px;
+  font-family:var(--display); font-weight:900; font-size:var(--t-lg);
   letter-spacing:-.03em; text-decoration:none; color:var(--sobre-oscuro);
   display:inline-flex; align-items:baseline; gap:.12em;
 }
 .marca .flecha{color:var(--acento-claro); font-size:.8em; transform:translateY(-.12em)}
 .barra a.ig{
-  font-size:15px; text-decoration:none; color:var(--sobre-oscuro-3); font-weight:500;
+  font-size:var(--t-sm); text-decoration:none; color:var(--sobre-oscuro-3); font-weight:500;
   white-space:nowrap;
 }
 .barra a.ig:hover{color:var(--sobre-oscuro)}
 
 /* ── Hero ─────────────────────────────────────────────── */
 .hero{
-  position:relative; isolation:isolate; overflow:hidden;
+  position:relative; isolation:isolate;
+  /* clip recorta igual que hidden pero sin crear un contenedor de
+     scroll, que es lo que impediría fijar la columna del titular. */
+  overflow:hidden; overflow:clip;
   background:var(--oscuro); color:#fff;
   padding-block:clamp(40px,7vw,72px);
 }
 .hero h2{
-  font-size:clamp(31px,7.6vw,50px); font-weight:900; color:var(--sobre-oscuro);
+  font-size:var(--d-lg); font-weight:900; color:var(--sobre-oscuro);
   line-height:1.04; letter-spacing:-.03em; text-wrap:balance;
 }
 /* La foto no es un recuadro al lado del texto: es el ambiente del hero.
@@ -221,7 +235,11 @@ p:last-child{margin-bottom:0}
 .hero h1{color:var(--sobre-oscuro)}
 .hero-grid{display:grid; gap:clamp(32px,6vw,56px)}
 @media (min-width:940px){
-  .hero-grid{grid-template-columns:.92fr 1.08fr; align-items:center; gap:clamp(44px,5vw,72px)}
+  .hero-grid{grid-template-columns:.92fr 1.08fr; align-items:start; gap:clamp(44px,5vw,72px)}
+  /* El formulario es largo; el titular se queda fijo al lado mientras se
+     llena. Antes se perdía arriba y la mitad izquierda quedaba vacía
+     durante media pantalla de scroll. */
+  .hero-copy{position:sticky; top:clamp(76px,11vh,124px)}
   /* En pantalla ancha la foto ocupa la mitad derecha y el formulario flota
      encima. El titular queda sobre negro liso, sin competir con la imagen. */
   /* La foto cruza todo el hero: a la izquierda queda como textura apenas
@@ -235,14 +253,14 @@ p:last-child{margin-bottom:0}
       rgba(9,9,9,.66) 68%, rgba(9,9,9,.52) 100%);
   }
 }
-h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
+h1{font-size:var(--d-xl); font-weight:900; text-wrap:balance}
 .hero .sub{
-  font-size:clamp(18px,4.6vw,21px);
+  font-size:var(--d-xs);
   color:var(--sobre-oscuro-2); margin:22px 0 0; max-width:30ch;
 }
 .hero .sub b{font-weight:700; color:var(--sobre-oscuro)}
 .acciones{margin-top:30px}
-.microcopy{margin:14px 0 0; font-size:15px; color:var(--sutil)}
+.microcopy{margin:14px 0 0; font-size:var(--t-sm); color:var(--sutil)}
 .microcopy .punto{
   display:inline-block; width:8px; height:8px; border-radius:50%;
   background:var(--acento); margin-right:8px; vertical-align:baseline;
@@ -251,7 +269,7 @@ h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
 /* ── Botones ──────────────────────────────────────────── */
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:10px;
-  font-family:var(--display); font-weight:800; font-size:19px; letter-spacing:-.01em;
+  font-family:var(--display); font-weight:800; font-size:var(--t-lg); letter-spacing:-.01em;
   background:var(--acento); color:#fff; text-decoration:none;
   padding:17px 34px; border:0; border-radius:999px; cursor:pointer;
   min-height:56px; width:100%; max-width:340px;
@@ -276,52 +294,71 @@ h1{font-size:clamp(38px,9.6vw,68px); font-weight:900; text-wrap:balance}
 .quien-grid{display:grid; gap:0}
 .quien .foto img{aspect-ratio:4/5; object-position:44% 28%}
 .quien-txt{padding:clamp(38px,7vw,72px) var(--pad)}
-.quien-txt > *{max-width:58ch}
+/* El tope en ch se mide con la letra del blockquote, que es más grande
+   que la del cuerpo: daba casi 80 caracteres por renglón. El tope en px
+   deja la medida donde se lee cómodo, entre 65 y 70. */
+.quien-txt > *{max-width:min(58ch,560px)}
 @media (min-width:900px){
   .quien-grid{grid-template-columns:minmax(0,44%) minmax(0,56%); align-items:stretch}
-  .quien .foto img{aspect-ratio:auto; min-height:100%}
+  /* La altura la manda el texto. Antes la imagen entraba con su tamaño
+     natural —casi mil píxeles— y al lado del relato quedaba un palmo de
+     papel vacío. Sacando la foto del flujo, la fila mide lo que mide el
+     texto y la imagen recorta para llenarla. */
+  .quien .foto{min-height:clamp(430px,40vw,540px)}
+  .quien .foto img{position:absolute; inset:0; aspect-ratio:auto}
   .quien-txt{
     display:flex; flex-direction:column; justify-content:center;
     padding:clamp(56px,6vw,88px) clamp(40px,5vw,72px);
   }
 }
 .quien blockquote{
-  margin:0; font-size:clamp(18px,4.4vw,20px); line-height:1.6;
+  margin:0; font-size:var(--d-xs); line-height:1.6;
 }
 .quien blockquote p:first-of-type{
-  font-family:var(--display); font-weight:700; font-size:clamp(22px,5.4vw,27px);
+  font-family:var(--display); font-weight:700; font-size:var(--d-md);
   line-height:1.28; letter-spacing:-.02em; margin-bottom:.7em;
 }
+/* El cierre de la cita se separa por voz, no por una pestaña de color:
+   vuelve a la tipografía de titular, más chica que la frase de entrada.
+   La barrita naranja al costado es el recurso de siempre y no decía nada
+   que el cambio de letra no diga mejor. */
 .quien blockquote p:last-of-type{
-  border-left:3px solid var(--acento); padding-left:18px; font-weight:500;
+  font-family:var(--display); font-weight:700; font-size:var(--d-xs);
+  line-height:1.35; letter-spacing:-.015em; color:var(--texto);
+  margin-top:1.15em;
 }
 
 /* ── Ritmo de tono: la página alterna claro y oscuro para que
       no sea una sábana blanca de arriba abajo ──────────────── */
 .que-es{background:var(--medio); border-block:1px solid var(--linea-fuerte)}
-.que-es .tarjeta{background:var(--panel); border-color:var(--linea-fuerte)}
 
 .faq-seccion{background:var(--fondo)}
 
-/* ── Tarjetas ─────────────────────────────────────────── */
-.tarjetas{display:grid; gap:14px; margin-top:36px}
-@media (min-width:640px){ .tarjetas{grid-template-columns:1fr 1fr; gap:18px} }
-.tarjeta{
-  background:var(--panel); border:1px solid var(--linea);
-  border-radius:14px; padding:26px 24px 28px;
+/* ── Los cuatro hechos ────────────────────────────────────
+   Son cuatro hechos, no cuatro tarjetas. Las cajas iguales no añadían
+   información —separaban lo que la tipografía ya separaba— y hacían que
+   la sección pesara lo mismo de arriba abajo. Tampoco van numerados:
+   01-04 prometía una secuencia, y no la hay; se pueden leer en
+   cualquier orden. Ahora manda el titular y una línea fina marca dónde
+   empieza cada uno. */
+.hechos{margin-top:clamp(34px,5vw,52px); display:grid}
+.hecho{padding:clamp(22px,3.6vw,32px) 0; border-top:1px solid var(--linea-fuerte)}
+/* La línea de cierre va en los últimos de la fila, no cruzando el hueco
+   entre columnas: así todas las reglas se cortan en el mismo sitio. */
+.hecho:last-child{border-bottom:1px solid var(--linea-fuerte)}
+@media (min-width:720px){
+  .hechos{grid-template-columns:1fr 1fr; column-gap:clamp(40px,6vw,88px)}
+  .hecho:nth-last-child(-n+2){border-bottom:1px solid var(--linea-fuerte)}
 }
-.tarjeta .num{
-  font-family:var(--display); font-weight:900; font-size:14px;
-  color:var(--acento-texto); display:block; margin-bottom:12px; letter-spacing:.04em;
-}
-.tarjeta p{margin:10px 0 0; font-size:16.5px; color:var(--texto-2)}
+.hecho h3{font-size:var(--d-md); line-height:1.12; letter-spacing:-.02em}
+.hecho p{margin:10px 0 0; font-size:var(--t-md); color:var(--texto-2); max-width:40ch}
 
 /* ── FAQ ──────────────────────────────────────────────── */
 .faq{margin-top:36px; border-top:1px solid var(--linea)}
 details{border-bottom:1px solid var(--linea)}
 summary{
   list-style:none; cursor:pointer; padding:22px 44px 22px 0; position:relative;
-  font-family:var(--display); font-weight:700; font-size:clamp(18px,4.5vw,21px);
+  font-family:var(--display); font-weight:700; font-size:var(--d-xs);
   line-height:1.3; letter-spacing:-.015em;
 }
 summary::-webkit-details-marker{display:none}
@@ -336,7 +373,7 @@ summary::after{
 details[open] summary::after{transform:rotate(90deg); background:linear-gradient(var(--acento),var(--acento)) center/100% 2.5px no-repeat}
 summary:hover{color:var(--acento-texto)}
 .respuesta{padding:0 0 26px; max-width:66ch; color:var(--texto-2)}
-.respuesta em{color:var(--sutil); font-size:15.5px}
+.respuesta em{color:var(--sutil); font-size:var(--t-sm)}
 
 /* ── Equipo: banda con el texto sobre la foto ─────────── */
 .equipo-banda{
@@ -347,23 +384,25 @@ summary:hover{color:var(--acento-texto)}
 /* Anclada arriba: Freddy está en la parte alta de la foto, así que el
    recorte se come el suelo vacío de abajo y no a él. */
 .equipo-banda img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 0%; z-index:-2}
+/* El velo se concentra donde va el texto y suelta la mitad de arriba,
+   que es donde está el equipo sentado a la mesa. Antes oscurecía la foto
+   pareja de arriba abajo y la prueba de los 25 agentes no se veía. */
 .equipo-banda::after{
   content:""; position:absolute; inset:0; z-index:-1;
   background:linear-gradient(to top,
-    rgba(10,10,10,.97) 0%, rgba(10,10,10,.93) 26%,
-    rgba(10,10,10,.72) 50%, rgba(10,10,10,.34) 76%,
-    rgba(10,10,10,.10) 100%);
+    rgba(10,10,10,.97) 0%, rgba(10,10,10,.86) 24%,
+    rgba(10,10,10,.50) 52%, rgba(10,10,10,.16) 78%,
+    rgba(10,10,10,0) 100%);
 }
 .equipo-banda .banda-txt{width:100%; padding-block:clamp(36px,6vw,60px)}
 .equipo-banda h2{color:var(--sobre-oscuro)}
-.equipo-banda .etiqueta{color:var(--acento-claro)}
 .equipo-banda .dato{color:var(--sobre-oscuro-2)}
 .equipo-banda .dato b{color:var(--sobre-oscuro)}
 /* Si la foto no cargara, la banda seguiría legible sobre negro. */
 .equipo-banda{background:var(--oscuro)}
 .dato{
   font-family:var(--display); font-weight:800;
-  font-size:clamp(20px,4.8vw,24px); line-height:1.3; letter-spacing:-.02em;
+  font-size:var(--d-sm); line-height:1.3; letter-spacing:-.02em;
   margin:28px 0 0; max-width:24ch;
 }
 .dato b{color:var(--acento-texto)}
@@ -372,8 +411,8 @@ summary:hover{color:var(--acento-texto)}
 .testimonio{background:var(--medio); border:1px solid var(--linea); border-radius:14px; overflow:hidden}
 .testimonio img{width:100%; aspect-ratio:1/1; object-fit:cover}
 .testimonio .txt{padding:20px}
-.testimonio .nombre{font-family:var(--display); font-weight:800; font-size:17px}
-.testimonio .antes{font-size:14.5px; color:var(--sutil); margin:2px 0 12px}
+.testimonio .nombre{font-family:var(--display); font-weight:800; font-size:var(--t-md)}
+.testimonio .antes{font-size:var(--t-sm); color:var(--sutil); margin:2px 0 12px}
 
 /* ── Formulario (vive en el hero, sobre fondo claro) ──── */
 .form-caja{
@@ -384,8 +423,8 @@ summary:hover{color:var(--acento-texto)}
 }
 /* La tarjeta vive dentro del bloque oscuro, que pinta su texto en blanco.
    Sin esto el título saldría blanco sobre blanco. */
-.form-caja h2{font-size:clamp(24px,5.6vw,31px); margin-bottom:6px; color:var(--texto)}
-.form-caja .sub{font-size:15.5px; color:var(--sutil); margin:0 0 22px; max-width:none}
+.form-caja h2{font-size:var(--d-md); margin-bottom:6px; color:var(--texto)}
+.form-caja .sub{font-size:var(--t-sm); color:var(--sutil); margin:0 0 22px; max-width:none}
 
 /* Firma: quién es y quién te va a contactar */
 .hero-firma{display:flex; align-items:center; gap:13px; margin-top:30px}
@@ -395,8 +434,8 @@ summary:hover{color:var(--acento-texto)}
   box-shadow:0 0 0 1px rgba(255,255,255,.18);
 }
 .hero-firma .foto-mini img{width:100%; height:100%; object-fit:cover}
-.hero-firma .txt{font-size:15px; color:var(--sobre-oscuro-3); line-height:1.45}
-.hero-firma .txt b{display:block; color:var(--sobre-oscuro); font-family:var(--display); font-weight:800; font-size:16.5px}
+.hero-firma .txt{font-size:var(--t-sm); color:var(--sobre-oscuro-3); line-height:1.45}
+.hero-firma .txt b{display:block; color:var(--sobre-oscuro); font-family:var(--display); font-weight:800; font-size:var(--t-md)}
 
 /* El retrato grande solo cabe en escritorio; en celular manda el formulario. */
 
@@ -407,7 +446,7 @@ summary:hover{color:var(--acento-texto)}
   padding-block:var(--bloque);
 }
 .cierre h2{text-wrap:balance}
-.cierre p{color:var(--texto-2); margin:16px auto 0; max-width:36ch; font-size:clamp(17px,4.2vw,19px)}
+.cierre p{color:var(--texto-2); margin:16px auto 0; max-width:36ch; font-size:var(--d-xs)}
 .cierre .form-caja{margin:clamp(32px,5vw,48px) auto 0; max-width:560px}
 
 /* ── Botón flotante de WhatsApp ───────────────────────── */
@@ -427,11 +466,11 @@ summary:hover{color:var(--acento-texto)}
 .campo{margin-bottom:20px}
 .campo label{
   display:block; font-family:var(--display); font-weight:700;
-  font-size:15.5px; margin-bottom:8px; letter-spacing:-.005em;
+  font-size:var(--t-sm); margin-bottom:8px; letter-spacing:-.005em;
 }
-.campo .opcional{font-weight:600; color:var(--sutil); font-size:14px; letter-spacing:0}
+.campo .opcional{font-weight:600; color:var(--sutil); font-size:var(--t-xs); letter-spacing:0}
 input[type=text],input[type=tel],select,textarea{
-  width:100%; font-family:var(--cuerpo); font-size:17px; color:var(--texto);
+  width:100%; font-family:var(--cuerpo); font-size:var(--t-md); color:var(--texto);
   background:var(--campo); border:1.5px solid var(--linea-fuerte); border-radius:11px;
   padding:14px 15px; min-height:52px; line-height:1.4;
   appearance:none; -webkit-appearance:none;
@@ -444,7 +483,7 @@ select{
 }
 input:focus,select:focus,textarea:focus{border-color:var(--acento); outline-offset:1px}
 input[aria-invalid=true],select[aria-invalid=true]{border-color:var(--error)}
-.error{display:none; color:var(--error); font-size:14.5px; font-weight:600; margin-top:7px}
+.error{display:none; color:var(--error); font-size:var(--t-sm); font-weight:600; margin-top:7px}
 .error.visible{display:block}
 
 .consentimiento{
@@ -455,12 +494,12 @@ input[aria-invalid=true],select[aria-invalid=true]{border-color:var(--error)}
 .consentimiento input[type=checkbox]{
   flex:none; width:24px; height:24px; margin:1px 0 0; accent-color:var(--acento); cursor:pointer;
 }
-.consentimiento label{font-size:15.5px; line-height:1.5; cursor:pointer}
-.nota-form{font-size:14px; color:var(--sutil); margin-top:16px; line-height:1.5}
+.consentimiento label{font-size:var(--t-sm); line-height:1.5; cursor:pointer}
+.nota-form{font-size:var(--t-xs); color:var(--sutil); margin-top:16px; line-height:1.5}
 
 /* Grupos de opción */
 fieldset{border:0; padding:0; margin:0 0 20px; min-width:0}
-legend{font-family:var(--display); font-weight:700; font-size:15px; margin-bottom:10px; padding:0; line-height:1.3}
+legend{font-family:var(--display); font-weight:700; font-size:var(--t-sm); margin-bottom:10px; padding:0; line-height:1.3}
 .opciones{display:flex; flex-direction:column; gap:8px}
 .opcion{display:flex; gap:12px; align-items:flex-start; padding:12px 14px;
   border:1.5px solid var(--linea-fuerte); border-radius:11px; cursor:pointer;
@@ -468,37 +507,37 @@ legend{font-family:var(--display); font-weight:700; font-size:15px; margin-botto
 .opcion:hover{border-color:var(--sutil)}
 .opcion:has(input:checked){border-color:var(--acento); background:#FBEDE6}
 .opcion input{flex:none; width:22px; height:22px; margin:1px 0 0; accent-color:var(--acento); cursor:pointer}
-.opcion span{font-size:16px; line-height:1.42}
+.opcion span{font-size:var(--t-md); line-height:1.42}
 .opciones[aria-invalid=true] .opcion{border-color:var(--error)}
 
 /* Éxito */
 .exito{display:none}
 .exito.visible{display:block; text-align:left}
-.exito h3{font-size:clamp(23px,5.6vw,28px); margin-bottom:12px}
+.exito h3{font-size:var(--d-md); margin-bottom:12px}
 .exito p{color:var(--texto-2)}
 .exito .btn{margin-top:20px}   /* el color lo pone .btn-negro, que el enlace ya lleva */
-.exito .aviso{font-size:14.5px; color:var(--sutil); margin-top:14px}
+.exito .aviso{font-size:var(--t-sm); color:var(--sutil); margin-top:14px}
 .wa-icono{width:22px; height:22px; flex:none}
 
 /* ── Footer ───────────────────────────────────────────── */
 footer{background:var(--fondo); padding-block:clamp(48px,9vw,72px) clamp(84px,11vw,96px); border-top:1px solid var(--linea)}
-.footer-nombre{font-family:var(--display); font-weight:800; font-size:19px}
-footer .contacto{margin:6px 0 26px; font-size:16px}
+.footer-nombre{font-family:var(--display); font-weight:800; font-size:var(--t-lg)}
+footer .contacto{margin:6px 0 26px; font-size:var(--t-md)}
 /* Enlace suelto, no dentro de una frase: le aplica el mínimo de 24px de
    WCAG 2.5.8, y a 19px de alto no llegaba. */
 footer .contacto a{display:inline-block; padding-block:4px}
 .divulgacion{
-  max-width:62ch; font-size:15px; color:var(--texto-2); line-height:1.55;
+  max-width:62ch; font-size:var(--t-sm); color:var(--texto-2); line-height:1.55;
   margin-bottom:22px;
 }
 .disclaimer{
-  max-width:62ch; font-size:15px; color:var(--texto-2); line-height:1.55;
+  max-width:62ch; font-size:var(--t-sm); color:var(--texto-2); line-height:1.55;
   background:#fff; border:1px solid var(--linea); border-radius:12px; padding:16px 18px;
 }
-.legal{margin-top:26px; font-size:15px; display:flex; flex-wrap:wrap; gap:8px 22px; align-items:center}
+.legal{margin-top:26px; font-size:var(--t-sm); display:flex; flex-wrap:wrap; gap:8px 22px; align-items:center}
 .legal a{color:var(--sutil)}
 .legal a:hover{color:var(--texto)}
-.copy{margin-top:22px; font-size:14px; color:var(--sutil)}
+.copy{margin-top:22px; font-size:var(--t-xs); color:var(--sutil)}
 
 /* ── Movimiento ───────────────────────────────────────── */
 .reveal{opacity:0; transform:translateY(18px); transition:opacity .55s ease, transform .55s ease}
@@ -574,7 +613,6 @@ footer .contacto a{display:inline-block; padding-block:4px}
       <picture><source srcset="img/freddy-quien-soy.webp" type="image/webp"><img src="img/freddy-quien-soy.jpg" alt="Freddy Mota con su equipo" width="900" height="1350" decoding="async"></picture>
     </figure>
     <div class="quien-txt reveal">
-      <p class="etiqueta">Quién soy</p>
       <blockquote>
         <p>Me llamo Freddy Mota. Llegué a Estados Unidos hace cuatro años.</p>
         <p>Empecé en construcción. Cuando vi que el sueldo no alcanzaba, me metí a hacer delivery — de todo, lo que saliera. Después junté lo suficiente para abrir mi propia empresa de limpieza.</p>
@@ -589,27 +627,22 @@ footer .contacto a{display:inline-block; padding-block:4px}
 <section class="seccion que-es">
   <div class="env">
     <div class="reveal">
-      <p class="etiqueta">Qué es esto exactamente</p>
       <h2>Sin adornos:<br>así funciona.</h2>
     </div>
-    <div class="tarjetas">
-      <article class="tarjeta reveal">
-        <span class="num">01</span>
+    <div class="hechos">
+      <article class="hecho reveal">
         <h3>Comisiones, no sueldo</h3>
         <p>Ganas por lo que produces. No hay tope arriba — tampoco hay piso.</p>
       </article>
-      <article class="tarjeta reveal">
-        <span class="num">02</span>
+      <article class="hecho reveal">
         <h3>Nosotros ponemos los clientes</h3>
         <p>No vendes a tu familia ni a tus amigos. Trabajas referidos que genera la agencia.</p>
       </article>
-      <article class="tarjeta reveal">
-        <span class="num">03</span>
+      <article class="hecho reveal">
         <h3>Entrenamiento desde cero</h3>
         <p>Nadie llega sabiendo. Te acompaño desde el primer día hasta tu primera venta.</p>
       </article>
-      <article class="tarjeta reveal">
-        <span class="num">04</span>
+      <article class="hecho reveal">
         <h3>Camino de crecimiento</h3>
         <p>La estructura de la compañía está diseñada para que subas y formes tu propio equipo.</p>
       </article>
@@ -621,7 +654,6 @@ footer .contacto a{display:inline-block; padding-block:4px}
 <section class="seccion faq-seccion">
   <div class="env">
     <div class="reveal">
-      <p class="etiqueta">Preguntas frecuentes</p>
       <h2>Lo que todos<br>me preguntan.</h2>
     </div>
 
@@ -688,7 +720,6 @@ footer .contacto a{display:inline-block; padding-block:4px}
   <picture><source srcset="img/equipo-summit.webp" type="image/webp"><img src="img/equipo-summit.jpg" alt="Reunión del equipo de 10k Month Group" width="1600" height="1067" loading="lazy" decoding="async"></picture>
   <div class="banda-txt">
     <div class="env reveal">
-      <p class="etiqueta">El equipo</p>
       <h2>No vas a estar solo.</h2>
       <p class="dato">Entreno directamente a <b>25 agentes</b>, dentro de una agencia de <b>más de 200</b>.</p>
     </div>

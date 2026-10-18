@@ -1,0 +1,4 @@
+# Dependencias que el detector de diseño instala para poder analizar el
+# HTML. Son herramientas locales, no parte del sitio.
+.claude/skills/*/node_modules/
+node_modules/
