@@ -81,8 +81,10 @@ en el navegador, o `python3 -m http.server 8000` en esta carpeta.
 
 ## Fotos
 
-Ver **`img/LEEME-FOTOS.md`**. Resumen: tres archivos obligatorios
-(`freddy-hero.jpg`, `freddy-quien-soy.jpg`, `equipo-summit.jpg`) más `og.jpg`.
+Ver **`site/img/LEEME-FOTOS.md`**. Resumen: los obligatorios son
+`banner-equipo.jpg`, `freddy-hero.jpg`, `freddy-quien-soy.jpg` y
+`equipo-summit.jpg`; `og.jpg` se queda solo para la vista previa al
+compartir el link.
 
 Si un archivo no existe, el sitio **oculta ese bloque** en vez de mostrar la imagen rota.
 Así que la página ya se ve bien hoy, sin fotos — pero sin ellas pierde casi toda su fuerza.

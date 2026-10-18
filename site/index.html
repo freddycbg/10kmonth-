@@ -69,8 +69,8 @@
   --sobre-oscuro-2:#DFDAD3;   /* secundario: subtítulos, cifras */
   --sobre-oscuro-3:#A8A199;   /* apagado: firmas, microcopy, enlaces de barra */
 
-  --negro-banner:#060606;     /* el negro exacto del borde de og.jpg: la imagen
-                                 debe fundirse con la sección, no recortarse */
+  --negro-banner:#060606;     /* el negro donde muere el degradado del banner;
+                                 también el del borde de og.jpg */
   --oscuro-presionado:#100E0C;/* estado presionado sobre superficies oscuras */
   --whatsapp:#25D366;         /* verde de marca de WhatsApp, no de esta paleta */
 
@@ -128,13 +128,57 @@ p:last-child{margin-bottom:0}
 
 /* ── Marca ────────────────────────────────────────────── */
 /* ── Banner de apertura ──────────────────────────────────
-   La imagen ya trae el titular compuesto dentro. El fondo de la
-   sección usa --negro-banner, leído del borde del propio archivo,
-   para que la imagen se funda con la página en vez de recortarse. */
+   Una foto que se apaga hacia abajo hasta el negro de la sección,
+   con el titular encima. El degradado y el fondo terminan los dos
+   en --negro-banner: de ahí que no se vea ningún corte. */
 .banner{background:var(--negro-banner); padding-bottom:clamp(30px,5vw,46px)}
-.banner h1{margin:0 auto; max-width:1200px}
-.banner img{width:100%; height:auto; display:block}
-.banner .env{text-align:center; padding-top:clamp(28px,4.5vw,40px)}
+/* Foto y titular comparten una sola celda: la foto arriba, el texto pegado
+   abajo. Así el bloque mide siempre lo que mide la foto —y crece solo si el
+   texto llegara a ser más alto— sin márgenes negativos que lo descuadren. */
+.banner-foto{position:relative; display:grid; background:var(--negro-banner)}
+.banner-foto > .banner-txt{grid-area:1/1; align-self:end}
+/* En pantalla angosta el encuadre es casi cuadrado: así caben los dos de
+   cuerpo entero. Al ensancharse se abre a 16:9 y el tope de altura evita
+   que en un monitor grande la foto se coma la pantalla entera.
+   La regla va sobre la <img> y no sobre el <picture> porque ese es
+   display:contents: el elemento de la rejilla es la imagen misma. */
+.banner-foto img{
+  grid-area:1/1; align-self:start;
+  display:block; width:100%; aspect-ratio:1/1;
+  max-height:66vh; max-height:66svh;   /* el botón tiene que caber sin hacer scroll */
+  object-fit:cover; object-position:50% 25%;
+}
+@media (min-width:600px){ .banner-foto img{aspect-ratio:4/3} }
+@media (min-width:900px){ .banner-foto img{aspect-ratio:16/9} }
+/* El degradado cubre la foto entera, no solo la caja del texto: a lo ancho
+   no deja borde visible, y abajo termina en el mismo negro de la sección,
+   así la foto se funde con el bloque del botón sin que se vea el corte. */
+.banner-foto::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  /* Arranca al 38%, justo debajo de las caras, y de ahí baja rápido: en
+     pantallas angostas el titular ocupa tres líneas y sube hasta la camisa
+     blanca, donde una rampa suave no daba contraste suficiente. */
+  background:linear-gradient(to bottom,
+    rgba(6,6,6,0) 38%, rgba(6,6,6,.55) 54%, rgba(6,6,6,.88) 72%, var(--negro-banner) 92%);
+}
+/* El titular sube sobre la foto, pero sigue en el flujo: si el texto crece
+   —otro idioma, letra más grande— el bloque crece con él en vez de taparse. */
+.banner-txt{
+  position:relative; z-index:1; text-align:center;
+  padding:0 var(--pad) clamp(14px,3vw,34px);
+  max-width:var(--ancho); margin-inline:auto;
+}
+.banner-txt h1{display:flex; flex-direction:column; gap:.1em; align-items:center}
+.banner-txt .titular{
+  font-size:clamp(29px,7.6vw,60px); color:var(--sobre-oscuro);
+  text-shadow:0 2px 18px rgba(6,6,6,.75);
+}
+.banner-txt .cifra{
+  font-size:clamp(33px,8.8vw,70px); color:var(--acento-claro);
+  letter-spacing:-.035em; white-space:nowrap;
+}
+.banner-txt .flecha{font-size:.78em}
+.banner .env{text-align:center; padding-top:clamp(22px,3.6vw,34px)}
 .banner .btn{max-width:340px; margin-inline:auto}
 .banner .microcopy{margin:16px 0 0; font-size:15px; color:var(--sobre-oscuro-3)}
 
@@ -493,17 +537,30 @@ footer .contacto a{display:inline-block; padding-block:4px}
 
 <main id="top">
 
-<!-- ══ HERO + FORMULARIO ══════════════════════════════
-     El formulario vive aquí arriba: nadie tiene que hacer
-     scroll para llegar a él.
-     ═══════════════════════════════════════════════════ -->
 <!-- ══ BANNER ══════════════════════════════════════════
-     El primer bloque es la imagen de marca, con el titular ya
-     compuesto dentro. El <h1> es la imagen: su texto alternativo
-     lleva el titular, así que no hace falta repetirlo debajo.
+     La foto se funde hacia abajo en el negro de la sección y el
+     titular va encima como texto de verdad, no incrustado en la
+     imagen: se puede seleccionar y traducir, se reacomoda solo en
+     cada pantalla y lo lee un lector de voz. og.jpg se queda, pero
+     solo para la tarjeta que se ve al compartir el link.
      ═════════════════════════════════════════════════════ -->
 <section class="banner">
-  <h1><picture><source srcset="img/og.webp" type="image/webp"><img src="img/og.jpg" alt="¿Cansado de que tu trabajo tenga techo? $10k↗ MONTH" width="1200" height="630" fetchpriority="high" decoding="async"></picture></h1>
+  <div class="banner-foto">
+    <picture>
+      <source type="image/webp" sizes="100vw"
+              srcset="img/banner-equipo-900.webp 900w, img/banner-equipo.webp 1800w">
+      <img src="img/banner-equipo.jpg" sizes="100vw"
+           srcset="img/banner-equipo-900.jpg 900w, img/banner-equipo.jpg 1800w"
+           alt="Freddy Mota, a la izquierda, junto a otro agente de la agencia"
+           width="1800" height="1200" fetchpriority="high" decoding="async">
+    </picture>
+    <div class="banner-txt">
+      <h1>
+        <span class="titular">¿Cansado de que tu trabajo tenga techo?</span>
+        <span class="cifra">$10k<span class="flecha" aria-hidden="true">&#8599;</span> MONTH</span>
+      </h1>
+    </div>
+  </div>
   <div class="env">
     <a class="btn" href="#formulario" data-ir-form>Quiero información</a>
     <p class="microcopy">Te contacta mi equipo de recursos humanos. Normalmente en menos de una hora.</p>
