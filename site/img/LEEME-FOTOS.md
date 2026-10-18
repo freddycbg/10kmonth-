@@ -7,7 +7,7 @@ Si falta alguno, el sitio oculta ese bloque solo, en vez de mostrar una imagen r
 
 | Archivo | Dónde sale | Formato | Cuál de tus fotos |
 |---|---|---|---|
-| `banner-equipo.jpg` | Primer bloque de la página, con el titular encima | **horizontal 3:2**, ~1800×1200. Las caras tienen que quedar en la mitad de arriba: la mitad de abajo se oscurece para que se lea el texto | La de **los dos de traje frente a la pared de listones**. Va acompañada de `banner-equipo-900.jpg`, el mismo recorte a 900 px para celular. |
+| `banner-portada.jpg` | Primer bloque de la página, con el titular encima | **horizontal 3:2**, mínimo ~1536×1024. La cara tiene que quedar en la mitad de arriba y el sujeto centrado: en celular se recorta a cuadrado desde el centro, y la mitad de abajo se oscurece para que se lea el texto | La del **traje azul marino frente a la pared de listones con la D dorada**. Va acompañada de `banner-portada-900.jpg`, el mismo recorte a 900 px para celular. |
 | `freddy-hero.jpg` | Retrato grande del hero, solo en escritorio | vertical 3:4, ~900×1350 | La del **saco azul marino**, parado junto a la mesa larga con las lámparas de madera. |
 | `freddy-avatar.jpg` | El círculo junto a tu nombre, sobre todo en celular | **cuadrada**, 300×300 | Recorte de cara y hombros sacado de `freddy-hero.jpg`. En un círculo de 54 px el retrato completo no sirve: la cara queda del tamaño de un punto. Si algún día cambias la foto del hero, hay que rehacer este recorte. |
 | `freddy-quien-soy.jpg` | Sección "Quién soy" | vertical 3:4, ~900×1200 | La del **polo blanco y gorra, escribiendo en la libreta**. Se ve trabajando, no posando. (Alternativa: la del traje azul en la terraza.) |

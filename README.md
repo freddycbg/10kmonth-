@@ -82,7 +82,7 @@ en el navegador, o `python3 -m http.server 8000` en esta carpeta.
 ## Fotos
 
 Ver **`site/img/LEEME-FOTOS.md`**. Resumen: los obligatorios son
-`banner-equipo.jpg`, `freddy-hero.jpg`, `freddy-quien-soy.jpg` y
+`banner-portada.jpg`, `freddy-hero.jpg`, `freddy-quien-soy.jpg` y
 `equipo-summit.jpg`; `og.jpg` se queda solo para la vista previa al
 compartir el link.
 
