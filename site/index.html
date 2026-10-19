@@ -253,11 +253,15 @@ p:last-child{margin-bottom:0}
      visible detrás del titular, a la derecha respira alrededor del formulario.
      Así ningún lado es negro plano. */
   .hero-fondo{inset:0; width:100%; height:auto}
-  .hero-fondo img{object-position:50% 6%}
+  /* Un retrato vertical de 900 px estirado a lo ancho de un monitor
+     quedaba como medio ojo y media boca gigantes y desenfocados: parecía
+     un recorte mal hecho, no un fondo. Desenfocado a propósito y más
+     apagado, pasa a leerse como la textura que siempre quiso ser. */
+  .hero-fondo img{object-position:50% 6%; filter:blur(7px) saturate(.72); transform:scale(1.04)}
   .hero-fondo::after{
     background:linear-gradient(90deg,
-      rgba(9,9,9,.95) 0%, rgba(9,9,9,.93) 32%, rgba(9,9,9,.86) 48%,
-      rgba(9,9,9,.66) 68%, rgba(9,9,9,.52) 100%);
+      rgba(9,9,9,.96) 0%, rgba(9,9,9,.95) 32%, rgba(9,9,9,.90) 48%,
+      rgba(9,9,9,.76) 68%, rgba(9,9,9,.66) 100%);
   }
 }
 h1{font-size:var(--d-xl); font-weight:900; text-wrap:balance}
@@ -377,7 +381,10 @@ summary::after{
     linear-gradient(var(--acento),var(--acento)) center/2.5px 100% no-repeat;
   transition:transform .2s ease;
 }
-details[open] summary::after{transform:rotate(90deg); background:linear-gradient(var(--acento),var(--acento)) center/100% 2.5px no-repeat}
+/* Abierto deja la barra VERTICAL y la gira: así termina horizontal, o sea
+   un menos. Dejando la horizontal, el giro la ponía de pie y el signo
+   quedaba como una rayita suelta que no significaba nada. */
+details[open] summary::after{transform:rotate(90deg); background:linear-gradient(var(--acento),var(--acento)) center/2.5px 100% no-repeat}
 summary:hover{color:var(--acento-texto)}
 .respuesta{padding:0 0 26px; max-width:66ch; color:var(--texto-2)}
 .respuesta em{color:var(--sutil); font-size:var(--t-sm)}
@@ -427,6 +434,9 @@ summary:hover{color:var(--acento-texto)}
   border:1px solid var(--linea); border-radius:18px;
   padding:clamp(22px,5vw,34px);
   box-shadow:0 18px 44px rgba(17,17,17,.07);
+  /* Aire por encima al llegar desde «Quiero información», para que el
+     título de la tarjeta no quede pegado al borde de la pantalla. */
+  scroll-margin-top:clamp(14px,3.5vh,34px);
 }
 /* La tarjeta vive dentro del bloque oscuro, que pinta su texto en blanco.
    Sin esto el título saldría blanco sobre blanco. */
@@ -434,8 +444,12 @@ summary:hover{color:var(--acento-texto)}
 .form-caja .sub{font-size:var(--t-sm); color:var(--sutil); margin:0 0 22px; max-width:none}
 
 /* Firma: quién es y quién te va a contactar */
-.hero-firma{display:flex; align-items:center; gap:13px; margin-top:30px}
+/* La foto se alinea con el NOMBRE, no con el centro del bloque de texto.
+   Centrando el bloque entero —tres renglones— el nombre quedaba 33 px más
+   arriba que la foto y parecía flotando sobre ella en vez de a su lado. */
+.hero-firma{display:flex; align-items:flex-start; gap:13px; margin-top:30px}
 .hero-firma .foto-mini{
+  margin-top:-15px;   /* media diferencia entre el alto de la foto y el del nombre */
   width:54px; height:54px; border-radius:50%; overflow:hidden; flex:none;
   background:var(--oscuro-2);
   box-shadow:0 0 0 1px rgba(255,255,255,.18);
@@ -468,6 +482,8 @@ summary:hover{color:var(--acento-texto)}
 .wa-flotante svg{width:32px; height:32px}
 /* Mientras el formulario está en pantalla estorba y compite con el botón Enviar. */
 .wa-flotante.oculto{opacity:0; transform:scale(.7); pointer-events:none}
+/* Se aparta mientras se baja leyendo, para no quedar encima del texto. */
+.wa-flotante.bajando{opacity:0; transform:translateY(12px) scale(.86); pointer-events:none}
 @supports(padding:max(0px)){ .wa-flotante{bottom:max(16px, env(safe-area-inset-bottom))} }
 
 .campo{margin-bottom:20px}
@@ -502,7 +518,9 @@ input[aria-invalid=true],select[aria-invalid=true]{border-color:var(--error)}
   flex:none; width:24px; height:24px; margin:1px 0 0; accent-color:var(--acento); cursor:pointer;
 }
 .consentimiento label{font-size:var(--t-sm); line-height:1.5; cursor:pointer}
-.nota-form{font-size:var(--t-xs); color:var(--sutil); margin-top:16px; line-height:1.5}
+/* Es la línea de «no vendo ni comparto tus datos»: la que más necesita
+   leerse de todo el formulario, así que no va en la letra más chica. */
+.nota-form{font-size:var(--t-sm); color:var(--texto-2); margin-top:16px; line-height:1.5}
 
 /* Grupos de opción */
 fieldset{border:0; padding:0; margin:0 0 20px; min-width:0}
@@ -528,6 +546,18 @@ legend{font-family:var(--display); font-weight:700; font-size:var(--t-sm); margi
 
 /* ── Footer ───────────────────────────────────────────── */
 footer{background:var(--fondo); padding-block:clamp(48px,9vw,72px) clamp(84px,11vw,96px); border-top:1px solid var(--linea)}
+/* En escritorio el pie se reparte en dos columnas: quién firma a la
+   izquierda, la letra legal a la derecha. Apilado ocupaba la mitad
+   izquierda y la otra mitad quedaba en blanco, como si faltara algo.
+   Cada columna va envuelta en su propio bloque para que una alta no le
+   abra huecos a la otra. */
+@media (min-width:860px){
+  footer .env{
+    display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    column-gap:clamp(40px,6vw,88px); align-items:start;
+  }
+  .pie-legal .divulgacion{margin-top:0}
+}
 .footer-nombre{font-family:var(--display); font-weight:800; font-size:var(--t-lg)}
 footer .contacto{margin:6px 0 26px; font-size:var(--t-md)}
 /* Enlace suelto, no dentro de una frase: le aplica el mínimo de 24px de
@@ -547,8 +577,13 @@ footer .contacto a{display:inline-block; padding-block:4px}
 .copy{margin-top:22px; font-size:var(--t-xs); color:var(--sutil)}
 
 /* ── Movimiento ───────────────────────────────────────── */
-.reveal{opacity:0; transform:translateY(18px); transition:opacity .55s ease, transform .55s ease}
+/* Entrada corta y con poco recorrido. A 0.55 s, quien baja rápido pillaba
+   los titulares a media opacidad y los veía grises y descoloridos: el
+   efecto se notaba más que el texto. */
+.reveal{opacity:0; transform:translateY(12px); transition:opacity .32s ease-out, transform .32s cubic-bezier(.16,1,.3,1)}
 .reveal.visible{opacity:1; transform:none}
+/* Sin JavaScript nadie añade .visible y la página entera quedaría en
+   blanco. El contenido manda sobre el efecto. */
 @media (prefers-reduced-motion:reduce){
   /* Movimiento reducido significa menos desplazamiento, no cero señales.
      Se retira todo lo que mueve cosas por la pantalla y se conservan las
@@ -563,6 +598,7 @@ footer .contacto a{display:inline-block; padding-block:4px}
   /* Fuera las transformaciones espaciales. */
   .btn:active,
   .wa-flotante:hover,
+  .wa-flotante.bajando,
   .wa-flotante.oculto{transform:none}
 
   /* El acordeón cambia de estado al instante: el signo ya se transforma
@@ -571,6 +607,7 @@ footer .contacto a{display:inline-block; padding-block:4px}
   details[open] summary::after{transition:none}
 }
 </style>
+<noscript><style>.reveal{opacity:1 !important; transform:none !important}</style></noscript>
 </head>
 <body>
 
@@ -868,7 +905,7 @@ footer .contacto a{display:inline-block; padding-block:4px}
         <div class="campo">
           <label for="ocupacion">¿Qué haces actualmente?</label>
           <input type="text" id="ocupacion" name="ocupacion" required
-                 placeholder="Construcción, restaurante, delivery…"
+                 placeholder="Construcción, restaurante…"
                  aria-describedby="err-ocupacion" enterkeyhint="next">
           <p class="error" id="err-ocupacion">Cuéntame a qué te dedicas hoy.</p>
         </div>
@@ -906,18 +943,20 @@ footer .contacto a{display:inline-block; padding-block:4px}
 
 <footer>
   <div class="env">
-    <p class="footer-nombre">Freddy Mota · General Agent</p>
-    <p class="contacto"><a href="mailto:freddy@10kmonthgroup.com">freddy@10kmonthgroup.com</a></p>
+    <div class="pie-firma">
+      <p class="footer-nombre">Freddy Mota · General Agent</p>
+      <p class="contacto"><a href="mailto:freddy@10kmonthgroup.com">freddy@10kmonthgroup.com</a></p>
+      <p class="legal">
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="https://instagram.com/freddyjmo" target="_blank" rel="noopener">Instagram @freddyjmo</a>
+      </p>
+      <p class="copy">&copy; <span id="anio">2026</span> 10k Month Group</p>
+    </div>
 
-    <p class="divulgacion">10k Month Group es la marca personal de Freddy Mota, General Agent en American Income Life a través de Carta Business Group. No es una agencia independiente.</p>
-
-    <p class="disclaimer">Los resultados individuales varían. Esta no es una oferta de empleo asalariado ni una garantía de ingreso. Posición de contratista independiente por comisión.</p>
-
-    <p class="legal">
-      <a href="privacidad.html">Política de privacidad</a>
-      <a href="https://instagram.com/freddyjmo" target="_blank" rel="noopener">Instagram @freddyjmo</a>
-    </p>
-    <p class="copy">&copy; <span id="anio">2026</span> 10k Month Group</p>
+    <div class="pie-legal">
+      <p class="divulgacion">10k Month Group es la marca personal de Freddy Mota, General Agent en American Income Life a través de Carta Business Group. No es una agencia independiente.</p>
+      <p class="disclaimer">Los resultados individuales varían. Esta no es una oferta de empleo asalariado ni una garantía de ingreso. Posición de contratista independiente por comisión.</p>
+    </div>
   </div>
 </footer>
 
@@ -1000,8 +1039,12 @@ footer .contacto a{display:inline-block; padding-block:4px}
   var irForm = document.querySelector("[data-ir-form]");
   irForm.addEventListener("click", function(ev){
     ev.preventDefault();
-    var destino = document.getElementById("formulario");
-    destino.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+    /* Se apunta a la tarjeta, no a la sección entera: centrar la sección
+       —que mide más de una pantalla— dejaba el título «Cuéntame de ti» y la
+       etiqueta del primer campo por encima del borde, y lo primero que veía
+       la persona era una caja vacía sin nada que dijera qué va ahí. */
+    var destino = document.querySelector("#formulario .form-caja");
+    destino.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     setTimeout(function(){ document.getElementById("nombre").focus({ preventScroll:true }); }, reduce ? 0 : 600);
   });
 
@@ -1104,6 +1147,17 @@ footer .contacto a{display:inline-block; padding-block:4px}
 
   /* El flotante se esconde mientras el formulario esté a la vista: ahí el botón
      Enviar es la acción que queremos, y el flotante lo tapaba. */
+  /* Y también mientras se baja leyendo: el botón es fijo y el texto llega
+     casi al borde derecho, así que tapaba frases a mitad de párrafo —entre
+     ellas el aviso de que esto no garantiza ingresos, justo el que más
+     importa que se lea. Al subir reaparece, que es cuando se busca. */
+  var ultimoY = window.scrollY;
+  window.addEventListener("scroll", function(){
+    var y = window.scrollY;
+    if(Math.abs(y - ultimoY) > 6) flotante.classList.toggle("bajando", y > ultimoY && y > 240);
+    ultimoY = y;
+  }, { passive:true });
+
   if("IntersectionObserver" in window){
     new IntersectionObserver(function(entries){
       flotante.classList.toggle("oculto", entries[0].isIntersecting);
@@ -1196,7 +1250,14 @@ footer .contacto a{display:inline-block; padding-block:4px}
     document.getElementById("exito-texto").textContent  = "Mi equipo te está escribiendo por WhatsApp ahora mismo.";
 
     form.style.display = "none";
-    document.getElementById("exito").classList.add("visible");
+    var panel = document.getElementById("exito");
+    panel.classList.add("visible");
+
+    /* Al ocultar el formulario, la página encoge y el aviso de «Listo» queda
+       por encima del borde de la pantalla: la persona confirmaba el envío y
+       lo que veía era el pie de página. Hay que traerlo a la vista; enfocar
+       sin desplazar no bastaba. */
+    panel.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
     link.focus({ preventScroll:true });
 
     evento("lead_enviado", { estado: estado, guardado: guardado });
