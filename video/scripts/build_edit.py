@@ -185,6 +185,8 @@ def main(cfg_path):
         ).stdout
     )
     # Si la pista es más corta que el vídeo se estira con atempo; si es más larga, se recorta.
+    music_start = cfg.get("music_start", 0.0)  # salta la intro suave de la pista si hace falta
+    music_dur -= music_start
     tempo = music_dur / total if music_dur < total else 1.0
     # Se normaliza a MUSIC_REF_LUFS para que los volúmenes aprobados (index.tsx) valgan con cualquier pista.
     stats = subprocess.run(
@@ -194,8 +196,9 @@ def main(cfg_path):
     measured = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", stats)[-1])
     gain = MUSIC_REF_LUFS - measured
     run([
-        "ffmpeg", "-v", "error", "-y", "-i", cfg["music"],
-        "-af", f"atempo={tempo:.5f},volume={gain:.2f}dB,alimiter=limit=0.89:level=false,afade=t=out:st={max(0, total - 1.5):.3f}:d=1.5",
+        "ffmpeg", "-v", "error", "-y", "-ss", f"{music_start:.3f}", "-i", cfg["music"],
+        "-af", f"atempo={tempo:.5f},volume={gain:.2f}dB,alimiter=limit=0.89:level=false,"
+        f"afade=t=in:d=0.25,afade=t=out:st={max(0, total - 1.5):.3f}:d=1.5",
         "-t", f"{total:.3f}", "-c:a", "aac", "-b:a", "192k", music_dst,
     ])
 
