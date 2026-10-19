@@ -25,16 +25,23 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- La hoja de fuentes no bloquea el pintado: se carga como "print" y se
-     promueve a "all" al terminar. Si el host de Google tarda o no responde,
-     la página igual pinta con la pila de sistema en vez de quedarse en blanco. -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&display=swap"
-      media="print" onload="this.media='all'; this.onload=null">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&display=swap"></noscript>
+<!-- Archivo va servida desde aquí mismo, no desde Google. Es un archivo de
+     34 KB con el alfabeto latino: ahorra dos conexiones a otro dominio,
+     quita la dependencia de un tercero y elimina el parpadeo en el que el
+     titular se pintaba con la letra del sistema y saltaba al cargar. -->
+<link rel="preload" href="fuentes/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
+/* Un solo archivo variable cubre de semibold a black. swap: si por lo que
+   sea tardara, el texto se ve de inmediato con la letra del sistema y
+   cambia al llegar, en vez de quedarse invisible. */
+@font-face{
+  font-family:'Archivo';
+  src:url('fuentes/archivo-latin.woff2') format('woff2');
+  font-weight:600 900;
+  font-style:normal;
+  font-display:swap;
+}
 /* ── Tokens ───────────────────────────────────────────── */
 :root{
   /* Paleta cálida de rango corto. Nada de blanco puro contra negro puro:
