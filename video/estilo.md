@@ -135,7 +135,7 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
 - **B-roll:** literal a la frase, cortado de la primera a la última palabra de esa frase (+0.15 s; si choca con
   el siguiente b-roll, termina donde empieza ese), sin audio, reencuadrado a 1080×1920 y sin filtro de color.
   Solo se convierte el trozo usado de cada clip. El aeropuerto de stock (120 fps) va a 0.5×.
-  Cobertura del borrador 4: 23 inserciones, el 32 % del vídeo (referencia: 40 %).
+  Cobertura del borrador 5: 27 inserciones, el 34 % del vídeo (referencia: 40 %).
 - **Fotos como b-roll:** se recortan a vertical ("cover") con un paneo lento de un sujeto a otro
   (p. ej. de un gemelo al otro) y/o un zoom del 100 al 108 % durante la frase.
 - **Audio:** voz con paso alto a 80 Hz y compresión 3:1, a −16 LUFS. La música se ajusta a la duración con
@@ -156,6 +156,16 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
   más luminosa. (Borrador 1: el ajuste de luz y tono se veía artificial.)
 - **Música más baja:** ×0.13 bajo la voz (≈ 11 dB por debajo de la voz, unos 3 dB menos que la referencia)
   y ×0.28 en el cierre. La voz siempre manda; la música es un fondo que apenas se nota.
+- **Coherencia temporal del b-roll:** cada imagen tiene que corresponder al momento de la historia que se narra.
+  Antes de los gemelos no puede aparecer nada de los gemelos (ni el portabebés con un bebé dentro): para
+  "primer hijo" y "cuidar al niño" se usan fotos con solo el primer hijo. Para los gemelos: fotos del parto
+  con los dos bebés y fotos o vídeos de cuando eran muy pequeños, en orden cronológico.
+- **El protagonista trabajando:** en "trabajando en el almacén" va el clip donde él sale colocando cajas;
+  el recorrido de la cámara alrededor de los palés se usa justo después ("distribución de alimentos").
+- **Música:** pista actual "Freedom" (inspiradora, sin copyright). Si dura más que el vídeo se recorta y se
+  funde al final; si dura menos, se estira con atempo. Siempre se normaliza a −9.3 LUFS (con limitador)
+  antes de aplicar el nivel aprobado, para que cualquier pista quede igual de baja bajo la voz.
+- **Delivery:** usar el repartidor de rojo con las cajas de pizza; el clip de la repartidora quedó descartado.
 - **Entrega:** MP4 H.264 (High, 4.1, yuv420p) + **AAC-LC 44.1 kHz estéreo 192 kbps**, `faststart`, −14 LUFS.
   Se envía como **descarga** (no en el visor del chat) y de **un archivo a la vez**. El render a 48 kHz
   enviado al visor se escuchó mudo en el dispositivo del cliente; esta configuración sí funcionó.

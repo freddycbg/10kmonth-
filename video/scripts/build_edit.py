@@ -25,6 +25,7 @@ W, H = 1080, 1920
 GRADE = "null"
 VOICE = "highpass=f=80,acompressor=threshold=-24dB:ratio=3:attack=5:release=120:makeup=4"
 TAIL_SECONDS = 1.2  # plano final que se conserva tras la última palabra
+MUSIC_REF_LUFS = -9.3  # volumen de la pista con la que se aprobó el nivel de música (borrador 2)
 
 # Encuadres (fracciones del cuadro). "cerrado" = recorte digital centrado en la cara.
 FACE = {"x": 0.72, "y": 0.31}
@@ -183,10 +184,18 @@ def main(cfg_path):
             capture_output=True, text=True, check=True,
         ).stdout
     )
-    tempo = music_dur / total
+    # Si la pista es más corta que el vídeo se estira con atempo; si es más larga, se recorta.
+    tempo = music_dur / total if music_dur < total else 1.0
+    # Se normaliza a MUSIC_REF_LUFS para que los volúmenes aprobados (index.tsx) valgan con cualquier pista.
+    stats = subprocess.run(
+        ["ffmpeg", "-hide_banner", "-nostats", "-i", cfg["music"], "-af", "ebur128", "-f", "null", "-"],
+        capture_output=True, text=True,
+    ).stderr
+    measured = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", stats)[-1])
+    gain = MUSIC_REF_LUFS - measured
     run([
         "ffmpeg", "-v", "error", "-y", "-i", cfg["music"],
-        "-af", f"atempo={tempo:.5f},afade=t=out:st={max(0, total - 1.5):.3f}:d=1.5",
+        "-af", f"atempo={tempo:.5f},volume={gain:.2f}dB,alimiter=limit=0.89:level=false,afade=t=out:st={max(0, total - 1.5):.3f}:d=1.5",
         "-t", f"{total:.3f}", "-c:a", "aac", "-b:a", "192k", music_dst,
     ])
 
@@ -207,7 +216,7 @@ def main(cfg_path):
     print(
         f"duración {total:.2f}s ({total_frames} fotogramas) · {len(segs)} tramos · "
         f"{len(shots)} planos de entrevista · {len(broll_out)} b-roll · {len(captions)} subtítulos · "
-        f"música atempo {tempo:.4f}"
+        f"música atempo {tempo:.4f}, ganancia {gain:+.1f} dB"
     )
 
 

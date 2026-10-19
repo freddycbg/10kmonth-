@@ -77,12 +77,12 @@
   },
   {
    "from": 1376,
-   "durationInFrames": 83,
+   "durationInFrames": 54,
    "framing": "cerrado"
   },
   {
-   "from": 1459,
-   "durationInFrames": 73,
+   "from": 1430,
+   "durationInFrames": 102,
    "framing": "ancho"
   },
   {
@@ -102,12 +102,12 @@
   },
   {
    "from": 1782,
-   "durationInFrames": 82,
+   "durationInFrames": 77,
    "framing": "ancho"
   },
   {
-   "from": 1864,
-   "durationInFrames": 86,
+   "from": 1859,
+   "durationInFrames": 91,
    "framing": "cerrado"
   },
   {
@@ -330,12 +330,46 @@
    "trimBefore": 0
   },
   {
-   "name": "B-roll hijo_hombros: y tuvimos nuestro primer hijo.",
+   "name": "B-roll foto_primer_hijo_recien: y tuvimos nuestro primer hijo.",
    "from": 1069,
    "durationInFrames": 56,
-   "type": "video",
-   "src": "media/hijo_hombros_80.mp4",
-   "trimBefore": 0
+   "type": "image",
+   "src": "media/foto_primer_hijo_recien.jpg",
+   "imageWidth": 1350,
+   "imageHeight": 2400,
+   "pan": {
+    "from": [
+     0.5,
+     0.5,
+     1.0
+    ],
+    "to": [
+     0.5,
+     0.55,
+     1.06
+    ]
+   }
+  },
+  {
+   "name": "B-roll foto_primer_hijo_familia: tener un hijo en el país.",
+   "from": 1430,
+   "durationInFrames": 29,
+   "type": "image",
+   "src": "media/foto_primer_hijo_familia.jpg",
+   "imageWidth": 1352,
+   "imageHeight": 2400,
+   "pan": {
+    "from": [
+     0.5,
+     0.45,
+     1.0
+    ],
+    "to": [
+     0.5,
+     0.5,
+     1.06
+    ]
+   }
   },
   {
    "name": "B-roll b1: Tomamos la decisión de poder salir de Ve",
@@ -354,44 +388,86 @@
    "trimBefore": 0
   },
   {
-   "name": "B-roll almacen_carga: Comencé trabajando en el almacén,",
+   "name": "B-roll almacen_cajas: Comencé trabajando en el almacén,",
    "from": 1715,
    "durationInFrames": 67,
    "type": "video",
-   "src": "media/almacen_carga_15.mp4",
+   "src": "media/almacen_cajas_107.mp4",
    "trimBefore": 0
   },
   {
    "name": "B-roll almacen_alimentos: todo lo que viene siendo distribución de",
    "from": 1782,
-   "durationInFrames": 82,
+   "durationInFrames": 77,
    "type": "video",
    "src": "media/almacen_alimentos_1.mp4",
    "trimBefore": 0
   },
   {
-   "name": "B-roll b5: me dedicaba a hacer deliveries, a entreg",
+   "name": "B-roll almacen_2024: como por dos años",
+   "from": 1859,
+   "durationInFrames": 43,
+   "type": "video",
+   "src": "media/almacen_2024_2.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll delivery_rojo: me dedicaba a hacer deliveries, a entreg",
    "from": 1950,
    "durationInFrames": 107,
    "type": "video",
-   "src": "media/b5_1.mp4",
+   "src": "media/delivery_rojo_3.mp4",
    "trimBefore": 0
   },
   {
-   "name": "B-roll almacen_noche: y tenía dos trabajos a la vez.",
+   "name": "B-roll almacen_carga: y tenía dos trabajos a la vez.",
    "from": 2057,
    "durationInFrames": 58,
    "type": "video",
-   "src": "media/almacen_noche_108.mp4",
+   "src": "media/almacen_carga_15.mp4",
    "trimBefore": 0
   },
   {
-   "name": "B-roll portabebes: nos organizamos para poder cuidar al niñ",
+   "name": "B-roll foto_primer_hijo_bebe: nos organizamos para poder cuidar al niñ",
    "from": 2205,
    "durationInFrames": 70,
-   "type": "video",
-   "src": "media/portabebes_2.mp4",
-   "trimBefore": 0
+   "type": "image",
+   "src": "media/foto_primer_hijo_bebe.jpg",
+   "imageWidth": 1350,
+   "imageHeight": 2400,
+   "pan": {
+    "from": [
+     0.5,
+     0.45,
+     1.0
+    ],
+    "to": [
+     0.5,
+     0.5,
+     1.06
+    ]
+   }
+  },
+  {
+   "name": "B-roll foto_parto_1: a ser padres nuevamente,",
+   "from": 2611,
+   "durationInFrames": 42,
+   "type": "image",
+   "src": "media/foto_parto_1.jpg",
+   "imageWidth": 1352,
+   "imageHeight": 2400,
+   "pan": {
+    "from": [
+     0.25,
+     0.5,
+     1.0
+    ],
+    "to": [
+     0.38,
+     0.5,
+     1.06
+    ]
+   }
   },
   {
    "name": "B-roll foto_hospital: pero esta vez de unos gemelos.",
@@ -415,9 +491,38 @@
    }
   },
   {
-   "name": "B-roll foto_gemelos: Para nosotros fue una gran bendición,",
+   "name": "B-roll foto_parto_2: Para nosotros fue una gran bendición,",
    "from": 2714,
    "durationInFrames": 78,
+   "type": "image",
+   "src": "media/foto_parto_2.jpg",
+   "imageWidth": 1352,
+   "imageHeight": 2400,
+   "pan": {
+    "from": [
+     0.28,
+     0.5,
+     1.0
+    ],
+    "to": [
+     0.5,
+     0.5,
+     1.0
+    ]
+   }
+  },
+  {
+   "name": "B-roll biberones: pero también un gran compromiso",
+   "from": 2792,
+   "durationInFrames": 43,
+   "type": "video",
+   "src": "media/biberones_2.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll foto_gemelos: que se venía adelante.",
+   "from": 2835,
+   "durationInFrames": 35,
    "type": "image",
    "src": "media/foto_gemelos.jpg",
    "imageWidth": 1800,
@@ -434,14 +539,6 @@
      1.02
     ]
    }
-  },
-  {
-   "name": "B-roll biberones: pero también un gran compromiso que se v",
-   "from": 2792,
-   "durationInFrames": 78,
-   "type": "video",
-   "src": "media/biberones_2.mp4",
-   "trimBefore": 0
   },
   {
    "name": "B-roll esposa_carrito: Mi esposa tuvo que dejar de trabajar",

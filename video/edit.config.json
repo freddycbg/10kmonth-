@@ -2,7 +2,7 @@
   "source": "input/mi-video.mov",
   "transcript": "input/transcript.json",
   "keep": "input/keep.json",
-  "music": "input/music.mp3",
+  "music": "input/music_freedom.mp3",
   "rebuild_aroll": true,
   "fixes": [
     {
@@ -62,10 +62,38 @@
       "phrase": "Luego de allí me casé"
     },
     {
-      "id": "hijo_hombros",
-      "file": "input/drive/20251129_150135.mp4",
-      "trim": 80.0,
+      "id": "foto_primer_hijo_recien",
+      "image": "input/drive2/IMG-20261017-WA0150.jpg",
+      "pan": {
+        "from": [
+          0.5,
+          0.5,
+          1.0
+        ],
+        "to": [
+          0.5,
+          0.55,
+          1.06
+        ]
+      },
       "phrase": "y tuvimos nuestro primer hijo."
+    },
+    {
+      "id": "foto_primer_hijo_familia",
+      "image": "input/drive2/IMG-20261017-WA0149.jpg",
+      "pan": {
+        "from": [
+          0.5,
+          0.45,
+          1.0
+        ],
+        "to": [
+          0.5,
+          0.5,
+          1.06
+        ]
+      },
+      "phrase": "tener un hijo en el país."
     },
     {
       "id": "b1",
@@ -81,9 +109,9 @@
       "phrase": "y llegamos aquí a los Estados Unidos."
     },
     {
-      "id": "almacen_carga",
-      "file": "input/drive/20260402_091605.mp4",
-      "trim": 15.0,
+      "id": "almacen_cajas",
+      "file": "input/drive/20260515_105947.mp4",
+      "trim": 107.0,
       "phrase": "Comencé trabajando en el almacén,"
     },
     {
@@ -93,22 +121,56 @@
       "phrase": "todo lo que viene siendo distribución de alimentos"
     },
     {
-      "id": "b5",
-      "file": "input/broll/b5.mp4",
-      "trim": 1.0,
+      "id": "almacen_2024",
+      "file": "input/drive2/20240608_013819.mp4",
+      "trim": 2.0,
+      "phrase": "como por dos años"
+    },
+    {
+      "id": "delivery_rojo",
+      "file": "input/drive2/9460247-uhd_2160_3840_24fps.mp4",
+      "trim": 3.0,
       "phrase": "me dedicaba a hacer deliveries, a entregar paquetes de Amazon"
     },
     {
-      "id": "almacen_noche",
-      "file": "input/drive/20260515_105947.mp4",
-      "trim": 108.0,
+      "id": "almacen_carga",
+      "file": "input/drive/20260402_091605.mp4",
+      "trim": 15.0,
       "phrase": "y tenía dos trabajos a la vez."
     },
     {
-      "id": "portabebes",
-      "file": "input/drive/20251129_150135.mp4",
-      "trim": 2.0,
+      "id": "foto_primer_hijo_bebe",
+      "image": "input/drive2/IMG-20261017-WA0153.jpg",
+      "pan": {
+        "from": [
+          0.5,
+          0.45,
+          1.0
+        ],
+        "to": [
+          0.5,
+          0.5,
+          1.06
+        ]
+      },
       "phrase": "nos organizamos para poder cuidar al niño."
+    },
+    {
+      "id": "foto_parto_1",
+      "image": "input/drive2/20251103_083435.jpg",
+      "pan": {
+        "from": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "to": [
+          0.38,
+          0.5,
+          1.06
+        ]
+      },
+      "phrase": "a ser padres nuevamente,"
     },
     {
       "id": "foto_hospital",
@@ -128,6 +190,29 @@
       "phrase": "pero esta vez de unos gemelos."
     },
     {
+      "id": "foto_parto_2",
+      "image": "input/drive2/20251103_090535.jpg",
+      "pan": {
+        "from": [
+          0.28,
+          0.5,
+          1.0
+        ],
+        "to": [
+          0.5,
+          0.5,
+          1.0
+        ]
+      },
+      "phrase": "Para nosotros fue una gran bendición,"
+    },
+    {
+      "id": "biberones",
+      "file": "input/drive/20251122_170408.mp4",
+      "trim": 2.0,
+      "phrase": "pero también un gran compromiso"
+    },
+    {
       "id": "foto_gemelos",
       "image": "input/drive/20260309_172616.jpg",
       "pan": {
@@ -142,13 +227,7 @@
           1.02
         ]
       },
-      "phrase": "Para nosotros fue una gran bendición,"
-    },
-    {
-      "id": "biberones",
-      "file": "input/drive/20251122_170408.mp4",
-      "trim": 2.0,
-      "phrase": "pero también un gran compromiso que se venía adelante."
+      "phrase": "que se venía adelante."
     },
     {
       "id": "esposa_carrito",
