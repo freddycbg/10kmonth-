@@ -168,6 +168,8 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
 - **La música se oye desde el primer segundo:** si la pista empieza con una intro suave, se salta hasta donde
   entra con cuerpo (`music_start` en edit.config.json; "Freedom" empieza en el segundo 12) con un fundido
   de entrada de 0.25 s. Nunca debe parecer que el vídeo arranca sin música.
+  Si la pista crece (intro más suave que el resto), la mezcla lo compensa: ×0.22 los primeros 20 s y bajada
+  progresiva hasta ×0.13 a los 45 s, para que la música quede a unos 15 dB de la voz desde el inicio.
 - **Delivery:** usar el repartidor de rojo con las cajas de pizza; el clip de la repartidora quedó descartado.
 - **Entrega:** MP4 H.264 (High, 4.1, yuv420p) + **AAC-LC 44.1 kHz estéreo 192 kbps**, `faststart`, −14 LUFS.
   Se envía como **descarga** (no en el visor del chat) y de **un archivo a la vez**. El render a 48 kHz

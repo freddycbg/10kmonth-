@@ -16,6 +16,11 @@ import edit from "./edit.json";
 // Música unos 11 dB por debajo de la voz; sube al terminar de hablar (estilo.md, preferencias).
 const MUSIC_UNDER_VOICE = 0.13;
 const MUSIC_END = 0.28;
+// La pista crece: sus primeros ~40 s son 5–7 dB más suaves. Se compensa arrancando más alto y bajando
+// al nivel aprobado mientras la canción sube sola, para que la música se oiga desde el primer segundo.
+const MUSIC_INTRO = 0.22;
+const MUSIC_INTRO_HOLD_S = 20;
+const MUSIC_INTRO_SETTLE_S = 45;
 
 export const Edit: React.FC = () => {
   const { fps } = useVideoConfig();
@@ -69,8 +74,22 @@ export const Edit: React.FC = () => {
         volume={(f) =>
           interpolate(
             f,
-            [0, 10, edit.lastWordFrame, edit.lastWordFrame + 15],
-            [0.05, MUSIC_UNDER_VOICE, MUSIC_UNDER_VOICE, MUSIC_END],
+            [
+              0,
+              10,
+              MUSIC_INTRO_HOLD_S * fps,
+              MUSIC_INTRO_SETTLE_S * fps,
+              edit.lastWordFrame,
+              edit.lastWordFrame + 15,
+            ],
+            [
+              0.05,
+              MUSIC_INTRO,
+              MUSIC_INTRO,
+              MUSIC_UNDER_VOICE,
+              MUSIC_UNDER_VOICE,
+              MUSIC_END,
+            ],
             { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
           )
         }
