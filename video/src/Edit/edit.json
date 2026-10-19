@@ -12,12 +12,12 @@
  "shots": [
   {
    "from": 0,
-   "durationInFrames": 98,
+   "durationInFrames": 101,
    "framing": "ancho"
   },
   {
-   "from": 98,
-   "durationInFrames": 70,
+   "from": 101,
+   "durationInFrames": 67,
    "framing": "cerrado"
   },
   {
@@ -42,212 +42,212 @@
   },
   {
    "from": 664,
-   "durationInFrames": 135,
+   "durationInFrames": 132,
    "framing": "ancho"
   },
   {
-   "from": 799,
-   "durationInFrames": 202,
+   "from": 796,
+   "durationInFrames": 55,
    "framing": "cerrado"
+  },
+  {
+   "from": 851,
+   "durationInFrames": 150,
+   "framing": "ancho"
   },
   {
    "from": 1001,
    "durationInFrames": 68,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 1069,
    "durationInFrames": 56,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 1125,
    "durationInFrames": 104,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 1229,
    "durationInFrames": 60,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 1289,
    "durationInFrames": 87,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 1376,
    "durationInFrames": 54,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 1430,
    "durationInFrames": 102,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 1532,
    "durationInFrames": 55,
-   "framing": "cerrado"
-  },
-  {
-   "from": 1587,
-   "durationInFrames": 123,
    "framing": "ancho"
   },
   {
-   "from": 1710,
-   "durationInFrames": 72,
+   "from": 1587,
+   "durationInFrames": 128,
    "framing": "cerrado"
+  },
+  {
+   "from": 1715,
+   "durationInFrames": 67,
+   "framing": "ancho"
   },
   {
    "from": 1782,
    "durationInFrames": 77,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 1859,
    "durationInFrames": 91,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 1950,
    "durationInFrames": 61,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 2011,
-   "durationInFrames": 55,
-   "framing": "cerrado"
-  },
-  {
-   "from": 2066,
-   "durationInFrames": 134,
+   "durationInFrames": 104,
    "framing": "ancho"
   },
   {
-   "from": 2200,
-   "durationInFrames": 75,
+   "from": 2115,
+   "durationInFrames": 90,
    "framing": "cerrado"
+  },
+  {
+   "from": 2205,
+   "durationInFrames": 70,
+   "framing": "ancho"
   },
   {
    "from": 2275,
    "durationInFrames": 296,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 2571,
    "durationInFrames": 82,
-   "framing": "cerrado"
-  },
-  {
-   "from": 2653,
-   "durationInFrames": 59,
    "framing": "ancho"
   },
   {
-   "from": 2712,
-   "durationInFrames": 80,
+   "from": 2653,
+   "durationInFrames": 61,
    "framing": "cerrado"
+  },
+  {
+   "from": 2714,
+   "durationInFrames": 78,
+   "framing": "ancho"
   },
   {
    "from": 2792,
    "durationInFrames": 78,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 2870,
    "durationInFrames": 77,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 2947,
    "durationInFrames": 59,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3006,
-   "durationInFrames": 63,
-   "framing": "cerrado"
-  },
-  {
-   "from": 3069,
-   "durationInFrames": 90,
+   "durationInFrames": 71,
    "framing": "ancho"
   },
   {
-   "from": 3159,
-   "durationInFrames": 122,
+   "from": 3077,
+   "durationInFrames": 83,
    "framing": "cerrado"
+  },
+  {
+   "from": 3160,
+   "durationInFrames": 121,
+   "framing": "ancho"
   },
   {
    "from": 3281,
    "durationInFrames": 166,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3447,
    "durationInFrames": 122,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 3569,
    "durationInFrames": 60,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3629,
    "durationInFrames": 75,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 3704,
    "durationInFrames": 73,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3777,
    "durationInFrames": 81,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 3858,
    "durationInFrames": 78,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 3936,
    "durationInFrames": 57,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 3993,
    "durationInFrames": 57,
-   "framing": "ancho"
+   "framing": "cerrado"
   },
   {
    "from": 4050,
    "durationInFrames": 97,
-   "framing": "cerrado"
+   "framing": "ancho"
   },
   {
    "from": 4147,
    "durationInFrames": 82,
-   "framing": "ancho"
-  },
-  {
-   "from": 4229,
-   "durationInFrames": 210,
    "framing": "cerrado"
   },
   {
-   "from": 4439,
-   "durationInFrames": 56,
+   "from": 4229,
+   "durationInFrames": 214,
    "framing": "ancho"
   },
   {
-   "from": 4495,
-   "durationInFrames": 54,
+   "from": 4443,
+   "durationInFrames": 106,
    "framing": "cerrado"
   },
   {
@@ -319,6 +319,14 @@
    "durationInFrames": 105,
    "type": "video",
    "src": "media/b10_3.mp4",
+   "trimBefore": 0
+  },
+  {
+   "name": "B-roll estudiando: También en Venezuela estaba estudiando c",
+   "from": 713,
+   "durationInFrames": 83,
+   "type": "video",
+   "src": "media/estudiando_1.mp4",
    "trimBefore": 0
   },
   {

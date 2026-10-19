@@ -56,6 +56,12 @@
       "phrase": "Tuvimos que cerrar por diferentes situaciones del país"
     },
     {
+      "id": "estudiando",
+      "file": "input/broll/b11.mp4",
+      "trim": 1.0,
+      "phrase": "También en Venezuela estaba estudiando contaduría pública"
+    },
+    {
       "id": "b7",
       "file": "input/broll/b7.mp4",
       "trim": 0.0,

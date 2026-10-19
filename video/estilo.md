@@ -135,7 +135,7 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
 - **B-roll:** literal a la frase, cortado de la primera a la última palabra de esa frase (+0.15 s; si choca con
   el siguiente b-roll, termina donde empieza ese), sin audio, reencuadrado a 1080×1920 y sin filtro de color.
   Solo se convierte el trozo usado de cada clip. El aeropuerto de stock (120 fps) va a 0.5×.
-  Cobertura del borrador 5: 27 inserciones, el 34 % del vídeo (referencia: 40 %).
+  Cobertura del borrador 7: 28 inserciones, el 35 % del vídeo (referencia: 40 %).
 - **Fotos como b-roll:** se recortan a vertical ("cover") con un paneo lento de un sujeto a otro
   (p. ej. de un gemelo al otro) y/o un zoom del 100 al 108 % durante la frase.
 - **Audio:** voz con paso alto a 80 Hz y compresión 3:1, a −16 LUFS. La música se ajusta a la duración con
@@ -171,6 +171,10 @@ Paleta del set: blancos, beige y madera clara, con traje oscuro como punto de co
   Si la pista crece (intro más suave que el resto), la mezcla lo compensa: ×0.22 los primeros 20 s y bajada
   progresiva hasta ×0.13 a los 45 s, para que la música quede a unos 15 dB de la voz desde el inicio.
 - **Delivery:** usar el repartidor de rojo con las cajas de pizza; el clip de la repartidora quedó descartado.
+- **Sin saltos de zoom pegados al b-roll:** no se cambia de encuadre (ancho/cerrado) a menos de 0.5 s de la
+  entrada o salida de un b-roll; el cambio se hace justo cuando el b-roll lo tapa. Ningún tramo de entrevista
+  visible puede durar menos de 0.5 s (borrador 6: un zoom de 3 fotogramas antes de "soy de Venezuela").
+- **"Estudiando":** clip del estudiante con cuaderno en un banco (b11) en "estaba estudiando contaduría pública".
 - **Entrega:** MP4 H.264 (High, 4.1, yuv420p) + **AAC-LC 44.1 kHz estéreo 192 kbps**, `faststart`, −14 LUFS.
   Se envía como **descarga** (no en el visor del chat) y de **un archivo a la vez**. El render a 48 kHz
   enviado al visor se escuchó mudo en el dispositivo del cliente; esta configuración sí funcionó.

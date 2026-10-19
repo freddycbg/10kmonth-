@@ -31,6 +31,7 @@ MUSIC_REF_LUFS = -9.3  # volumen de la pista con la que se aprobó el nivel de m
 FACE = {"x": 0.72, "y": 0.31}
 CLOSE_SCALE = 1.45
 MIN_SHOT = 1.8  # s: no se cambia de encuadre antes de este tiempo
+BROLL_GUARD = 0.5  # s: margen sin cambios de encuadre alrededor de cada b-roll
 
 # Subtítulos: bloques por frase, 1 línea.
 MAX_CHARS = 30
@@ -153,6 +154,16 @@ def main(cfg_path):
     for b in broll_out:
         joins += [b["from"], b["from"] + b["durationInFrames"]]
     joins = sorted(set(j for j in joins if 0 < j < total_frames))
+    # Sin cambios de encuadre a menos de BROLL_GUARD de la entrada o salida de un b-roll: si no, el plano
+    # nuevo se ve unos fotogramas y parece un salto de zoom (p. ej. en "soy de Venezuela", segundo 3).
+    guard = round(BROLL_GUARD * FPS)
+    starts = [b["from"] for b in broll_out]
+    ends = [b["from"] + b["durationInFrames"] for b in broll_out]
+    joins = [
+        j for j in joins
+        if j in starts or j in ends
+        or not (any(0 < s - j < guard for s in starts) or any(0 < j - e < guard for e in ends))
+    ]
     shots, cur_start, framing = [], 0, "ancho"
     for j in joins:
         if (j - cur_start) / FPS >= MIN_SHOT:
