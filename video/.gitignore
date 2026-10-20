@@ -5,3 +5,7 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Medios del proyecto de Jorge (pesados, no se versionan; el código está en la rama video-edit-estilo)
+input/
+public/
