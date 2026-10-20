@@ -1,0 +1,657 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 699,
+ "arollFrames": 624,
+ "lastWordFrame": 609,
+ "shots": [
+  {
+   "from": 0,
+   "durationInFrames": 49,
+   "framing": "ancho",
+   "face": {
+    "x": 0.54,
+    "y": 0.43
+   },
+   "closeScale": 1.6
+  },
+  {
+   "from": 49,
+   "durationInFrames": 80,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.54,
+    "y": 0.43
+   },
+   "closeScale": 1.6
+  },
+  {
+   "from": 129,
+   "durationInFrames": 90,
+   "framing": "ancho",
+   "face": {
+    "x": 0.54,
+    "y": 0.43
+   },
+   "closeScale": 1.6
+  },
+  {
+   "from": 219,
+   "durationInFrames": 45,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.59,
+    "y": 0.31
+   },
+   "closeScale": 1.35
+  },
+  {
+   "from": 264,
+   "durationInFrames": 49,
+   "framing": "ancho",
+   "face": {
+    "x": 0.59,
+    "y": 0.31
+   },
+   "closeScale": 1.35
+  },
+  {
+   "from": 313,
+   "durationInFrames": 33,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.59,
+    "y": 0.31
+   },
+   "closeScale": 1.35
+  },
+  {
+   "from": 346,
+   "durationInFrames": 96,
+   "framing": "ancho",
+   "face": {
+    "x": 0.41,
+    "y": 0.33
+   },
+   "closeScale": 1.35
+  },
+  {
+   "from": 442,
+   "durationInFrames": 91,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.48,
+    "y": 0.36
+   },
+   "closeScale": 1.6
+  },
+  {
+   "from": 533,
+   "durationInFrames": 54,
+   "framing": "ancho",
+   "face": {
+    "x": 0.48,
+    "y": 0.36
+   },
+   "closeScale": 1.6
+  },
+  {
+   "from": 587,
+   "durationInFrames": 37,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.48,
+    "y": 0.36
+   },
+   "closeScale": 1.6
+  }
+ ],
+ "broll": [
+  {
+   "name": "B-roll aereo_capitolio: y estamos abriendo oportunidades",
+   "src": "media/aereo_capitolio_42.mp4",
+   "from": 49,
+   "durationInFrames": 39,
+   "leak": false
+  },
+  {
+   "name": "B-roll equipo_alfombra: para todas aquellas personas",
+   "src": "media/equipo_alfombra_3.23.mp4",
+   "from": 88,
+   "durationInFrames": 41,
+   "leak": false
+  },
+  {
+   "name": "B-roll traje_caminando: que quieran cambiar su vida",
+   "src": "media/traje_caminando_5.1.mp4",
+   "from": 129,
+   "durationInFrames": 36,
+   "leak": false
+  },
+  {
+   "name": "B-roll escenario: a través de la industria financiera.",
+   "src": "media/escenario_6.3.mp4",
+   "from": 165,
+   "durationInFrames": 54,
+   "leak": false
+  },
+  {
+   "name": "B-roll agobiado: Olvídate del mito",
+   "src": "media/agobiado_13.mp4",
+   "from": 219,
+   "durationInFrames": 20,
+   "leak": false
+  },
+  {
+   "name": "B-roll estatua: que para poder triunfar",
+   "src": "media/estatua_2.mp4",
+   "from": 239,
+   "durationInFrames": 25,
+   "leak": false
+  },
+  {
+   "name": "B-roll calle: en este país",
+   "src": "media/calle_1.mp4",
+   "from": 264,
+   "durationInFrames": 15,
+   "leak": false
+  },
+  {
+   "name": "B-roll aula: tienes que tener una carrera",
+   "src": "media/aula_1.mp4",
+   "from": 279,
+   "durationInFrames": 34,
+   "leak": false
+  },
+  {
+   "name": "B-roll founders_club: Las oportunidades existen",
+   "src": "media/founders_club_2.1.mp4",
+   "from": 346,
+   "durationInFrames": 37,
+   "leak": true
+  },
+  {
+   "name": "B-roll tarjeta_carta: y queremos mostrarte cómo funciona.",
+   "src": "media/tarjeta_carta_0.97.mp4",
+   "from": 383,
+   "durationInFrames": 59,
+   "leak": false
+  },
+  {
+   "name": "B-roll descapotable: Tu próximo capítulo puede empezar",
+   "src": "media/descapotable_16.3.mp4",
+   "from": 533,
+   "durationInFrames": 54,
+   "leak": true
+  }
+ ],
+ "captions": [
+  {
+   "from": 52,
+   "durationInFrames": 22,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0
+    },
+    {
+     "text": "ESTAMOS",
+     "at": 4
+    },
+    {
+     "text": "ABRIENDO",
+     "at": 12
+    }
+   ]
+  },
+  {
+   "from": 74,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "OPORTUNIDADES",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "from": 88,
+   "durationInFrames": 30,
+   "words": [
+    {
+     "text": "PARA",
+     "at": 0
+    },
+    {
+     "text": "TODAS",
+     "at": 7
+    },
+    {
+     "text": "AQUELLAS",
+     "at": 17
+    }
+   ]
+  },
+  {
+   "from": 118,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "PERSONAS",
+     "at": 0
+    },
+    {
+     "text": "QUE",
+     "at": 11
+    },
+    {
+     "text": "QUIERAN",
+     "at": 16
+    }
+   ]
+  },
+  {
+   "from": 169,
+   "durationInFrames": 11,
+   "words": [
+    {
+     "text": "A",
+     "at": 0
+    },
+    {
+     "text": "TRAVÉS",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "from": 180,
+   "durationInFrames": 21,
+   "words": [
+    {
+     "text": "DE",
+     "at": 0
+    },
+    {
+     "text": "LA",
+     "at": 4
+    },
+    {
+     "text": "INDUSTRIA",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "from": 201,
+   "durationInFrames": 18,
+   "words": [
+    {
+     "text": "FINANCIERA",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "from": 243,
+   "durationInFrames": 11,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0
+    },
+    {
+     "text": "PARA",
+     "at": 0
+    },
+    {
+     "text": "PODER",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "from": 254,
+   "durationInFrames": 10,
+   "words": [
+    {
+     "text": "TRIUNFAR",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "from": 264,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "EN",
+     "at": 0
+    },
+    {
+     "text": "ESTE",
+     "at": 4
+    },
+    {
+     "text": "PAÍS",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "from": 279,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "TIENES",
+     "at": 0
+    },
+    {
+     "text": "QUE",
+     "at": 7
+    },
+    {
+     "text": "TENER",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "from": 294,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "UNA",
+     "at": 0
+    },
+    {
+     "text": "CARRERA",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "from": 310,
+   "durationInFrames": 8,
+   "words": [
+    {
+     "text": "O",
+     "at": 0
+    },
+    {
+     "text": "HABLAR",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "from": 318,
+   "durationInFrames": 28,
+   "words": [
+    {
+     "text": "UN",
+     "at": 0
+    },
+    {
+     "text": "INGLÉS",
+     "at": 5
+    },
+    {
+     "text": "FLUIDO",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "from": 346,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "LAS",
+     "at": 0
+    },
+    {
+     "text": "OPORTUNIDADES",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "from": 369,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "EXISTEN",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "from": 383,
+   "durationInFrames": 27,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0
+    },
+    {
+     "text": "QUEREMOS",
+     "at": 3
+    },
+    {
+     "text": "MOSTRARTE",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "from": 410,
+   "durationInFrames": 35,
+   "words": [
+    {
+     "text": "CÓMO",
+     "at": 0
+    },
+    {
+     "text": "FUNCIONA",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "from": 476,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "AQUÍ",
+     "at": 0
+    },
+    {
+     "text": "ABAJO",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "from": 489,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0
+    },
+    {
+     "text": "TE",
+     "at": 4
+    },
+    {
+     "text": "ENVIAREMOS",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "from": 505,
+   "durationInFrames": 28,
+   "words": [
+    {
+     "text": "TODA",
+     "at": 0
+    },
+    {
+     "text": "LA",
+     "at": 7
+    },
+    {
+     "text": "INFORMACIÓN",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "from": 533,
+   "durationInFrames": 31,
+   "words": [
+    {
+     "text": "TU",
+     "at": 0
+    },
+    {
+     "text": "PRÓXIMO",
+     "at": 6
+    },
+    {
+     "text": "CAPÍTULO",
+     "at": 16
+    }
+   ]
+  },
+  {
+   "from": 564,
+   "durationInFrames": 20,
+   "words": [
+    {
+     "text": "PUEDE",
+     "at": 0
+    },
+    {
+     "text": "EMPEZAR",
+     "at": 10
+    }
+   ]
+  }
+ ],
+ "titles": [
+  {
+   "name": "Título: NOS ENCONTRAMOS EN VIRGINIA",
+   "from": 0,
+   "durationInFrames": 52,
+   "top": [
+    {
+     "text": "NOS",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "ENCONTRAMOS",
+     "accent": false,
+     "at": 6
+    },
+    {
+     "text": "EN",
+     "accent": true,
+     "at": 18
+    }
+   ],
+   "big": "VIRGINIA",
+   "bigAt": 30,
+   "y": 0.13
+  },
+  {
+   "name": "Título: CAMBIAR SU VIDA",
+   "from": 143,
+   "durationInFrames": 26,
+   "top": [
+    {
+     "text": "CAMBIAR",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "SU",
+     "accent": true,
+     "at": 8
+    }
+   ],
+   "big": "VIDA",
+   "bigAt": 15,
+   "y": 0.14
+  },
+  {
+   "name": "Título: OLVÍDATE DEL MITO",
+   "from": 219,
+   "durationInFrames": 24,
+   "top": [
+    {
+     "text": "OLVÍDATE",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "DEL",
+     "accent": true,
+     "at": 11
+    }
+   ],
+   "big": "MITO",
+   "bigAt": 15,
+   "y": 0.14
+  },
+  {
+   "name": "Título: COMENTA 10K",
+   "from": 445,
+   "durationInFrames": 31,
+   "top": [
+    {
+     "text": "COMENTA",
+     "accent": false,
+     "at": 0
+    }
+   ],
+   "big": "10K",
+   "bigAt": 10,
+   "y": 0.14
+  },
+  {
+   "name": "Título: EL DÍA DE HOY",
+   "from": 584,
+   "durationInFrames": 38,
+   "top": [
+    {
+     "text": "EL",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "DÍA",
+     "accent": false,
+     "at": 12
+    },
+    {
+     "text": "DE",
+     "accent": true,
+     "at": 16
+    }
+   ],
+   "big": "HOY",
+   "bigAt": 19,
+   "y": 0.14
+  }
+ ],
+ "flashes": [
+  219,
+  445,
+  624
+ ]
+}

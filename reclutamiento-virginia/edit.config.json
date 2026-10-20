@@ -1,0 +1,175 @@
+{
+  "source": "input/material/mi-video.mp4",
+  "transcript": "input/transcript.json",
+  "keep": "input/keep.json",
+  "music": "input/material/musica_alegre_32.mp3",
+  "music_drop": 33.5,
+  "music_drop_at": "Virginia",
+  "rebuild_aroll": true,
+  "fixes": [],
+  "takes": [
+    {
+      "until": 9.1,
+      "face": [
+        0.54,
+        0.43
+      ],
+      "close": 1.6
+    },
+    {
+      "until": 13.8,
+      "face": [
+        0.59,
+        0.31
+      ],
+      "close": 1.35
+    },
+    {
+      "until": 17.2,
+      "face": [
+        0.41,
+        0.33
+      ],
+      "close": 1.35
+    },
+    {
+      "until": 999,
+      "face": [
+        0.48,
+        0.36
+      ],
+      "close": 1.6
+    }
+  ],
+  "titles": [
+    {
+      "phrase": "Nos encontramos en Virginia",
+      "top": "NOS ENCONTRAMOS EN",
+      "accent": [
+        "EN"
+      ],
+      "big": "VIRGINIA",
+      "y": 0.13
+    },
+    {
+      "phrase": "cambiar su vida",
+      "top": "CAMBIAR SU",
+      "accent": [
+        "SU"
+      ],
+      "big": "VIDA",
+      "y": 0.14
+    },
+    {
+      "phrase": "Olvídate del mito",
+      "top": "OLVÍDATE DEL",
+      "accent": [
+        "DEL"
+      ],
+      "big": "MITO",
+      "y": 0.14
+    },
+    {
+      "phrase": "Comenta 10K",
+      "top": "COMENTA",
+      "accent": [],
+      "big": "10K",
+      "y": 0.14
+    },
+    {
+      "phrase": "el día de hoy.",
+      "top": "EL DÍA DE",
+      "accent": [
+        "DE"
+      ],
+      "big": "HOY",
+      "y": 0.14
+    }
+  ],
+  "flash_at": [
+    "Olvídate del mito",
+    "Comenta 10K"
+  ],
+  "broll": [
+    {
+      "id": "aereo_capitolio",
+      "file": "input/material/14950038_2160_3840_60fps.mp4",
+      "trim": 42.0,
+      "phrase": "y estamos abriendo oportunidades"
+    },
+    {
+      "id": "equipo_alfombra",
+      "file": "input/material/1020.mp4",
+      "trim": 3.23,
+      "cx": 0.45,
+      "phrase": "para todas aquellas personas",
+      "speed": 0.55
+    },
+    {
+      "id": "traje_caminando",
+      "file": "input/material/1020.mp4",
+      "trim": 5.1,
+      "cx": 0.42,
+      "phrase": "que quieran cambiar su vida",
+      "speed": 0.9
+    },
+    {
+      "id": "escenario",
+      "file": "input/material/1020.mp4",
+      "trim": 6.3,
+      "cx": 0.72,
+      "phrase": "a través de la industria financiera.",
+      "speed": 1.0
+    },
+    {
+      "id": "agobiado",
+      "file": "input/material/8526496-uhd_2160_4096_25fps.mp4",
+      "trim": 13.0,
+      "phrase": "Olvídate del mito"
+    },
+    {
+      "id": "estatua",
+      "file": "input/material/14650904_1080_1920_60fps.mp4",
+      "trim": 2.0,
+      "phrase": "que para poder triunfar"
+    },
+    {
+      "id": "calle",
+      "file": "input/material/5957461-uhd_2160_3840_24fps.mp4",
+      "trim": 1.0,
+      "phrase": "en este país"
+    },
+    {
+      "id": "aula",
+      "file": "input/material/15861438_2160_3840_30fps.mp4",
+      "trim": 1.0,
+      "phrase": "tienes que tener una carrera"
+    },
+    {
+      "id": "founders_club",
+      "file": "input/material/1020.mp4",
+      "trim": 2.1,
+      "cx": 0.6,
+      "leak": true,
+      "phrase": "Las oportunidades existen",
+      "speed": 0.9
+    },
+    {
+      "id": "tarjeta_carta",
+      "file": "input/material/1020.mp4",
+      "trim": 0.97,
+      "cx": 0.58,
+      "phrase": "y queremos mostrarte cómo funciona.",
+      "speed": 0.55
+    },
+    {
+      "id": "descapotable",
+      "file": "input/material/1020.mp4",
+      "trim": 16.3,
+      "cx": 0.5,
+      "leak": true,
+      "phrase": "Tu próximo capítulo puede empezar",
+      "speed": 0.6
+    }
+  ]
+}

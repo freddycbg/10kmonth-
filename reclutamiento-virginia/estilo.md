@@ -123,21 +123,40 @@ Hay **tres estilos de texto**, todos en el mismo **amarillo dorado de la marca**
 
 ---
 
-## 8. Adaptación para el vídeo de reclutamiento (Virginia)
+## 8. Adaptación para el vídeo de reclutamiento (Virginia), valores del borrador 1
 
-> Combina la autoridad y los títulos de R1 con la energía y los subtítulos de R2. Valores **[SUPOSICIÓN]**
-> hasta que se aprueben.
+> Combina la autoridad y los títulos de R1 con la energía y los subtítulos de R2. Código en
+> `scripts/build_edit.py`, `edit.config.json` y `src/Edit/`.
 
-- **Formato:** 1080×1920, 30 fps.
-- **Subtítulos:** estilo 2a en todo el vídeo, palabra a palabra, Poppins ExtraBold #F1C440, mayúscula de 64 px,
-  centro al 74 % del alto, bloques de hasta 3 palabras / 22 caracteres.
-- **Frases clave:** estilo 2b (Anton, palabra gigante en dorado) en 3–5 momentos: el gancho, las cifras o
-  beneficios, y la llamada a la acción. Mientras sale un título 2b, se ocultan los subtítulos 2a.
-- **Ritmo:** cortar silencios > 0.3 s; un plano cada 1–3 s alternando orador, punch-in y b-roll.
-- **Transiciones:** cortes secos + destello blanco o fuga de luz cálida en los cambios de bloque.
-- **Música:** la pista entra más adelante porque empieza muy bajita (indicación del cliente); por debajo de
-  la voz y subiendo en los tramos sin voz y en el cierre. Máster a −14 LUFS.
-- **Cierre:** logo de Carta Business Group (si se proporciona) sobre fondo desenfocado o blanco, 2–3 s.
+- **Formato:** 1080×1920, 30 fps. Duración: 20.8 s de orador + 2.5 s de tarjeta final = 23.3 s.
+- **Silencios:** se cortan los ≥ 0.3 s por debajo de **−36 dB** (el ruido de fondo exterior está en −43 dB);
+  0.08 s de margen tras la voz y 0.10 s antes. Quedan 6 tramos (24.2 s → 20.8 s).
+- **Subtítulos (2a):** Poppins ExtraBold, mayúsculas, **#F1C440**, **66 px**, centro al **74 %** del alto,
+  bloques de **≤ 3 palabras / 22 caracteres**. Cortan en puntuación y antes de "y/pero/porque", y nunca terminan
+  en palabra débil (de, la, en, este…). Cada palabra entra con un muelle de 6 fotogramas (escala 70→100 %,
+  sube 22 px). Sombra reforzada `0 3px 14px rgba(0,0,0,.65)` para leerse sobre fondos claros.
+- **Títulos cinéticos (2b):** Anton. Línea 1 de **62 px** en blanco con la palabra de acento en **#F7C14A**,
+  construida palabra a palabra al ritmo de la voz; palabra gigante en #F7C14A ajustada al **85 % del ancho**
+  (máx. 330 px), entra en 6 fotogramas con desenfoque 18→0 px y escala 125→100 %. Margen izquierdo del 7.5 %,
+  arriba (13–14 % del alto) para no tapar la cara. Se retira cuando empieza la siguiente frase.
+  Títulos: NOS ENCONTRAMOS EN **VIRGINIA** · CAMBIAR SU **VIDA** · OLVÍDATE DEL **MITO** · COMENTA **10K** ·
+  EL DÍA DE **HOY**. Mientras hay título no hay subtítulo.
+- **Orador:** se alterna plano ancho y punch-in en cada cambio de toma o de b-roll (mínimo 1.5 s por plano,
+  ningún cambio a < 0.5 s de un b-roll). Punch-in: ×1.6 en las tomas de cuerpo entero (Capitolio, césped) y
+  ×1.35 en el banco, con la cara al 50 % / 34 %. Acercamiento continuo del 5 % por plano. Colores originales.
+- **B-roll:** 11 inserciones, **66 % del tiempo del orador** (como R2), literal a la frase. El vídeo horizontal
+  `1020` se recorta a vertical en la posición de cada sujeto (`cx`) y **nunca empieza encima de uno de sus
+  cortes** (0.95, 2.08, 3.22, 4.0, 5.08, 6.27, 7.03, 8.12, 13.23, 14.5, 16.28 s); los planos que se quedan cortos
+  van a cámara lenta suave (0.55–0.9×, el original es de 60 fps).
+- **Transiciones:** destello blanco de 6 fotogramas en "Olvídate del mito", "Comenta 10K" y al entrar la tarjeta
+  final. Fuga de luz cálida de 18 fotogramas al entrar "Las oportunidades existen" y "Tu próximo capítulo".
+  Hecha con degradados CSS, porque el efecto WebGL de `@remotion/effects` no se dibuja en el render sin GPU.
+- **Música:** "Música de fondo alegre #32". Se salta su intro suave (0–32 s) y arranca en el crescendo
+  (32.5 s), de modo que **el golpe de 33.5 s cae en la palabra "Virginia"** (1.0 s), donde entra el primer
+  título gigante. Normalizada a −9.3 LUFS, a ×0.2 bajo la voz (≈ 7 dB por debajo) y ×0.55 en la tarjeta final.
+  Máster a −14 LUFS.
+- **Cierre:** tarjeta blanca de 2.5 s con el logo de Carta Business Group y "VIRGINIA" debajo. El logo está
+  extraído del final de R2 (sustituir por el PNG original cuando esté disponible).
 
 ---
 
