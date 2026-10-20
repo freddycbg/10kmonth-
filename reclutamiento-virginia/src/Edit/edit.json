@@ -5,6 +5,7 @@
  "durationInFrames": 699,
  "arollFrames": 624,
  "lastWordFrame": 609,
+ "introDropFrame": 30,
  "shots": [
   {
    "from": 0,
@@ -18,7 +19,7 @@
   },
   {
    "from": 49,
-   "durationInFrames": 80,
+   "durationInFrames": 42,
    "framing": "cerrado",
    "face": {
     "x": 0.54,
@@ -27,9 +28,29 @@
    "closeScale": 1.6
   },
   {
-   "from": 129,
-   "durationInFrames": 90,
+   "from": 91,
+   "durationInFrames": 38,
    "framing": "ancho",
+   "face": {
+    "x": 0.54,
+    "y": 0.43
+   },
+   "closeScale": 1.6
+  },
+  {
+   "from": 129,
+   "durationInFrames": 36,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.54,
+    "y": 0.43
+   },
+   "closeScale": 1.6
+  },
+  {
+   "from": 165,
+   "durationInFrames": 54,
+   "framing": "cerrado",
    "face": {
     "x": 0.54,
     "y": 0.43
@@ -39,7 +60,7 @@
   {
    "from": 219,
    "durationInFrames": 45,
-   "framing": "cerrado",
+   "framing": "ancho",
    "face": {
     "x": 0.59,
     "y": 0.31
@@ -49,7 +70,7 @@
   {
    "from": 264,
    "durationInFrames": 49,
-   "framing": "ancho",
+   "framing": "cerrado",
    "face": {
     "x": 0.59,
     "y": 0.31
@@ -59,7 +80,7 @@
   {
    "from": 313,
    "durationInFrames": 33,
-   "framing": "cerrado",
+   "framing": "ancho",
    "face": {
     "x": 0.59,
     "y": 0.31
@@ -68,7 +89,17 @@
   },
   {
    "from": 346,
-   "durationInFrames": 96,
+   "durationInFrames": 37,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.41,
+    "y": 0.33
+   },
+   "closeScale": 1.35
+  },
+  {
+   "from": 383,
+   "durationInFrames": 59,
    "framing": "ancho",
    "face": {
     "x": 0.41,
@@ -78,8 +109,18 @@
   },
   {
    "from": 442,
-   "durationInFrames": 91,
+   "durationInFrames": 47,
    "framing": "cerrado",
+   "face": {
+    "x": 0.48,
+    "y": 0.36
+   },
+   "closeScale": 1.6
+  },
+  {
+   "from": 489,
+   "durationInFrames": 44,
+   "framing": "ancho",
    "face": {
     "x": 0.48,
     "y": 0.36
@@ -112,21 +153,7 @@
    "name": "B-roll aereo_capitolio: y estamos abriendo oportunidades",
    "src": "media/aereo_capitolio_42.mp4",
    "from": 49,
-   "durationInFrames": 39,
-   "leak": false
-  },
-  {
-   "name": "B-roll equipo_alfombra: para todas aquellas personas",
-   "src": "media/equipo_alfombra_3.23.mp4",
-   "from": 88,
-   "durationInFrames": 41,
-   "leak": false
-  },
-  {
-   "name": "B-roll traje_caminando: que quieran cambiar su vida",
-   "src": "media/traje_caminando_5.1.mp4",
-   "from": 129,
-   "durationInFrames": 36,
+   "durationInFrames": 42,
    "leak": false
   },
   {

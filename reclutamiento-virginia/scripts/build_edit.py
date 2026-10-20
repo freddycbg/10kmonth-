@@ -26,7 +26,8 @@ TAIL_SECONDS = 0.5   # plano del orador que se conserva tras la última palabra
 END_CARD_SECONDS = 2.5  # tarjeta final con el logo (estilo.md §1)
 MUSIC_REF_LUFS = -9.3  # la música se normaliza aquí; los volúmenes se fijan en index.tsx
 
-MIN_SHOT = 1.5     # s: no se cambia de encuadre antes de este tiempo
+MIN_SHOT = 1.0     # s: no se cambia de encuadre antes de este tiempo (ritmo dinámico)
+MAX_SHOT = 2.0     # s: un tramo visible del orador más largo se parte con un punch-in
 BROLL_GUARD = 0.5  # s: margen sin cambios de encuadre alrededor de cada b-roll
 
 # Subtítulos palabra a palabra (estilo.md §2a): bloques de hasta 3 palabras / 22 caracteres.
@@ -172,6 +173,31 @@ def main(cfg_path):
             framing = "cerrado" if framing == "ancho" else "ancho"
     shots = [s for s in shots if s["durationInFrames"] > 0]
 
+    # Ritmo dinámico: ningún tramo visible del orador dura más de MAX_SHOT; se parte en el inicio de una palabra
+    # cercana a la mitad y alterna ancho/punch-in (el punch-in entra animado, ver ARoll.tsx).
+    covered = np.zeros(aroll_frames + 1, bool)
+    for b in broll_out:
+        covered[b["from"]:b["from"] + b["durationInFrames"]] = True
+    word_frames = [frame(w["os"]) for w in words]
+    split = []
+    for sh in shots:
+        a, z = sh["from"], sh["from"] + sh["durationInFrames"]
+        vis = [f for f in range(a, z) if not covered[f]]
+        if sh["from"] == 0 or len(vis) < MAX_SHOT * FPS or vis[-1] - vis[0] + 1 != len(vis):
+            split.append(sh)
+            continue
+        v0, v1 = vis[0], vis[-1]
+        cands = [f for f in word_frames if v0 + 0.8 * FPS <= f <= v1 - 0.8 * FPS]
+        if not cands:
+            split.append(sh)
+            continue
+        cut = min(cands, key=lambda f: abs(f - (v0 + v1) / 2))
+        first = dict(sh, durationInFrames=cut - a)
+        second = dict(sh, **{"from": cut, "durationInFrames": z - cut,
+                             "framing": "cerrado" if sh["framing"] == "ancho" else "ancho"})
+        split += [first, second]
+    shots = split
+
     # --- Títulos cinéticos (estilo.md §2b) ----------------------------------
     titles, title_words = [], set()
     for tt in cfg.get("titles", []):
@@ -238,6 +264,8 @@ def main(cfg_path):
         "durationInFrames": total_frames,
         "arollFrames": aroll_frames,
         "lastWordFrame": frame(words[-1]["oe"]),
+        # Zoom fuerte del gancho: pega en la palabra del golpe de música (estilo.md, preferencias).
+        "introDropFrame": frame(anchor),
         "shots": shots, "broll": broll_out, "captions": captions, "titles": titles,
         "flashes": flashes,
     }

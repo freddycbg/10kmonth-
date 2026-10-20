@@ -98,22 +98,6 @@
       "phrase": "y estamos abriendo oportunidades"
     },
     {
-      "id": "equipo_alfombra",
-      "file": "input/material/1020.mp4",
-      "trim": 3.23,
-      "cx": 0.45,
-      "phrase": "para todas aquellas personas",
-      "speed": 0.55
-    },
-    {
-      "id": "traje_caminando",
-      "file": "input/material/1020.mp4",
-      "trim": 5.1,
-      "cx": 0.42,
-      "phrase": "que quieran cambiar su vida",
-      "speed": 0.9
-    },
-    {
       "id": "escenario",
       "file": "input/material/1020.mp4",
       "trim": 6.3,

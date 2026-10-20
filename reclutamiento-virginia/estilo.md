@@ -123,7 +123,7 @@ Hay **tres estilos de texto**, todos en el mismo **amarillo dorado de la marca**
 
 ---
 
-## 8. Adaptación para el vídeo de reclutamiento (Virginia), valores del borrador 1
+## 8. Adaptación para el vídeo de reclutamiento (Virginia), valores del borrador 1 (ver cambios en Preferencias)
 
 > Combina la autoridad y los títulos de R1 con la energía y los subtítulos de R2. Código en
 > `scripts/build_edit.py`, `edit.config.json` y `src/Edit/`.
@@ -165,3 +165,14 @@ Hay **tres estilos de texto**, todos en el mismo **amarillo dorado de la marca**
 - **Música:** no ponerla desde el comienzo, porque la pista empieza muy bajita; entra más adelante
   (indicación del cliente antes del primer borrador).
 - **Tono:** vídeo de reclutamiento para la agencia en Virginia; tiene que verse **muy profesional**.
+- **Ritmo dinámico:** cambio de encuadre como mínimo cada 1.0 s y ningún tramo visible del orador de más de
+  **2.0 s**; si es más largo, se parte en el inicio de una palabra con un punch-in. Los punch-ins **entran
+  animados** (zoom del 80 al 100 % de su escala en 5 fotogramas, con desenfoque de 4 px), no en corte seco.
+  Resultado del borrador 2: todos los tramos visibles del orador duran entre 1.1 y 1.6 s.
+- **Arranque sin saturar de b-roll:** en los primeros ~7 s, como máximo 2 b-roll (borrador 1 tenía 4 seguidos y
+  se veía "muy cargado"). Que se vea al orador en el gancho y en la presentación. Cobertura total: 54 %.
+- **Zoom fuerte en el gancho** ("Nos encontramos en Virginia"): acercamiento lento del 100 al 114 %, aceleración
+  brusca hasta ×2.05 justo en la palabra del golpe de música, con desenfoque de movimiento según la velocidad
+  (máx. 7 px), rebote a ×1.9 y sacudida de 3 fotogramas (±20 px). La cara termina centrada al 50 % del alto,
+  debajo del título gigante.
+
