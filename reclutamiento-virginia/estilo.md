@@ -175,4 +175,15 @@ Hay **tres estilos de texto**, todos en el mismo **amarillo dorado de la marca**
   brusca hasta ×2.05 justo en la palabra del golpe de música, con desenfoque de movimiento según la velocidad
   (máx. 7 px), rebote a ×1.9 y sacudida de 3 fotogramas (±20 px). La cara termina centrada al 50 % del alto,
   debajo del título gigante.
+- **Palabra gigante estable, sin parpadeo:** su tamaño se calcula en `build_edit.py` con las métricas reales de
+  Anton (fontTools), nunca midiendo en el render: con 4 pestañas en paralelo algunas medían antes de cargar la
+  fuente y "VIRGINIA"/"MITO" cambiaban de tamaño fotograma a fotograma (borrador 2). Entrada suave de 8
+  fotogramas (desenfoque 16→0 px, escala 118→100 %, curva ease-out) y **mínimo 0.9 s en pantalla**.
+- **Subtítulos y títulos a la vez:** las palabras del título no llevan subtítulo, pero las que se dicen después
+  sí aparecen abajo aunque la palabra gigante siga arriba. Ninguna palabra se queda sin mostrar (70/70) y ningún
+  bloque dura menos de 8 fotogramas.
+- **Frase de la llamada a la acción completa en el título:** COMENTA / **10K** / AQUÍ ABAJO (tercera línea
+  blanca que aparece al decirla).
+- **B-roll del hombre agobiado** (manos en la cabeza): en "o hablar un inglés fluido", después del aula
+  universitaria, no en "Olvídate del mito". En "Olvídate del mito" se ve al orador con el título MITO.
 

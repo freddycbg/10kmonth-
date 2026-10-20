@@ -69,7 +69,7 @@
   },
   {
    "from": 264,
-   "durationInFrames": 49,
+   "durationInFrames": 46,
    "framing": "cerrado",
    "face": {
     "x": 0.59,
@@ -78,8 +78,8 @@
    "closeScale": 1.35
   },
   {
-   "from": 313,
-   "durationInFrames": 33,
+   "from": 310,
+   "durationInFrames": 36,
    "framing": "ancho",
    "face": {
     "x": 0.59,
@@ -160,14 +160,7 @@
    "name": "B-roll escenario: a través de la industria financiera.",
    "src": "media/escenario_6.3.mp4",
    "from": 165,
-   "durationInFrames": 54,
-   "leak": false
-  },
-  {
-   "name": "B-roll agobiado: Olvídate del mito",
-   "src": "media/agobiado_13.mp4",
-   "from": 219,
-   "durationInFrames": 20,
+   "durationInFrames": 56,
    "leak": false
   },
   {
@@ -188,7 +181,14 @@
    "name": "B-roll aula: tienes que tener una carrera",
    "src": "media/aula_1.mp4",
    "from": 279,
-   "durationInFrames": 34,
+   "durationInFrames": 31,
+   "leak": false
+  },
+  {
+   "name": "B-roll agobiado: o hablar un inglés fluido.",
+   "src": "media/agobiado_13.mp4",
+   "from": 310,
+   "durationInFrames": 36,
    "leak": false
   },
   {
@@ -215,8 +215,8 @@
  ],
  "captions": [
   {
-   "from": 52,
-   "durationInFrames": 22,
+   "from": 49,
+   "durationInFrames": 25,
    "words": [
     {
      "text": "Y",
@@ -224,11 +224,11 @@
     },
     {
      "text": "ESTAMOS",
-     "at": 4
+     "at": 7
     },
     {
      "text": "ABRIENDO",
-     "at": 12
+     "at": 15
     }
    ]
   },
@@ -279,8 +279,8 @@
    ]
   },
   {
-   "from": 169,
-   "durationInFrames": 11,
+   "from": 165,
+   "durationInFrames": 15,
    "words": [
     {
      "text": "A",
@@ -288,7 +288,7 @@
     },
     {
      "text": "TRAVÉS",
-     "at": 5
+     "at": 9
     }
    ]
   },
@@ -321,8 +321,8 @@
    ]
   },
   {
-   "from": 243,
-   "durationInFrames": 11,
+   "from": 239,
+   "durationInFrames": 15,
    "words": [
     {
      "text": "QUE",
@@ -330,11 +330,11 @@
     },
     {
      "text": "PARA",
-     "at": 0
+     "at": 3
     },
     {
      "text": "PODER",
-     "at": 5
+     "at": 9
     }
    ]
   },
@@ -487,20 +487,6 @@
    ]
   },
   {
-   "from": 476,
-   "durationInFrames": 13,
-   "words": [
-    {
-     "text": "AQUÍ",
-     "at": 0
-    },
-    {
-     "text": "ABAJO",
-     "at": 6
-    }
-   ]
-  },
-  {
    "from": 489,
    "durationInFrames": 16,
    "words": [
@@ -573,7 +559,7 @@
   {
    "name": "Título: NOS ENCONTRAMOS EN VIRGINIA",
    "from": 0,
-   "durationInFrames": 52,
+   "durationInFrames": 57,
    "top": [
     {
      "text": "NOS",
@@ -593,12 +579,14 @@
    ],
    "big": "VIRGINIA",
    "bigAt": 30,
+   "bottom": [],
+   "bigSize": 296.7,
    "y": 0.13
   },
   {
    "name": "Título: CAMBIAR SU VIDA",
    "from": 143,
-   "durationInFrames": 26,
+   "durationInFrames": 42,
    "top": [
     {
      "text": "CAMBIAR",
@@ -613,12 +601,14 @@
    ],
    "big": "VIDA",
    "bigAt": 15,
+   "bottom": [],
+   "bigSize": 330,
    "y": 0.14
   },
   {
    "name": "Título: OLVÍDATE DEL MITO",
    "from": 219,
-   "durationInFrames": 24,
+   "durationInFrames": 42,
    "top": [
     {
      "text": "OLVÍDATE",
@@ -633,12 +623,14 @@
    ],
    "big": "MITO",
    "bigAt": 15,
+   "bottom": [],
+   "bigSize": 330,
    "y": 0.14
   },
   {
    "name": "Título: COMENTA 10K",
    "from": 445,
-   "durationInFrames": 31,
+   "durationInFrames": 48,
    "top": [
     {
      "text": "COMENTA",
@@ -648,12 +640,23 @@
    ],
    "big": "10K",
    "bigAt": 10,
+   "bottom": [
+    {
+     "text": "AQUÍ",
+     "at": 27
+    },
+    {
+     "text": "ABAJO",
+     "at": 37
+    }
+   ],
+   "bigSize": 330,
    "y": 0.14
   },
   {
    "name": "Título: EL DÍA DE HOY",
    "from": 584,
-   "durationInFrames": 38,
+   "durationInFrames": 46,
    "top": [
     {
      "text": "EL",
@@ -673,6 +676,8 @@
    ],
    "big": "HOY",
    "bigAt": 19,
+   "bottom": [],
+   "bigSize": 330,
    "y": 0.14
   }
  ],

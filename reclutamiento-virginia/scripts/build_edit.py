@@ -41,6 +41,11 @@ WEAK_END = {
 }
 BREAK_BEFORE = {"y", "pero", "porque"}  # abren bloque nuevo si el actual ya tiene alguna palabra
 TITLE_HOLD = 0.45  # s que el título cinético sigue en pantalla tras su última palabra
+TITLE_BIG_MIN = 0.9  # s mínimos de la palabra gigante en pantalla (borrador 2: "MITO" duraba 0.3 s)
+MIN_CAPTION_FRAMES = 8  # un bloque de subtítulo visible menos tiempo se une al siguiente
+TITLE_FONT_FILE = "public/fonts/anton-latin-400-normal.woff2"
+BIG_WIDTH = 0.85   # ancho máximo de la palabra gigante (fracción del cuadro)
+BIG_MAX_SIZE = 330
 
 
 def run(cmd):
@@ -204,41 +209,73 @@ def main(cfg_path):
         first, last = find_phrase(words, tt["phrase"])
         ws = words[first:last + 1]
         title_words.update(range(first, last + 1))
+        # La palabra gigante es "big" (por defecto la última); las palabras posteriores forman una línea inferior.
+        big_i = next((k for k, w in enumerate(ws) if norm(w["w"]) == norm(tt["big"])), len(ws) - 1)
+        after = ws[big_i + 1:]
+        ws_main = ws[:big_i + 1]
         f0 = frame(ws[0]["os"])
         # Se mantiene TITLE_HOLD tras su última palabra, pero se retira cuando empieza la siguiente frase
         # hablada (si no, tapa el principio del subtítulo siguiente).
         hold_end = ws[-1]["oe"] + TITLE_HOLD
         if last + 1 < len(words):
             hold_end = min(hold_end, max(ws[-1]["oe"] + 0.12, words[last + 1]["os"]))
+        # ...pero la palabra gigante se queda al menos TITLE_BIG_MIN (los subtítulos esperan).
+        hold_end = max(hold_end, ws_main[-1]["os"] + TITLE_BIG_MIN)
         f1 = frame(hold_end)
         top = tt["top"].split()
         # Cada palabra de la línea superior aparece cuando se dice; la grande, con su palabra.
         top_words = [{"text": tx, "accent": tx in tt.get("accent", []),
-                      "at": frame(ws[min(k, len(ws) - 2)]["os"]) - f0} for k, tx in enumerate(top)]
+                      "at": frame(ws_main[min(k, max(0, len(ws_main) - 2))]["os"]) - f0} for k, tx in enumerate(top)]
+        bottom = [{"text": w["w"].upper().strip(".,"), "at": frame(w["os"]) - f0} for w in after]
         titles.append({"name": f"Título: {tt['top']} {tt['big']}", "from": f0, "durationInFrames": f1 - f0,
-                       "top": top_words, "big": tt["big"], "bigAt": frame(ws[-1]["os"]) - f0,
-                       "y": tt.get("y", 0.2)})
+                       "top": top_words, "big": tt["big"], "bigAt": frame(ws_main[-1]["os"]) - f0,
+                       "bottom": bottom,
+                       "bigSize": big_font_size(tt["big"], root), "y": tt.get("y", 0.2)})
 
     # --- Subtítulos palabra a palabra (estilo.md §2a) -----------------------
     title_ranges = [(t["from"], t["from"] + t["durationInFrames"]) for t in titles]
     free = [w for i, w in enumerate(words) if i not in title_words]
     blocks = chunk(free)
     captions = []
+    carry = []  # palabras de un bloque que quedó entero bajo un título: pasan al principio del siguiente
     for k, blk in enumerate(blocks):
+        if carry and len(" ".join(w["w"] for w in carry + blk)) <= MAX_CHARS + 4:
+            blk = carry + blk
+        carry = []
         f0 = frame(blk[0]["os"])
         end = blk[-1]["oe"] + 0.3
         if k + 1 < len(blocks):
             end = min(end, blocks[k + 1][0]["os"])
         f1 = min(frame(end), aroll_frames)
-        for a, b in title_ranges:  # nunca a la vez que un título
-            if a <= f0 < b:
-                f0 = b
-            if f0 < a < f1:
+        # Las palabras del título no llevan subtítulo, pero las que se dicen después sí, aunque la palabra
+        # gigante siga en pantalla (va arriba y el subtítulo abajo): así no se pierde ninguna (borrador 3).
+        for a, _b in title_ranges:
+            if f0 < a < f1:  # un bloque no invade el comienzo de un título
                 f1 = a
+        if f1 <= f0:
+            carry = blk
+            continue
         if f1 > f0:
             captions.append({"from": f0, "durationInFrames": f1 - f0,
                              "words": [{"text": w["w"].upper().strip(".,"), "at": max(0, frame(w["os"]) - f0)}
                                        for w in blk]})
+    # Un bloque que queda demasiado corto (lo recortó un título) se une al siguiente si cabe: "TRIUNFAR" +
+    # "EN ESTE PAÍS" -> "TRIUNFAR EN ESTE PAÍS".
+    merged = []
+    for c in captions:
+        if merged and merged[-1]["durationInFrames"] < MIN_CAPTION_FRAMES:
+            p_ = merged[-1]
+            text = " ".join(w["text"] for w in p_["words"] + c["words"])
+            if c["from"] - (p_["from"] + p_["durationInFrames"]) <= 2 and len(text) <= MAX_CHARS + 4:
+                shift = c["from"] - p_["from"]
+                p_["words"] += [dict(w, at=w["at"] + shift) for w in c["words"]]
+                p_["durationInFrames"] = c["from"] + c["durationInFrames"] - p_["from"]
+                continue
+            merged.pop()  # no cabe: se descarta (sus palabras ya se dijeron bajo el título)
+        merged.append(c)
+    if merged and merged[-1]["durationInFrames"] < MIN_CAPTION_FRAMES:
+        merged.pop()
+    captions = merged
 
     # --- Transiciones ---------------------------------------------------------
     flashes = [frame(words[find_phrase(words, p)[0]]["os"]) for p in cfg.get("flash_at", [])]
@@ -275,6 +312,20 @@ def main(cfg_path):
           f"{len(segs)} tramos · {len(shots)} planos · {len(broll_out)} b-roll ({cover:.0f}%) · "
           f"{len(captions)} bloques de subtítulo · {len(titles)} títulos · música desde {music_start:.2f}s "
           f"(golpe en {anchor:.2f}s), ganancia {gain:+.1f} dB")
+
+
+def big_font_size(text, root):
+    """Tamaño de la palabra gigante calculado con las métricas reales de Anton (fontTools).
+
+    Medirlo durante el render daba tamaños distintos según la pestaña (algunas medían antes de que cargara la
+    fuente) y la palabra parpadeaba cambiando de tamaño (borrador 2). Aquí es fijo y determinista.
+    """
+    from fontTools.ttLib import TTFont
+
+    font = TTFont(os.path.join(root, TITLE_FONT_FILE))
+    cmap, hmtx, upm = font.getBestCmap(), font["hmtx"], font["head"].unitsPerEm
+    em = sum(hmtx[cmap[ord(c)]][0] for c in text) / upm
+    return round(min(BIG_MAX_SIZE, W * BIG_WIDTH / em), 1)
 
 
 def apply_fixes(words, fixes):

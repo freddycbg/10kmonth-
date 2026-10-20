@@ -81,7 +81,14 @@ export const Edit: React.FC = () => {
           durationInFrames={t.durationInFrames}
           layout="none"
         >
-          <KineticTitle top={t.top} big={t.big} bigAt={t.bigAt} y={t.y} />
+          <KineticTitle
+            top={t.top}
+            big={t.big}
+            bigAt={t.bigAt}
+            bigSize={t.bigSize}
+            bottom={t.bottom}
+            y={t.y}
+          />
         </Sequence>
       ))}
 
