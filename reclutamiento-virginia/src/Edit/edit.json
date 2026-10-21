@@ -487,6 +487,20 @@
    ]
   },
   {
+   "from": 472,
+   "durationInFrames": 17,
+   "words": [
+    {
+     "text": "AQUÍ",
+     "at": 0
+    },
+    {
+     "text": "ABAJO",
+     "at": 10
+    }
+   ]
+  },
+  {
    "from": 489,
    "durationInFrames": 16,
    "words": [
@@ -581,7 +595,8 @@
    "bigAt": 30,
    "bottom": [],
    "bigSize": 296.7,
-   "y": 0.13
+   "y": 0.225,
+   "align": "center"
   },
   {
    "name": "Título: CAMBIAR SU VIDA",
@@ -603,7 +618,8 @@
    "bigAt": 15,
    "bottom": [],
    "bigSize": 330,
-   "y": 0.14
+   "y": 0.156,
+   "align": "center"
   },
   {
    "name": "Título: OLVÍDATE DEL MITO",
@@ -625,12 +641,13 @@
    "bigAt": 15,
    "bottom": [],
    "bigSize": 330,
-   "y": 0.14
+   "y": 0.106,
+   "align": "center"
   },
   {
    "name": "Título: COMENTA 10K",
    "from": 445,
-   "durationInFrames": 48,
+   "durationInFrames": 37,
    "top": [
     {
      "text": "COMENTA",
@@ -640,18 +657,10 @@
    ],
    "big": "10K",
    "bigAt": 10,
-   "bottom": [
-    {
-     "text": "AQUÍ",
-     "at": 27
-    },
-    {
-     "text": "ABAJO",
-     "at": 37
-    }
-   ],
+   "bottom": [],
    "bigSize": 330,
-   "y": 0.14
+   "y": 0.145,
+   "align": "center"
   },
   {
    "name": "Título: EL DÍA DE HOY",
@@ -678,7 +687,8 @@
    "bigAt": 19,
    "bottom": [],
    "bigSize": 330,
-   "y": 0.14
+   "y": 0.135,
+   "align": "center"
   }
  ],
  "flashes": [

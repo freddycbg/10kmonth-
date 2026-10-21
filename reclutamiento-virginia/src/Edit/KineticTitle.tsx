@@ -25,7 +25,11 @@ export const KineticTitle: React.FC<{
   bigSize: number;
   bottom: { text: string; at: number }[];
   y: number;
-}> = ({ top, big, bigAt, bigSize, bottom, y }) => {
+  align: string;
+}> = ({ top, big, bigAt, bigSize, bottom, y, align }) => {
+  const center = align === "center";
+  // Separación entre palabras: centrado se reparte a los dos lados para no descentrar la línea.
+  const gap = center ? "0 0.11em" : "0 0.22em 0 0";
   const frame = useCurrentFrame();
   const { width, height, durationInFrames } = useVideoConfig();
 
@@ -53,6 +57,7 @@ export const KineticTitle: React.FC<{
           right: width * MARGIN_X,
           fontFamily: TITLE_FONT,
           textTransform: "uppercase",
+          textAlign: center ? "center" : "left",
           textShadow: SHADOW,
         }}
       >
@@ -70,7 +75,7 @@ export const KineticTitle: React.FC<{
                 key={i}
                 style={{
                   display: "inline-block",
-                  marginRight: "0.22em",
+                  margin: gap,
                   color: w.accent ? TITLE_GOLD : "#FFFFFF",
                   opacity: k,
                   transform: `translateY(${(1 - k) * 14}px)`,
@@ -88,7 +93,7 @@ export const KineticTitle: React.FC<{
               lineHeight: 0.98,
               color: TITLE_GOLD,
               whiteSpace: "nowrap",
-              transformOrigin: "left center",
+              transformOrigin: center ? "center center" : "left center",
               opacity: bigIn,
               filter: bigIn < 1 ? `blur(${(1 - bigIn) * 16}px)` : undefined,
               transform: `scale(${1.18 - 0.18 * bigIn})`,
@@ -112,7 +117,7 @@ export const KineticTitle: React.FC<{
                 key={i}
                 style={{
                   display: "inline-block",
-                  marginRight: "0.22em",
+                  margin: gap,
                   opacity: k,
                   transform: `translateY(${(1 - k) * -14}px)`,
                 }}

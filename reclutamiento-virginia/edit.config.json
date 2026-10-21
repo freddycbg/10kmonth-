@@ -5,7 +5,7 @@
   "music": "input/material/musica_alegre_32.mp3",
   "music_drop": 33.5,
   "music_drop_at": "Virginia",
-  "rebuild_aroll": true,
+  "rebuild_aroll": false,
   "fixes": [],
   "takes": [
     {
@@ -49,7 +49,8 @@
         "EN"
       ],
       "big": "VIRGINIA",
-      "y": 0.13
+      "y": 0.225,
+      "align": "center"
     },
     {
       "phrase": "cambiar su vida",
@@ -58,7 +59,8 @@
         "SU"
       ],
       "big": "VIDA",
-      "y": 0.14
+      "y": 0.156,
+      "align": "center"
     },
     {
       "phrase": "Olvídate del mito",
@@ -67,14 +69,16 @@
         "DEL"
       ],
       "big": "MITO",
-      "y": 0.14
+      "y": 0.106,
+      "align": "center"
     },
     {
-      "phrase": "Comenta 10K aquí abajo",
+      "phrase": "Comenta 10K",
       "top": "COMENTA",
       "accent": [],
       "big": "10K",
-      "y": 0.14
+      "y": 0.145,
+      "align": "center"
     },
     {
       "phrase": "el día de hoy.",
@@ -83,7 +87,8 @@
         "DE"
       ],
       "big": "HOY",
-      "y": 0.14
+      "y": 0.135,
+      "align": "center"
     }
   ],
   "flash_at": [

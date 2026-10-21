@@ -9,6 +9,8 @@ import {
 import { ARoll } from "./ARoll";
 import edit from "./edit.json";
 import { EndCard } from "./EndCard";
+import fg from "./fg.json";
+import { Foreground } from "./Foreground";
 import "./fonts";
 import { KineticTitle } from "./KineticTitle";
 import { Flash, LightLeakOverlay } from "./Transitions";
@@ -61,18 +63,6 @@ export const Edit: React.FC = () => {
           </Sequence>
         ))}
 
-      {edit.captions.map((c, i) => (
-        <Sequence
-          key={`cap-${i}`}
-          name={`Subtítulo: ${c.words.map((w) => w.text).join(" ")}`}
-          from={c.from}
-          durationInFrames={c.durationInFrames}
-          layout="none"
-        >
-          <WordCaption words={c.words} />
-        </Sequence>
-      ))}
-
       {edit.titles.map((t, i) => (
         <Sequence
           key={`title-${i}`}
@@ -88,7 +78,33 @@ export const Edit: React.FC = () => {
             bigSize={t.bigSize}
             bottom={t.bottom}
             y={t.y}
+            align={t.align}
           />
+        </Sequence>
+      ))}
+
+      {/* El orador recortado tapa los títulos: quedan detrás de su cabeza. Los subtítulos van delante. */}
+      {(fg.runs as number[][]).map(([a, b]) => (
+        <Sequence
+          key={`fg-${a}`}
+          name={`Recorte del orador ${a}-${b}`}
+          from={a}
+          durationInFrames={b - a + 1}
+          premountFor={fps}
+        >
+          <Foreground from={a} to={b} />
+        </Sequence>
+      ))}
+
+      {edit.captions.map((c, i) => (
+        <Sequence
+          key={`cap-${i}`}
+          name={`Subtítulo: ${c.words.map((w) => w.text).join(" ")}`}
+          from={c.from}
+          durationInFrames={c.durationInFrames}
+          layout="none"
+        >
+          <WordCaption words={c.words} />
         </Sequence>
       ))}
 

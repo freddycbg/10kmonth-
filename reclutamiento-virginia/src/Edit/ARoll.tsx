@@ -18,8 +18,8 @@ const CLOSE_FACE_TARGET = { x: 0.5, y: 0.34 };
 const PUNCH_FRAMES = 5;
 
 // Zoom fuerte del gancho ("Nos encontramos en Virginia"): acercamiento lento, aceleración brusca que pega en el
-// golpe de música sobre "Virginia", rebote y sacudida corta. La cara queda centrada, bajo el título gigante.
-const INTRO_FACE_TARGET = { x: 0.5, y: 0.5 };
+// golpe de música sobre "Virginia", rebote y sacudida corta. La cabeza queda delante del título gigante.
+const INTRO_FACE_TARGET = { x: 0.5, y: 0.42 };
 const INTRO_SCALE = 1.95;
 
 const findShot = (frame: number): Shot => {
@@ -46,8 +46,11 @@ const introScale = (frame: number, drop: number, end: number) =>
     },
   );
 
-export const ARoll: React.FC = () => {
-  const frame = useCurrentFrame();
+// Transformación del A-roll en el fotograma actual. La comparten el vídeo base y el recorte del orador
+// (Foreground.tsx), que tiene que coincidir píxel a píxel. scripts/mattes.py lleva una copia en Python.
+// offset: inicio de la Sequence que lo usa, para trabajar siempre con el fotograma global.
+export const useArollStyle = (offset = 0): React.CSSProperties => {
+  const frame = useCurrentFrame() + offset;
   const { width, height } = useVideoConfig();
   const shot = findShot(frame);
   const local = frame - shot.from;
@@ -105,17 +108,18 @@ export const ARoll: React.FC = () => {
   const x0 = clamp(shot.face.x * width - target.x * viewW, 0, width - viewW);
   const y0 = clamp(shot.face.y * height - target.y * viewH, 0, height - viewH);
 
+  return {
+    width,
+    height,
+    transformOrigin: "0 0",
+    transform: `translate(${shakeX}px, ${shakeY}px) scale(${scale}) translate(${-x0}px, ${-y0}px)`,
+    filter: blur > 0.2 ? `blur(${blur}px)` : undefined,
+  };
+};
+
+export const ARoll: React.FC = () => {
+  const style = useArollStyle();
   return (
-    <Video
-      name="Orador (A-roll)"
-      src={staticFile("media/aroll.mp4")}
-      style={{
-        width,
-        height,
-        transformOrigin: "0 0",
-        transform: `translate(${shakeX}px, ${shakeY}px) scale(${scale}) translate(${-x0}px, ${-y0}px)`,
-        filter: blur > 0.2 ? `blur(${blur}px)` : undefined,
-      }}
-    />
+    <Video name="Orador (A-roll)" src={staticFile("media/aroll.mp4")} style={style} />
   );
 };

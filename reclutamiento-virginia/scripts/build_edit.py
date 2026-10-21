@@ -230,7 +230,8 @@ def main(cfg_path):
         titles.append({"name": f"Título: {tt['top']} {tt['big']}", "from": f0, "durationInFrames": f1 - f0,
                        "top": top_words, "big": tt["big"], "bigAt": frame(ws_main[-1]["os"]) - f0,
                        "bottom": bottom,
-                       "bigSize": big_font_size(tt["big"], root), "y": tt.get("y", 0.2)})
+                       "bigSize": big_font_size(tt["big"], root), "y": tt.get("y", 0.2),
+                       "align": tt.get("align", "left")})
 
     # --- Subtítulos palabra a palabra (estilo.md §2a) -----------------------
     title_ranges = [(t["from"], t["from"] + t["durationInFrames"]) for t in titles]
