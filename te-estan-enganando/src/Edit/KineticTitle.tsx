@@ -16,7 +16,7 @@ const TOP_SIZE = 62;
 const BIG_IN_FRAMES = 8;
 const SHADOW = "0 4px 18px rgba(0,0,0,0.35)";
 const ACCENTED = /[ÁÉÍÓÚÑÜ]/;
-const ACCENT_PAD = 0.1;
+const ACCENT_PAD = 0.2;
 
 type TopWord = { text: string; accent: boolean; at: number };
 

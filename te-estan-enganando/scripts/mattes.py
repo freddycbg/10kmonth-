@@ -89,7 +89,7 @@ def title_box(t, local):
     top = t["y"] * H
     bottom = top + TOP_SIZE * 1.05
     if local >= t["bigAt"]:
-        accent = 0.1 if any(ch in "ÁÉÍÓÚÑÜ" for ch in t["big"]) else 0  # ACCENT_PAD en KineticTitle.tsx
+        accent = 0.2 if any(ch in "ÁÉÍÓÚÑÜ" for ch in t["big"]) else 0  # ACCENT_PAD en KineticTitle.tsx
         bottom += t["bigSize"] * (0.98 + accent) + (TOP_SIZE * 1.05 if t["bottom"] else 0)
     return (MARGIN_X * W - SAFE, top - SAFE, (1 - MARGIN_X) * W + SAFE, bottom + SAFE)
 
