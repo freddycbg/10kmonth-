@@ -9,3 +9,4 @@ out
 # Material de entrada y medios generados (pesados, no se versionan)
 input/
 public/media/
+__pycache__/
