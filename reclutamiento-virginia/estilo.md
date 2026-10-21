@@ -173,8 +173,8 @@ Hay **tres estilos de texto**, todos en el mismo **amarillo dorado de la marca**
   se veía "muy cargado"). Que se vea al orador en el gancho y en la presentación. Cobertura total: 54 %.
 - **Zoom fuerte en el gancho** ("Nos encontramos en Virginia"): acercamiento lento del 100 al 114 %, aceleración
   brusca hasta ×2.05 justo en la palabra del golpe de música, con desenfoque de movimiento según la velocidad
-  (máx. 7 px), rebote a ×1.9 y sacudida de 3 fotogramas (±20 px). La cara termina centrada al 50 % del alto,
-  debajo del título gigante.
+  (máx. 7 px), rebote a ×1.9 y sacudida de 3 fotogramas (±20 px). La cara termina centrada en horizontal y al
+  **42 % del alto** (borrador 4; antes 50 %), para que la cabeza tape la parte baja de "VIRGINIA".
 - **Palabra gigante estable, sin parpadeo:** su tamaño se calcula en `build_edit.py` con las métricas reales de
   Anton (fontTools), nunca midiendo en el render: con 4 pestañas en paralelo algunas medían antes de cargar la
   fuente y "VIRGINIA"/"MITO" cambiaban de tamaño fotograma a fotograma (borrador 2). Entrada suave de 8
@@ -182,8 +182,21 @@ Hay **tres estilos de texto**, todos en el mismo **amarillo dorado de la marca**
 - **Subtítulos y títulos a la vez:** las palabras del título no llevan subtítulo, pero las que se dicen después
   sí aparecen abajo aunque la palabra gigante siga arriba. Ninguna palabra se queda sin mostrar (70/70) y ningún
   bloque dura menos de 8 fotogramas.
-- **Frase de la llamada a la acción completa en el título:** COMENTA / **10K** / AQUÍ ABAJO (tercera línea
-  blanca que aparece al decirla).
+- **Llamada a la acción:** título COMENTA / **10K**; "AQUÍ ABAJO" va en los subtítulos dorados de abajo
+  (borrador 4). Como tercera línea del título quedaba justo sobre la cara y la tapaba el recorte del orador.
 - **B-roll del hombre agobiado** (manos en la cabeza): en "o hablar un inglés fluido", después del aula
   universitaria, no en "Olvídate del mito". En "Olvídate del mito" se ve al orador con el título MITO.
-
+- **Títulos cinéticos detrás del orador** (borrador 4): la palabra gigante (VIRGINIA, VIDA, MITO, 10K, HOY) va
+  por encima del vídeo base pero **detrás de la cabeza**; los subtítulos de abajo siguen delante. Orden de capas:
+  A-roll → b-roll → título → orador recortado → subtítulos → destellos.
+  - **Recorte:** `scripts/mattes.py` (tras `build_edit.py`) segmenta al orador con **BiRefNet-portrait** (rembg)
+    sobre un recorte de su silueta, solo en los fotogramas en que el título está sobre él y lo toca (79 de 163,
+    ~50 s por fotograma en CPU; las máscaras se guardan y se reutilizan). u2net y el mosaico de 4 fotogramas
+    pegaban trozos de la cúpula del Capitolio a la cabeza.
+  - **Composición:** `Foreground.tsx` dibuja una segunda copia del A-roll con la misma transformación
+    (`useArollStyle`) y la máscara como `mask-image`, así los píxeles son idénticos al vídeo base (sin saltos de
+    color). Las máscaras de cada tramo se precargan con `delayRender` para que ningún fotograma salga sin máscara.
+  - **Posición:** títulos **centrados** y bajados para que la cabeza tape ~el 25–30 % inferior de la palabra
+    gigante: `y` = 0.225 (VIRGINIA), 0.156 (VIDA), 0.106 (MITO), 0.145 (10K), 0.135 (HOY). Se calcula con
+    `y = (alto de la cabeza − 65 − 0.66 × tamaño) / 1920`, con el borde superior de la cabeza medido en pantalla.
+  - Si cambia el encuadre del orador (ARoll.tsx), hay que cambiar también la copia de `view()` en `mattes.py`.
