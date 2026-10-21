@@ -149,5 +149,6 @@
       "leak": true,
       "phrase": "y quieres saber cómo funciona esto"
     }
-  ]
+  ],
+  "denoise": true
 }
