@@ -200,3 +200,29 @@ Hay **tres estilos de texto**, todos en el mismo **amarillo dorado de la marca**
     gigante: `y` = 0.225 (VIRGINIA), 0.156 (VIDA), 0.106 (MITO), 0.145 (10K), 0.135 (HOY). Se calcula con
     `y = (alto de la cabeza − 65 − 0.66 × tamaño) / 1920`, con el borde superior de la cabeza medido en pantalla.
   - Si cambia el encuadre del orador (ARoll.tsx), hay que cambiar también la copia de `view()` en `mattes.py`.
+
+## Vídeo "Te están mintiendo" (10K Month): preferencias aprobadas
+
+- **Voz sin ruido de fondo** (borrador 2, aprobado): la voz grabada en exteriores (viento, tráfico) se limpia con
+  **DeepFilterNet3** (`"denoise": true` en `edit.config.json`; binario `/opt/deepfilter/deep-filter`, de las
+  releases de GitHub de DeepFilterNet; PyTorch no se puede descargar aquí). Ruido en las pausas de −31 a −68 dB,
+  mismo nivel de voz, y Whisper la entiende mejor (confianza 0.98 frente a 0.96). RNNoise (`arnndn`) quitaba
+  bastante menos (−49 dB). Aplicarlo por defecto en grabaciones de exteriores.
+- **Gancho con doble zoom** (`"intro"` en la configuración): golpe de zoom en el primer instante (×1.4 en 5
+  fotogramas), empuje lento mientras habla y un segundo golpe más cerrado (×2.3, rebote y sacudida) en la palabra
+  fuerte de la primera frase ("mintiendo"), que coincide con el golpe de la música. El título de esa frase sale
+  detrás de la cabeza.
+- **Títulos en un solo plano cerrado:** mientras un título está en pantalla no hay cambio de encuadre (la cabeza no
+  salta detrás del texto) y el plano es cerrado para que la cabeza tape la parte baja de la palabra gigante.
+- **Ningún b-roll tapa la palabra gigante** antes de 0.9 s; si choca, el b-roll se mueve o se quita.
+- **Palabra gigante con tilde o Ñ** (SUEÑO): 0.2 em de espacio extra encima para que no choque con la línea
+  superior; el `y` del título baja lo mismo para que la cabeza tape la misma parte.
+- **Cierre de 10K Month:** el vídeo `FINAL.mp4` (animación del logo, con su sonido) sustituye a la tarjeta de
+  Carta Business Group (`"end_video"`); la música sube a 0.35 en vez de 0.55.
+- **A-roll a la resolución del original** (1440×2560) para que los zooms fuertes salgan nítidos.
+- **Recorte del orador con `birefnet-general-lite`** cuando el fondo es limpio (cielo): igual de preciso que
+  BiRefNet-portrait en la mitad de tiempo (~25 s por fotograma). u2net dejaba un halo azul alrededor de la cabeza.
+- **B-roll descartado:** vídeos con subtítulos incrustados (el de Carta) y material de otra marca en vídeos de
+  10K Month.
+- **Entrega en alta calidad:** render con CRF 10 (`--crf=10 --x264-preset=slow`), vídeo copiado tal cual en el
+  máster y AAC 44.1 kHz a 256 kbps.
