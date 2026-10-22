@@ -262,3 +262,28 @@ encajen con una mujer**. Aprobado en el borrador 1.
   en la carpeta de b-roll; aquí `input/material/Final_10K.mp4`, `"end_video"` en la configuración). Solo en los de
   Freddy: los del equipo (Claudia, etc.) cierran con la tarjeta de Carta Business Group.
 - En los vídeos de Freddy los subtítulos **no van en amarillo** y deben ir acordes a un hombre.
+
+## Vídeo de Freddy 2 ("¿Crees que vivir en Estados Unidos cambia tu vida?"): estilo aprobado
+
+Estilo fijo para los vídeos de Freddy, sacado de las referencias nuevas (subtítulos a media altura con la palabra
+clave grande en otro color, números y gráficos en pantalla, destellos, cierre con logo). Aprobado en la versión final.
+
+- **Subtítulos** (centro al 66 % del alto, delante del orador): palabras normales en Montserrat ExtraBold blanca,
+  56 px, en mayúsculas; **palabras clave** (`"emphasis"` en la configuración) en su propia línea, Anton 124 px,
+  **verde neón #35F2A0** (crecimiento y dinero, como la flecha del logo 10K), con un pop más fuerte. Nunca amarillo.
+- **Títulos detrás de la cabeza** solo en momentos clave (gancho, MENTALIDAD, ATRÉVETE, 10K): línea pequeña en
+  Montserrat blanca con acento verde y palabra gigante en Anton verde. Sombra fuerte en la línea blanca: sobre el
+  cielo claro no se leía.
+- **Iconos animados** (`"icons"`, componente `IconPop`, iconos de lucide-react) cuando hay que mostrar algo: insignia
+  redonda oscura con aro y brillo verde, entrada elástica con giro, flota y sale encogiéndose. Calendario con
+  "5 AÑOS", candado (limitadas), gráfica que sube (oportunidades), bombilla (mentalidad), puerta (abrirte sus
+  puertas), flecha que rebota hacia los comentarios ("escribe acá abajo") y avión de papel que sale volando ("al
+  privado"). A la derecha de la cabeza (x 0.78, y 0.27), 190 px.
+- **Gancho:** doble zoom (×1.35 al empezar, ×2.3 en la palabra fuerte) con el drop de la música en esa palabra.
+- **B-roll por nombre** de la carpeta compartida (Bandera Perú, Hacer delivery, Trabajar en cocina, Estados Unidos 2,
+  Reflexión, Mentalidad, Lujo, Pasando la frontera, Convención AIL Las Vegas, Equipo de trabajo), ~40 % del tiempo.
+- **Revisar el material antes de editar:** las tomas desde el segundo 11 traían una franja negra arriba; se recorta
+  y reescala sin deformar (`freddy_limpio.mov`).
+- **Cierre:** animación 10K Month (regla fija de arriba).
+- **No renderizar mientras corre `mattes.py`:** juntos se quedan sin memoria y el sistema mata el recorte (se
+  reanuda desde las máscaras guardadas).
