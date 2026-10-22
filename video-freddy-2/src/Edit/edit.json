@@ -1,0 +1,1296 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1124,
+ "arollFrames": 1004,
+ "lastWordFrame": 991,
+ "introDropFrame": 60,
+ "intro": {
+  "frames": [
+   0,
+   5,
+   48,
+   60,
+   64,
+   88
+  ],
+  "scales": [
+   1.0,
+   1.35,
+   1.5,
+   2.3,
+   2.1799999999999997,
+   2.2
+  ]
+ },
+ "endSrc": "media/end.mp4",
+ "shots": [
+  {
+   "from": 0,
+   "durationInFrames": 89,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 89,
+   "durationInFrames": 32,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 121,
+   "durationInFrames": 38,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 159,
+   "durationInFrames": 40,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 199,
+   "durationInFrames": 71,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 270,
+   "durationInFrames": 39,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 309,
+   "durationInFrames": 54,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 363,
+   "durationInFrames": 34,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 397,
+   "durationInFrames": 30,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 427,
+   "durationInFrames": 55,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 482,
+   "durationInFrames": 85,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 567,
+   "durationInFrames": 25,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 592,
+   "durationInFrames": 34,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 626,
+   "durationInFrames": 36,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 662,
+   "durationInFrames": 51,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 713,
+   "durationInFrames": 82,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 795,
+   "durationInFrames": 49,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  },
+  {
+   "from": 844,
+   "durationInFrames": 160,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.22
+   },
+   "closeScale": 2.0
+  }
+ ],
+ "broll": [
+  {
+   "name": "B-roll bandera_peru: Yo viví en Perú",
+   "src": "media/bandera_peru_0.2.mp4",
+   "from": 89,
+   "durationInFrames": 32,
+   "leak": false
+  },
+  {
+   "name": "B-roll delivery: trabajando como delivery",
+   "src": "media/delivery_1.5.mp4",
+   "from": 159,
+   "durationInFrames": 40,
+   "leak": false
+  },
+  {
+   "name": "B-roll cocina: en cocina",
+   "src": "media/cocina_2.mp4",
+   "from": 199,
+   "durationInFrames": 22,
+   "leak": false
+  },
+  {
+   "name": "B-roll usa_ciudad: cuando llegué a Estados Unidos",
+   "src": "media/usa_ciudad_0.5.mp4",
+   "from": 325,
+   "durationInFrames": 38,
+   "leak": false
+  },
+  {
+   "name": "B-roll reflexion: me di cuenta que el país no era lo único",
+   "src": "media/reflexion_0.5.mp4",
+   "from": 427,
+   "durationInFrames": 55,
+   "leak": false
+  },
+  {
+   "name": "B-roll mentalidad: de manera diferente",
+   "src": "media/mentalidad_3.mp4",
+   "from": 567,
+   "durationInFrames": 28,
+   "leak": false
+  },
+  {
+   "name": "B-roll lujo: pueden cambiar tu vida",
+   "src": "media/lujo_5.mp4",
+   "from": 662,
+   "durationInFrames": 51,
+   "leak": true
+  },
+  {
+   "name": "B-roll frontera: te atreviste a venir a Estados Unidos",
+   "src": "media/frontera_1.mp4",
+   "from": 713,
+   "durationInFrames": 41,
+   "leak": false
+  },
+  {
+   "name": "B-roll convencion: nueva industria",
+   "src": "media/convencion_6.3.mp4",
+   "from": 779,
+   "durationInFrames": 16,
+   "leak": false
+  },
+  {
+   "name": "B-roll equipo: que está dispuesta a abrirte sus puertas",
+   "src": "media/equipo_2.mp4",
+   "from": 795,
+   "durationInFrames": 49,
+   "leak": false
+  }
+ ],
+ "captions": [
+  {
+   "from": 0,
+   "durationInFrames": 18,
+   "words": [
+    {
+     "text": "¿CREES",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "QUE",
+     "at": 8,
+     "em": false
+    },
+    {
+     "text": "VIVIR",
+     "at": 11,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 18,
+   "durationInFrames": 21,
+   "words": [
+    {
+     "text": "EN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ESTADOS",
+     "at": 5,
+     "em": true
+    },
+    {
+     "text": "UNIDOS",
+     "at": 11,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 89,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "YO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "VIVÍ",
+     "at": 8,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 105,
+   "durationInFrames": 22,
+   "words": [
+    {
+     "text": "EN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "PERÚ",
+     "at": 3,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 129,
+   "durationInFrames": 20,
+   "words": [
+    {
+     "text": "ESTUVE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "5",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "AÑOS",
+     "at": 13,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 149,
+   "durationInFrames": 10,
+   "words": [
+    {
+     "text": "VIVIENDO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ALLÁ",
+     "at": 7,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 159,
+   "durationInFrames": 11,
+   "words": [
+    {
+     "text": "TRABAJANDO",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 170,
+   "durationInFrames": 29,
+   "words": [
+    {
+     "text": "COMO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "DELIVERY",
+     "at": 8,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 199,
+   "durationInFrames": 19,
+   "words": [
+    {
+     "text": "EN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "COCINA",
+     "at": 3,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 218,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "YO",
+     "at": 6,
+     "em": false
+    },
+    {
+     "text": "SENTÍA",
+     "at": 11,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 241,
+   "durationInFrames": 29,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "MIS",
+     "at": 4,
+     "em": false
+    },
+    {
+     "text": "OPORTUNIDADES",
+     "at": 9,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 270,
+   "durationInFrames": 34,
+   "words": [
+    {
+     "text": "ESTABAN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "LIMITADAS",
+     "at": 13,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 304,
+   "durationInFrames": 17,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "CIERTO",
+     "at": 10,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 321,
+   "durationInFrames": 19,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "CUANDO",
+     "at": 4,
+     "em": false
+    },
+    {
+     "text": "LLEGUÉ",
+     "at": 11,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 340,
+   "durationInFrames": 20,
+   "words": [
+    {
+     "text": "A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ESTADOS",
+     "at": 3,
+     "em": true
+    },
+    {
+     "text": "UNIDOS",
+     "at": 9,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 360,
+   "durationInFrames": 31,
+   "words": [
+    {
+     "text": "ENCONTRÉ",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "UNA",
+     "at": 16,
+     "em": false
+    },
+    {
+     "text": "ECONOMÍA",
+     "at": 19,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 391,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "CON",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "OTRAS",
+     "at": 6,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 404,
+   "durationInFrames": 17,
+   "words": [
+    {
+     "text": "OPORTUNIDADES",
+     "at": 0,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 421,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "PERO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ME",
+     "at": 6,
+     "em": false
+    },
+    {
+     "text": "DI",
+     "at": 10,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 434,
+   "durationInFrames": 9,
+   "words": [
+    {
+     "text": "CUENTA",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 443,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "EL",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "PAÍS",
+     "at": 9,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 458,
+   "durationInFrames": 8,
+   "words": [
+    {
+     "text": "NO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ERA",
+     "at": 5,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 466,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "LO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ÚNICO",
+     "at": 5,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 479,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "DEBÍA",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "CAMBIAR",
+     "at": 11,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 541,
+   "durationInFrames": 12,
+   "words": [
+    {
+     "text": "PARA",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "HACER",
+     "at": 6,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 553,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "LAS",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "COSAS",
+     "at": 5,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 567,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "DE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "MANERA",
+     "at": 4,
+     "em": false
+    },
+    {
+     "text": "DIFERENTE",
+     "at": 12,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 592,
+   "durationInFrames": 27,
+   "words": [
+    {
+     "text": "PORQUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "TU",
+     "at": 10,
+     "em": false
+    },
+    {
+     "text": "MENTALIDAD",
+     "at": 15,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 619,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "LAS",
+     "at": 3,
+     "em": false
+    },
+    {
+     "text": "OPORTUNIDADES",
+     "at": 7,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 642,
+   "durationInFrames": 31,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "APROVECHAS",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "PUEDEN",
+     "at": 20,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 673,
+   "durationInFrames": 24,
+   "words": [
+    {
+     "text": "CAMBIAR",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "TU",
+     "at": 11,
+     "em": false
+    },
+    {
+     "text": "VIDA",
+     "at": 16,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 697,
+   "durationInFrames": 19,
+   "words": [
+    {
+     "text": "ASÍ",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "COMO",
+     "at": 11,
+     "em": false
+    },
+    {
+     "text": "TE",
+     "at": 16,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 716,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "ATREVISTE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "A",
+     "at": 9,
+     "em": false
+    },
+    {
+     "text": "VENIR",
+     "at": 11,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 731,
+   "durationInFrames": 20,
+   "words": [
+    {
+     "text": "A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ESTADOS",
+     "at": 4,
+     "em": true
+    },
+    {
+     "text": "UNIDOS",
+     "at": 10,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 764,
+   "durationInFrames": 10,
+   "words": [
+    {
+     "text": "A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "CONOCER",
+     "at": 3,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 774,
+   "durationInFrames": 21,
+   "words": [
+    {
+     "text": "UNA",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "NUEVA",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "INDUSTRIA",
+     "at": 10,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 795,
+   "durationInFrames": 21,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ESTÁ",
+     "at": 3,
+     "em": false
+    },
+    {
+     "text": "DISPUESTA",
+     "at": 7,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 816,
+   "durationInFrames": 11,
+   "words": [
+    {
+     "text": "A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ABRIRTE",
+     "at": 2,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 827,
+   "durationInFrames": 21,
+   "words": [
+    {
+     "text": "SUS",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "PUERTAS",
+     "at": 5,
+     "em": true
+    },
+    {
+     "text": "SI",
+     "at": 14,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 848,
+   "durationInFrames": 22,
+   "words": [
+    {
+     "text": "TE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "INTERESA",
+     "at": 3,
+     "em": false
+    },
+    {
+     "text": "CONOCER",
+     "at": 12,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 870,
+   "durationInFrames": 29,
+   "words": [
+    {
+     "text": "MÁS",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "INFORMACIÓN",
+     "at": 5,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 899,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "ESCRIBE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ACÁ",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "ABAJO",
+     "at": 9,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 941,
+   "durationInFrames": 19,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "TE",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "PASARÉ",
+     "at": 9,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 960,
+   "durationInFrames": 17,
+   "words": [
+    {
+     "text": "TODA",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "LA",
+     "at": 3,
+     "em": false
+    },
+    {
+     "text": "INFORMACIÓN",
+     "at": 6,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 977,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "AL",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "PRIVADO",
+     "at": 4,
+     "em": true
+    }
+   ]
+  }
+ ],
+ "titles": [
+  {
+   "name": "Título: ¿CAMBIA TU VIDA AUTOMÁTICAMENTE?",
+   "from": 39,
+   "durationInFrames": 50,
+   "top": [
+    {
+     "text": "¿CAMBIA",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "TU",
+     "accent": false,
+     "at": 11
+    },
+    {
+     "text": "VIDA",
+     "accent": true,
+     "at": 15
+    }
+   ],
+   "big": "AUTOMÁTICAMENTE?",
+   "bigAt": 21,
+   "bottom": [],
+   "bigSize": 120.6,
+   "y": 0.2065,
+   "align": "center"
+  },
+  {
+   "name": "Título: DEBÍA CAMBIAR MI MENTALIDAD",
+   "from": 502,
+   "durationInFrames": 52,
+   "top": [
+    {
+     "text": "DEBÍA",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "CAMBIAR",
+     "accent": false,
+     "at": 11
+    },
+    {
+     "text": "MI",
+     "accent": true,
+     "at": 21
+    }
+   ],
+   "big": "MENTALIDAD",
+   "bigAt": 25,
+   "bottom": [],
+   "bigSize": 198.2,
+   "y": 0.109,
+   "align": "center"
+  },
+  {
+   "name": "Título:  ATRÉVETE",
+   "from": 751,
+   "durationInFrames": 27,
+   "top": [],
+   "big": "ATRÉVETE",
+   "bigAt": 0,
+   "bottom": [],
+   "bigSize": 265.5,
+   "y": 0.105,
+   "align": "center"
+  },
+  {
+   "name": "Título: LA PALABRA 10K",
+   "from": 913,
+   "durationInFrames": 40,
+   "top": [
+    {
+     "text": "LA",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "PALABRA",
+     "accent": false,
+     "at": 4
+    }
+   ],
+   "big": "10K",
+   "bigAt": 13,
+   "bottom": [],
+   "bigSize": 330,
+   "y": 0.0855,
+   "align": "center"
+  }
+ ],
+ "icons": [
+  {
+   "name": "Icono CalendarDays: estuve 5 años",
+   "icon": "CalendarDays",
+   "from": 129,
+   "durationInFrames": 39,
+   "x": 0.78,
+   "y": 0.27,
+   "size": 190,
+   "anim": "pop",
+   "label": "5 AÑOS"
+  },
+  {
+   "name": "Icono Lock: estaban limitadas",
+   "icon": "Lock",
+   "from": 270,
+   "durationInFrames": 43,
+   "x": 0.78,
+   "y": 0.27,
+   "size": 190,
+   "anim": "pop",
+   "label": ""
+  },
+  {
+   "name": "Icono TrendingUp: con otras oportunidades",
+   "icon": "TrendingUp",
+   "from": 391,
+   "durationInFrames": 39,
+   "x": 0.78,
+   "y": 0.27,
+   "size": 190,
+   "anim": "pop",
+   "label": ""
+  },
+  {
+   "name": "Icono Lightbulb: Porque tu mentalidad",
+   "icon": "Lightbulb",
+   "from": 592,
+   "durationInFrames": 36,
+   "x": 0.78,
+   "y": 0.27,
+   "size": 190,
+   "anim": "pop",
+   "label": ""
+  },
+  {
+   "name": "Icono DoorOpen: abrirte sus puertas",
+   "icon": "DoorOpen",
+   "from": 818,
+   "durationInFrames": 36,
+   "x": 0.5,
+   "y": 0.3,
+   "size": 200,
+   "anim": "pop",
+   "label": ""
+  },
+  {
+   "name": "Icono ArrowDown: escribe acá abajo",
+   "icon": "ArrowDown",
+   "from": 899,
+   "durationInFrames": 48,
+   "x": 0.5,
+   "y": 0.86,
+   "size": 150,
+   "anim": "bounce",
+   "label": ""
+  },
+  {
+   "name": "Icono Send: al privado",
+   "icon": "Send",
+   "from": 977,
+   "durationInFrames": 36,
+   "x": 0.78,
+   "y": 0.27,
+   "size": 190,
+   "anim": "fly",
+   "label": ""
+  }
+ ],
+ "flashes": [
+  484,
+  751,
+  1004
+ ]
+}

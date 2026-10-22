@@ -1,0 +1,249 @@
+{
+  "source": "input/material/freddy_limpio.mov",
+  "transcript": "input/transcript.json",
+  "keep": "input/keep.json",
+  "music": "input/material/musica_fondo.mp3",
+  "music_drop": 20.24,
+  "music_drop_at": "automáticamente",
+  "end_video": "input/material/Final_10K.mp4",
+  "denoise": true,
+  "rebuild_aroll": false,
+  "fixes": [],
+  "intro": {
+    "punch_frames": 5,
+    "punch_scale": 1.35,
+    "ramp_frames": 12,
+    "pre_drop_scale": 1.5,
+    "drop_scale": 2.3,
+    "settle_scale": 2.2
+  },
+  "takes": [
+    {
+      "until": 3.233,
+      "face": [
+        0.5,
+        0.22
+      ],
+      "close": 2.0
+    },
+    {
+      "until": 11.117,
+      "face": [
+        0.5,
+        0.22
+      ],
+      "close": 2.0
+    },
+    {
+      "until": 21.083,
+      "face": [
+        0.5,
+        0.22
+      ],
+      "close": 2.0
+    },
+    {
+      "until": 24.933,
+      "face": [
+        0.5,
+        0.22
+      ],
+      "close": 2.0
+    },
+    {
+      "until": 30.067,
+      "face": [
+        0.5,
+        0.22
+      ],
+      "close": 2.0
+    },
+    {
+      "until": 999,
+      "face": [
+        0.5,
+        0.22
+      ],
+      "close": 2.0
+    }
+  ],
+  "titles": [
+    {
+      "phrase": "cambia tu vida automáticamente",
+      "top": "¿CAMBIA TU VIDA",
+      "accent": [
+        "VIDA"
+      ],
+      "big": "AUTOMÁTICAMENTE?",
+      "y": 0.2065,
+      "align": "center"
+    },
+    {
+      "phrase": "Debía cambiar mi mentalidad",
+      "top": "DEBÍA CAMBIAR MI",
+      "accent": [
+        "MI"
+      ],
+      "big": "MENTALIDAD",
+      "y": 0.109,
+      "align": "center"
+    },
+    {
+      "phrase": "Atrévete",
+      "top": "",
+      "accent": [],
+      "big": "ATRÉVETE",
+      "y": 0.105,
+      "align": "center"
+    },
+    {
+      "phrase": "la palabra 10K",
+      "top": "LA PALABRA",
+      "accent": [],
+      "big": "10K",
+      "y": 0.0855,
+      "align": "center"
+    }
+  ],
+  "emphasis": [
+    "Estados Unidos",
+    "Perú",
+    "delivery",
+    "cocina",
+    "limitadas",
+    "economía",
+    "oportunidades",
+    "país",
+    "diferente",
+    "vida",
+    "industria",
+    "puertas",
+    "información",
+    "privado"
+  ],
+  "icons": [
+    {
+      "phrase": "estuve 5 años",
+      "icon": "CalendarDays",
+      "label": "5 AÑOS",
+      "x": 0.78,
+      "y": 0.27,
+      "hold": 1.3
+    },
+    {
+      "phrase": "estaban limitadas",
+      "icon": "Lock",
+      "x": 0.78,
+      "y": 0.27,
+      "hold": 1.2
+    },
+    {
+      "phrase": "con otras oportunidades",
+      "icon": "TrendingUp",
+      "x": 0.78,
+      "y": 0.27,
+      "hold": 1.3
+    },
+    {
+      "phrase": "Porque tu mentalidad",
+      "icon": "Lightbulb",
+      "x": 0.78,
+      "y": 0.27,
+      "hold": 1.2
+    },
+    {
+      "phrase": "abrirte sus puertas",
+      "icon": "DoorOpen",
+      "x": 0.5,
+      "y": 0.3,
+      "size": 200,
+      "hold": 1.2
+    },
+    {
+      "phrase": "escribe acá abajo",
+      "icon": "ArrowDown",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 150,
+      "anim": "bounce",
+      "hold": 1.6
+    },
+    {
+      "phrase": "al privado",
+      "icon": "Send",
+      "x": 0.78,
+      "y": 0.27,
+      "anim": "fly",
+      "hold": 1.2
+    }
+  ],
+  "flash_at": [
+    "Debía cambiar",
+    "Atrévete"
+  ],
+  "broll": [
+    {
+      "id": "bandera_peru",
+      "file": "input/material/Bandera_peru_1.mp4",
+      "trim": 0.2,
+      "phrase": "Yo viví en Perú"
+    },
+    {
+      "id": "delivery",
+      "file": "input/material/Hacer_delivery.mp4",
+      "trim": 1.5,
+      "phrase": "trabajando como delivery"
+    },
+    {
+      "id": "cocina",
+      "file": "input/material/Trabajar_en_cocina.mp4",
+      "trim": 2.0,
+      "phrase": "en cocina"
+    },
+    {
+      "id": "usa_ciudad",
+      "file": "input/material/Estados_unidos_2.mp4",
+      "trim": 0.5,
+      "phrase": "cuando llegué a Estados Unidos"
+    },
+    {
+      "id": "reflexion",
+      "file": "input/material/Reflexion.mp4",
+      "trim": 0.5,
+      "phrase": "me di cuenta que el país no era lo único"
+    },
+    {
+      "id": "mentalidad",
+      "file": "input/material/Mentalidad.mp4",
+      "trim": 3.0,
+      "phrase": "de manera diferente"
+    },
+    {
+      "id": "lujo",
+      "file": "input/material/Lujo_1.mp4",
+      "trim": 5.0,
+      "leak": true,
+      "phrase": "pueden cambiar tu vida"
+    },
+    {
+      "id": "frontera",
+      "file": "input/material/Pasando_la_frontera.mp4",
+      "trim": 1.0,
+      "phrase": "te atreviste a venir a Estados Unidos"
+    },
+    {
+      "id": "convencion",
+      "file": "input/material/Convencion_AIL_Las_Vegas.mp4",
+      "trim": 6.3,
+      "cx": 0.72,
+      "speed": 1.0,
+      "phrase": "nueva industria"
+    },
+    {
+      "id": "equipo",
+      "file": "input/material/Equipo_de_trabajo.mp4",
+      "trim": 2.0,
+      "phrase": "que está dispuesta a abrirte sus puertas"
+    }
+  ]
+}
