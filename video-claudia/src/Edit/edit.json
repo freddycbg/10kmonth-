@@ -1,0 +1,1136 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1185,
+ "arollFrames": 1065,
+ "lastWordFrame": 1050,
+ "introDropFrame": 73,
+ "intro": {
+  "frames": [
+   0,
+   5,
+   61,
+   73,
+   77,
+   102
+  ],
+  "scales": [
+   1.0,
+   1.4,
+   1.52,
+   2.3,
+   2.1799999999999997,
+   2.2
+  ]
+ },
+ "endSrc": "media/end.mp4",
+ "shots": [
+  {
+   "from": 0,
+   "durationInFrames": 103,
+   "framing": "ancho",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 103,
+   "durationInFrames": 34,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 137,
+   "durationInFrames": 26,
+   "framing": "ancho",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 163,
+   "durationInFrames": 35,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 198,
+   "durationInFrames": 64,
+   "framing": "ancho",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 262,
+   "durationInFrames": 93,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 355,
+   "durationInFrames": 68,
+   "framing": "ancho",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 423,
+   "durationInFrames": 73,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 496,
+   "durationInFrames": 33,
+   "framing": "ancho",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 529,
+   "durationInFrames": 54,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 583,
+   "durationInFrames": 86,
+   "framing": "ancho",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 669,
+   "durationInFrames": 78,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 747,
+   "durationInFrames": 39,
+   "framing": "ancho",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 786,
+   "durationInFrames": 75,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 861,
+   "durationInFrames": 45,
+   "framing": "ancho",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 906,
+   "durationInFrames": 108,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  },
+  {
+   "from": 1014,
+   "durationInFrames": 51,
+   "framing": "ancho",
+   "face": {
+    "x": 0.57,
+    "y": 0.52
+   },
+   "closeScale": 1.9
+  }
+ ],
+ "broll": [
+  {
+   "name": "B-roll bandera: llegaste a este país",
+   "src": "media/bandera_0.3.mp4",
+   "from": 103,
+   "durationInFrames": 34,
+   "leak": false
+  },
+  {
+   "name": "B-roll taller: que en este país se vive solamente para ",
+   "src": "media/taller_1.mp4",
+   "from": 198,
+   "durationInFrames": 64,
+   "leak": false
+  },
+  {
+   "name": "B-roll facturas: porque si no, no tendrás como pagar los ",
+   "src": "media/facturas_3.mp4",
+   "from": 355,
+   "durationInFrames": 68,
+   "leak": false
+  },
+  {
+   "name": "B-roll gimnasio: Vete a hacer ejercicio",
+   "src": "media/gimnasio_10.mp4",
+   "from": 496,
+   "durationInFrames": 33,
+   "leak": false
+  },
+  {
+   "name": "B-roll velero: y ponte a hacer cosas diferentes",
+   "src": "media/velero_5.mp4",
+   "from": 529,
+   "durationInFrames": 54,
+   "leak": false
+  },
+  {
+   "name": "B-roll calle: Si sigues haciendo lo mismo que hacen to",
+   "src": "media/calle_1.mp4",
+   "from": 583,
+   "durationInFrames": 86,
+   "leak": false
+  },
+  {
+   "name": "B-roll agobiado: Vas a vivir en el mismo cuento que siemp",
+   "src": "media/agobiado_2.mp4",
+   "from": 669,
+   "durationInFrames": 78,
+   "leak": false
+  },
+  {
+   "name": "B-roll escenario: Y nosotros como latinos",
+   "src": "media/escenario_6.3.mp4",
+   "from": 747,
+   "durationInFrames": 39,
+   "leak": false
+  },
+  {
+   "name": "B-roll founders_club: y quieres saber cómo funciona esto",
+   "src": "media/founders_club_2.1.mp4",
+   "from": 906,
+   "durationInFrames": 57,
+   "leak": true
+  }
+ ],
+ "captions": [
+  {
+   "from": 0,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "LAMENTO",
+     "at": 0
+    },
+    {
+     "text": "TENER",
+     "at": 19
+    }
+   ]
+  },
+  {
+   "from": 25,
+   "durationInFrames": 28,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0
+    },
+    {
+     "text": "DECIRTE",
+     "at": 4
+    },
+    {
+     "text": "ESTO",
+     "at": 16
+    }
+   ]
+  },
+  {
+   "from": 89,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "CUANDO",
+     "at": 0
+    },
+    {
+     "text": "LLEGASTE",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "from": 112,
+   "durationInFrames": 11,
+   "words": [
+    {
+     "text": "A",
+     "at": 0
+    },
+    {
+     "text": "ESTE",
+     "at": 3
+    },
+    {
+     "text": "PAÍS",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "from": 123,
+   "durationInFrames": 30,
+   "words": [
+    {
+     "text": "SEGURAMENTE",
+     "at": 0
+    },
+    {
+     "text": "ESCUCHASTE",
+     "at": 18
+    }
+   ]
+  },
+  {
+   "from": 153,
+   "durationInFrames": 18,
+   "words": [
+    {
+     "text": "LA",
+     "at": 0
+    },
+    {
+     "text": "MISMA",
+     "at": 4
+    },
+    {
+     "text": "FRASE",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "from": 171,
+   "durationInFrames": 27,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0
+    },
+    {
+     "text": "TODOS",
+     "at": 4
+    },
+    {
+     "text": "ESCUCHAMOS",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "from": 198,
+   "durationInFrames": 22,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0
+    },
+    {
+     "text": "EN",
+     "at": 7
+    },
+    {
+     "text": "ESTE",
+     "at": 10
+    },
+    {
+     "text": "PAÍS",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "from": 220,
+   "durationInFrames": 19,
+   "words": [
+    {
+     "text": "SE",
+     "at": 0
+    },
+    {
+     "text": "VIVE",
+     "at": 4
+    },
+    {
+     "text": "SOLAMENTE",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "from": 239,
+   "durationInFrames": 29,
+   "words": [
+    {
+     "text": "PARA",
+     "at": 0
+    },
+    {
+     "text": "TRABAJAR",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "from": 268,
+   "durationInFrames": 10,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0
+    },
+    {
+     "text": "EL",
+     "at": 1
+    },
+    {
+     "text": "SUEÑO",
+     "at": 3
+    }
+   ]
+  },
+  {
+   "from": 278,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "AMERICANO",
+     "at": 0
+    },
+    {
+     "text": "ES",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "from": 314,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0
+    },
+    {
+     "text": "NUNCA",
+     "at": 5
+    },
+    {
+     "text": "VAS",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "from": 329,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "A",
+     "at": 0
+    },
+    {
+     "text": "PODER",
+     "at": 3
+    },
+    {
+     "text": "DEJAR",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "from": 342,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "DE",
+     "at": 0
+    },
+    {
+     "text": "TRABAJAR",
+     "at": 4
+    }
+   ]
+  },
+  {
+   "from": 355,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "PORQUE",
+     "at": 0
+    },
+    {
+     "text": "SI",
+     "at": 9
+    },
+    {
+     "text": "NO",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "from": 378,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "NO",
+     "at": 0
+    },
+    {
+     "text": "TENDRÁS",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "from": 393,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "COMO",
+     "at": 0
+    },
+    {
+     "text": "PAGAR",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "from": 406,
+   "durationInFrames": 18,
+   "words": [
+    {
+     "text": "LOS",
+     "at": 0
+    },
+    {
+     "text": "BILLS",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "from": 455,
+   "durationInFrames": 37,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0
+    },
+    {
+     "text": "COME",
+     "at": 10
+    },
+    {
+     "text": "SANO",
+     "at": 18
+    }
+   ]
+  },
+  {
+   "from": 496,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "VETE",
+     "at": 0
+    },
+    {
+     "text": "A",
+     "at": 10
+    },
+    {
+     "text": "HACER",
+     "at": 13
+    }
+   ]
+  },
+  {
+   "from": 512,
+   "durationInFrames": 17,
+   "words": [
+    {
+     "text": "EJERCICIO",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "from": 529,
+   "durationInFrames": 18,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0
+    },
+    {
+     "text": "PONTE",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "from": 547,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "A",
+     "at": 0
+    },
+    {
+     "text": "HACER",
+     "at": 3
+    },
+    {
+     "text": "COSAS",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "from": 563,
+   "durationInFrames": 32,
+   "words": [
+    {
+     "text": "DIFERENTES",
+     "at": 0
+    },
+    {
+     "text": "SI",
+     "at": 20
+    },
+    {
+     "text": "SIGUES",
+     "at": 25
+    }
+   ]
+  },
+  {
+   "from": 595,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "HACIENDO",
+     "at": 0
+    },
+    {
+     "text": "LO",
+     "at": 9
+    },
+    {
+     "text": "MISMO",
+     "at": 14
+    }
+   ]
+  },
+  {
+   "from": 618,
+   "durationInFrames": 17,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0
+    },
+    {
+     "text": "HACEN",
+     "at": 6
+    },
+    {
+     "text": "TODOS",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "from": 635,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "LOS",
+     "at": 0
+    },
+    {
+     "text": "LATINOS",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "from": 649,
+   "durationInFrames": 20,
+   "words": [
+    {
+     "text": "EN",
+     "at": 0
+    },
+    {
+     "text": "ESTADOS",
+     "at": 5
+    },
+    {
+     "text": "UNIDOS",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "from": 669,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "VAS",
+     "at": 0
+    },
+    {
+     "text": "A",
+     "at": 6
+    },
+    {
+     "text": "VIVIR",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "from": 683,
+   "durationInFrames": 22,
+   "words": [
+    {
+     "text": "EN",
+     "at": 0
+    },
+    {
+     "text": "EL",
+     "at": 6
+    },
+    {
+     "text": "MISMO",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "from": 705,
+   "durationInFrames": 24,
+   "words": [
+    {
+     "text": "CUENTO",
+     "at": 0
+    },
+    {
+     "text": "QUE",
+     "at": 10
+    },
+    {
+     "text": "SIEMPRE",
+     "at": 15
+    }
+   ]
+  },
+  {
+   "from": 729,
+   "durationInFrames": 18,
+   "words": [
+    {
+     "text": "TE",
+     "at": 0
+    },
+    {
+     "text": "HAN",
+     "at": 4
+    },
+    {
+     "text": "DICHO",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "from": 747,
+   "durationInFrames": 18,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0
+    },
+    {
+     "text": "NOSOTROS",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "from": 765,
+   "durationInFrames": 26,
+   "words": [
+    {
+     "text": "COMO",
+     "at": 0
+    },
+    {
+     "text": "LATINOS",
+     "at": 8
+    },
+    {
+     "text": "TENEMOS",
+     "at": 18
+    }
+   ]
+  },
+  {
+   "from": 819,
+   "durationInFrames": 24,
+   "words": [
+    {
+     "text": "PARA",
+     "at": 0
+    },
+    {
+     "text": "SOBRESALIR",
+     "at": 8
+    }
+   ]
+  },
+  {
+   "from": 843,
+   "durationInFrames": 18,
+   "words": [
+    {
+     "text": "EN",
+     "at": 0
+    },
+    {
+     "text": "ESTE",
+     "at": 4
+    },
+    {
+     "text": "PAÍS",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "from": 861,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "SI",
+     "at": 0
+    },
+    {
+     "text": "TE",
+     "at": 4
+    },
+    {
+     "text": "INTERESA",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "from": 877,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "RECIBIR",
+     "at": 0
+    },
+    {
+     "text": "MÁS",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "from": 892,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "INFORMACIÓN",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "from": 906,
+   "durationInFrames": 24,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0
+    },
+    {
+     "text": "QUIERES",
+     "at": 13
+    },
+    {
+     "text": "SABER",
+     "at": 18
+    }
+   ]
+  },
+  {
+   "from": 930,
+   "durationInFrames": 30,
+   "words": [
+    {
+     "text": "CÓMO",
+     "at": 0
+    },
+    {
+     "text": "FUNCIONA",
+     "at": 8
+    },
+    {
+     "text": "ESTO",
+     "at": 21
+    }
+   ]
+  },
+  {
+   "from": 984,
+   "durationInFrames": 19,
+   "words": [
+    {
+     "text": "AQUÍ",
+     "at": 0
+    },
+    {
+     "text": "ABAJO",
+     "at": 10
+    }
+   ]
+  },
+  {
+   "from": 1003,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0
+    },
+    {
+     "text": "TE",
+     "at": 7
+    },
+    {
+     "text": "VOY",
+     "at": 11
+    }
+   ]
+  },
+  {
+   "from": 1018,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "A",
+     "at": 0
+    },
+    {
+     "text": "PASAR",
+     "at": 2
+    },
+    {
+     "text": "TODA",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "from": 1034,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "LA",
+     "at": 0
+    },
+    {
+     "text": "INFORMACIÓN",
+     "at": 4
+    }
+   ]
+  }
+ ],
+ "titles": [
+  {
+   "name": "Título: TE ESTÁN MINTIENDO",
+   "from": 57,
+   "durationInFrames": 43,
+   "top": [
+    {
+     "text": "TE",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "ESTÁN",
+     "accent": true,
+     "at": 9
+    }
+   ],
+   "big": "MINTIENDO",
+   "bigAt": 16,
+   "bottom": [],
+   "bigSize": 230.5,
+   "y": 0.216,
+   "align": "center"
+  },
+  {
+   "name": "Título: VIVIR CON SUEÑO",
+   "from": 292,
+   "durationInFrames": 39,
+   "top": [
+    {
+     "text": "VIVIR",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "CON",
+     "accent": true,
+     "at": 6
+    }
+   ],
+   "big": "SUEÑO",
+   "bigAt": 12,
+   "bottom": [],
+   "bigSize": 330,
+   "y": 0.083,
+   "align": "center"
+  },
+  {
+   "name": "Título: DEJA DE COMER CUENTO",
+   "from": 424,
+   "durationInFrames": 47,
+   "top": [
+    {
+     "text": "DEJA",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "DE",
+     "accent": false,
+     "at": 9
+    },
+    {
+     "text": "COMER",
+     "accent": true,
+     "at": 12
+    }
+   ],
+   "big": "CUENTO",
+   "bigAt": 20,
+   "bottom": [],
+   "bigSize": 330,
+   "y": 0.117,
+   "align": "center"
+  },
+  {
+   "name": "Título: MUCHAS OPORTUNIDADES",
+   "from": 791,
+   "durationInFrames": 39,
+   "top": [
+    {
+     "text": "MUCHAS",
+     "accent": false,
+     "at": 0
+    }
+   ],
+   "big": "OPORTUNIDADES",
+   "bigAt": 12,
+   "bottom": [],
+   "bigSize": 156.7,
+   "y": 0.178,
+   "align": "center"
+  },
+  {
+   "name": "Título: COMENTA 10K",
+   "from": 960,
+   "durationInFrames": 39,
+   "top": [
+    {
+     "text": "COMENTA",
+     "accent": false,
+     "at": 0
+    }
+   ],
+   "big": "10K",
+   "bigAt": 12,
+   "bottom": [],
+   "bigSize": 330,
+   "y": 0.118,
+   "align": "center"
+  }
+ ],
+ "flashes": [
+  424,
+  960,
+  1065
+ ]
+}

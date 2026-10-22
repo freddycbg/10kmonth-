@@ -1,0 +1,154 @@
+{
+  "source": "input/material/mi-video.mp4",
+  "transcript": "input/transcript.json",
+  "keep": "input/keep.json",
+  "music": "input/material/musica_happy_pop.mp3",
+  "music_drop": 16.58,
+  "music_drop_at": "mintiendo",
+  "end_video": "input/material/FINAL.mp4",
+  "rebuild_aroll": false,
+  "fixes": [
+    {
+      "find": [
+        "biles"
+      ],
+      "replace": [
+        "bills"
+      ]
+    }
+  ],
+  "intro": {
+    "punch_frames": 5,
+    "punch_scale": 1.4,
+    "ramp_frames": 12,
+    "pre_drop_scale": 1.52,
+    "drop_scale": 2.3,
+    "settle_scale": 2.2
+  },
+  "takes": [
+    {
+      "until": 999,
+      "face": [
+        0.57,
+        0.52
+      ],
+      "close": 1.9
+    }
+  ],
+  "titles": [
+    {
+      "phrase": "te están mintiendo",
+      "top": "TE ESTÁN",
+      "accent": [
+        "ESTÁN"
+      ],
+      "big": "MINTIENDO",
+      "y": 0.216,
+      "align": "center"
+    },
+    {
+      "phrase": "vivir con sueño",
+      "top": "VIVIR CON",
+      "accent": [
+        "CON"
+      ],
+      "big": "SUEÑO",
+      "y": 0.083,
+      "align": "center"
+    },
+    {
+      "phrase": "Deja de comer cuento",
+      "top": "DEJA DE COMER",
+      "accent": [
+        "COMER"
+      ],
+      "big": "CUENTO",
+      "y": 0.117,
+      "align": "center"
+    },
+    {
+      "phrase": "muchas oportunidades",
+      "top": "MUCHAS",
+      "accent": [],
+      "big": "OPORTUNIDADES",
+      "y": 0.178,
+      "align": "center"
+    },
+    {
+      "phrase": "Comenta 10K",
+      "top": "COMENTA",
+      "accent": [],
+      "big": "10K",
+      "y": 0.118,
+      "align": "center"
+    }
+  ],
+  "flash_at": [
+    "Deja de comer cuento",
+    "Comenta 10K"
+  ],
+  "broll": [
+    {
+      "id": "bandera",
+      "file": "input/material/15703699-uhd_2160_3840_24fps.mp4",
+      "trim": 0.3,
+      "phrase": "llegaste a este país",
+      "hold": 0.45
+    },
+    {
+      "id": "taller",
+      "file": "input/material/14554263_2160_3840_60fps.mp4",
+      "trim": 1.0,
+      "phrase": "que en este país se vive solamente para trabajar"
+    },
+    {
+      "id": "facturas",
+      "file": "input/material/7925402-uhd_2160_3840_24fps.mp4",
+      "trim": 3.0,
+      "phrase": "porque si no, no tendrás como pagar los bills"
+    },
+    {
+      "id": "gimnasio",
+      "file": "input/material/IMG_5967.MOV",
+      "transpose": 1,
+      "trim": 10.0,
+      "phrase": "Vete a hacer ejercicio"
+    },
+    {
+      "id": "velero",
+      "file": "input/material/8523242-hd_1080_1920_30fps.mp4",
+      "trim": 5.0,
+      "phrase": "y ponte a hacer cosas diferentes"
+    },
+    {
+      "id": "calle",
+      "file": "input/material/5957461-uhd_2160_3840_24fps.mp4",
+      "trim": 1.0,
+      "phrase": "Si sigues haciendo lo mismo que hacen todos los latinos en Estados Unidos"
+    },
+    {
+      "id": "agobiado",
+      "file": "input/material/8731293-hd_1080_1920_25fps.mp4",
+      "trim": 2.0,
+      "phrase": "Vas a vivir en el mismo cuento que siempre te han dicho"
+    },
+    {
+      "id": "escenario",
+      "file": "input/material/1020.mp4",
+      "trim": 6.3,
+      "cx": 0.72,
+      "speed": 1.0,
+      "phrase": "Y nosotros como latinos"
+    },
+    {
+      "id": "founders_club",
+      "file": "input/material/1020.mp4",
+      "trim": 2.1,
+      "cx": 0.6,
+      "speed": 0.9,
+      "leak": true,
+      "phrase": "y quieres saber cómo funciona esto"
+    }
+  ],
+  "denoise": true
+}
