@@ -245,5 +245,6 @@
       "trim": 2.0,
       "phrase": "que está dispuesta a abrirte sus puertas"
     }
-  ]
+  ],
+  "sfx": false
 }
