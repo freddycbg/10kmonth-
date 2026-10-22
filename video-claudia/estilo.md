@@ -226,3 +226,32 @@ Hay **tres estilos de texto**, todos en el mismo **amarillo dorado de la marca**
   10K Month.
 - **Entrega en alta calidad:** render con CRF 10 (`--crf=10 --x264-preset=slow`), vídeo copiado tal cual en el
   máster y AAC 44.1 kHz a 256 kbps.
+
+## Vídeo de Claudia (reclutamiento para Carta Business Group Virginia): preferencias aprobadas
+
+Claudia es del equipo: mujer de 48 años, colombiana, abogada toda su vida, empezando a reclutar. Mismo estilo de
+edición (dinámico, títulos detrás de la cabeza, gancho con doble zoom), pero con **tipografía y color propios que
+encajen con una mujer**. Aprobado en el borrador 1.
+
+- **Subtítulos:** Montserrat ExtraBold (800) en mayúsculas, **rosa #FF9DBA** (a juego con su labial rojo), con la
+  misma sombra fuerte y el mismo pop palabra a palabra.
+- **Títulos cinéticos:** línea pequeña en Montserrat ExtraBold blanca con la palabra de acento en rosa, y la
+  palabra gigante en **Playfair Display Black Italic, en minúsculas, rosa #FF8FB1** (estilo revista, elegante).
+  En minúsculas sale mucho más grande que en mayúsculas ("triste" a 360 px); `build_edit.py` calcula el tamaño
+  con las métricas de Playfair. Para colocarla detrás de la cabeza: `y = (alto de la cabeza − 65 − 0.75 × tamaño)
+  / 1920` (sin línea superior, sin el 65).
+- **Palabras gigantes:** *triste* (gancho), *manera* (¿existe otra manera?), *camino* (tu propio camino), *cero*
+  (empezando de cero), *comenta* (con "QUIERES CONOCER MÁS" encima). Nada debajo de la palabra gigante: quedaría
+  sobre la cara, tapado por el recorte; esas palabras van en los subtítulos.
+- **El guion manda sobre el orden de la grabación:** si una frase se grabó en otro orden y es una toma aparte, se
+  reordena antes de editar (`claudia_orden.mov`, cortes exactos al fotograma), y se quitan las frases que no son del
+  guion ("¿Ya?").
+- **Seguimiento de cara** (`scripts/facetrack.py` → `src/Edit/face.json`): cuando el orador camina, el encuadre
+  (punch-ins, zoom del gancho) sigue su cara fotograma a fotograma, suavizado dentro de cada tramo. Con la cara
+  fija por toma el plano cerrado la dejaba fuera.
+- **B-roll pedido por el usuario, en su frase exacta** y sin llenar el vídeo (38 %): mamá con el bebé trabajando
+  ("dejar de compartir tiempo con tu familia"), señora de traje rojo frustrada ("donde soñabas estar"), albañil
+  ("trabajar más horas"), chico que no descansó ("dormir menos"), equipo viendo la PC ("crecer profesionalmente"),
+  equipo señalando la pantalla ("ganas de aprender"), además de fábrica, escenario de premios y Founders Club.
+- **Cierre:** tarjeta de Carta Business Group con "VIRGINIA" (2.5 s).
+- **Recorte con `birefnet-general-lite`** también con fondos de edificios y árboles: borde limpio en el pelo rubio.
