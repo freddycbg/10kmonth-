@@ -255,3 +255,10 @@ encajen con una mujer**. Aprobado en el borrador 1.
   equipo señalando la pantalla ("ganas de aprender"), además de fábrica, escenario de premios y Founders Club.
 - **Cierre:** tarjeta de Carta Business Group con "VIRGINIA" (2.5 s).
 - **Recorte con `birefnet-general-lite`** también con fondos de edificios y árboles: borde limpio en el pelo rubio.
+
+## Regla fija para los vídeos de Freddy
+
+- **Todos los vídeos de Freddy terminan con la animación del logo 10K Month** (`Final (SOLO EN VIDEOS DE FREDDY).mp4`
+  en la carpeta de b-roll; aquí `input/material/Final_10K.mp4`, `"end_video"` en la configuración). Solo en los de
+  Freddy: los del equipo (Claudia, etc.) cierran con la tarjeta de Carta Business Group.
+- En los vídeos de Freddy los subtítulos **no van en amarillo** y deben ir acordes a un hombre.
