@@ -2,18 +2,18 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationInFrames": 1072,
- "arollFrames": 997,
- "lastWordFrame": 983,
- "introDropFrame": 98,
+ "durationInFrames": 1236,
+ "arollFrames": 1161,
+ "lastWordFrame": 1147,
+ "introDropFrame": 163,
  "intro": {
   "frames": [
    0,
    5,
-   90,
-   98,
-   102,
-   232
+   155,
+   163,
+   167,
+   339
   ],
   "scales": [
    1.0,
@@ -29,6 +29,7 @@
   "handle": "@aimeecarolinag",
   "kicker": "Sígueme"
  },
+ "static": true,
  "music": false,
  "overlays": [
   {
@@ -65,8 +66,8 @@
    "y": 0.2,
    "rotate": 4,
    "name": "Gráfico phrase: Olvidé algo",
-   "from": 248,
-   "durationInFrames": 33
+   "from": 380,
+   "durationInFrames": 35
   },
   {
    "type": "phrase",
@@ -87,7 +88,7 @@
    "pill": true,
    "rotate": -2,
    "name": "Gráfico phrase: Anna, ¿podrías recordarme",
-   "from": 297,
+   "from": 456,
    "durationInFrames": 66
   },
   {
@@ -99,7 +100,7 @@
    "time": "8:50 a. m.",
    "y": 0.05,
    "name": "Gráfico notification: 8:50 de la mañana",
-   "from": 486,
+   "from": 645,
    "durationInFrames": 91
   },
   {
@@ -109,7 +110,7 @@
    "body": "Tacos de frijoles negros con aguacate",
    "y": 0.2,
    "name": "Gráfico card: tacos de frijoles negros con a",
-   "from": 589,
+   "from": 748,
    "durationInFrames": 99
   },
   {
@@ -127,29 +128,29 @@
    "y": 0.14,
    "rotate": -3,
    "name": "Gráfico phrase: una ayudita extra",
-   "from": 800,
+   "from": 964,
    "durationInFrames": 43
   },
   {
    "type": "image",
    "sfx": "swoosh",
    "src": "media/anna_chat.png",
-   "x": 0.28,
-   "y": 0.4,
-   "width": 0.42,
-   "rotate": -6,
+   "x": 0.8,
+   "y": 0.3,
+   "width": 0.34,
+   "rotate": 6,
    "name": "Gráfico image: descarga la aplicación Anna",
-   "from": 837,
+   "from": 1001,
    "durationInFrames": 155
   },
   {
    "type": "code",
    "label": "Código",
    "code": "AIMEE",
-   "x": 0.66,
-   "y": 0.65,
+   "x": 0.5,
+   "y": 0.66,
    "name": "Gráfico code: coloca AIMEE",
-   "from": 887,
+   "from": 1051,
    "durationInFrames": 105
   },
   {
@@ -157,17 +158,17 @@
    "sfx": "kaching",
    "big": "20%",
    "small": "DESCUENTO",
-   "x": 0.76,
-   "y": 0.22,
+   "x": 0.2,
+   "y": 0.15,
    "name": "Gráfico badge: 20% de descuento",
-   "from": 945,
+   "from": 1109,
    "durationInFrames": 48
   }
  ],
  "shots": [
   {
    "from": 0,
-   "durationInFrames": 233,
+   "durationInFrames": 340,
    "framing": "ancho",
    "face": {
     "x": 0.5,
@@ -176,8 +177,8 @@
    "closeScale": 1.25
   },
   {
-   "from": 233,
-   "durationInFrames": 38,
+   "from": 340,
+   "durationInFrames": 58,
    "framing": "cerrado",
    "face": {
     "x": 0.45,
@@ -186,8 +187,8 @@
    "closeScale": 1.2
   },
   {
-   "from": 271,
-   "durationInFrames": 25,
+   "from": 398,
+   "durationInFrames": 54,
    "framing": "ancho",
    "face": {
     "x": 0.45,
@@ -196,17 +197,7 @@
    "closeScale": 1.2
   },
   {
-   "from": 296,
-   "durationInFrames": 124,
-   "framing": "cerrado",
-   "face": {
-    "x": 0.5,
-    "y": 0.42
-   },
-   "closeScale": 1.25
-  },
-  {
-   "from": 420,
+   "from": 452,
    "durationInFrames": 127,
    "framing": "ancho",
    "face": {
@@ -216,18 +207,18 @@
    "closeScale": 1.25
   },
   {
-   "from": 547,
+   "from": 579,
+   "durationInFrames": 127,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.25
+  },
+  {
+   "from": 706,
    "durationInFrames": 25,
-   "framing": "ancho",
-   "face": {
-    "x": 0.5,
-    "y": 0.43
-   },
-   "closeScale": 1.3
-  },
-  {
-   "from": 572,
-   "durationInFrames": 58,
    "framing": "cerrado",
    "face": {
     "x": 0.5,
@@ -236,8 +227,8 @@
    "closeScale": 1.3
   },
   {
-   "from": 630,
-   "durationInFrames": 50,
+   "from": 731,
+   "durationInFrames": 107,
    "framing": "ancho",
    "face": {
     "x": 0.5,
@@ -246,18 +237,8 @@
    "closeScale": 1.3
   },
   {
-   "from": 680,
-   "durationInFrames": 48,
-   "framing": "ancho",
-   "face": {
-    "x": 0.5,
-    "y": 0.43
-   },
-   "closeScale": 1.3
-  },
-  {
-   "from": 728,
-   "durationInFrames": 56,
+   "from": 838,
+   "durationInFrames": 110,
    "framing": "cerrado",
    "face": {
     "x": 0.5,
@@ -266,7 +247,7 @@
    "closeScale": 1.3
   },
   {
-   "from": 784,
+   "from": 948,
    "durationInFrames": 103,
    "framing": "cerrado",
    "face": {
@@ -276,7 +257,7 @@
    "closeScale": 1.3
   },
   {
-   "from": 887,
+   "from": 1051,
    "durationInFrames": 110,
    "framing": "ancho",
    "face": {
@@ -315,7 +296,7 @@
    ]
   },
   {
-   "from": 98,
+   "from": 163,
    "durationInFrames": 41,
    "words": [
     {
@@ -336,8 +317,8 @@
    ]
   },
   {
-   "from": 235,
-   "durationInFrames": 16,
+   "from": 347,
+   "durationInFrames": 27,
    "words": [
     {
      "text": "¿Qué?",
@@ -347,7 +328,7 @@
    ]
   },
   {
-   "from": 297,
+   "from": 456,
    "durationInFrames": 14,
    "words": [
     {
@@ -358,7 +339,7 @@
    ]
   },
   {
-   "from": 311,
+   "from": 470,
    "durationInFrames": 45,
    "words": [
     {
@@ -384,7 +365,7 @@
    ]
   },
   {
-   "from": 356,
+   "from": 515,
    "durationInFrames": 36,
    "words": [
     {
@@ -415,7 +396,7 @@
    ]
   },
   {
-   "from": 392,
+   "from": 551,
    "durationInFrames": 20,
    "words": [
     {
@@ -436,7 +417,7 @@
    ]
   },
   {
-   "from": 412,
+   "from": 571,
    "durationInFrames": 31,
    "words": [
     {
@@ -467,7 +448,7 @@
    ]
   },
   {
-   "from": 443,
+   "from": 602,
    "durationInFrames": 43,
    "words": [
     {
@@ -498,7 +479,7 @@
    ]
   },
   {
-   "from": 486,
+   "from": 645,
    "durationInFrames": 44,
    "words": [
     {
@@ -524,7 +505,7 @@
    ]
   },
   {
-   "from": 530,
+   "from": 689,
    "durationInFrames": 21,
    "words": [
     {
@@ -540,7 +521,7 @@
    ]
   },
   {
-   "from": 551,
+   "from": 710,
    "durationInFrames": 20,
    "words": [
     {
@@ -551,7 +532,7 @@
    ]
   },
   {
-   "from": 571,
+   "from": 730,
    "durationInFrames": 46,
    "words": [
     {
@@ -582,7 +563,7 @@
    ]
   },
   {
-   "from": 617,
+   "from": 776,
    "durationInFrames": 39,
    "words": [
     {
@@ -603,7 +584,7 @@
    ]
   },
   {
-   "from": 656,
+   "from": 815,
    "durationInFrames": 23,
    "words": [
     {
@@ -619,8 +600,8 @@
    ]
   },
   {
-   "from": 679,
-   "durationInFrames": 25,
+   "from": 838,
+   "durationInFrames": 30,
    "words": [
     {
      "text": "Parece",
@@ -629,13 +610,13 @@
     },
     {
      "text": "bien",
-     "at": 11,
+     "at": 16,
      "em": false
     }
    ]
   },
   {
-   "from": 704,
+   "from": 868,
    "durationInFrames": 24,
    "words": [
     {
@@ -666,7 +647,7 @@
    ]
   },
   {
-   "from": 728,
+   "from": 892,
    "durationInFrames": 28,
    "words": [
     {
@@ -692,7 +673,7 @@
    ]
   },
   {
-   "from": 756,
+   "from": 920,
    "durationInFrames": 29,
    "words": [
     {
@@ -718,7 +699,7 @@
    ]
   },
   {
-   "from": 785,
+   "from": 949,
    "durationInFrames": 52,
    "words": [
     {
@@ -749,7 +730,7 @@
    ]
   },
   {
-   "from": 837,
+   "from": 1001,
    "durationInFrames": 42,
    "words": [
     {
@@ -775,7 +756,7 @@
    ]
   },
   {
-   "from": 879,
+   "from": 1043,
    "durationInFrames": 36,
    "words": [
     {
@@ -796,7 +777,7 @@
    ]
   },
   {
-   "from": 915,
+   "from": 1079,
    "durationInFrames": 47,
    "words": [
     {
@@ -827,7 +808,7 @@
    ]
   },
   {
-   "from": 962,
+   "from": 1126,
    "durationInFrames": 30,
    "words": [
     {
@@ -855,111 +836,118 @@
   },
   {
    "sound": "whoosh_corto",
-   "from": 225,
+   "from": 332,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.28
   },
   {
    "sound": "pop",
-   "from": 248,
+   "from": 380,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.5
   },
   {
+   "sound": "whoosh_corto",
+   "from": 444,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.28
+  },
+  {
    "sound": "pop",
-   "from": 297,
+   "from": 456,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.5
   },
   {
    "sound": "ding",
-   "from": 486,
+   "from": 645,
    "trim": 0,
    "durationInFrames": 51,
    "vol": 0.35
   },
   {
    "sound": "whoosh_corto",
-   "from": 539,
+   "from": 698,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.28
   },
   {
    "sound": "whoosh_corto",
-   "from": 564,
+   "from": 723,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.28
   },
   {
    "sound": "pop",
-   "from": 589,
+   "from": 748,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.5
   },
   {
    "sound": "whoosh_corto",
-   "from": 776,
+   "from": 940,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.28
   },
   {
    "sound": "pop",
-   "from": 800,
+   "from": 964,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.5
   },
   {
    "sound": "swoosh",
-   "from": 832,
+   "from": 996,
    "trim": 0,
    "durationInFrames": 9,
    "vol": 0.4
   },
   {
    "sound": "pop",
-   "from": 887,
+   "from": 1051,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.5
   },
   {
    "sound": "click",
-   "from": 899,
+   "from": 1063,
    "trim": 0,
    "durationInFrames": 2,
    "vol": 0.5
   },
   {
    "sound": "kaching",
-   "from": 945,
+   "from": 1109,
    "trim": 0,
    "durationInFrames": 51,
    "vol": 0.4
   },
   {
    "sound": "whoosh_largo",
-   "from": 981,
+   "from": 1145,
    "trim": 0,
    "durationInFrames": 27,
    "vol": 0.35
   },
   {
    "sound": "pop",
-   "from": 1003,
+   "from": 1167,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.45
   }
  ],
  "flashes": [
-  997
+  1161
  ]
 }

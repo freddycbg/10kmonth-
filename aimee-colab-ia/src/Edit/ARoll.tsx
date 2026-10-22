@@ -57,6 +57,9 @@ const introScale = (frame: number) =>
 export const useArollStyle = (offset = 0): React.CSSProperties => {
   const frame = useCurrentFrame() + offset;
   const { width, height } = useVideoConfig();
+  if (edit.static) {
+    return { width, height };
+  }
   const shot = findShot(frame);
   const face = faceAt(frame, shot);
   const local = frame - shot.from;

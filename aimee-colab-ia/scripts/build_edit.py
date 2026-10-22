@@ -122,7 +122,8 @@ def main(cfg_path):
         global LEVEL_VOICE
         LEVEL_VOICE = bool(cfg.get("level_voice"))
         audio_src = denoise(cfg["source"], root) if cfg.get("denoise") else cfg["source"]
-        build_aroll(cfg["source"], segs, aroll, audio_src, cfg.get("raw_ranges", []))
+        build_aroll(cfg["source"], segs, aroll, audio_src, cfg.get("raw_ranges", []),
+                    original_audio=bool(cfg.get("original_audio")))
     got = int(subprocess.run(
         ["ffprobe", "-v", "error", "-select_streams", "v:0", "-count_packets",
          "-show_entries", "stream=nb_read_packets", "-of", "csv=p=0", aroll],
@@ -396,6 +397,8 @@ def main(cfg_path):
         "intro": intro_keys(cfg.get("intro"), frame(anchor), shots[0]["durationInFrames"] - 1),
         "endSrc": end_src,
         "endCard": end_card,
+        # Cámara fija: sin zoom del gancho, sin punch-ins ni empuje (Aimee, borrador 2).
+        "static": bool(cfg.get("static_camera")),
         "music": bool(cfg.get("music")),
         "overlays": overlays,
         "shots": shots, "broll": broll_out, "captions": captions, "titles": titles, "icons": icons, "sfx": sfx,
@@ -633,7 +636,7 @@ def restore_ranges(x, src, sr, ranges, target_db=-30.0, max_gain_db=24.0):
     return x
 
 
-def build_aroll(src, segs, dst, audio_src=None, raw_ranges=()):
+def build_aroll(src, segs, dst, audio_src=None, raw_ranges=(), original_audio=False):
     """Vídeo exacto al fotograma y audio exacto a la muestra, montados por separado."""
     tmp = os.path.join(os.path.dirname(dst), "aroll_parts")
     os.makedirs(tmp, exist_ok=True)
@@ -680,7 +683,9 @@ def build_aroll(src, segs, dst, audio_src=None, raw_ranges=()):
     run([
         "ffmpeg", "-v", "error", "-y", "-i", video, "-f", "f32le", "-ar", str(sr), "-ac", "2", "-i", pcm,
         "-map", "0:v", "-map", "1:a", "-c:v", "copy",
-        "-af", f"{VOICE},{LEVELER + ',' if LEVEL_VOICE else ''}loudnorm=I=-16:TP=-1.5:LRA=7,aresample={sr}",
+        # original_audio: la voz tal cual se grabó, sin procesar (lo pidió Aimee: que se oiga como en el original).
+        *([] if original_audio else
+          ["-af", f"{VOICE},{LEVELER + ',' if LEVEL_VOICE else ''}loudnorm=I=-16:TP=-1.5:LRA=7,aresample={sr}"]),
         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", dst,
     ])
     for f in os.listdir(tmp):
