@@ -36,11 +36,11 @@
    "type": "phrase",
    "lines": [
     {
-     "text": "Mamá",
+     "text": "Allison y mamá",
      "style": "bold"
     },
     {
-     "text": "multitarea",
+     "text": "jugando",
      "style": "script"
     }
    ],
@@ -48,11 +48,10 @@
    "rotate": -3,
    "name": "Gráfico phrase: ¡Yo soy tu mamá!",
    "from": 0,
-   "durationInFrames": 72
+   "durationInFrames": 204
   },
   {
    "type": "phrase",
-   "hide_caption": true,
    "lines": [
     {
      "text": "¡Olvidé",
@@ -296,6 +295,17 @@
    ]
   },
   {
+   "from": 119,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "¡Gracias!",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
    "from": 163,
    "durationInFrames": 41,
    "words": [
@@ -317,11 +327,75 @@
    ]
   },
   {
+   "from": 230,
+   "durationInFrames": 41,
+   "words": [
+    {
+     "text": "Ya",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "es",
+     "at": 11,
+     "em": false
+    },
+    {
+     "text": "normal",
+     "at": 21,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 272,
+   "durationInFrames": 70,
+   "words": [
+    {
+     "text": "¡Este",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "comentario!",
+     "at": 31,
+     "em": false
+    }
+   ]
+  },
+  {
    "from": 347,
    "durationInFrames": 27,
    "words": [
     {
      "text": "¿Qué?",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 380,
+   "durationInFrames": 34,
+   "words": [
+    {
+     "text": "Olvidé",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "algo",
+     "at": 18,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 427,
+   "durationInFrames": 22,
+   "words": [
+    {
+     "text": "¿Dónde?",
      "at": 0,
      "em": false
     }

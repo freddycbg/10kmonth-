@@ -74,7 +74,11 @@
         "es",
         "mamá!"
       ],
-      "replace": []
+      "replace": [
+        "Ya",
+        "es",
+        "normal."
+      ]
     },
     {
       "find": [
@@ -82,13 +86,18 @@
         "tu",
         "comentario!"
       ],
-      "replace": []
+      "replace": [
+        "¡Este",
+        "comentario!"
+      ]
     },
     {
       "find": [
         "vale."
       ],
-      "replace": []
+      "replace": [
+        "¿Dónde?"
+      ]
     }
   ],
   "intro": {
@@ -160,22 +169,22 @@
       "phrase": "¡Yo soy tu mamá!",
       "lines": [
         {
-          "text": "Mamá",
+          "text": "Allison y mamá",
           "style": "bold"
         },
         {
-          "text": "multitarea",
+          "text": "jugando",
           "style": "script"
         }
       ],
       "y": 0.15,
       "rotate": -3,
-      "hold": 2.4
+      "hold": 4.0,
+      "until": "¿Eres mi mamá?"
     },
     {
       "type": "phrase",
       "phrase": "Olvidé algo",
-      "hide_caption": true,
       "lines": [
         {
           "text": "¡Olvidé",
@@ -285,5 +294,12 @@
   },
   "raw_ranges": [],
   "static_camera": true,
-  "original_audio": true
+  "original_audio": true,
+  "insert_words": [
+    {
+      "w": "¡Gracias!",
+      "s": 3.98,
+      "e": 4.45
+    }
+  ]
 }

@@ -79,6 +79,9 @@ def main(cfg_path):
         for seg in transcript["segments"] for w in seg["words"]
     ]
     words = apply_fixes(words, cfg.get("fixes", []))
+    # Palabras que Whisper no recoge (p. ej. un "¡Gracias!" de la niña): se añaden con su tiempo en el original.
+    words = sorted(words + [{"w": x["w"], "s": x["s"], "e": x["e"]} for x in cfg.get("insert_words", [])],
+                   key=lambda w: w["s"])
 
     # --- Tramos conservados, ajustados a fotogramas ---------------------------
     segs = [[snap(a), snap(b)] for a, b in keep["keep"]]
@@ -565,8 +568,8 @@ def chunk(words):
         return len(" ".join(w["w"] for w in ws))
 
     for w in words:
-        if cur and (w["os"] - cur[-1]["oe"] > 0.6 or norm(w["w"]) in BREAK_BEFORE):
-            # hueco (había un título en medio) o conjunción: bloque nuevo
+        if cur and (w["os"] - cur[-1]["oe"] > 0.6 or norm(w["w"]) in BREAK_BEFORE or w["w"][:1] in "¡¿"):
+            # hueco (había un título en medio), conjunción o frase nueva (¡ ¿): bloque nuevo
             blocks.append(cur)
             cur = []
         if cur and (length(cur + [w]) > MAX_CHARS or len(cur) >= MAX_WORDS):
