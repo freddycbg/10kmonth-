@@ -167,20 +167,50 @@
     {
       "type": "phrase",
       "phrase": "¡Yo soy tu mamá!",
+      "until": "¿Eres mi mamá?",
+      "y": 0.15,
+      "rotate": -2,
       "lines": [
         {
-          "text": "Allison y mamá",
-          "style": "bold"
+          "text": "POV:",
+          "style": "bold",
+          "size": 62
         },
         {
-          "text": "jugando",
-          "style": "script"
+          "text": "mi hija cree que",
+          "style": "script",
+          "size": 80
+        },
+        {
+          "text": "ella es la mamá",
+          "style": "script",
+          "size": 80
         }
-      ],
+      ]
+    },
+    {
+      "type": "phrase",
+      "phrase": "Ya es normal.",
+      "until": "¿Qué?",
       "y": 0.15,
-      "rotate": -3,
-      "hold": 4.0,
-      "until": "¿Eres mi mamá?"
+      "rotate": 2,
+      "lines": [
+        {
+          "text": "Menos mal tengo a",
+          "style": "bold",
+          "size": 54
+        },
+        {
+          "text": "Anna",
+          "style": "script",
+          "size": 112
+        },
+        {
+          "text": "para ayudarme",
+          "style": "bold",
+          "size": 54
+        }
+      ]
     },
     {
       "type": "phrase",

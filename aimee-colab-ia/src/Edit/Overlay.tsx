@@ -15,7 +15,8 @@ import { CREAM, SAGE, SCRIPT_FONT, TITLE_FONT } from "./fonts";
 // insignia de descuento y casilla con el código. Todos entran con un pop elástico y salen en 5 fotogramas.
 const ICONS: Record<string, LucideIcon> = { AlarmClock, Leaf, Sparkles, UtensilsCrossed };
 const EXIT = 5;
-const SHADOW = "0 3px 14px rgba(0,0,0,0.45), 0 0 3px rgba(0,0,0,0.35)";
+// Sombra reforzada: la cursiva blanca se perdía sobre la pared clara (POV de Aimee).
+const SHADOW = "0 3px 16px rgba(0,0,0,0.6), 0 0 4px rgba(0,0,0,0.5)";
 const CARD_SHADOW = "0 18px 50px rgba(0,0,0,0.28), 0 4px 12px rgba(0,0,0,0.18)";
 
 type Line = { text: string; style: "bold" | "script"; size?: number };
@@ -73,14 +74,19 @@ const Phrase: React.FC<OverlayProps> = ({ lines = [], x = 0.5, y = 0.2, rotate =
       }}
     >
       {lines.map((l, i) => (
-        <PhraseLine key={i} line={l} delay={i * 6} dark={dark} />
+        <PhraseLine key={i} line={l} delay={i * 6} dark={dark} afterScript={i > 0 && lines[i - 1].style === "script"} />
       ))}
     </div>
   );
 };
 
 // dark: texto oscuro para fondos claros (el fondo amarillo de la toma del móvil).
-const PhraseLine: React.FC<{ line: Line; delay: number; dark: boolean }> = ({ line, delay, dark }) => {
+const PhraseLine: React.FC<{ line: Line; delay: number; dark: boolean; afterScript: boolean }> = ({
+  line,
+  delay,
+  dark,
+  afterScript,
+}) => {
   const { pop } = usePop(delay);
   const bold = line.style === "bold";
   return (
@@ -92,7 +98,8 @@ const PhraseLine: React.FC<{ line: Line; delay: number; dark: boolean }> = ({ li
         textTransform: bold ? "uppercase" : "none",
         fontSize: line.size ?? (bold ? 66 : 96),
         lineHeight: bold ? 1.0 : 0.95,
-        marginTop: bold ? 0 : -10,
+        // La cursiva se encaja bajo la línea gruesa; dos cursivas seguidas necesitan aire (los rasgos chocaban).
+        marginTop: bold ? 0 : afterScript ? 6 : -10,
         color: dark ? (bold ? "#2F5546" : "#1C1C1E") : bold ? CREAM : "#FFFFFF",
         letterSpacing: bold ? "0.02em" : 0,
         opacity: Math.min(1, pop * 1.5),
