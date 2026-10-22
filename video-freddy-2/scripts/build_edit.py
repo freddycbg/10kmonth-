@@ -354,6 +354,9 @@ def main(cfg_path):
         "-t", f"{total:.3f}", "-c:a", "aac", "-b:a", "192k", music_dst,
     ])
 
+    sfx = sound_effects(cfg, root, words, frame, find_phrase, titles, broll_out, flashes, icons, captions,
+                        frame(anchor), aroll_frames)
+
     edit = {
         "fps": FPS, "width": W, "height": H,
         "durationInFrames": total_frames,
@@ -363,7 +366,7 @@ def main(cfg_path):
         "introDropFrame": frame(anchor),
         "intro": intro_keys(cfg.get("intro"), frame(anchor), shots[0]["durationInFrames"] - 1),
         "endSrc": end_src,
-        "shots": shots, "broll": broll_out, "captions": captions, "titles": titles, "icons": icons,
+        "shots": shots, "broll": broll_out, "captions": captions, "titles": titles, "icons": icons, "sfx": sfx,
         "flashes": flashes,
     }
     json.dump(edit, open(os.path.join(root, "src", "Edit", "edit.json"), "w"), ensure_ascii=False, indent=1)
@@ -372,6 +375,77 @@ def main(cfg_path):
           f"{len(segs)} tramos · {len(shots)} planos · {len(broll_out)} b-roll ({cover:.0f}%) · "
           f"{len(captions)} bloques de subtítulo · {len(titles)} títulos · música desde {music_start:.2f}s "
           f"(golpe en {anchor:.2f}s), ganancia {gain:+.1f} dB")
+
+
+# Efectos de sonido (librería sfx/ del repositorio, sintetizados con sfx/generar_sfx.py). Volumen de cada uno
+# bajo la voz; el máster final normaliza el conjunto.
+SFX_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "sfx")
+SFX_VOL = {"whoosh_corto": 0.3, "whoosh_largo": 0.35, "swoosh": 0.4, "pop": 0.5, "click": 0.45, "impacto": 0.55,
+           "sub_drop": 0.45, "riser": 0.3, "ding": 0.35, "kaching": 0.4, "camara": 0.4, "glitch": 0.35,
+           "error": 0.35, "braam": 0.45}
+# Sonido de cada icono animado.
+ICON_SFX = {"ArrowDown": "ding", "Send": "swoosh", "TrendingUp": "kaching", "Lightbulb": "ding", "Lock": "click",
+            "DoorOpen": "whoosh_corto", "CalendarDays": "pop"}
+
+
+def sound_effects(cfg, root, words, frame, find_phrase, titles, broll, flashes, icons, captions, drop, aroll_frames):
+    """Coloca los efectos típicos de vídeo viral: riser e impacto en el gancho, whoosh en cada b-roll y destello,
+    caída de graves en cada palabra gigante, pop/ding/kaching/swoosh en los iconos y un clic suave en las palabras
+    clave de los subtítulos. "sfx": false en la configuración los quita; "sfx_extra" añade los que se pidan."""
+    if cfg.get("sfx") is False:
+        return []
+    import shutil
+    import wave
+
+    dst = os.path.join(root, "public", "sfx")
+    os.makedirs(dst, exist_ok=True)
+    length = {}
+    for f in os.listdir(SFX_DIR):
+        if f.endswith(".wav"):
+            shutil.copy(os.path.join(SFX_DIR, f), os.path.join(dst, f))
+            with wave.open(os.path.join(SFX_DIR, f)) as w:
+                length[f[:-4]] = int(np.ceil(w.getnframes() / w.getframerate() * FPS))
+    # Fotograma en que cada efecto "pega" (pico del whoosh, final del riser).
+    peak = {"whoosh_corto": 8, "whoosh_largo": 16, "swoosh": 5, "riser": length["riser"]}
+    ev = []
+
+    def add(sound, at, vol=None):
+        ev.append({"sound": sound, "at": at, "vol": vol if vol is not None else SFX_VOL[sound]})
+
+    add("riser", drop)
+    add("impacto", drop)
+    for t in titles:
+        if t["from"] + t["bigAt"] != drop:
+            add("sub_drop", t["from"] + t["bigAt"])
+    for k, b in enumerate(broll):
+        add("whoosh_corto" if k % 2 == 0 else "whoosh_largo", b["from"], SFX_VOL["whoosh_corto"])
+    for f in flashes:
+        add("whoosh_largo", f)
+    for ic in icons:
+        sound = ICON_SFX.get(ic["icon"], "pop")
+        at = ic["from"] + ic["durationInFrames"] - 10 if ic["anim"] == "fly" else ic["from"]
+        add(sound, at)
+    for c in captions:
+        for w in c["words"]:
+            if w.get("em"):
+                add("click", c["from"] + w["at"], 0.18)
+    for x in cfg.get("sfx_extra", []):
+        add(x["sound"], frame(words[find_phrase(words, x["phrase"])[0]]["os"]), x.get("vol"))
+
+    # Uno por sitio: si dos efectos caen a menos de 4 fotogramas, se queda el más fuerte (salvo riser+impacto).
+    ev.sort(key=lambda e: (e["at"], -e["vol"]))
+    out = []
+    for e in ev:
+        clash = [o for o in out if abs(o["at"] - e["at"]) < 4 and "riser" not in (o["sound"], e["sound"])]
+        if clash and clash[0]["vol"] >= e["vol"]:
+            continue
+        out = [o for o in out if o not in clash] + [e]
+    result = []
+    for e in sorted(out, key=lambda e: e["at"]):
+        start = e["at"] - peak.get(e["sound"], 0)
+        result.append({"sound": e["sound"], "from": max(0, start), "trim": max(0, -start),
+                       "durationInFrames": length[e["sound"]] - max(0, -start), "vol": e["vol"]})
+    return [r for r in result if r["durationInFrames"] > 0]
 
 
 def intro_keys(cfg, drop, end):

@@ -146,6 +146,19 @@ export const Edit: React.FC = () => {
         </Sequence>
       ))}
 
+      {/* Efectos de sonido (sfx/ del repositorio): whoosh, impactos, pops... colocados por build_edit.py. */}
+      {edit.sfx.map((x, i) => (
+        <Sequence
+          key={`sfx-${i}`}
+          name={`Efecto ${x.sound}`}
+          from={x.from}
+          durationInFrames={x.durationInFrames}
+          layout="none"
+        >
+          <Audio src={staticFile(`sfx/${x.sound}.wav`)} volume={x.vol} trimBefore={x.trim} />
+        </Sequence>
+      ))}
+
       <Audio
         name="Música"
         src={staticFile("media/music.m4a")}
