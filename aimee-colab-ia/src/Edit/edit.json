@@ -1,0 +1,965 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1072,
+ "arollFrames": 997,
+ "lastWordFrame": 983,
+ "introDropFrame": 98,
+ "intro": {
+  "frames": [
+   0,
+   5,
+   90,
+   98,
+   102,
+   232
+  ],
+  "scales": [
+   1.0,
+   1.08,
+   1.1,
+   1.24,
+   1.12,
+   1.2
+  ]
+ },
+ "endSrc": null,
+ "endCard": {
+  "handle": "@aimeecarolinag",
+  "kicker": "Sígueme"
+ },
+ "music": false,
+ "overlays": [
+  {
+   "type": "phrase",
+   "lines": [
+    {
+     "text": "Mamá",
+     "style": "bold"
+    },
+    {
+     "text": "multitarea",
+     "style": "script"
+    }
+   ],
+   "y": 0.15,
+   "rotate": -3,
+   "name": "Gráfico phrase: ¡Yo soy tu mamá!",
+   "from": 0,
+   "durationInFrames": 72
+  },
+  {
+   "type": "phrase",
+   "hide_caption": true,
+   "lines": [
+    {
+     "text": "¡Olvidé",
+     "style": "bold"
+    },
+    {
+     "text": "algo!",
+     "style": "script"
+    }
+   ],
+   "y": 0.2,
+   "rotate": 4,
+   "name": "Gráfico phrase: Olvidé algo",
+   "from": 248,
+   "durationInFrames": 33
+  },
+  {
+   "type": "phrase",
+   "dark": true,
+   "lines": [
+    {
+     "text": "Anna",
+     "style": "bold",
+     "size": 58
+    },
+    {
+     "text": "tu asistente con IA",
+     "style": "script",
+     "size": 66
+    }
+   ],
+   "y": 0.1,
+   "pill": true,
+   "rotate": -2,
+   "name": "Gráfico phrase: Anna, ¿podrías recordarme",
+   "from": 297,
+   "durationInFrames": 66
+  },
+  {
+   "type": "notification",
+   "sfx": "ding",
+   "app": "Anna",
+   "title": "Recordatorio · mañana",
+   "body": "Hablar con la maestra de mi hijo",
+   "time": "8:50 a. m.",
+   "y": 0.05,
+   "name": "Gráfico notification: 8:50 de la mañana",
+   "from": 486,
+   "durationInFrames": 91
+  },
+  {
+   "type": "card",
+   "icon": "UtensilsCrossed",
+   "title": "Idea para la cena",
+   "body": "Tacos de frijoles negros con aguacate",
+   "y": 0.2,
+   "name": "Gráfico card: tacos de frijoles negros con a",
+   "from": 589,
+   "durationInFrames": 99
+  },
+  {
+   "type": "phrase",
+   "lines": [
+    {
+     "text": "Una ayudita",
+     "style": "bold"
+    },
+    {
+     "text": "extra",
+     "style": "script"
+    }
+   ],
+   "y": 0.14,
+   "rotate": -3,
+   "name": "Gráfico phrase: una ayudita extra",
+   "from": 800,
+   "durationInFrames": 43
+  },
+  {
+   "type": "image",
+   "sfx": "swoosh",
+   "src": "media/anna_chat.png",
+   "x": 0.28,
+   "y": 0.4,
+   "width": 0.42,
+   "rotate": -6,
+   "name": "Gráfico image: descarga la aplicación Anna",
+   "from": 837,
+   "durationInFrames": 155
+  },
+  {
+   "type": "code",
+   "label": "Código",
+   "code": "AIMEE",
+   "x": 0.66,
+   "y": 0.65,
+   "name": "Gráfico code: coloca AIMEE",
+   "from": 887,
+   "durationInFrames": 105
+  },
+  {
+   "type": "badge",
+   "sfx": "kaching",
+   "big": "20%",
+   "small": "DESCUENTO",
+   "x": 0.76,
+   "y": 0.22,
+   "name": "Gráfico badge: 20% de descuento",
+   "from": 945,
+   "durationInFrames": 48
+  }
+ ],
+ "shots": [
+  {
+   "from": 0,
+   "durationInFrames": 233,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.45
+   },
+   "closeScale": 1.25
+  },
+  {
+   "from": 233,
+   "durationInFrames": 38,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.45,
+    "y": 0.42
+   },
+   "closeScale": 1.2
+  },
+  {
+   "from": 271,
+   "durationInFrames": 25,
+   "framing": "ancho",
+   "face": {
+    "x": 0.45,
+    "y": 0.42
+   },
+   "closeScale": 1.2
+  },
+  {
+   "from": 296,
+   "durationInFrames": 124,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.25
+  },
+  {
+   "from": 420,
+   "durationInFrames": 127,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.25
+  },
+  {
+   "from": 547,
+   "durationInFrames": 25,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.43
+   },
+   "closeScale": 1.3
+  },
+  {
+   "from": 572,
+   "durationInFrames": 58,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.43
+   },
+   "closeScale": 1.3
+  },
+  {
+   "from": 630,
+   "durationInFrames": 50,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.43
+   },
+   "closeScale": 1.3
+  },
+  {
+   "from": 680,
+   "durationInFrames": 48,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.43
+   },
+   "closeScale": 1.3
+  },
+  {
+   "from": 728,
+   "durationInFrames": 56,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.43
+   },
+   "closeScale": 1.3
+  },
+  {
+   "from": 784,
+   "durationInFrames": 103,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.57,
+    "y": 0.38
+   },
+   "closeScale": 1.3
+  },
+  {
+   "from": 887,
+   "durationInFrames": 110,
+   "framing": "ancho",
+   "face": {
+    "x": 0.57,
+    "y": 0.38
+   },
+   "closeScale": 1.3
+  }
+ ],
+ "broll": [],
+ "captions": [
+  {
+   "from": 0,
+   "durationInFrames": 56,
+   "words": [
+    {
+     "text": "¡Yo",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "soy",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "tu",
+     "at": 15,
+     "em": false
+    },
+    {
+     "text": "mamá!",
+     "at": 22,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 98,
+   "durationInFrames": 41,
+   "words": [
+    {
+     "text": "¿Eres",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "mi",
+     "at": 18,
+     "em": false
+    },
+    {
+     "text": "mamá?",
+     "at": 22,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 235,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "¿Qué?",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 297,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "Anna",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 311,
+   "durationInFrames": 45,
+   "words": [
+    {
+     "text": "¿podrías",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "recordarme",
+     "at": 9,
+     "em": false
+    },
+    {
+     "text": "que",
+     "at": 28,
+     "em": false
+    },
+    {
+     "text": "mañana",
+     "at": 33,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 356,
+   "durationInFrames": 36,
+   "words": [
+    {
+     "text": "debo",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "hablar",
+     "at": 9,
+     "em": false
+    },
+    {
+     "text": "con",
+     "at": 15,
+     "em": false
+    },
+    {
+     "text": "la",
+     "at": 21,
+     "em": false
+    },
+    {
+     "text": "maestra",
+     "at": 24,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 392,
+   "durationInFrames": 20,
+   "words": [
+    {
+     "text": "de",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "mi",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "hijo?",
+     "at": 9,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 412,
+   "durationInFrames": 31,
+   "words": [
+    {
+     "text": "¿A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "qué",
+     "at": 4,
+     "em": false
+    },
+    {
+     "text": "hora",
+     "at": 8,
+     "em": false
+    },
+    {
+     "text": "te",
+     "at": 14,
+     "em": false
+    },
+    {
+     "text": "gustaría",
+     "at": 19,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 443,
+   "durationInFrames": 43,
+   "words": [
+    {
+     "text": "que",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "te",
+     "at": 7,
+     "em": false
+    },
+    {
+     "text": "lo",
+     "at": 11,
+     "em": false
+    },
+    {
+     "text": "recuerde",
+     "at": 15,
+     "em": false
+    },
+    {
+     "text": "mañana?",
+     "at": 28,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 486,
+   "durationInFrames": 44,
+   "words": [
+    {
+     "text": "8:50",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "de",
+     "at": 18,
+     "em": false
+    },
+    {
+     "text": "la",
+     "at": 27,
+     "em": false
+    },
+    {
+     "text": "mañana",
+     "at": 29,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 530,
+   "durationInFrames": 21,
+   "words": [
+    {
+     "text": "por",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "favor",
+     "at": 4,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 551,
+   "durationInFrames": 20,
+   "words": [
+    {
+     "text": "Entendido",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 571,
+   "durationInFrames": 46,
+   "words": [
+    {
+     "text": "También",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "unos",
+     "at": 7,
+     "em": false
+    },
+    {
+     "text": "tacos",
+     "at": 18,
+     "em": false
+    },
+    {
+     "text": "de",
+     "at": 27,
+     "em": false
+    },
+    {
+     "text": "frijoles",
+     "at": 32,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 617,
+   "durationInFrames": 39,
+   "words": [
+    {
+     "text": "negros",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "con",
+     "at": 13,
+     "em": false
+    },
+    {
+     "text": "aguacate",
+     "at": 18,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 656,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "¿Qué",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "opinas?",
+     "at": 10,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 679,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "Parece",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "bien",
+     "at": 11,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 704,
+   "durationInFrames": 24,
+   "words": [
+    {
+     "text": "pero",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "voy",
+     "at": 2,
+     "em": false
+    },
+    {
+     "text": "a",
+     "at": 8,
+     "em": false
+    },
+    {
+     "text": "revisar",
+     "at": 10,
+     "em": false
+    },
+    {
+     "text": "qué",
+     "at": 17,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 728,
+   "durationInFrames": 28,
+   "words": [
+    {
+     "text": "tengo",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "en",
+     "at": 7,
+     "em": false
+    },
+    {
+     "text": "la",
+     "at": 14,
+     "em": false
+    },
+    {
+     "text": "refri",
+     "at": 21,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 756,
+   "durationInFrames": 29,
+   "words": [
+    {
+     "text": "y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "mejor",
+     "at": 4,
+     "em": false
+    },
+    {
+     "text": "te",
+     "at": 12,
+     "em": false
+    },
+    {
+     "text": "aviso",
+     "at": 17,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 785,
+   "durationInFrames": 52,
+   "words": [
+    {
+     "text": "Si",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "quieres",
+     "at": 6,
+     "em": false
+    },
+    {
+     "text": "una",
+     "at": 15,
+     "em": false
+    },
+    {
+     "text": "ayudita",
+     "at": 24,
+     "em": false
+    },
+    {
+     "text": "extra",
+     "at": 36,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 837,
+   "durationInFrames": 42,
+   "words": [
+    {
+     "text": "descarga",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "la",
+     "at": 10,
+     "em": false
+    },
+    {
+     "text": "aplicación",
+     "at": 14,
+     "em": false
+    },
+    {
+     "text": "Anna",
+     "at": 31,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 879,
+   "durationInFrames": 36,
+   "words": [
+    {
+     "text": "y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "coloca",
+     "at": 8,
+     "em": false
+    },
+    {
+     "text": "AIMEE",
+     "at": 21,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 915,
+   "durationInFrames": 47,
+   "words": [
+    {
+     "text": "para",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "que",
+     "at": 12,
+     "em": false
+    },
+    {
+     "text": "tengas",
+     "at": 17,
+     "em": false
+    },
+    {
+     "text": "un",
+     "at": 26,
+     "em": false
+    },
+    {
+     "text": "20%",
+     "at": 30,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 962,
+   "durationInFrames": 30,
+   "words": [
+    {
+     "text": "de",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "descuento",
+     "at": 7,
+     "em": false
+    }
+   ]
+  }
+ ],
+ "titles": [],
+ "icons": [],
+ "sfx": [
+  {
+   "sound": "pop",
+   "from": 0,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.5
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 225,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.28
+  },
+  {
+   "sound": "pop",
+   "from": 248,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.5
+  },
+  {
+   "sound": "pop",
+   "from": 297,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.5
+  },
+  {
+   "sound": "ding",
+   "from": 486,
+   "trim": 0,
+   "durationInFrames": 51,
+   "vol": 0.35
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 539,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.28
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 564,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.28
+  },
+  {
+   "sound": "pop",
+   "from": 589,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.5
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 776,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.28
+  },
+  {
+   "sound": "pop",
+   "from": 800,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.5
+  },
+  {
+   "sound": "swoosh",
+   "from": 832,
+   "trim": 0,
+   "durationInFrames": 9,
+   "vol": 0.4
+  },
+  {
+   "sound": "pop",
+   "from": 887,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.5
+  },
+  {
+   "sound": "click",
+   "from": 899,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.5
+  },
+  {
+   "sound": "kaching",
+   "from": 945,
+   "trim": 0,
+   "durationInFrames": 51,
+   "vol": 0.4
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 981,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.35
+  },
+  {
+   "sound": "pop",
+   "from": 1003,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.45
+  }
+ ],
+ "flashes": [
+  997
+ ]
+}

@@ -1,0 +1,300 @@
+{
+  "source": "input/material/video_para_editar.mov",
+  "transcript": "input/transcript.json",
+  "keep": "input/keep.json",
+  "intro_drop_at": "Eres",
+  "denoise": true,
+  "level_voice": true,
+  "rebuild_aroll": false,
+  "caption_case": "natural",
+  "fixes": [
+    {
+      "find": [
+        "Ana,"
+      ],
+      "replace": [
+        "Anna,"
+      ]
+    },
+    {
+      "find": [
+        "Ana"
+      ],
+      "replace": [
+        "Anna"
+      ]
+    },
+    {
+      "find": [
+        "Aime"
+      ],
+      "replace": [
+        "AIMEE"
+      ]
+    },
+    {
+      "find": [
+        "regresar",
+        "que",
+        "tengo",
+        "una",
+        "refri"
+      ],
+      "replace": [
+        "revisar",
+        "qué",
+        "tengo",
+        "en",
+        "la",
+        "refri"
+      ]
+    },
+    {
+      "find": [
+        "8",
+        "y",
+        "50"
+      ],
+      "replace": [
+        "8:50"
+      ]
+    },
+    {
+      "find": [
+        "20",
+        "%"
+      ],
+      "replace": [
+        "20%"
+      ]
+    },
+    {
+      "find": [
+        "¡ya",
+        "es",
+        "mamá!"
+      ],
+      "replace": []
+    },
+    {
+      "find": [
+        "¡y",
+        "tu",
+        "comentario!"
+      ],
+      "replace": []
+    },
+    {
+      "find": [
+        "vale."
+      ],
+      "replace": []
+    }
+  ],
+  "intro": {
+    "punch_frames": 5,
+    "punch_scale": 1.08,
+    "ramp_frames": 8,
+    "pre_drop_scale": 1.1,
+    "drop_scale": 1.24,
+    "settle_scale": 1.2
+  },
+  "takes": [
+    {
+      "until": 11.333,
+      "face": [
+        0.5,
+        0.45
+      ],
+      "close": 1.25
+    },
+    {
+      "until": 15.067,
+      "face": [
+        0.45,
+        0.42
+      ],
+      "close": 1.2
+    },
+    {
+      "until": 23.533,
+      "face": [
+        0.5,
+        0.42
+      ],
+      "close": 1.25
+    },
+    {
+      "until": 24.367,
+      "face": [
+        0.5,
+        0.43
+      ],
+      "close": 1.3
+    },
+    {
+      "until": 31.6,
+      "face": [
+        0.5,
+        0.43
+      ],
+      "close": 1.3
+    },
+    {
+      "until": 999,
+      "face": [
+        0.57,
+        0.38
+      ],
+      "close": 1.3
+    }
+  ],
+  "titles": [],
+  "emphasis": [],
+  "icons": [],
+  "broll": [],
+  "flash_at": [],
+  "overlays": [
+    {
+      "type": "phrase",
+      "phrase": "¡Yo soy tu mamá!",
+      "lines": [
+        {
+          "text": "Mamá",
+          "style": "bold"
+        },
+        {
+          "text": "multitarea",
+          "style": "script"
+        }
+      ],
+      "y": 0.15,
+      "rotate": -3,
+      "hold": 2.4
+    },
+    {
+      "type": "phrase",
+      "phrase": "Olvidé algo",
+      "hide_caption": true,
+      "lines": [
+        {
+          "text": "¡Olvidé",
+          "style": "bold"
+        },
+        {
+          "text": "algo!",
+          "style": "script"
+        }
+      ],
+      "y": 0.2,
+      "rotate": 4,
+      "hold": 1.1
+    },
+    {
+      "type": "phrase",
+      "phrase": "Anna, ¿podrías recordarme",
+      "dark": true,
+      "lines": [
+        {
+          "text": "Anna",
+          "style": "bold",
+          "size": 58
+        },
+        {
+          "text": "tu asistente con IA",
+          "style": "script",
+          "size": 66
+        }
+      ],
+      "y": 0.1,
+      "hold": 2.2,
+      "pill": true,
+      "rotate": -2
+    },
+    {
+      "type": "notification",
+      "phrase": "8:50 de la mañana",
+      "until": "Entendido",
+      "sfx": "ding",
+      "app": "Anna",
+      "title": "Recordatorio · mañana",
+      "body": "Hablar con la maestra de mi hijo",
+      "time": "8:50 a. m.",
+      "y": 0.05
+    },
+    {
+      "type": "card",
+      "phrase": "tacos de frijoles negros con aguacate",
+      "until": "¿Qué opinas?",
+      "icon": "UtensilsCrossed",
+      "title": "Idea para la cena",
+      "body": "Tacos de frijoles negros con aguacate",
+      "y": 0.2
+    },
+    {
+      "type": "phrase",
+      "phrase": "una ayudita extra",
+      "lines": [
+        {
+          "text": "Una ayudita",
+          "style": "bold"
+        },
+        {
+          "text": "extra",
+          "style": "script"
+        }
+      ],
+      "y": 0.14,
+      "rotate": -3,
+      "hold": 1.0
+    },
+    {
+      "type": "image",
+      "phrase": "descarga la aplicación Anna",
+      "until": "descuento",
+      "sfx": "swoosh",
+      "src": "media/anna_chat.png",
+      "x": 0.28,
+      "y": 0.4,
+      "width": 0.42,
+      "rotate": -6
+    },
+    {
+      "type": "code",
+      "phrase": "coloca AIMEE",
+      "until": "descuento",
+      "label": "Código",
+      "code": "AIMEE",
+      "x": 0.66,
+      "y": 0.65
+    },
+    {
+      "type": "badge",
+      "phrase": "20% de descuento",
+      "sfx": "kaching",
+      "big": "20%",
+      "small": "DESCUENTO",
+      "x": 0.76,
+      "y": 0.22,
+      "hold": 1.6
+    }
+  ],
+  "end_card": {
+    "handle": "@aimeecarolinag",
+    "kicker": "Sígueme"
+  },
+  "raw_ranges": [
+    [
+      19.0,
+      21.4
+    ],
+    [
+      23.55,
+      24.3
+    ],
+    [
+      24.3,
+      28.0
+    ]
+  ]
+}
