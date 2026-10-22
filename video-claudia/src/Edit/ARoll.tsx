@@ -7,6 +7,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import edit from "./edit.json";
+import track from "./face.json";
 
 type Shot = (typeof edit.shots)[number];
 
@@ -31,6 +32,10 @@ const findShot = (frame: number): Shot => {
   return edit.shots[edit.shots.length - 1];
 };
 
+// Cara seguida fotograma a fotograma (scripts/facetrack.py); si no hay seguimiento, la de la toma.
+const faceAt = (frame: number, shot: Shot) =>
+  frame < track.x.length ? { x: track.x[frame], y: track.y[frame] } : shot.face;
+
 const clamp = (v: number, min: number, max: number) =>
   Math.min(max, Math.max(min, v));
 
@@ -53,6 +58,7 @@ export const useArollStyle = (offset = 0): React.CSSProperties => {
   const frame = useCurrentFrame() + offset;
   const { width, height } = useVideoConfig();
   const shot = findShot(frame);
+  const face = faceAt(frame, shot);
   const local = frame - shot.from;
   const progress = clamp(local / Math.max(1, shot.durationInFrames - 1), 0, 1);
   const drop = edit.introDropFrame;
@@ -70,11 +76,11 @@ export const useArollStyle = (offset = 0): React.CSSProperties => {
     const speed = Math.abs(introScale(frame + 1) - scale);
     blur = clamp(speed * 40, 0, 7);
     target = {
-      x: interpolate(scale, [1, INTRO_SCALE], [shot.face.x, INTRO_FACE_TARGET.x], {
+      x: interpolate(scale, [1, INTRO_SCALE], [face.x, INTRO_FACE_TARGET.x], {
         extrapolateLeft: "clamp",
         extrapolateRight: "clamp",
       }),
-      y: interpolate(scale, [1, INTRO_SCALE], [shot.face.y, INTRO_FACE_TARGET.y], {
+      y: interpolate(scale, [1, INTRO_SCALE], [face.y, INTRO_FACE_TARGET.y], {
         extrapolateLeft: "clamp",
         extrapolateRight: "clamp",
       }),
@@ -99,13 +105,13 @@ export const useArollStyle = (offset = 0): React.CSSProperties => {
       blur = (1 - local / PUNCH_FRAMES) * 4;
     }
     scale = Math.max(1, (close ? shot.closeScale * punch : 1) * (1 + PUSH * progress));
-    target = close ? CLOSE_FACE_TARGET : shot.face;
+    target = close ? CLOSE_FACE_TARGET : face;
   }
 
   const viewW = width / scale;
   const viewH = height / scale;
-  const x0 = clamp(shot.face.x * width - target.x * viewW, 0, width - viewW);
-  const y0 = clamp(shot.face.y * height - target.y * viewH, 0, height - viewH);
+  const x0 = clamp(face.x * width - target.x * viewW, 0, width - viewW);
+  const y0 = clamp(face.y * height - target.y * viewH, 0, height - viewH);
 
   return {
     width,

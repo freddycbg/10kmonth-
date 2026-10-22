@@ -5,7 +5,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { TITLE_FONT, TITLE_GOLD } from "./fonts";
+import { TITLE_COLOR, TITLE_FONT, TITLE_TOP_FONT } from "./fonts";
 
 // Título cinético de frase clave (estilo.md §2b): línea pequeña blanca (acento en dorado) que se construye
 // palabra a palabra, y debajo una palabra gigante en dorado que entra con desenfoque y escala.
@@ -57,7 +57,8 @@ export const KineticTitle: React.FC<{
           top: height * y,
           left: width * MARGIN_X,
           right: width * MARGIN_X,
-          fontFamily: TITLE_FONT,
+          fontFamily: TITLE_TOP_FONT,
+          fontWeight: 800,
           textTransform: "uppercase",
           textAlign: center ? "center" : "left",
           textShadow: SHADOW,
@@ -78,7 +79,7 @@ export const KineticTitle: React.FC<{
                 style={{
                   display: "inline-block",
                   margin: gap,
-                  color: w.accent ? TITLE_GOLD : "#FFFFFF",
+                  color: w.accent ? TITLE_COLOR : "#FFFFFF",
                   opacity: k,
                   transform: `translateY(${(1 - k) * 14}px)`,
                 }}
@@ -91,11 +92,15 @@ export const KineticTitle: React.FC<{
         {bigLocal >= 0 ? (
           <div
             style={{
+              fontFamily: TITLE_FONT,
+              fontStyle: "italic",
+              fontWeight: 900,
+              textTransform: "none",
               fontSize: bigSize,
               lineHeight: 0.98,
               // Tilde o virgulilla en mayúscula (SUEÑO): sobresale por encima y chocaba con la línea superior.
               paddingTop: ACCENTED.test(big) ? `${ACCENT_PAD}em` : undefined,
-              color: TITLE_GOLD,
+              color: TITLE_COLOR,
               whiteSpace: "nowrap",
               transformOrigin: center ? "center center" : "left center",
               opacity: bigIn,

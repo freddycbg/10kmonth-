@@ -45,9 +45,9 @@ BREAK_BEFORE = {"y", "pero", "porque"}  # abren bloque nuevo si el actual ya tie
 TITLE_HOLD = 0.45  # s que el título cinético sigue en pantalla tras su última palabra
 TITLE_BIG_MIN = 0.9  # s mínimos de la palabra gigante en pantalla (borrador 2: "MITO" duraba 0.3 s)
 MIN_CAPTION_FRAMES = 8  # un bloque de subtítulo visible menos tiempo se une al siguiente
-TITLE_FONT_FILE = "public/fonts/anton-latin-400-normal.woff2"
+TITLE_FONT_FILE = "public/fonts/playfair-display-latin-900-italic.woff2"  # fonts.ts
 BIG_WIDTH = 0.85   # ancho máximo de la palabra gigante (fracción del cuadro)
-BIG_MAX_SIZE = 330
+BIG_MAX_SIZE = 360
 
 
 def run(cmd):
@@ -164,7 +164,8 @@ def main(cfg_path):
     for b in broll_out:
         joins += [b["from"], b["from"] + b["durationInFrames"]]
     # El gancho es un único plano con su zoom hasta el primer b-roll (los cortes de silencio quedan dentro).
-    intro_end = broll_out[0]["from"] if broll_out else 0
+    # (y hasta el primer cambio de toma, que siempre corta: el encuadre depende de la toma).
+    intro_end = min([b["from"] for b in broll_out[:1]] + [frame(to_out(tk["until"])) for tk in takes[:-1]] + [aroll_frames])
     joins = sorted(set(j for j in joins if max(0, intro_end - 1) < j < aroll_frames))
     guard = round(BROLL_GUARD * FPS)
     starts = [b["from"] for b in broll_out]
@@ -243,6 +244,7 @@ def main(cfg_path):
 
     # Cada título cae en un solo plano cerrado: sin cortes de encuadre mientras está en pantalla (la cabeza no salta
     # detrás del texto) y con la cabeza grande para que el título quede detrás de ella.
+    title_shots = []
     for t in titles:
         a, z = t["from"], t["from"] + t["durationInFrames"]
         idx = [i for i, sh in enumerate(shots) if sh["from"] < z and sh["from"] + sh["durationInFrames"] > a]
@@ -251,13 +253,18 @@ def main(cfg_path):
         first = shots[idx[0]]
         first["durationInFrames"] = shots[idx[-1]]["from"] + shots[idx[-1]]["durationInFrames"] - first["from"]
         del shots[idx[0] + 1:idx[-1] + 1]
-        if first["from"] == 0:
+        if first["from"] != 0:
+            first["framing"] = "cerrado"
+        title_shots.append(first)
+    # Un plano vecino de la misma toma no repite el cerrado (sería un salto sin cambio de encuadre); los planos
+    # con título no se tocan.
+    for i, sh in enumerate(shots):
+        if sh in title_shots or sh["from"] == 0:
             continue
-        first["framing"] = "cerrado"
-        i = idx[0]
         for j in (i - 1, i + 1):
-            if 0 < j < len(shots) and shots[j]["framing"] == "cerrado":
-                shots[j]["framing"] = "ancho"
+            if 0 <= j < len(shots) and shots[j] in title_shots and shots[j]["framing"] == sh["framing"] == "cerrado" \
+                    and shots[j]["face"] == sh["face"]:
+                sh["framing"] = "ancho"
 
     # --- Subtítulos palabra a palabra (estilo.md §2a) -----------------------
     title_ranges = [(t["from"], t["from"] + t["durationInFrames"]) for t in titles]

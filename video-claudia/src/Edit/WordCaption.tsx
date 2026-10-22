@@ -5,9 +5,9 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { CAPTION_FONT, GOLD } from "./fonts";
+import { CAPTION_COLOR, CAPTION_FONT } from "./fonts";
 
-// Subtítulo palabra a palabra (estilo.md §2a): Poppins ExtraBold en mayúsculas, dorado, centrado al 74 %
+// Subtítulo palabra a palabra (estilo.md §2a): Montserrat ExtraBold en mayúsculas, rosa, centrado al 74 %
 // del alto. Cada palabra entra cuando se dice: aparece más pequeña y algo más abajo y sube en ~4 fotogramas.
 const FONT_SIZE = 66;
 const CENTER_Y = 0.74;
@@ -59,7 +59,7 @@ export const WordCaption: React.FC<{ words: Word[] }> = ({ words }) => {
           fontWeight: 800,
           fontSize: FONT_SIZE,
           lineHeight: 1.15,
-          color: GOLD,
+          color: CAPTION_COLOR,
           // Sombra reforzada para que el dorado se lea también sobre fondos claros o amarillos.
           textShadow:
             "0 3px 14px rgba(0,0,0,0.65), 0 0 4px rgba(0,0,0,0.55), 0 1px 1px rgba(0,0,0,0.4)",

@@ -1,136 +1,157 @@
 {
-  "source": "input/material/mi-video.mp4",
+  "source": "input/material/claudia_orden.mov",
   "transcript": "input/transcript.json",
   "keep": "input/keep.json",
-  "music": "input/material/musica_happy_pop.mp3",
-  "music_drop": 16.58,
-  "music_drop_at": "mintiendo",
-  "end_video": "input/material/FINAL.mp4",
+  "music": "input/material/musica_claudia.mp3",
+  "music_drop": 3.23,
+  "music_drop_at": "triste",
+  "denoise": true,
   "rebuild_aroll": false,
-  "fixes": [
-    {
-      "find": [
-        "biles"
-      ],
-      "replace": [
-        "bills"
-      ]
-    }
-  ],
+  "fixes": [],
   "intro": {
     "punch_frames": 5,
-    "punch_scale": 1.4,
-    "ramp_frames": 12,
-    "pre_drop_scale": 1.52,
-    "drop_scale": 2.3,
-    "settle_scale": 2.2
+    "punch_scale": 1.35,
+    "ramp_frames": 10,
+    "pre_drop_scale": 1.5,
+    "drop_scale": 2.35,
+    "settle_scale": 2.25
   },
   "takes": [
     {
+      "until": 4.067,
+      "face": [
+        0.552,
+        0.57
+      ],
+      "close": 2.2
+    },
+    {
+      "until": 20.067,
+      "face": [
+        0.51,
+        0.41
+      ],
+      "close": 1.5
+    },
+    {
+      "until": 24.633,
+      "face": [
+        0.588,
+        0.4
+      ],
+      "close": 1.6
+    },
+    {
+      "until": 36.167,
+      "face": [
+        0.51,
+        0.41
+      ],
+      "close": 1.7
+    },
+    {
+      "until": 41.333,
+      "face": [
+        0.42,
+        0.39
+      ],
+      "close": 1.6
+    },
+    {
       "until": 999,
       "face": [
-        0.57,
-        0.52
+        0.544,
+        0.575
       ],
-      "close": 1.9
+      "close": 2.2
     }
   ],
   "titles": [
     {
-      "phrase": "te están mintiendo",
-      "top": "TE ESTÁN",
+      "phrase": "lo más triste",
+      "top": "LO MÁS",
       "accent": [
-        "ESTÁN"
+        "MÁS"
       ],
-      "big": "MINTIENDO",
-      "y": 0.216,
+      "big": "triste",
+      "y": 0.186,
       "align": "center"
     },
     {
-      "phrase": "vivir con sueño",
-      "top": "VIVIR CON",
+      "phrase": "existe otra manera",
+      "top": "¿EXISTE OTRA",
       "accent": [
-        "CON"
+        "OTRA"
       ],
-      "big": "SUEÑO",
-      "y": 0.083,
+      "big": "manera",
+      "y": 0.1255,
       "align": "center"
     },
     {
-      "phrase": "Deja de comer cuento",
-      "top": "DEJA DE COMER",
+      "phrase": "tu propio camino",
+      "top": "TU PROPIO",
       "accent": [
-        "COMER"
+        "PROPIO"
       ],
-      "big": "CUENTO",
-      "y": 0.117,
+      "big": "camino",
+      "y": 0.1266,
       "align": "center"
     },
     {
-      "phrase": "muchas oportunidades",
-      "top": "MUCHAS",
-      "accent": [],
-      "big": "OPORTUNIDADES",
-      "y": 0.178,
+      "phrase": "empezando de cero",
+      "top": "EMPEZANDO DE",
+      "accent": [
+        "DE"
+      ],
+      "big": "cero",
+      "y": 0.0818,
       "align": "center"
     },
     {
-      "phrase": "Comenta 10K",
-      "top": "COMENTA",
-      "accent": [],
-      "big": "10K",
-      "y": 0.118,
+      "phrase": "quieres conocer más, comenta",
+      "top": "QUIERES CONOCER MÁS",
+      "accent": [
+        "MÁS"
+      ],
+      "big": "comenta",
+      "y": 0.171,
       "align": "center"
     }
   ],
   "flash_at": [
-    "Deja de comer cuento",
-    "Comenta 10K"
+    "Hoy quiero compartir",
+    "comenta"
   ],
   "broll": [
     {
-      "id": "bandera",
-      "file": "input/material/15703699-uhd_2160_3840_24fps.mp4",
-      "trim": 0.3,
-      "phrase": "llegaste a este país",
-      "hold": 0.45
-    },
-    {
-      "id": "taller",
-      "file": "input/material/14554263_2160_3840_60fps.mp4",
+      "id": "fabrica",
+      "file": "input/material/14804690_1080_1920_24fps.mp4",
       "trim": 1.0,
-      "phrase": "que en este país se vive solamente para trabajar"
+      "phrase": "puedes pasar años trabajando, sacrificándote"
     },
     {
-      "id": "facturas",
-      "file": "input/material/7925402-uhd_2160_3840_24fps.mp4",
-      "trim": 3.0,
-      "phrase": "porque si no, no tendrás como pagar los bills"
-    },
-    {
-      "id": "gimnasio",
-      "file": "input/material/IMG_5967.MOV",
-      "transpose": 1,
-      "trim": 10.0,
-      "phrase": "Vete a hacer ejercicio"
-    },
-    {
-      "id": "velero",
-      "file": "input/material/8523242-hd_1080_1920_30fps.mp4",
-      "trim": 5.0,
-      "phrase": "y ponte a hacer cosas diferentes"
-    },
-    {
-      "id": "calle",
-      "file": "input/material/5957461-uhd_2160_3840_24fps.mp4",
+      "id": "mama_bebe",
+      "file": "input/material/7279098-uhd_2160_3840_24fps.mp4",
       "trim": 1.0,
-      "phrase": "Si sigues haciendo lo mismo que hacen todos los latinos en Estados Unidos"
+      "phrase": "dejar de compartir tiempo con tu familia"
     },
     {
-      "id": "agobiado",
-      "file": "input/material/8731293-hd_1080_1920_25fps.mp4",
+      "id": "traje_rojo",
+      "file": "input/material/8530542-uhd_2160_4096_25fps.mp4",
       "trim": 2.0,
-      "phrase": "Vas a vivir en el mismo cuento que siempre te han dicho"
+      "phrase": "sentir que no estás donde soñabas estar"
+    },
+    {
+      "id": "albanil",
+      "file": "input/material/16752401_720_1280_30fps.mp4",
+      "trim": 0.5,
+      "phrase": "debemos trabajar más horas"
+    },
+    {
+      "id": "cansado",
+      "file": "input/material/7131825-uhd_2160_4096_30fps.mp4",
+      "trim": 3.0,
+      "phrase": "dormir menos"
     },
     {
       "id": "escenario",
@@ -138,7 +159,19 @@
       "trim": 6.3,
       "cx": 0.72,
       "speed": 1.0,
-      "phrase": "Y nosotros como latinos"
+      "phrase": "en la industria financiera"
+    },
+    {
+      "id": "equipo_pc",
+      "file": "input/material/7643614-uhd_2160_4096_25fps.mp4",
+      "trim": 2.0,
+      "phrase": "a crecer profesionalmente"
+    },
+    {
+      "id": "equipo_senala",
+      "file": "input/material/7643617-uhd_2160_4096_25fps.mp4",
+      "trim": 0.8,
+      "phrase": "que tengas ganas de aprender"
     },
     {
       "id": "founders_club",
@@ -147,8 +180,7 @@
       "cx": 0.6,
       "speed": 0.9,
       "leak": true,
-      "phrase": "y quieres saber cómo funciona esto"
+      "phrase": "la oportunidad que estabas buscando"
     }
-  ],
-  "denoise": true
+  ]
 }

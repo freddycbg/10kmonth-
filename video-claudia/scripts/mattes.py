@@ -67,7 +67,11 @@ def view(edit, frame):
     shot = next((s for s in edit["shots"] if frame < s["from"] + s["durationInFrames"]), edit["shots"][-1])
     local = frame - shot["from"]
     progress = min(1, max(0, local / max(1, shot["durationInFrames"] - 1)))
-    fx, fy = shot["face"]["x"], shot["face"]["y"]
+    track = edit.get("_face")
+    if track and frame < len(track["x"]):
+        fx, fy = track["x"][frame], track["y"][frame]  # face.json (facetrack.py), como ARoll.tsx
+    else:
+        fx, fy = shot["face"]["x"], shot["face"]["y"]
     if shot["from"] == 0:
         keys = edit["intro"]
         scale = interp(frame, keys["frames"], keys["scales"], INTRO_EASE)
@@ -118,6 +122,9 @@ def extract(src, frames, dst):
 def main(force, model):
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     edit = json.load(open(os.path.join(root, "src", "Edit", "edit.json")))
+    face_path = os.path.join(root, "src", "Edit", "face.json")
+    if os.path.exists(face_path):
+        edit["_face"] = json.load(open(face_path))
     fg_dir = os.path.join(root, "public", "media", "fg")
     os.makedirs(fg_dir, exist_ok=True)
     cand = candidates(edit)
