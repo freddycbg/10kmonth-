@@ -938,126 +938,126 @@
    "from": 0,
    "trim": 0,
    "durationInFrames": 13,
-   "vol": 0.5
+   "vol": 0.25
   },
   {
    "sound": "pop",
    "from": 230,
    "trim": 0,
    "durationInFrames": 13,
-   "vol": 0.5
+   "vol": 0.25
   },
   {
    "sound": "whoosh_corto",
    "from": 332,
    "trim": 0,
    "durationInFrames": 14,
-   "vol": 0.28
+   "vol": 0.14
   },
   {
    "sound": "pop",
    "from": 380,
    "trim": 0,
    "durationInFrames": 13,
-   "vol": 0.5
+   "vol": 0.25
   },
   {
    "sound": "whoosh_corto",
    "from": 444,
    "trim": 0,
    "durationInFrames": 14,
-   "vol": 0.28
+   "vol": 0.14
   },
   {
    "sound": "pop",
    "from": 456,
    "trim": 0,
    "durationInFrames": 13,
-   "vol": 0.5
+   "vol": 0.25
   },
   {
    "sound": "ding",
    "from": 645,
    "trim": 0,
    "durationInFrames": 51,
-   "vol": 0.35
+   "vol": 0.175
   },
   {
    "sound": "whoosh_corto",
    "from": 698,
    "trim": 0,
    "durationInFrames": 14,
-   "vol": 0.28
+   "vol": 0.14
   },
   {
    "sound": "whoosh_corto",
    "from": 723,
    "trim": 0,
    "durationInFrames": 14,
-   "vol": 0.28
+   "vol": 0.14
   },
   {
    "sound": "pop",
    "from": 748,
    "trim": 0,
    "durationInFrames": 13,
-   "vol": 0.5
+   "vol": 0.25
   },
   {
    "sound": "whoosh_corto",
    "from": 940,
    "trim": 0,
    "durationInFrames": 14,
-   "vol": 0.28
+   "vol": 0.14
   },
   {
    "sound": "pop",
    "from": 964,
    "trim": 0,
    "durationInFrames": 13,
-   "vol": 0.5
+   "vol": 0.25
   },
   {
    "sound": "swoosh",
    "from": 996,
    "trim": 0,
    "durationInFrames": 9,
-   "vol": 0.4
+   "vol": 0.2
   },
   {
    "sound": "pop",
    "from": 1051,
    "trim": 0,
    "durationInFrames": 13,
-   "vol": 0.5
+   "vol": 0.25
   },
   {
    "sound": "click",
    "from": 1063,
    "trim": 0,
    "durationInFrames": 2,
-   "vol": 0.5
+   "vol": 0.25
   },
   {
    "sound": "kaching",
    "from": 1109,
    "trim": 0,
    "durationInFrames": 51,
-   "vol": 0.4
+   "vol": 0.2
   },
   {
    "sound": "whoosh_largo",
    "from": 1145,
    "trim": 0,
    "durationInFrames": 27,
-   "vol": 0.35
+   "vol": 0.175
   },
   {
    "sound": "pop",
    "from": 1167,
    "trim": 0,
    "durationInFrames": 13,
-   "vol": 0.45
+   "vol": 0.225
   }
  ],
  "flashes": [

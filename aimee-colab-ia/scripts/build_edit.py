@@ -490,6 +490,9 @@ def sound_effects(cfg, root, words, frame, find_phrase, titles, broll, flashes, 
         if clash and clash[0]["vol"] >= e["vol"]:
             continue
         out = [o for o in out if o not in clash] + [e]
+    gain = cfg.get("sfx_gain", 1.0)  # Aimee: efectos más bajos (borrador 5: la mitad)
+    for e in out:
+        e["vol"] = round(e["vol"] * gain, 3)
     result = []
     for e in sorted(out, key=lambda e: e["at"]):
         start = e["at"] - peak.get(e["sound"], 0)
