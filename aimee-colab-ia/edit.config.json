@@ -233,5 +233,17 @@
   "raw_ranges": [],
   "static_camera": true,
   "original_audio": true,
-  "sfx_gain": 0.5
+  "sfx_gain": 0.5,
+  "audio_extra": [
+    {
+      "file": "input/material/faaa.mp3",
+      "at": 1.24,
+      "gain_db": -7.5
+    }
+  ],
+  "music_bed": {
+    "file": "input/material/musica_fondo.mp3",
+    "gain_db": -21.5,
+    "end_gain_db": -11
+  }
 }

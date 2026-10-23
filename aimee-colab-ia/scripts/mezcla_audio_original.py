@@ -34,6 +34,25 @@ for k, x in enumerate(edit["sfx"]):
     chains.append(f"[{k + 2}:a]atrim=start={x['trim'] / fps:.4f},asetpts=PTS-STARTPTS,aresample={sr},"
                   f"volume={x['vol']},adelay={delay}|{delay}[s{k}]")
     labels.append(f"[s{k}]")
+# Sonidos propios del vídeo ("audio_extra": p. ej. el "FAAA" de Aimee) en su segundo exacto.
+n = len(edit["sfx"]) + 2
+for x in cfg.get("audio_extra", []):
+    inputs += ["-i", os.path.join(root, x["file"])]
+    delay = round(x["at"] * 1000)
+    chains.append(f"[{n}:a]aresample={sr},volume={x['gain_db']}dB,adelay={delay}|{delay}[x{n}]")
+    labels.append(f"[x{n}]")
+    n += 1
+# Música de fondo ("music_bed"): bajo la voz y más alta en el cierre, con fundidos.
+mb = cfg.get("music_bed")
+if mb:
+    inputs += ["-i", os.path.join(root, mb["file"])]
+    t_end = edit["arollFrames"] / fps
+    g1, g2 = 10 ** (mb["gain_db"] / 20), 10 ** (mb["end_gain_db"] / 20)
+    chains.append(f"[{n}:a]aresample={sr},atrim=0:{total:.3f},"
+                  f"volume=eval=frame:volume='{g1:.5f}+({g2:.5f}-{g1:.5f})*clip((t-{t_end - 0.3:.3f})/0.6,0,1)',"
+                  f"afade=t=in:d=0.4,afade=t=out:st={total - 1.5:.3f}:d=1.5[musica]")
+    labels.append("[musica]")
+    n += 1
 # La voz entra sin ningún filtro salvo el relleno de silencio al final (la tarjeta de cierre).
 chains.append(f"[1:a]apad=whole_dur={total:.3f}[voz]")
 chains.append(f"[voz]{''.join(labels)}amix=inputs={len(labels) + 1}:normalize=0:duration=first[a]")
