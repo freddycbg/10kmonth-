@@ -83,8 +83,8 @@
   ],
   "titles": [
     {
-      "phrase": "experiencia cercana a la muerte",
-      "top": "EXPERIENCIA CERCANA A LA",
+      "phrase": "cercana a la muerte",
+      "top": "CERCANA A LA",
       "accent": [
         "CERCANA"
       ],
@@ -98,7 +98,7 @@
       "top": "NO LLEGA A",
       "accent": [],
       "big": "viejo",
-      "y": 0.16,
+      "y": 0.07,
       "align": "center"
     },
     {
@@ -106,7 +106,7 @@
       "top": "CREE EN",
       "accent": [],
       "big": "ti",
-      "y": 0.12,
+      "y": 0.05,
       "align": "center"
     },
     {
@@ -114,7 +114,7 @@
       "top": "",
       "accent": [],
       "big": "escríbeme",
-      "y": 0.2,
+      "y": 0.14,
       "align": "center",
       "hold": 0.8
     }

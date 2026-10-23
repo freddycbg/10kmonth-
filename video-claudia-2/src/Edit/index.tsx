@@ -55,11 +55,12 @@ const bwAmount = (f: number) =>
 export const Edit: React.FC = () => {
   const { fps } = useVideoConfig();
   const gray = bwAmount(useCurrentFrame());
+  const bwStyle = { filter: gray > 0 ? `grayscale(${gray}) contrast(${1 + 0.15 * gray})` : undefined };
 
   return (
     <AbsoluteFill style={{ backgroundColor: "black" }}>
-      {/* Imagen (orador, b-roll, títulos y recorte): en blanco y negro en los tramos de edit.bw. */}
-      <AbsoluteFill style={{ filter: gray > 0 ? `grayscale(${gray}) contrast(${1 + 0.15 * gray})` : undefined }}>
+      {/* Imagen (orador, b-roll y recorte): en blanco y negro en los tramos de edit.bw; los títulos siguen en rosa. */}
+      <AbsoluteFill style={bwStyle}>
       <Sequence name="Orador" durationInFrames={edit.arollFrames} premountFor={fps}>
         <ARoll />
       </Sequence>
@@ -95,6 +96,8 @@ export const Edit: React.FC = () => {
           </Sequence>
         ))}
 
+      </AbsoluteFill>
+
       {titles.map((t, i) => (
         <Sequence
           key={`title-${i}`}
@@ -116,6 +119,7 @@ export const Edit: React.FC = () => {
       ))}
 
       {/* El orador recortado tapa los títulos: quedan detrás de su cabeza. Los subtítulos van delante. */}
+      <AbsoluteFill style={bwStyle}>
       {(fg.runs as number[][]).map(([a, b]) => (
         <Sequence
           key={`fg-${a}`}
