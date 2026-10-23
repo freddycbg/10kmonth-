@@ -1,0 +1,1875 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1356,
+ "arollFrames": 1281,
+ "lastWordFrame": 1266,
+ "introDropFrame": 51,
+ "intro": {
+  "frames": [
+   0,
+   5,
+   39,
+   51,
+   55,
+   139
+  ],
+  "scales": [
+   1.0,
+   1.35,
+   1.5,
+   2.3,
+   2.1799999999999997,
+   2.2
+  ]
+ },
+ "endSrc": null,
+ "endCard": null,
+ "static": false,
+ "music": true,
+ "overlays": [
+  {
+   "type": "flag",
+   "label": "COLOMBIA",
+   "x": 0.5,
+   "y": 0.17,
+   "width": 0.42,
+   "sfx": "whoosh_corto",
+   "name": "Gráfico flag: desde Colombia",
+   "from": 119,
+   "durationInFrames": 31
+  },
+  {
+   "type": "counter",
+   "prefix": "$",
+   "value": 15,
+   "suffix": "/ HORA",
+   "x": 0.5,
+   "y": 0.18,
+   "sfx": "kaching",
+   "name": "Gráfico counter: 15 la hora",
+   "from": 295,
+   "durationInFrames": 42
+  },
+  {
+   "type": "checklist",
+   "title": "TODOS ME DECÍAN",
+   "x": 0.5,
+   "y": 0.83,
+   "items": [
+    {
+     "text": "Excelente",
+     "phrase": "excelente",
+     "at": 60
+    },
+    {
+     "text": "Estable",
+     "phrase": "estable",
+     "at": 97
+    },
+    {
+     "text": "Beneficios",
+     "phrase": "beneficios",
+     "at": 134
+    }
+   ],
+   "name": "Gráfico checklist: Todo el mundo me decía",
+   "from": 330,
+   "durationInFrames": 162
+  },
+  {
+   "type": "counter",
+   "prefix": "+",
+   "value": 20,
+   "suffix": "AÑOS",
+   "label": "TRABAJANDO ALLÍ",
+   "x": 0.5,
+   "y": 0.2,
+   "name": "Gráfico counter: más de 20 años",
+   "from": 537,
+   "durationInFrames": 45
+  },
+  {
+   "type": "code",
+   "label": "Licencia de agente de",
+   "code": "SEGUROS",
+   "x": 0.5,
+   "y": 0.66,
+   "hide_caption": true,
+   "sfx": "pop",
+   "name": "Gráfico code: licencia de agente de seguros",
+   "from": 848,
+   "durationInFrames": 50
+  }
+ ],
+ "shots": [
+  {
+   "from": 0,
+   "durationInFrames": 140,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 0
+  },
+  {
+   "from": 140,
+   "durationInFrames": 44,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 0
+  },
+  {
+   "from": 184,
+   "durationInFrames": 52,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 1
+  },
+  {
+   "from": 236,
+   "durationInFrames": 33,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 1
+  },
+  {
+   "from": 269,
+   "durationInFrames": 59,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 1
+  },
+  {
+   "from": 328,
+   "durationInFrames": 50,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 1
+  },
+  {
+   "from": 378,
+   "durationInFrames": 46,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 1
+  },
+  {
+   "from": 424,
+   "durationInFrames": 30,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 1
+  },
+  {
+   "from": 454,
+   "durationInFrames": 32,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 1
+  },
+  {
+   "from": 486,
+   "durationInFrames": 114,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.55,
+    "y": 0.36
+   },
+   "closeScale": 1.8,
+   "take": 2
+  },
+  {
+   "from": 600,
+   "durationInFrames": 37,
+   "framing": "ancho",
+   "face": {
+    "x": 0.55,
+    "y": 0.36
+   },
+   "closeScale": 1.8,
+   "take": 2
+  },
+  {
+   "from": 637,
+   "durationInFrames": 37,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.55,
+    "y": 0.36
+   },
+   "closeScale": 1.8,
+   "take": 2
+  },
+  {
+   "from": 674,
+   "durationInFrames": 131,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 3
+  },
+  {
+   "from": 805,
+   "durationInFrames": 43,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 4
+  },
+  {
+   "from": 848,
+   "durationInFrames": 43,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 4
+  },
+  {
+   "from": 891,
+   "durationInFrames": 27,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 5
+  },
+  {
+   "from": 918,
+   "durationInFrames": 44,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 5
+  },
+  {
+   "from": 962,
+   "durationInFrames": 41,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 5
+  },
+  {
+   "from": 1003,
+   "durationInFrames": 48,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 5
+  },
+  {
+   "from": 1051,
+   "durationInFrames": 56,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 5
+  },
+  {
+   "from": 1107,
+   "durationInFrames": 116,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 6
+  },
+  {
+   "from": 1223,
+   "durationInFrames": 58,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.27
+   },
+   "closeScale": 2.0,
+   "take": 6
+  }
+ ],
+ "broll": [
+  {
+   "name": "B-roll horizonte1: buscando un futuro mejor",
+   "src": "media/horizonte1_1.mp4",
+   "from": 140,
+   "durationInFrames": 44,
+   "leak": false
+  },
+  {
+   "name": "B-roll colchones: una fábrica de colchones",
+   "src": "media/colchones_4.mp4",
+   "from": 236,
+   "durationInFrames": 33,
+   "leak": false
+  },
+  {
+   "name": "B-roll viejo: personas que llevaban más de 20 años tra",
+   "src": "media/viejo_1.mp4",
+   "from": 505,
+   "durationInFrames": 95,
+   "leak": false
+  },
+  {
+   "name": "B-roll frustracion: ganaban casi lo mismo",
+   "src": "media/frustracion_2.mp4",
+   "from": 600,
+   "durationInFrames": 37,
+   "leak": false
+  },
+  {
+   "name": "B-roll reflexion: ¿esto es realmente lo que quiero para mi",
+   "src": "media/reflexion_0.mp4",
+   "from": 674,
+   "durationInFrames": 62,
+   "leak": false
+  },
+  {
+   "name": "B-roll utah: decidimos mudarnos a Utah",
+   "src": "media/utah_1.5.mp4",
+   "from": 762,
+   "durationInFrames": 43,
+   "leak": true
+  },
+  {
+   "name": "B-roll equipo: nueva visión de mi futuro y la oportunid",
+   "src": "media/equipo_2.mp4",
+   "from": 962,
+   "durationInFrames": 89,
+   "leak": false
+  },
+  {
+   "name": "B-roll familias: ayudo a proteger a otras familias",
+   "src": "media/familias_1.mp4",
+   "from": 1051,
+   "durationInFrames": 59,
+   "leak": false
+  },
+  {
+   "name": "B-roll cima: vine a crear un futuro mejor",
+   "src": "media/cima_0.3.mp4",
+   "from": 1184,
+   "durationInFrames": 39,
+   "leak": true
+  }
+ ],
+ "captions": [
+  {
+   "from": 0,
+   "durationInFrames": 34,
+   "words": [
+    {
+     "text": "HACE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "7",
+     "at": 15,
+     "em": false
+    },
+    {
+     "text": "AÑOS",
+     "at": 22,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 34,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "LLEGUÉ",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "A",
+     "at": 14,
+     "em": false
+    },
+    {
+     "text": "ESTADOS",
+     "at": 17,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 57,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "UNIDOS",
+     "at": 0,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 70,
+   "durationInFrames": 28,
+   "words": [
+    {
+     "text": "CON",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "MI",
+     "at": 11,
+     "em": false
+    },
+    {
+     "text": "ESPOSO",
+     "at": 16,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 98,
+   "durationInFrames": 12,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "MIS",
+     "at": 3,
+     "em": false
+    },
+    {
+     "text": "DOS",
+     "at": 8,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 110,
+   "durationInFrames": 30,
+   "words": [
+    {
+     "text": "HIJOS",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "DESDE",
+     "at": 9,
+     "em": false
+    },
+    {
+     "text": "COLOMBIA",
+     "at": 17,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 140,
+   "durationInFrames": 30,
+   "words": [
+    {
+     "text": "BUSCANDO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "UN",
+     "at": 11,
+     "em": false
+    },
+    {
+     "text": "FUTURO",
+     "at": 19,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 170,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "MEJOR",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 185,
+   "durationInFrames": 37,
+   "words": [
+    {
+     "text": "EN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "CALIFORNIA",
+     "at": 6,
+     "em": true
+    },
+    {
+     "text": "CONSEGUÍ",
+     "at": 22,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 222,
+   "durationInFrames": 11,
+   "words": [
+    {
+     "text": "UN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "TRABAJO",
+     "at": 3,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 233,
+   "durationInFrames": 17,
+   "words": [
+    {
+     "text": "EN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "UNA",
+     "at": 3,
+     "em": false
+    },
+    {
+     "text": "FÁBRICA",
+     "at": 7,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 250,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "DE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "COLCHONES",
+     "at": 4,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 266,
+   "durationInFrames": 12,
+   "words": [
+    {
+     "text": "EN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "EL",
+     "at": 6,
+     "em": false
+    },
+    {
+     "text": "CUAL",
+     "at": 8,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 278,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "ME",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "PAGABAN",
+     "at": 3,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 291,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "15",
+     "at": 4,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 305,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "LA",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "HORA",
+     "at": 10,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 330,
+   "durationInFrames": 10,
+   "words": [
+    {
+     "text": "TODO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "EL",
+     "at": 4,
+     "em": false
+    },
+    {
+     "text": "MUNDO",
+     "at": 7,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 340,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "ME",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "DECÍA",
+     "at": 5,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 355,
+   "durationInFrames": 17,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ERA",
+     "at": 9,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 372,
+   "durationInFrames": 55,
+   "words": [
+    {
+     "text": "UN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "TRABAJO",
+     "at": 6,
+     "em": false
+    },
+    {
+     "text": "EXCELENTE",
+     "at": 18,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 427,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "ESTABLE",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 441,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "CON",
+     "at": 8,
+     "em": false
+    },
+    {
+     "text": "MUCHOS",
+     "at": 13,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 464,
+   "durationInFrames": 22,
+   "words": [
+    {
+     "text": "BENEFICIOS",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 486,
+   "durationInFrames": 31,
+   "words": [
+    {
+     "text": "PERO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "CONOCÍ",
+     "at": 7,
+     "em": false
+    },
+    {
+     "text": "PERSONAS",
+     "at": 19,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 517,
+   "durationInFrames": 28,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "LLEVABAN",
+     "at": 8,
+     "em": false
+    },
+    {
+     "text": "MÁS",
+     "at": 20,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 545,
+   "durationInFrames": 27,
+   "words": [
+    {
+     "text": "DE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "20",
+     "at": 4,
+     "em": false
+    },
+    {
+     "text": "AÑOS",
+     "at": 15,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 572,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "TRABAJANDO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ALLÍ",
+     "at": 15,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 595,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "GANABAN",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "CASI",
+     "at": 15,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 620,
+   "durationInFrames": 14,
+   "words": [
+    {
+     "text": "LO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "MISMO",
+     "at": 5,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 634,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "QUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "YO",
+     "at": 6,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 647,
+   "durationInFrames": 27,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ME",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "PREGUNTÉ",
+     "at": 8,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 674,
+   "durationInFrames": 23,
+   "words": [
+    {
+     "text": "¿ESTO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ES",
+     "at": 9,
+     "em": false
+    },
+    {
+     "text": "REALMENTE",
+     "at": 13,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 738,
+   "durationInFrames": 11,
+   "words": [
+    {
+     "text": "DESPUÉS",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 749,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "DE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "UN",
+     "at": 4,
+     "em": false
+    },
+    {
+     "text": "AÑO",
+     "at": 7,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 762,
+   "durationInFrames": 27,
+   "words": [
+    {
+     "text": "DECIDIMOS",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "MUDARNOS",
+     "at": 15,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 789,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "UTAH",
+     "at": 6,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 804,
+   "durationInFrames": 27,
+   "words": [
+    {
+     "text": "DONDE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ME",
+     "at": 8,
+     "em": false
+    },
+    {
+     "text": "ATREVÍ",
+     "at": 14,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 831,
+   "durationInFrames": 26,
+   "words": [
+    {
+     "text": "A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "SACAR",
+     "at": 3,
+     "em": false
+    },
+    {
+     "text": "MI",
+     "at": 12,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 891,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "NO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "HA",
+     "at": 6,
+     "em": false
+    },
+    {
+     "text": "SIDO",
+     "at": 9,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 904,
+   "durationInFrames": 32,
+   "words": [
+    {
+     "text": "UN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "CAMINO",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "FÁCIL",
+     "at": 14,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 936,
+   "durationInFrames": 21,
+   "words": [
+    {
+     "text": "PERO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "HOY",
+     "at": 3,
+     "em": false
+    },
+    {
+     "text": "TENGO",
+     "at": 11,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 957,
+   "durationInFrames": 22,
+   "words": [
+    {
+     "text": "UNA",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "NUEVA",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "VISIÓN",
+     "at": 12,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 979,
+   "durationInFrames": 20,
+   "words": [
+    {
+     "text": "DE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "MI",
+     "at": 4,
+     "em": false
+    },
+    {
+     "text": "FUTURO",
+     "at": 8,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 999,
+   "durationInFrames": 26,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "LA",
+     "at": 9,
+     "em": false
+    },
+    {
+     "text": "OPORTUNIDAD",
+     "at": 11,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 1025,
+   "durationInFrames": 26,
+   "words": [
+    {
+     "text": "DE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "CRECER",
+     "at": 6,
+     "em": true
+    },
+    {
+     "text": "MIENTRAS",
+     "at": 18,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 1051,
+   "durationInFrames": 28,
+   "words": [
+    {
+     "text": "AYUDO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "A",
+     "at": 13,
+     "em": false
+    },
+    {
+     "text": "PROTEGER",
+     "at": 18,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 1079,
+   "durationInFrames": 28,
+   "words": [
+    {
+     "text": "A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "OTRAS",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "FAMILIAS",
+     "at": 11,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 1107,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "PORQUE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "YO",
+     "at": 8,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 1184,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "VINE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "A",
+     "at": 6,
+     "em": false
+    },
+    {
+     "text": "CREAR",
+     "at": 9,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 1199,
+   "durationInFrames": 21,
+   "words": [
+    {
+     "text": "UN",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "FUTURO",
+     "at": 5,
+     "em": true
+    },
+    {
+     "text": "MEJOR",
+     "at": 13,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 1220,
+   "durationInFrames": 17,
+   "words": [
+    {
+     "text": "PARA",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "MÍ",
+     "at": 9,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 1237,
+   "durationInFrames": 38,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "PARA",
+     "at": 7,
+     "em": false
+    },
+    {
+     "text": "MI",
+     "at": 12,
+     "em": false
+    },
+    {
+     "text": "FAMILIA",
+     "at": 16,
+     "em": true
+    }
+   ]
+  }
+ ],
+ "titles": [
+  {
+   "name": "Título: ¿LO QUE QUIERO PARA MI FUTURO?",
+   "from": 697,
+   "durationInFrames": 53,
+   "top": [
+    {
+     "text": "¿LO",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "QUE",
+     "accent": false,
+     "at": 6
+    },
+    {
+     "text": "QUIERO",
+     "accent": true,
+     "at": 9
+    },
+    {
+     "text": "PARA",
+     "accent": false,
+     "at": 15
+    },
+    {
+     "text": "MI",
+     "accent": false,
+     "at": 21
+    }
+   ],
+   "big": "FUTURO?",
+   "bigAt": 26,
+   "bottom": [],
+   "bigSize": 200.7,
+   "y": 0.12,
+   "align": "center"
+  },
+  {
+   "name": "Título: NO VINE SOLO A SOBREVIVIR",
+   "from": 1123,
+   "durationInFrames": 64,
+   "top": [
+    {
+     "text": "NO",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "VINE",
+     "accent": false,
+     "at": 4
+    },
+    {
+     "text": "SOLO",
+     "accent": false,
+     "at": 9
+    },
+    {
+     "text": "A",
+     "accent": false,
+     "at": 13
+    }
+   ],
+   "big": "SOBREVIVIR",
+   "bigAt": 37,
+   "bottom": [],
+   "bigSize": 151.5,
+   "y": 0.075,
+   "align": "center"
+  }
+ ],
+ "icons": [
+  {
+   "name": "Icono CalendarDays: 7 años",
+   "icon": "CalendarDays",
+   "from": 15,
+   "durationInFrames": 39,
+   "x": 0.78,
+   "y": 0.2,
+   "size": 190,
+   "anim": "pop",
+   "label": "7 AÑOS"
+  },
+  {
+   "name": "Icono Users: mi esposo y mis dos hijos",
+   "icon": "Users",
+   "from": 81,
+   "durationInFrames": 47,
+   "x": 0.22,
+   "y": 0.2,
+   "size": 190,
+   "anim": "pop",
+   "label": "MI FAMILIA"
+  },
+  {
+   "name": "Icono MapPin: En California",
+   "icon": "MapPin",
+   "from": 185,
+   "durationInFrames": 39,
+   "x": 0.5,
+   "y": 0.17,
+   "size": 180,
+   "anim": "pop",
+   "label": "CALIFORNIA"
+  },
+  {
+   "name": "Icono MapPin: mudarnos a Utah",
+   "icon": "MapPin",
+   "from": 777,
+   "durationInFrames": 39,
+   "x": 0.5,
+   "y": 0.3,
+   "size": 210,
+   "anim": "pop",
+   "label": "UTAH"
+  },
+  {
+   "name": "Icono TrendingUp: oportunidad de crecer",
+   "icon": "TrendingUp",
+   "from": 1010,
+   "durationInFrames": 42,
+   "x": 0.76,
+   "y": 0.22,
+   "size": 190,
+   "anim": "pop",
+   "label": ""
+  },
+  {
+   "name": "Icono ShieldCheck: proteger a otras familias",
+   "icon": "ShieldCheck",
+   "from": 1069,
+   "durationInFrames": 47,
+   "x": 0.5,
+   "y": 0.24,
+   "size": 210,
+   "anim": "pop",
+   "label": "PROTEGER"
+  },
+  {
+   "name": "Icono Heart: para mi familia",
+   "icon": "Heart",
+   "from": 1244,
+   "durationInFrames": 31,
+   "x": 0.78,
+   "y": 0.2,
+   "size": 190,
+   "anim": "pop",
+   "label": ""
+  }
+ ],
+ "sfx": [
+  {
+   "sound": "pop",
+   "from": 15,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.35
+  },
+  {
+   "sound": "impacto",
+   "from": 51,
+   "trim": 0,
+   "durationInFrames": 84,
+   "vol": 0.385
+  },
+  {
+   "sound": "riser",
+   "from": 0,
+   "trim": 9,
+   "durationInFrames": 51,
+   "vol": 0.21
+  },
+  {
+   "sound": "click",
+   "from": 57,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "pop",
+   "from": 81,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.35
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 111,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.21
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 132,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.21
+  },
+  {
+   "sound": "click",
+   "from": 159,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "pop",
+   "from": 185,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.35
+  },
+  {
+   "sound": "click",
+   "from": 191,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 220,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.21
+  },
+  {
+   "sound": "click",
+   "from": 254,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "kaching",
+   "from": 295,
+   "trim": 0,
+   "durationInFrames": 51,
+   "vol": 0.28
+  },
+  {
+   "sound": "pop",
+   "from": 330,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.35
+  },
+  {
+   "sound": "click",
+   "from": 394,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.315
+  },
+  {
+   "sound": "click",
+   "from": 431,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.315
+  },
+  {
+   "sound": "click",
+   "from": 468,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.315
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 478,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.196
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 497,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.21
+  },
+  {
+   "sound": "pop",
+   "from": 537,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.35
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 584,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.21
+  },
+  {
+   "sound": "click",
+   "from": 625,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 639,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.196
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 666,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.21
+  },
+  {
+   "sound": "sub_drop",
+   "from": 723,
+   "trim": 0,
+   "durationInFrames": 45,
+   "vol": 0.315
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 722,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.245
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 746,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.21
+  },
+  {
+   "sound": "pop",
+   "from": 777,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.35
+  },
+  {
+   "sound": "pop",
+   "from": 848,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.35
+  },
+  {
+   "sound": "click",
+   "from": 860,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.35
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 883,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.196
+  },
+  {
+   "sound": "click",
+   "from": 918,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 954,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.21
+  },
+  {
+   "sound": "click",
+   "from": 987,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "kaching",
+   "from": 1010,
+   "trim": 0,
+   "durationInFrames": 51,
+   "vol": 0.28
+  },
+  {
+   "sound": "click",
+   "from": 1031,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 1035,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.21
+  },
+  {
+   "sound": "ding",
+   "from": 1069,
+   "trim": 0,
+   "durationInFrames": 51,
+   "vol": 0.245
+  },
+  {
+   "sound": "click",
+   "from": 1090,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 1099,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.196
+  },
+  {
+   "sound": "sub_drop",
+   "from": 1160,
+   "trim": 0,
+   "durationInFrames": 45,
+   "vol": 0.315
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 1168,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.245
+  },
+  {
+   "sound": "click",
+   "from": 1204,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "pop",
+   "from": 1244,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.35
+  },
+  {
+   "sound": "click",
+   "from": 1253,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 1265,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.245
+  }
+ ],
+ "flashes": [
+  738,
+  1184,
+  1281
+ ]
+}
