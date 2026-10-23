@@ -1,5 +1,5 @@
 {
-  "source": "input/material/video_aimee_base_2.mov",
+  "source": "input/material/video_aimee_base_2_sdr.mov",
   "transcript": "input/transcript_base2_corregido.json",
   "keep": "input/keep_base2.json",
   "intro_drop_at": "podrías",
@@ -166,14 +166,37 @@
     },
     {
       "type": "notification",
-      "phrase": "Listo, Aimee",
+      "phrase": "Un momento",
       "sfx": "ding",
       "app": "Anna",
       "title": "Recordatorio · hoy",
       "body": "Sale mi hijo de la escuela",
       "time": "3:30 p. m.",
       "y": 0.05,
-      "hold": 1.4
+      "until": "Listo, Aimee"
+    },
+    {
+      "type": "phrase",
+      "phrase": "También unos tacos",
+      "until": "mejor te",
+      "lines": [
+        {
+          "text": "Y también me ayudó",
+          "style": "bold",
+          "size": 56
+        },
+        {
+          "text": "con ideas para la cena",
+          "style": "script",
+          "size": 76
+        }
+      ],
+      "y": 0.11,
+      "rotate": -2,
+      "sfx": "pop",
+      "dark": true,
+      "pill": true,
+      "delay": 0.3
     },
     {
       "type": "card",
@@ -182,7 +205,7 @@
       "icon": "UtensilsCrossed",
       "title": "Idea para la cena",
       "body": "Tacos de frijoles negros con aguacate",
-      "y": 0.2
+      "y": 0.29
     },
     {
       "type": "image",

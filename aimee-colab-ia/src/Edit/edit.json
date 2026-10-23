@@ -130,16 +130,39 @@
    "body": "Sale mi hijo de la escuela",
    "time": "3:30 p. m.",
    "y": 0.05,
-   "name": "Gráfico notification: Listo, Aimee",
-   "from": 547,
-   "durationInFrames": 42
+   "name": "Gráfico notification: Un momento",
+   "from": 517,
+   "durationInFrames": 65
+  },
+  {
+   "type": "phrase",
+   "lines": [
+    {
+     "text": "Y también me ayudó",
+     "style": "bold",
+     "size": 56
+    },
+    {
+     "text": "con ideas para la cena",
+     "style": "script",
+     "size": 76
+    }
+   ],
+   "y": 0.11,
+   "rotate": -2,
+   "sfx": "pop",
+   "dark": true,
+   "pill": true,
+   "name": "Gráfico phrase: También unos tacos",
+   "from": 584,
+   "durationInFrames": 206
   },
   {
    "type": "card",
    "icon": "UtensilsCrossed",
    "title": "Idea para la cena",
    "body": "Tacos de frijoles negros con aguacate",
-   "y": 0.2,
+   "y": 0.29,
    "name": "Gráfico card: tacos de frijoles negros con a",
    "from": 593,
    "durationInFrames": 98
@@ -1039,15 +1062,8 @@
    "vol": 0.15
   },
   {
-   "sound": "whoosh_largo",
-   "from": 501,
-   "trim": 0,
-   "durationInFrames": 27,
-   "vol": 0.15
-  },
-  {
    "sound": "ding",
-   "from": 547,
+   "from": 517,
    "trim": 0,
    "durationInFrames": 51,
    "vol": 0.175
@@ -1058,6 +1074,13 @@
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.14
+  },
+  {
+   "sound": "pop",
+   "from": 584,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.25
   },
   {
    "sound": "pop",
