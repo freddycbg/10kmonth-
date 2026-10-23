@@ -287,3 +287,50 @@ clave grande en otro color, números y gráficos en pantalla, destellos, cierre 
 - **Cierre:** animación 10K Month (regla fija de arriba).
 - **No renderizar mientras corre `mattes.py`:** juntos se quedan sin memoria y el sistema mata el recorte (se
   reanuda desde las máscaras guardadas).
+
+## Vídeos de colaboración de AIMEE (esposa de Freddy): estilo aprobado
+
+Totalmente distintos de los de reclutamiento (Freddy, Claudia): son colaboraciones de redes de Aimee, estilo
+influencer. Aprobado en "Aimee × Anna" (app de IA), versión final `Aimee_Anna_FINAL.mp4`.
+
+**Material**
+- Solo vídeos e imágenes de la carpeta de Aimee. **Nunca** el b-roll de reclutamiento de Freddy.
+- Referencias: dos vídeos de influencer (uno es de la propia Aimee, @aimeecarolinag).
+
+**Audio: lo más importante (Aimee lo pidió varias veces)**
+- **La voz no se toca:** ni limpieza de ruido, ni mejora de voz, ni compresión, ni normalización, ni cambio de
+  frecuencia de muestreo. El render de Remotion va **sin audio** (`--muted`) y `scripts/mezcla_audio_original.py`
+  pone el audio del vídeo base tal cual y le suma encima efectos y música (una sola codificación AAC 320 kbps a la
+  frecuencia original). Sin efectos, el audio se copia bit a bit (`--sin-efectos`).
+- Única excepción: si ella lo pide, subir la voz en un tramo concreto (`"voice_gain"`, puntos [segundo, dB] con
+  curva suave; aquí +2/+4/+6 dB en "…la maestra de mi hijo").
+- Si un tramo del vídeo base tiene un corte o fallo, ella manda el pedazo bueno: se empalma **muestra a muestra en
+  un silencio** (alineado por correlación de audio), sin fundidos, y se comprueba que cada trozo es idéntico al
+  original.
+- **Música de fondo muy bajita**: unos 21 dB por debajo de la voz (`"music_bed"`: −33 dB bajo la voz, −22 dB en el
+  cierre), fundidos de entrada y salida.
+- **Efectos de sonido a la mitad** (`"sfx_gain": 0.5`) de la librería `sfx/`: pop en cada gráfico, ding en la
+  notificación, swoosh en la captura, ka-ching en el descuento, clic en la casilla del código, whoosh en los cambios
+  de escena y al entrar el cierre.
+- Sonidos propios que ella pase (`"audio_extra"`), en la sílaba exacta: el "FAAA" cae en el último "má" de
+  "yo soy tu mamá" (inicio de la sílaba tónica medido en la onda, descontando el silencio inicial del archivo).
+
+**Imagen**
+- **Sin zoom dinámico ni punch-ins** (`"static_camera": true`) y **sin cortar silencios** (vídeo completo): lo que
+  diga la niña (Allison) tiene que oírse entero.
+- Subtítulos estilo influencer: Poppins SemiBold 50 px, mayúsculas normales, blancos con sombra suave y **fondo
+  oscuro translúcido** (se leen también sobre la pantalla blanca del móvil), tercio inferior (76 %).
+- **Subtítulos con guion corregido y sincronizados palabra a palabra** (`scripts/alinear_guion.py`): una frase por
+  persona (nunca dos voces en el mismo subtítulo), todo lo que se dice (también lo de la niña: "¿Dónde?", "Ujum"),
+  ortografía y signos ¿? ¡! correctos ("tú" con tilde, "Anna", código "AIMEE", "20 %"). Si ella manda un vídeo con
+  el texto, ese texto manda, pero ordenado y corregido.
+- Frases clave tipo referencia 2: Montserrat ExtraBold en mayúsculas color crema #FFF1B8 + Playfair Display
+  cursiva blanca, con sombra reforzada (dos cursivas seguidas con aire entre líneas). Sobre fondos claros, texto
+  oscuro en tarjeta blanca (`"pill"`).
+- **Título POV** al empezar: "POV: *mi hija cree que ella es la mamá*" y luego "Menos mal tengo a *Anna* para
+  ayudarme" (dos letreros para que dé tiempo a leerlos).
+- Gráficos generados (`Overlay.tsx`): notificación de recordatorio tipo iPhone, tarjeta de sugerencia con icono,
+  captura de la app flotando (**sin tapar nunca la cara de Aimee**: a un lado, sobre la pared), insignia "20 %
+  DESCUENTO" verde salvia (color de la app), casilla con el código que se marca.
+- Cierre: último plano desenfocado, icono de Instagram y "Sígueme @aimeecarolinag" (2.5 s).
+- Entrega: 1080×1920, 30 fps, H.264 CRF 10 (~24 Mbps).
