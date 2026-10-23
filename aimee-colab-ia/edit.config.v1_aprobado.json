@@ -1,0 +1,275 @@
+{
+  "source": "input/material/video_aimee_base_1_arreglado.mov",
+  "transcript": "input/transcript_base1_arreglado_corregido.json",
+  "keep": "input/keep_base1_arreglado.json",
+  "intro_drop_at": "podrías",
+  "denoise": false,
+  "level_voice": false,
+  "rebuild_aroll": true,
+  "caption_case": "natural",
+  "fixes": [],
+  "intro": {
+    "punch_frames": 5,
+    "punch_scale": 1.08,
+    "ramp_frames": 8,
+    "pre_drop_scale": 1.1,
+    "drop_scale": 1.24,
+    "settle_scale": 1.2
+  },
+  "takes": [
+    {
+      "until": 6.567,
+      "face": [
+        0.5,
+        0.42
+      ],
+      "close": 1.2
+    },
+    {
+      "until": 9.067,
+      "face": [
+        0.5,
+        0.42
+      ],
+      "close": 1.2
+    },
+    {
+      "until": 18.667,
+      "face": [
+        0.5,
+        0.42
+      ],
+      "close": 1.2
+    },
+    {
+      "until": 25.9,
+      "face": [
+        0.5,
+        0.42
+      ],
+      "close": 1.2
+    },
+    {
+      "until": 999,
+      "face": [
+        0.5,
+        0.42
+      ],
+      "close": 1.2
+    }
+  ],
+  "titles": [],
+  "emphasis": [],
+  "icons": [],
+  "broll": [],
+  "flash_at": [],
+  "overlays": [
+    {
+      "type": "phrase",
+      "phrase": "Yo soy tu mamá",
+      "until": "¿Eres mi mamá?",
+      "y": 0.15,
+      "rotate": -2,
+      "lines": [
+        {
+          "text": "POV:",
+          "style": "bold",
+          "size": 62
+        },
+        {
+          "text": "mi hija cree que",
+          "style": "script",
+          "size": 80
+        },
+        {
+          "text": "ella es la mamá",
+          "style": "script",
+          "size": 80
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "phrase": "Ya no más",
+      "until": "comes todo",
+      "y": 0.15,
+      "rotate": 2,
+      "lines": [
+        {
+          "text": "Menos mal tengo a",
+          "style": "bold",
+          "size": 54
+        },
+        {
+          "text": "Anna",
+          "style": "script",
+          "size": 112
+        },
+        {
+          "text": "para ayudarme",
+          "style": "bold",
+          "size": 54
+        }
+      ]
+    },
+    {
+      "type": "phrase",
+      "phrase": "Olvidé algo",
+      "lines": [
+        {
+          "text": "¡Olvidé",
+          "style": "bold"
+        },
+        {
+          "text": "algo!",
+          "style": "script"
+        }
+      ],
+      "y": 0.2,
+      "rotate": 4,
+      "hold": 1.1
+    },
+    {
+      "type": "phrase",
+      "phrase": "Anna, ¿podrías recordarme",
+      "dark": true,
+      "lines": [
+        {
+          "text": "Anna",
+          "style": "bold",
+          "size": 58
+        },
+        {
+          "text": "tu asistente con IA",
+          "style": "script",
+          "size": 66
+        }
+      ],
+      "y": 0.1,
+      "hold": 2.2,
+      "pill": true,
+      "rotate": -2
+    },
+    {
+      "type": "notification",
+      "phrase": "8:50 de la mañana",
+      "until": "Entendido",
+      "sfx": "ding",
+      "app": "Anna",
+      "title": "Recordatorio · mañana",
+      "body": "Hablar con la maestra de mi hijo",
+      "time": "8:50 a. m.",
+      "y": 0.05
+    },
+    {
+      "type": "card",
+      "phrase": "tacos de frijoles negros con aguacate",
+      "until": "¿Qué opinas?",
+      "icon": "UtensilsCrossed",
+      "title": "Idea para la cena",
+      "body": "Tacos de frijoles negros con aguacate",
+      "y": 0.2
+    },
+    {
+      "type": "phrase",
+      "phrase": "una ayudita extra",
+      "lines": [
+        {
+          "text": "Una ayudita",
+          "style": "bold"
+        },
+        {
+          "text": "extra",
+          "style": "script"
+        }
+      ],
+      "y": 0.14,
+      "rotate": -3,
+      "hold": 1.0
+    },
+    {
+      "type": "image",
+      "phrase": "descarga la aplicación Anna",
+      "until": "descuento",
+      "sfx": "swoosh",
+      "src": "media/anna_chat.png",
+      "x": 0.8,
+      "y": 0.3,
+      "width": 0.34,
+      "rotate": 6
+    },
+    {
+      "type": "code",
+      "phrase": "coloca AIMEE",
+      "until": "descuento",
+      "label": "Código",
+      "code": "AIMEE",
+      "x": 0.5,
+      "y": 0.66
+    },
+    {
+      "type": "badge",
+      "phrase": "20% de descuento",
+      "sfx": "kaching",
+      "big": "20%",
+      "small": "DESCUENTO",
+      "x": 0.2,
+      "y": 0.15,
+      "hold": 1.6
+    }
+  ],
+  "end_card": {
+    "handle": "@aimeecarolinag",
+    "kicker": "Sígueme"
+  },
+  "raw_ranges": [],
+  "static_camera": true,
+  "original_audio": true,
+  "sfx_gain": 0.5,
+  "audio_extra": [
+    {
+      "file": "input/material/faaa.mp3",
+      "at": 1.24,
+      "gain_db": -7.5
+    }
+  ],
+  "music_bed": {
+    "file": "input/material/musica_fondo.mp3",
+    "gain_db": -33,
+    "end_gain_db": -22
+  },
+  "voice_gain": [
+    [
+      10.561,
+      0
+    ],
+    [
+      10.710999999999999,
+      2
+    ],
+    [
+      11.911,
+      2
+    ],
+    [
+      12.061,
+      4
+    ],
+    [
+      12.561,
+      4
+    ],
+    [
+      12.661,
+      6
+    ],
+    [
+      13.011,
+      6
+    ],
+    [
+      13.091,
+      0
+    ]
+  ]
+}

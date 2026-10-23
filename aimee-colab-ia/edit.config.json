@@ -1,11 +1,11 @@
 {
-  "source": "input/material/video_aimee_base_1_arreglado.mov",
-  "transcript": "input/transcript_base1_arreglado_corregido.json",
-  "keep": "input/keep_base1_arreglado.json",
+  "source": "input/material/video_aimee_base_2.mov",
+  "transcript": "input/transcript_base2_corregido.json",
+  "keep": "input/keep_base2.json",
   "intro_drop_at": "podrías",
   "denoise": false,
   "level_voice": false,
-  "rebuild_aroll": true,
+  "rebuild_aroll": false,
   "caption_case": "natural",
   "fixes": [],
   "intro": {
@@ -34,7 +34,7 @@
       "close": 1.2
     },
     {
-      "until": 18.667,
+      "until": 19.167,
       "face": [
         0.5,
         0.42
@@ -42,7 +42,7 @@
       "close": 1.2
     },
     {
-      "until": 25.9,
+      "until": 26.4,
       "face": [
         0.5,
         0.42
@@ -61,7 +61,21 @@
   "titles": [],
   "emphasis": [],
   "icons": [],
-  "broll": [],
+  "broll": [
+    {
+      "id": "tel_anna1",
+      "file": "input/arreglos2/IMG_1749.MOV",
+      "trim": 0.0,
+      "phrase": "Por supuesto. Dime en qué puedo ayudarte hoy."
+    },
+    {
+      "id": "tel_anna2",
+      "file": "input/arreglos2/IMG_1749.MOV",
+      "trim": 2.6,
+      "phrase": "Un momento. Listo, Aimee.",
+      "hold": 0.07
+    }
+  ],
   "flash_at": [],
   "overlays": [
     {
@@ -131,7 +145,7 @@
     },
     {
       "type": "phrase",
-      "phrase": "Anna, ¿podrías recordarme",
+      "phrase": "Anna, ¿podrías ayudarme",
       "dark": true,
       "lines": [
         {
@@ -152,14 +166,14 @@
     },
     {
       "type": "notification",
-      "phrase": "8:50 de la mañana",
-      "until": "Entendido",
+      "phrase": "Listo, Aimee",
       "sfx": "ding",
       "app": "Anna",
-      "title": "Recordatorio · mañana",
-      "body": "Hablar con la maestra de mi hijo",
-      "time": "8:50 a. m.",
-      "y": 0.05
+      "title": "Recordatorio · hoy",
+      "body": "Sale mi hijo de la escuela",
+      "time": "3:30 p. m.",
+      "y": 0.05,
+      "hold": 1.4
     },
     {
       "type": "card",
@@ -171,25 +185,8 @@
       "y": 0.2
     },
     {
-      "type": "phrase",
-      "phrase": "una ayudita extra",
-      "lines": [
-        {
-          "text": "Una ayudita",
-          "style": "bold"
-        },
-        {
-          "text": "extra",
-          "style": "script"
-        }
-      ],
-      "y": 0.14,
-      "rotate": -3,
-      "hold": 1.0
-    },
-    {
       "type": "image",
-      "phrase": "descarga la aplicación Anna",
+      "phrase": "Si quieres probar Anna",
       "until": "descuento",
       "sfx": "swoosh",
       "src": "media/anna_chat.png",
@@ -199,8 +196,26 @@
       "rotate": 6
     },
     {
+      "type": "phrase",
+      "phrase": "el link está en mi bio",
+      "lines": [
+        {
+          "text": "Link en mi",
+          "style": "bold"
+        },
+        {
+          "text": "bio",
+          "style": "script"
+        }
+      ],
+      "y": 0.16,
+      "rotate": -3,
+      "hold": 1.2,
+      "x": 0.34
+    },
+    {
       "type": "code",
-      "phrase": "coloca AIMEE",
+      "phrase": "el código AIMEE",
       "until": "descuento",
       "label": "Código",
       "code": "AIMEE",
@@ -220,7 +235,7 @@
   ],
   "end_card": {
     "handle": "@aimeecarolinag",
-    "kicker": "Sígueme"
+    "kicker": "Enlace en mi biografía"
   },
   "raw_ranges": [],
   "static_camera": true,
@@ -238,38 +253,5 @@
     "gain_db": -33,
     "end_gain_db": -22
   },
-  "voice_gain": [
-    [
-      10.561,
-      0
-    ],
-    [
-      10.710999999999999,
-      2
-    ],
-    [
-      11.911,
-      2
-    ],
-    [
-      12.061,
-      4
-    ],
-    [
-      12.561,
-      4
-    ],
-    [
-      12.661,
-      6
-    ],
-    [
-      13.011,
-      6
-    ],
-    [
-      13.091,
-      0
-    ]
-  ]
+  "voice_gain": []
 }

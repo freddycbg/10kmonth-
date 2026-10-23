@@ -35,7 +35,7 @@ export const HandleOutro: React.FC<{ handle: string; kicker?: string }> = ({ han
           <Instagram size={140} color="#FFFFFF" strokeWidth={2} />
         </div>
         <div style={{ textAlign: "center", opacity: frame < 12 ? 0 : text, transform: `translateY(${(1 - text) * 30}px)` }}>
-          <div style={{ fontFamily: SCRIPT_FONT, fontStyle: "italic", fontWeight: 500, fontSize: 80, color: "#FFFFFF" }}>
+          <div style={{ fontFamily: SCRIPT_FONT, fontStyle: "italic", fontWeight: 500, fontSize: 80, color: "#FFFFFF", whiteSpace: "nowrap" }}>
             {kicker}
           </div>
           <div style={{ fontFamily: TITLE_FONT, fontWeight: 800, fontSize: 62, color: CREAM, letterSpacing: "0.03em" }}>
