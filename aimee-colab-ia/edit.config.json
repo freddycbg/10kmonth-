@@ -1,105 +1,13 @@
 {
   "source": "input/material/video_aimee_base_1.mp4",
-  "transcript": "input/transcript_base1.json",
+  "transcript": "input/transcript_base1_corregido.json",
   "keep": "input/keep_base1.json",
   "intro_drop_at": "podrías",
   "denoise": false,
   "level_voice": false,
-  "rebuild_aroll": true,
+  "rebuild_aroll": false,
   "caption_case": "natural",
-  "fixes": [
-    {
-      "find": [
-        "Ana,"
-      ],
-      "replace": [
-        "Anna,"
-      ]
-    },
-    {
-      "find": [
-        "Ana"
-      ],
-      "replace": [
-        "Anna"
-      ]
-    },
-    {
-      "find": [
-        "Aime"
-      ],
-      "replace": [
-        "AIMEE"
-      ]
-    },
-    {
-      "find": [
-        "regresar",
-        "que",
-        "tengo",
-        "una",
-        "refri"
-      ],
-      "replace": [
-        "revisar",
-        "qué",
-        "tengo",
-        "en",
-        "la",
-        "refri"
-      ]
-    },
-    {
-      "find": [
-        "8",
-        "y",
-        "50"
-      ],
-      "replace": [
-        "8:50"
-      ]
-    },
-    {
-      "find": [
-        "20",
-        "%"
-      ],
-      "replace": [
-        "20%"
-      ]
-    },
-    {
-      "find": [
-        "¡ya",
-        "es",
-        "mamá!"
-      ],
-      "replace": [
-        "Ya",
-        "es",
-        "normal."
-      ]
-    },
-    {
-      "find": [
-        "¡y",
-        "tu",
-        "comentario!"
-      ],
-      "replace": [
-        "¡Este",
-        "comentario!"
-      ]
-    },
-    {
-      "find": [
-        "vale."
-      ],
-      "replace": [
-        "¿Dónde?"
-      ]
-    }
-  ],
+  "fixes": [],
   "intro": {
     "punch_frames": 5,
     "punch_scale": 1.08,
@@ -190,8 +98,8 @@
     },
     {
       "type": "phrase",
-      "phrase": "Yo soy mamá",
-      "until": "Y te comentaron",
+      "phrase": "Ya no más",
+      "until": "comes todo",
       "y": 0.15,
       "rotate": 2,
       "lines": [
@@ -325,6 +233,5 @@
   "raw_ranges": [],
   "static_camera": true,
   "original_audio": true,
-  "sfx_gain": 0.5,
-  "caption_lines": "input/subtitulos_referencia.json"
+  "sfx_gain": 0.5
 }

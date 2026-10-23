@@ -40,6 +40,7 @@ WEAK_END = {
     "para", "un", "una", "del", "al", "lo", "se", "me", "nos", "tu", "su", "o",
     "pero", "porque", "no", "como", "cuando", "donde", "sino", "ni", "e", "u",
     "este", "esta", "estos", "estas", "ese", "esa", "sus", "tus", "mis",
+    "qué",  # "voy a revisar / qué tengo en la refri" (Aimee)
 }
 BREAK_BEFORE = {"y", "pero", "porque"}  # abren bloque nuevo si el actual ya tiene alguna palabra
 TITLE_HOLD = 0.45  # s que el título cinético sigue en pantalla tras su última palabra
