@@ -2,18 +2,18 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationInFrames": 1236,
- "arollFrames": 1161,
- "lastWordFrame": 1147,
- "introDropFrame": 163,
+ "durationInFrames": 1060,
+ "arollFrames": 985,
+ "lastWordFrame": 972,
+ "introDropFrame": 295,
  "intro": {
   "frames": [
    0,
    5,
-   155,
-   163,
-   167,
-   339
+   287,
+   295,
+   299,
+   196
   ],
   "scales": [
    1.0,
@@ -53,9 +53,9 @@
      "size": 80
     }
    ],
-   "name": "Gráfico phrase: ¡Yo soy tu mamá!",
+   "name": "Gráfico phrase: Yo soy tu mamá",
    "from": 0,
-   "durationInFrames": 204
+   "durationInFrames": 85
   },
   {
    "type": "phrase",
@@ -78,9 +78,9 @@
      "size": 54
     }
    ],
-   "name": "Gráfico phrase: Ya es normal.",
-   "from": 230,
-   "durationInFrames": 144
+   "name": "Gráfico phrase: Yo soy mamá",
+   "from": 94,
+   "durationInFrames": 106
   },
   {
    "type": "phrase",
@@ -97,8 +97,8 @@
    "y": 0.2,
    "rotate": 4,
    "name": "Gráfico phrase: Olvidé algo",
-   "from": 380,
-   "durationInFrames": 35
+   "from": 232,
+   "durationInFrames": 33
   },
   {
    "type": "phrase",
@@ -119,7 +119,7 @@
    "pill": true,
    "rotate": -2,
    "name": "Gráfico phrase: Anna, ¿podrías recordarme",
-   "from": 456,
+   "from": 273,
    "durationInFrames": 66
   },
   {
@@ -131,8 +131,8 @@
    "time": "8:50 a. m.",
    "y": 0.05,
    "name": "Gráfico notification: 8:50 de la mañana",
-   "from": 645,
-   "durationInFrames": 91
+   "from": 467,
+   "durationInFrames": 92
   },
   {
    "type": "card",
@@ -141,7 +141,7 @@
    "body": "Tacos de frijoles negros con aguacate",
    "y": 0.2,
    "name": "Gráfico card: tacos de frijoles negros con a",
-   "from": 748,
+   "from": 571,
    "durationInFrames": 99
   },
   {
@@ -159,8 +159,8 @@
    "y": 0.14,
    "rotate": -3,
    "name": "Gráfico phrase: una ayudita extra",
-   "from": 964,
-   "durationInFrames": 43
+   "from": 790,
+   "durationInFrames": 41
   },
   {
    "type": "image",
@@ -171,8 +171,8 @@
    "width": 0.34,
    "rotate": 6,
    "name": "Gráfico image: descarga la aplicación Anna",
-   "from": 1001,
-   "durationInFrames": 155
+   "from": 821,
+   "durationInFrames": 160
   },
   {
    "type": "code",
@@ -181,7 +181,7 @@
    "x": 0.5,
    "y": 0.66,
    "name": "Gráfico code: coloca AIMEE",
-   "from": 1051,
+   "from": 876,
    "durationInFrames": 105
   },
   {
@@ -192,250 +192,242 @@
    "x": 0.2,
    "y": 0.15,
    "name": "Gráfico badge: 20% de descuento",
-   "from": 1109,
+   "from": 934,
    "durationInFrames": 48
   }
  ],
  "shots": [
   {
    "from": 0,
-   "durationInFrames": 340,
+   "durationInFrames": 197,
    "framing": "ancho",
    "face": {
     "x": 0.5,
-    "y": 0.45
+    "y": 0.42
    },
-   "closeScale": 1.25
+   "closeScale": 1.2
   },
   {
-   "from": 340,
-   "durationInFrames": 58,
+   "from": 197,
+   "durationInFrames": 35,
    "framing": "cerrado",
    "face": {
-    "x": 0.45,
+    "x": 0.5,
     "y": 0.42
    },
    "closeScale": 1.2
   },
   {
-   "from": 398,
-   "durationInFrames": 54,
+   "from": 232,
+   "durationInFrames": 43,
    "framing": "ancho",
    "face": {
-    "x": 0.45,
+    "x": 0.5,
     "y": 0.42
    },
    "closeScale": 1.2
   },
   {
-   "from": 452,
+   "from": 275,
    "durationInFrames": 127,
    "framing": "ancho",
    "face": {
     "x": 0.5,
     "y": 0.42
    },
-   "closeScale": 1.25
+   "closeScale": 1.2
   },
   {
-   "from": 579,
-   "durationInFrames": 127,
+   "from": 402,
+   "durationInFrames": 126,
    "framing": "cerrado",
    "face": {
     "x": 0.5,
     "y": 0.42
    },
-   "closeScale": 1.25
+   "closeScale": 1.2
   },
   {
-   "from": 706,
+   "from": 528,
    "durationInFrames": 25,
    "framing": "cerrado",
    "face": {
     "x": 0.5,
-    "y": 0.43
+    "y": 0.42
    },
-   "closeScale": 1.3
+   "closeScale": 1.2
   },
   {
-   "from": 731,
-   "durationInFrames": 107,
+   "from": 553,
+   "durationInFrames": 112,
    "framing": "ancho",
    "face": {
     "x": 0.5,
-    "y": 0.43
+    "y": 0.42
    },
-   "closeScale": 1.3
+   "closeScale": 1.2
   },
   {
-   "from": 838,
-   "durationInFrames": 110,
+   "from": 665,
+   "durationInFrames": 105,
    "framing": "cerrado",
    "face": {
     "x": 0.5,
-    "y": 0.43
+    "y": 0.42
    },
-   "closeScale": 1.3
+   "closeScale": 1.2
   },
   {
-   "from": 948,
-   "durationInFrames": 103,
+   "from": 770,
+   "durationInFrames": 106,
    "framing": "cerrado",
    "face": {
-    "x": 0.57,
-    "y": 0.38
+    "x": 0.5,
+    "y": 0.42
    },
-   "closeScale": 1.3
+   "closeScale": 1.2
   },
   {
-   "from": 1051,
-   "durationInFrames": 110,
+   "from": 876,
+   "durationInFrames": 109,
    "framing": "ancho",
    "face": {
-    "x": 0.57,
-    "y": 0.38
+    "x": 0.5,
+    "y": 0.42
    },
-   "closeScale": 1.3
+   "closeScale": 1.2
   }
  ],
  "broll": [],
  "captions": [
   {
    "from": 0,
-   "durationInFrames": 56,
+   "durationInFrames": 59,
    "words": [
     {
-     "text": "¡Yo",
+     "text": "Yo",
      "at": 0,
      "em": false
     },
     {
      "text": "soy",
-     "at": 5,
+     "at": 10,
      "em": false
     },
     {
      "text": "tu",
-     "at": 15,
-     "em": false
-    },
-    {
-     "text": "mamá!",
-     "at": 22,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 119,
-   "durationInFrames": 23,
-   "words": [
-    {
-     "text": "¡Gracias!",
-     "at": 0,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 163,
-   "durationInFrames": 41,
-   "words": [
-    {
-     "text": "¿Eres",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "mi",
-     "at": 18,
-     "em": false
-    },
-    {
-     "text": "mamá?",
-     "at": 22,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 230,
-   "durationInFrames": 41,
-   "words": [
-    {
-     "text": "Ya",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "es",
-     "at": 11,
-     "em": false
-    },
-    {
-     "text": "normal",
      "at": 21,
      "em": false
-    }
-   ]
-  },
-  {
-   "from": 272,
-   "durationInFrames": 70,
-   "words": [
-    {
-     "text": "¡Este",
-     "at": 0,
-     "em": false
     },
     {
-     "text": "comentario!",
+     "text": "mamá",
      "at": 31,
      "em": false
     }
    ]
   },
   {
-   "from": 347,
-   "durationInFrames": 27,
+   "from": 59,
+   "durationInFrames": 47,
    "words": [
     {
-     "text": "¿Qué?",
-     "at": 0,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 380,
-   "durationInFrames": 34,
-   "words": [
-    {
-     "text": "Olvidé",
+     "text": "eres",
      "at": 0,
      "em": false
     },
     {
-     "text": "algo",
-     "at": 18,
+     "text": "mi",
+     "at": 8,
+     "em": false
+    },
+    {
+     "text": "mamá?",
+     "at": 16,
+     "em": false
+    },
+    {
+     "text": "ujum",
+     "at": 25,
      "em": false
     }
    ]
   },
   {
-   "from": 427,
-   "durationInFrames": 22,
+   "from": 106,
+   "durationInFrames": 30,
    "words": [
     {
-     "text": "¿Dónde?",
+     "text": "ya",
      "at": 0,
+     "em": false
+    },
+    {
+     "text": "no",
+     "at": 7,
+     "em": false
+    },
+    {
+     "text": "más",
+     "at": 14,
      "em": false
     }
    ]
   },
   {
-   "from": 456,
-   "durationInFrames": 14,
+   "from": 136,
+   "durationInFrames": 70,
+   "words": [
+    {
+     "text": "y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "tu",
+     "at": 10,
+     "em": false
+    },
+    {
+     "text": "te",
+     "at": 20,
+     "em": false
+    },
+    {
+     "text": "comes",
+     "at": 29,
+     "em": false
+    },
+    {
+     "text": "todo",
+     "at": 39,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 206,
+   "durationInFrames": 86,
+   "words": [
+    {
+     "text": "que?",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "olvidé",
+     "at": 20,
+     "em": false
+    },
+    {
+     "text": "algo",
+     "at": 40,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 292,
+   "durationInFrames": 18,
    "words": [
     {
      "text": "Anna",
@@ -445,236 +437,43 @@
    ]
   },
   {
-   "from": 470,
-   "durationInFrames": 45,
+   "from": 310,
+   "durationInFrames": 36,
    "words": [
     {
-     "text": "¿podrías",
+     "text": "podrías",
      "at": 0,
      "em": false
     },
     {
      "text": "recordarme",
-     "at": 9,
-     "em": false
-    },
-    {
-     "text": "que",
-     "at": 28,
-     "em": false
-    },
-    {
-     "text": "mañana",
-     "at": 33,
+     "at": 13,
      "em": false
     }
    ]
   },
   {
-   "from": 515,
-   "durationInFrames": 36,
+   "from": 346,
+   "durationInFrames": 48,
    "words": [
     {
-     "text": "debo",
+     "text": "que",
      "at": 0,
+     "em": false
+    },
+    {
+     "text": "mañana",
+     "at": 3,
+     "em": false
+    },
+    {
+     "text": "debo",
+     "at": 7,
      "em": false
     },
     {
      "text": "hablar",
-     "at": 9,
-     "em": false
-    },
-    {
-     "text": "con",
-     "at": 15,
-     "em": false
-    },
-    {
-     "text": "la",
-     "at": 21,
-     "em": false
-    },
-    {
-     "text": "maestra",
-     "at": 24,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 551,
-   "durationInFrames": 20,
-   "words": [
-    {
-     "text": "de",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "mi",
-     "at": 5,
-     "em": false
-    },
-    {
-     "text": "hijo?",
-     "at": 9,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 571,
-   "durationInFrames": 31,
-   "words": [
-    {
-     "text": "¿A",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "qué",
-     "at": 4,
-     "em": false
-    },
-    {
-     "text": "hora",
-     "at": 8,
-     "em": false
-    },
-    {
-     "text": "te",
-     "at": 14,
-     "em": false
-    },
-    {
-     "text": "gustaría",
-     "at": 19,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 602,
-   "durationInFrames": 43,
-   "words": [
-    {
-     "text": "que",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "te",
-     "at": 7,
-     "em": false
-    },
-    {
-     "text": "lo",
-     "at": 11,
-     "em": false
-    },
-    {
-     "text": "recuerde",
-     "at": 15,
-     "em": false
-    },
-    {
-     "text": "mañana?",
-     "at": 28,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 645,
-   "durationInFrames": 44,
-   "words": [
-    {
-     "text": "8:50",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "de",
-     "at": 18,
-     "em": false
-    },
-    {
-     "text": "la",
-     "at": 27,
-     "em": false
-    },
-    {
-     "text": "mañana",
-     "at": 29,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 689,
-   "durationInFrames": 21,
-   "words": [
-    {
-     "text": "por",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "favor",
-     "at": 4,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 710,
-   "durationInFrames": 20,
-   "words": [
-    {
-     "text": "Entendido",
-     "at": 0,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 730,
-   "durationInFrames": 46,
-   "words": [
-    {
-     "text": "También",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "unos",
-     "at": 7,
-     "em": false
-    },
-    {
-     "text": "tacos",
-     "at": 18,
-     "em": false
-    },
-    {
-     "text": "de",
-     "at": 27,
-     "em": false
-    },
-    {
-     "text": "frijoles",
-     "at": 32,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 776,
-   "durationInFrames": 39,
-   "words": [
-    {
-     "text": "negros",
-     "at": 0,
+     "at": 10,
      "em": false
     },
     {
@@ -683,161 +482,338 @@
      "em": false
     },
     {
-     "text": "aguacate",
-     "at": 18,
+     "text": "la",
+     "at": 17,
+     "em": false
+    },
+    {
+     "text": "maestra",
+     "at": 20,
+     "em": false
+    },
+    {
+     "text": "de",
+     "at": 24,
+     "em": false
+    },
+    {
+     "text": "mi",
+     "at": 27,
+     "em": false
+    },
+    {
+     "text": "hijo",
+     "at": 30,
      "em": false
     }
    ]
   },
   {
-   "from": 815,
-   "durationInFrames": 23,
+   "from": 394,
+   "durationInFrames": 74,
    "words": [
     {
-     "text": "¿Qué",
+     "text": "a",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "qué",
+     "at": 6,
+     "em": false
+    },
+    {
+     "text": "hora",
+     "at": 12,
+     "em": false
+    },
+    {
+     "text": "te",
+     "at": 17,
+     "em": false
+    },
+    {
+     "text": "gustaría",
+     "at": 23,
+     "em": false
+    },
+    {
+     "text": "que",
+     "at": 29,
+     "em": false
+    },
+    {
+     "text": "te",
+     "at": 35,
+     "em": false
+    },
+    {
+     "text": "lo",
+     "at": 40,
+     "em": false
+    },
+    {
+     "text": "recuerde",
+     "at": 46,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 468,
+   "durationInFrames": 61,
+   "words": [
+    {
+     "text": "mañana",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "ocho",
+     "at": 6,
+     "em": false
+    },
+    {
+     "text": "y",
+     "at": 12,
+     "em": false
+    },
+    {
+     "text": "cincuenta",
+     "at": 18,
+     "em": false
+    },
+    {
+     "text": "de",
+     "at": 24,
+     "em": false
+    },
+    {
+     "text": "la",
+     "at": 30,
+     "em": false
+    },
+    {
+     "text": "mañana",
+     "at": 37,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 529,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "por",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "favor",
+     "at": 6,
+     "em": false
+    },
+    {
+     "text": "entendido",
+     "at": 12,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 554,
+   "durationInFrames": 96,
+   "words": [
+    {
+     "text": "también",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "unos",
+     "at": 8,
+     "em": false
+    },
+    {
+     "text": "tacos",
+     "at": 17,
+     "em": false
+    },
+    {
+     "text": "de",
+     "at": 25,
+     "em": false
+    },
+    {
+     "text": "frijoles",
+     "at": 34,
+     "em": false
+    },
+    {
+     "text": "negros",
+     "at": 42,
+     "em": false
+    },
+    {
+     "text": "con",
+     "at": 50,
+     "em": false
+    },
+    {
+     "text": "aguacate",
+     "at": 59,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 650,
+   "durationInFrames": 53,
+   "words": [
+    {
+     "text": "qué",
      "at": 0,
      "em": false
     },
     {
      "text": "opinas?",
-     "at": 10,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 838,
-   "durationInFrames": 30,
-   "words": [
-    {
-     "text": "Parece",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "bien",
-     "at": 16,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 868,
-   "durationInFrames": 24,
-   "words": [
-    {
-     "text": "pero",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "voy",
-     "at": 2,
-     "em": false
-    },
-    {
-     "text": "a",
-     "at": 8,
-     "em": false
-    },
-    {
-     "text": "revisar",
-     "at": 10,
-     "em": false
-    },
-    {
-     "text": "qué",
-     "at": 17,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 892,
-   "durationInFrames": 28,
-   "words": [
-    {
-     "text": "tengo",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "en",
      "at": 7,
      "em": false
     },
     {
-     "text": "la",
-     "at": 14,
+     "text": "me",
+     "at": 15,
      "em": false
     },
     {
-     "text": "refri",
+     "text": "parece",
+     "at": 22,
+     "em": false
+    },
+    {
+     "text": "bien",
+     "at": 30,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 703,
+   "durationInFrames": 37,
+   "words": [
+    {
+     "text": "me",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "parece",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "voy",
+     "at": 10,
+     "em": false
+    },
+    {
+     "text": "a",
+     "at": 16,
+     "em": false
+    },
+    {
+     "text": "revisar",
      "at": 21,
      "em": false
     }
    ]
   },
   {
-   "from": 920,
-   "durationInFrames": 29,
+   "from": 740,
+   "durationInFrames": 31,
    "words": [
     {
-     "text": "y",
+     "text": "qué",
      "at": 0,
      "em": false
     },
     {
-     "text": "mejor",
-     "at": 4,
+     "text": "tengo",
+     "at": 2,
      "em": false
     },
     {
-     "text": "te",
+     "text": "en",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "la",
+     "at": 7,
+     "em": false
+    },
+    {
+     "text": "refri",
+     "at": 10,
+     "em": false
+    },
+    {
+     "text": "y",
      "at": 12,
      "em": false
     },
     {
-     "text": "aviso",
+     "text": "mejor",
+     "at": 14,
+     "em": false
+    },
+    {
+     "text": "te",
      "at": 17,
+     "em": false
+    },
+    {
+     "text": "aviso",
+     "at": 19,
      "em": false
     }
    ]
   },
   {
-   "from": 949,
-   "durationInFrames": 52,
+   "from": 773,
+   "durationInFrames": 69,
    "words": [
     {
-     "text": "Si",
+     "text": "si",
      "at": 0,
      "em": false
     },
     {
      "text": "quieres",
-     "at": 6,
+     "at": 10,
      "em": false
     },
     {
      "text": "una",
-     "at": 15,
+     "at": 19,
      "em": false
     },
     {
      "text": "ayudita",
-     "at": 24,
+     "at": 29,
      "em": false
     },
     {
      "text": "extra",
-     "at": 36,
+     "at": 39,
      "em": false
     }
    ]
   },
   {
-   "from": 1001,
-   "durationInFrames": 42,
+   "from": 842,
+   "durationInFrames": 31,
    "words": [
     {
      "text": "descarga",
@@ -846,49 +822,49 @@
     },
     {
      "text": "la",
-     "at": 10,
+     "at": 7,
      "em": false
     },
     {
      "text": "aplicación",
      "at": 14,
      "em": false
-    },
-    {
-     "text": "Anna",
-     "at": 31,
-     "em": false
     }
    ]
   },
   {
-   "from": 1043,
-   "durationInFrames": 36,
+   "from": 873,
+   "durationInFrames": 33,
    "words": [
     {
-     "text": "y",
+     "text": "Anna",
      "at": 0,
      "em": false
     },
     {
-     "text": "coloca",
+     "text": "y",
      "at": 8,
      "em": false
     },
     {
-     "text": "AIMEE",
-     "at": 21,
+     "text": "coloca",
+     "at": 15,
      "em": false
     }
    ]
   },
   {
-   "from": 1079,
-   "durationInFrames": 47,
+   "from": 905,
+   "durationInFrames": 80,
    "words": [
     {
-     "text": "para",
+     "text": "Aimee",
      "at": 0,
+     "em": false
+    },
+    {
+     "text": "para",
+     "at": 6,
      "em": false
     },
     {
@@ -898,33 +874,32 @@
     },
     {
      "text": "tengas",
-     "at": 17,
+     "at": 19,
      "em": false
     },
     {
      "text": "un",
-     "at": 26,
+     "at": 25,
      "em": false
     },
     {
-     "text": "20%",
-     "at": 30,
+     "text": "20",
+     "at": 31,
      "em": false
-    }
-   ]
-  },
-  {
-   "from": 1126,
-   "durationInFrames": 30,
-   "words": [
+    },
+    {
+     "text": "%",
+     "at": 37,
+     "em": false
+    },
     {
      "text": "de",
-     "at": 0,
+     "at": 44,
      "em": false
     },
     {
      "text": "descuento",
-     "at": 7,
+     "at": 50,
      "em": false
     }
    ]
@@ -942,125 +917,118 @@
   },
   {
    "sound": "pop",
-   "from": 230,
+   "from": 94,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "whoosh_corto",
-   "from": 332,
+   "from": 189,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.14
   },
   {
    "sound": "pop",
-   "from": 380,
+   "from": 232,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
-   "sound": "whoosh_corto",
-   "from": 444,
-   "trim": 0,
-   "durationInFrames": 14,
-   "vol": 0.14
-  },
-  {
    "sound": "pop",
-   "from": 456,
+   "from": 273,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "ding",
-   "from": 645,
+   "from": 467,
    "trim": 0,
    "durationInFrames": 51,
    "vol": 0.175
   },
   {
    "sound": "whoosh_corto",
-   "from": 698,
+   "from": 520,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.14
   },
   {
    "sound": "whoosh_corto",
-   "from": 723,
+   "from": 545,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.14
   },
   {
    "sound": "pop",
-   "from": 748,
+   "from": 571,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "whoosh_corto",
-   "from": 940,
+   "from": 762,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.14
   },
   {
    "sound": "pop",
-   "from": 964,
+   "from": 790,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "swoosh",
-   "from": 996,
+   "from": 816,
    "trim": 0,
    "durationInFrames": 9,
    "vol": 0.2
   },
   {
    "sound": "pop",
-   "from": 1051,
+   "from": 876,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "click",
-   "from": 1063,
+   "from": 888,
    "trim": 0,
    "durationInFrames": 2,
    "vol": 0.25
   },
   {
    "sound": "kaching",
-   "from": 1109,
+   "from": 934,
    "trim": 0,
    "durationInFrames": 51,
    "vol": 0.2
   },
   {
    "sound": "whoosh_largo",
-   "from": 1145,
+   "from": 969,
    "trim": 0,
    "durationInFrames": 27,
    "vol": 0.175
   },
   {
    "sound": "pop",
-   "from": 1167,
+   "from": 991,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.225
   }
  ],
  "flashes": [
-  1161
+  985
  ]
 }

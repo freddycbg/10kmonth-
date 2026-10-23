@@ -323,6 +323,8 @@ def main(cfg_path):
     if merged and merged[-1]["durationInFrames"] < MIN_CAPTION_FRAMES:
         merged.pop()
     captions = merged
+    if cfg.get("caption_lines"):
+        captions = caption_lines(json.load(open(cfg["caption_lines"])), to_out, frame)
 
     # --- Transiciones ---------------------------------------------------------
     flashes = [frame(words[find_phrase(words, p)[0]]["os"]) for p in cfg.get("flash_at", [])]
@@ -514,6 +516,19 @@ def intro_keys(cfg, drop, end):
         "scales": [1.0, cfg["punch_scale"], cfg["pre_drop_scale"], cfg["drop_scale"],
                    cfg["drop_scale"] - 0.12, cfg["settle_scale"]],
     }
+
+
+def caption_lines(lines, to_out, frame):
+    """Subtítulos con un texto dado (p. ej. copiado de un vídeo de referencia), cada línea en su tiempo del vídeo
+    base (base_start/base_end). Las palabras de la línea van apareciendo repartidas en el primer 70 % del tramo."""
+    out = []
+    for ln in lines:
+        f0, f1 = frame(to_out(ln["base_start"])), frame(to_out(ln["base_end"]))
+        ws = ln["text"].split()
+        step = (f1 - f0) * 0.7 / max(1, len(ws))
+        out.append({"from": f0, "durationInFrames": f1 - f0,
+                    "words": [{"text": w, "at": round(k * step), "em": False} for k, w in enumerate(ws)]})
+    return out
 
 
 def big_font_size(text, root):
