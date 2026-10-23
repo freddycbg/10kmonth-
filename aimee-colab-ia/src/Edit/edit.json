@@ -2,17 +2,17 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationInFrames": 1060,
- "arollFrames": 985,
- "lastWordFrame": 972,
- "introDropFrame": 295,
+ "durationInFrames": 1067,
+ "arollFrames": 992,
+ "lastWordFrame": 979,
+ "introDropFrame": 293,
  "intro": {
   "frames": [
    0,
    5,
-   287,
-   295,
-   299,
+   285,
+   293,
+   297,
    196
   ],
   "scales": [
@@ -80,7 +80,7 @@
    ],
    "name": "Gráfico phrase: Ya no más",
    "from": 94,
-   "durationInFrames": 106
+   "durationInFrames": 105
   },
   {
    "type": "phrase",
@@ -131,8 +131,8 @@
    "time": "8:50 a. m.",
    "y": 0.05,
    "name": "Gráfico notification: 8:50 de la mañana",
-   "from": 467,
-   "durationInFrames": 92
+   "from": 464,
+   "durationInFrames": 102
   },
   {
    "type": "card",
@@ -141,8 +141,8 @@
    "body": "Tacos de frijoles negros con aguacate",
    "y": 0.2,
    "name": "Gráfico card: tacos de frijoles negros con a",
-   "from": 571,
-   "durationInFrames": 99
+   "from": 578,
+   "durationInFrames": 98
   },
   {
    "type": "phrase",
@@ -159,8 +159,8 @@
    "y": 0.14,
    "rotate": -3,
    "name": "Gráfico phrase: una ayudita extra",
-   "from": 790,
-   "durationInFrames": 41
+   "from": 796,
+   "durationInFrames": 43
   },
   {
    "type": "image",
@@ -171,8 +171,8 @@
    "width": 0.34,
    "rotate": 6,
    "name": "Gráfico image: descarga la aplicación Anna",
-   "from": 821,
-   "durationInFrames": 160
+   "from": 833,
+   "durationInFrames": 155
   },
   {
    "type": "code",
@@ -181,7 +181,7 @@
    "x": 0.5,
    "y": 0.66,
    "name": "Gráfico code: coloca AIMEE",
-   "from": 876,
+   "from": 883,
    "durationInFrames": 105
   },
   {
@@ -192,8 +192,8 @@
    "x": 0.2,
    "y": 0.15,
    "name": "Gráfico badge: 20% de descuento",
-   "from": 934,
-   "durationInFrames": 48
+   "from": 940,
+   "durationInFrames": 49
   }
  ],
  "shots": [
@@ -219,7 +219,7 @@
   },
   {
    "from": 232,
-   "durationInFrames": 43,
+   "durationInFrames": 40,
    "framing": "ancho",
    "face": {
     "x": 0.5,
@@ -228,8 +228,8 @@
    "closeScale": 1.2
   },
   {
-   "from": 275,
-   "durationInFrames": 127,
+   "from": 272,
+   "durationInFrames": 147,
    "framing": "ancho",
    "face": {
     "x": 0.5,
@@ -238,8 +238,8 @@
    "closeScale": 1.2
   },
   {
-   "from": 402,
-   "durationInFrames": 126,
+   "from": 419,
+   "durationInFrames": 141,
    "framing": "cerrado",
    "face": {
     "x": 0.5,
@@ -248,8 +248,8 @@
    "closeScale": 1.2
   },
   {
-   "from": 528,
-   "durationInFrames": 25,
+   "from": 560,
+   "durationInFrames": 112,
    "framing": "cerrado",
    "face": {
     "x": 0.5,
@@ -258,8 +258,8 @@
    "closeScale": 1.2
   },
   {
-   "from": 553,
-   "durationInFrames": 108,
+   "from": 672,
+   "durationInFrames": 105,
    "framing": "ancho",
    "face": {
     "x": 0.5,
@@ -268,19 +268,9 @@
    "closeScale": 1.2
   },
   {
-   "from": 661,
-   "durationInFrames": 109,
-   "framing": "cerrado",
-   "face": {
-    "x": 0.5,
-    "y": 0.42
-   },
-   "closeScale": 1.2
-  },
-  {
-   "from": 770,
+   "from": 777,
    "durationInFrames": 106,
-   "framing": "cerrado",
+   "framing": "ancho",
    "face": {
     "x": 0.5,
     "y": 0.42
@@ -288,9 +278,9 @@
    "closeScale": 1.2
   },
   {
-   "from": 876,
+   "from": 883,
    "durationInFrames": 109,
-   "framing": "ancho",
+   "framing": "cerrado",
    "face": {
     "x": 0.5,
     "y": 0.42
@@ -302,7 +292,7 @@
  "captions": [
   {
    "from": 0,
-   "durationInFrames": 55,
+   "durationInFrames": 54,
    "words": [
     {
      "text": "¡Yo",
@@ -327,8 +317,8 @@
    ]
   },
   {
-   "from": 55,
-   "durationInFrames": 29,
+   "from": 54,
+   "durationInFrames": 30,
    "words": [
     {
      "text": "¿Eres",
@@ -337,12 +327,12 @@
     },
     {
      "text": "mi",
-     "at": 7,
+     "at": 8,
      "em": false
     },
     {
      "text": "mamá?",
-     "at": 10,
+     "at": 12,
      "em": false
     }
    ]
@@ -360,7 +350,7 @@
   },
   {
    "from": 94,
-   "durationInFrames": 42,
+   "durationInFrames": 39,
    "words": [
     {
      "text": "¡Ya",
@@ -369,19 +359,19 @@
     },
     {
      "text": "no",
-     "at": 11,
+     "at": 15,
      "em": false
     },
     {
      "text": "más!",
-     "at": 19,
+     "at": 21,
      "em": false
     }
    ]
   },
   {
-   "from": 136,
-   "durationInFrames": 64,
+   "from": 133,
+   "durationInFrames": 66,
    "words": [
     {
      "text": "¡Y",
@@ -390,22 +380,22 @@
     },
     {
      "text": "tú",
-     "at": 6,
+     "at": 10,
      "em": false
     },
     {
      "text": "te",
-     "at": 6,
+     "at": 17,
      "em": false
     },
     {
      "text": "comes",
-     "at": 19,
+     "at": 24,
      "em": false
     },
     {
      "text": "todo!",
-     "at": 37,
+     "at": 40,
      "em": false
     }
    ]
@@ -432,7 +422,7 @@
     },
     {
      "text": "algo",
-     "at": 15,
+     "at": 14,
      "em": false
     }
    ]
@@ -450,7 +440,7 @@
   },
   {
    "from": 275,
-   "durationInFrames": 20,
+   "durationInFrames": 18,
    "words": [
     {
      "text": "Anna",
@@ -460,8 +450,8 @@
    ]
   },
   {
-   "from": 295,
-   "durationInFrames": 42,
+   "from": 293,
+   "durationInFrames": 45,
    "words": [
     {
      "text": "¿podrías",
@@ -470,24 +460,24 @@
     },
     {
      "text": "recordarme",
-     "at": 7,
+     "at": 9,
      "em": false
     },
     {
      "text": "que",
-     "at": 25,
+     "at": 28,
      "em": false
     },
     {
      "text": "mañana",
-     "at": 31,
+     "at": 33,
      "em": false
     }
    ]
   },
   {
-   "from": 337,
-   "durationInFrames": 37,
+   "from": 338,
+   "durationInFrames": 36,
    "words": [
     {
      "text": "debo",
@@ -496,12 +486,12 @@
     },
     {
      "text": "hablar",
-     "at": 10,
+     "at": 8,
      "em": false
     },
     {
      "text": "con",
-     "at": 16,
+     "at": 15,
      "em": false
     },
     {
@@ -511,14 +501,14 @@
     },
     {
      "text": "maestra",
-     "at": 25,
+     "at": 24,
      "em": false
     }
    ]
   },
   {
    "from": 374,
-   "durationInFrames": 19,
+   "durationInFrames": 16,
    "words": [
     {
      "text": "de",
@@ -527,19 +517,19 @@
     },
     {
      "text": "mi",
-     "at": 4,
+     "at": 5,
      "em": false
     },
     {
      "text": "hijo?",
-     "at": 8,
+     "at": 9,
      "em": false
     }
    ]
   },
   {
-   "from": 393,
-   "durationInFrames": 31,
+   "from": 390,
+   "durationInFrames": 29,
    "words": [
     {
      "text": "¿A",
@@ -548,29 +538,29 @@
     },
     {
      "text": "qué",
-     "at": 5,
+     "at": 1,
      "em": false
     },
     {
      "text": "hora",
-     "at": 9,
+     "at": 7,
      "em": false
     },
     {
      "text": "te",
-     "at": 15,
+     "at": 12,
      "em": false
     },
     {
      "text": "gustaría",
-     "at": 20,
+     "at": 17,
      "em": false
     }
    ]
   },
   {
-   "from": 424,
-   "durationInFrames": 43,
+   "from": 419,
+   "durationInFrames": 45,
    "words": [
     {
      "text": "que",
@@ -584,24 +574,24 @@
     },
     {
      "text": "lo",
-     "at": 12,
+     "at": 11,
      "em": false
     },
     {
      "text": "recuerde",
-     "at": 16,
+     "at": 15,
      "em": false
     },
     {
      "text": "mañana?",
-     "at": 28,
+     "at": 27,
      "em": false
     }
    ]
   },
   {
-   "from": 467,
-   "durationInFrames": 45,
+   "from": 464,
+   "durationInFrames": 52,
    "words": [
     {
      "text": "8:50",
@@ -610,23 +600,23 @@
     },
     {
      "text": "de",
-     "at": 21,
+     "at": 29,
      "em": false
     },
     {
      "text": "la",
-     "at": 28,
+     "at": 34,
      "em": false
     },
     {
      "text": "mañana",
-     "at": 30,
+     "at": 36,
      "em": false
     }
    ]
   },
   {
-   "from": 512,
+   "from": 516,
    "durationInFrames": 22,
    "words": [
     {
@@ -636,13 +626,13 @@
     },
     {
      "text": "favor",
-     "at": 3,
+     "at": 2,
      "em": false
     }
    ]
   },
   {
-   "from": 535,
+   "from": 542,
    "durationInFrames": 18,
    "words": [
     {
@@ -653,7 +643,7 @@
    ]
   },
   {
-   "from": 553,
+   "from": 560,
    "durationInFrames": 45,
    "words": [
     {
@@ -678,13 +668,13 @@
     },
     {
      "text": "frijoles",
-     "at": 31,
+     "at": 32,
      "em": false
     }
    ]
   },
   {
-   "from": 598,
+   "from": 605,
    "durationInFrames": 39,
    "words": [
     {
@@ -694,19 +684,19 @@
     },
     {
      "text": "con",
-     "at": 13,
+     "at": 14,
      "em": false
     },
     {
      "text": "aguacate",
-     "at": 19,
+     "at": 20,
      "em": false
     }
    ]
   },
   {
-   "from": 637,
-   "durationInFrames": 24,
+   "from": 644,
+   "durationInFrames": 28,
    "words": [
     {
      "text": "¿Qué",
@@ -721,8 +711,8 @@
    ]
   },
   {
-   "from": 661,
-   "durationInFrames": 30,
+   "from": 672,
+   "durationInFrames": 24,
    "words": [
     {
      "text": "Me",
@@ -731,19 +721,19 @@
     },
     {
      "text": "parece",
-     "at": 4,
+     "at": 7,
      "em": false
     },
     {
      "text": "bien",
-     "at": 18,
+     "at": 14,
      "em": false
     }
    ]
   },
   {
-   "from": 691,
-   "durationInFrames": 22,
+   "from": 696,
+   "durationInFrames": 24,
    "words": [
     {
      "text": "pero",
@@ -752,23 +742,23 @@
     },
     {
      "text": "voy",
-     "at": 1,
+     "at": 4,
      "em": false
     },
     {
      "text": "a",
-     "at": 7,
+     "at": 10,
      "em": false
     },
     {
      "text": "revisar",
-     "at": 10,
+     "at": 11,
      "em": false
     }
    ]
   },
   {
-   "from": 713,
+   "from": 720,
    "durationInFrames": 29,
    "words": [
     {
@@ -793,13 +783,13 @@
     },
     {
      "text": "refri",
-     "at": 18,
+     "at": 17,
      "em": false
     }
    ]
   },
   {
-   "from": 742,
+   "from": 749,
    "durationInFrames": 27,
    "words": [
     {
@@ -825,8 +815,8 @@
    ]
   },
   {
-   "from": 769,
-   "durationInFrames": 52,
+   "from": 776,
+   "durationInFrames": 57,
    "words": [
     {
      "text": "Si",
@@ -840,7 +830,7 @@
     },
     {
      "text": "una",
-     "at": 21,
+     "at": 20,
      "em": false
     },
     {
@@ -856,8 +846,8 @@
    ]
   },
   {
-   "from": 821,
-   "durationInFrames": 47,
+   "from": 833,
+   "durationInFrames": 42,
    "words": [
     {
      "text": "descarga",
@@ -866,23 +856,23 @@
     },
     {
      "text": "la",
-     "at": 15,
+     "at": 11,
      "em": false
     },
     {
      "text": "aplicación",
-     "at": 19,
+     "at": 14,
      "em": false
     },
     {
      "text": "Anna",
-     "at": 36,
+     "at": 32,
      "em": false
     }
    ]
   },
   {
-   "from": 868,
+   "from": 875,
    "durationInFrames": 36,
    "words": [
     {
@@ -903,7 +893,7 @@
    ]
   },
   {
-   "from": 904,
+   "from": 911,
    "durationInFrames": 49,
    "words": [
     {
@@ -928,13 +918,13 @@
     },
     {
      "text": "20 %",
-     "at": 30,
+     "at": 29,
      "em": false
     }
    ]
   },
   {
-   "from": 953,
+   "from": 960,
    "durationInFrames": 28,
    "words": [
     {
@@ -990,90 +980,83 @@
   },
   {
    "sound": "ding",
-   "from": 467,
+   "from": 464,
    "trim": 0,
    "durationInFrames": 51,
    "vol": 0.175
   },
   {
    "sound": "whoosh_corto",
-   "from": 520,
-   "trim": 0,
-   "durationInFrames": 14,
-   "vol": 0.14
-  },
-  {
-   "sound": "whoosh_corto",
-   "from": 545,
+   "from": 552,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.14
   },
   {
    "sound": "pop",
-   "from": 571,
+   "from": 578,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "whoosh_corto",
-   "from": 762,
+   "from": 769,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.14
   },
   {
    "sound": "pop",
-   "from": 790,
+   "from": 796,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "swoosh",
-   "from": 816,
+   "from": 828,
    "trim": 0,
    "durationInFrames": 9,
    "vol": 0.2
   },
   {
    "sound": "pop",
-   "from": 876,
+   "from": 883,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "click",
-   "from": 888,
+   "from": 895,
    "trim": 0,
    "durationInFrames": 2,
    "vol": 0.25
   },
   {
    "sound": "kaching",
-   "from": 934,
+   "from": 940,
    "trim": 0,
    "durationInFrames": 51,
    "vol": 0.2
   },
   {
    "sound": "whoosh_largo",
-   "from": 969,
+   "from": 976,
    "trim": 0,
    "durationInFrames": 27,
    "vol": 0.175
   },
   {
    "sound": "pop",
-   "from": 991,
+   "from": 998,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.225
   }
  ],
  "flashes": [
-  985
+  992
  ]
 }

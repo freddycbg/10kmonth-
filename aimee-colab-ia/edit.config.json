@@ -1,11 +1,11 @@
 {
-  "source": "input/material/video_aimee_base_1.mp4",
-  "transcript": "input/transcript_base1_corregido.json",
-  "keep": "input/keep_base1.json",
+  "source": "input/material/video_aimee_base_1_arreglado.mov",
+  "transcript": "input/transcript_base1_arreglado_corregido.json",
+  "keep": "input/keep_base1_arreglado.json",
   "intro_drop_at": "podrías",
   "denoise": false,
   "level_voice": false,
-  "rebuild_aroll": false,
+  "rebuild_aroll": true,
   "caption_case": "natural",
   "fixes": [],
   "intro": {
@@ -26,7 +26,7 @@
       "close": 1.2
     },
     {
-      "until": 9.167,
+      "until": 9.067,
       "face": [
         0.5,
         0.42
@@ -34,7 +34,7 @@
       "close": 1.2
     },
     {
-      "until": 17.6,
+      "until": 18.667,
       "face": [
         0.5,
         0.42
@@ -42,15 +42,7 @@
       "close": 1.2
     },
     {
-      "until": 18.433,
-      "face": [
-        0.5,
-        0.42
-      ],
-      "close": 1.2
-    },
-    {
-      "until": 25.667,
+      "until": 25.9,
       "face": [
         0.5,
         0.42
@@ -248,35 +240,35 @@
   },
   "voice_gain": [
     [
-      10.55,
+      10.561,
       0
     ],
     [
-      10.7,
+      10.710999999999999,
       2
     ],
     [
-      11.9,
+      11.911,
       2
     ],
     [
-      12.05,
+      12.061,
       4
     ],
     [
-      12.55,
+      12.561,
       4
     ],
     [
-      12.65,
+      12.661,
       6
     ],
     [
-      13.0,
+      13.011,
       6
     ],
     [
-      13.08,
+      13.091,
       0
     ]
   ]
