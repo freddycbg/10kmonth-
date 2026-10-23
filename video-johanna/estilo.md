@@ -287,3 +287,26 @@ clave grande en otro color, números y gráficos en pantalla, destellos, cierre 
 - **Cierre:** animación 10K Month (regla fija de arriba).
 - **No renderizar mientras corre `mattes.py`:** juntos se quedan sin memoria y el sistema mata el recorte (se
   reanuda desde las máscaras guardadas).
+
+## Vídeo de Johanna (agente de Carta Business Group, colombiana): estilo aprobado
+
+Como los de Freddy y Claudia (dinámico, entrada fuerte), pero femenino y cálido. Aprobado en el primer borrador.
+
+- **Subtítulos delante de ella** (no hace falta ponerlos detrás): Montserrat ExtraBold blanca, 56 px, en mayúsculas;
+  **palabras clave** en su propia línea en **Poppins ExtraBold coral #FF7A6E**, 108 px (combina con los tonos tierra
+  de su ropa y se lee sobre cielo, agua y madera).
+- **Títulos delante** (sin recorte del orador), arriba de la cabeza: "¿LO QUE QUIERO PARA MI FUTURO?" sobre el b-roll
+  de reflexión y "NO VINE SOLO A SOBREVIVIR" al final; palabra gigante en Poppins coral.
+- **Gráficos animados** (`"overlays"`, Overlay.tsx): bandera de Colombia ondeando (`flag`), contador que sube
+  (`counter`: "$15 / HORA" con kaching, "+20 AÑOS"), lista que se marca al decir cada palabra (`checklist`:
+  EXCELENTE / ESTABLE / BENEFICIOS) y casilla con palomita (`code`: "LICENCIA DE AGENTE DE SEGUROS", en lugar del
+  subtítulo). Iconos con brillo coral: calendario "7 AÑOS", familia, ubicación (CALIFORNIA, UTAH), gráfica (crecer),
+  escudo (proteger), corazón (familia).
+- **Gancho:** doble zoom con el golpe de la música en "Estados Unidos"; seguimiento de la cara (camina).
+- **Música:** "And Still" (cinematic awards). Golpe en el gancho, parte suave en "no ha sido un camino fácil" y
+  vuelve a subir en "futuro mejor". Efectos de sonido al 70 % (`"sfx_gain": 0.7`).
+- **Cortes:** silencios de más de 0.3 s, sin dos planos seguidos de la misma toma con el mismo encuadre (un corte de
+  silencio sin cambio de encuadre se ve como salto).
+- **B-roll** (~40 %): Horizonte (mujer en la montaña, nieve para Utah, excursionista en la cima), Colchones, Trabajar
+  de viejo, Frustración, Reflexión, Equipo de trabajo, Trabajar sin familia (mamá con bebé: proteger familias).
+- **Cierre:** tarjeta de Carta Business Group VIRGINIA (como Claudia).
