@@ -54,7 +54,16 @@ if mb:
     labels.append("[musica]")
     n += 1
 # La voz entra sin ningún filtro salvo el relleno de silencio al final (la tarjeta de cierre).
-chains.append(f"[1:a]apad=whole_dur={total:.3f}[voz]")
+# Única excepción, pedida por Aimee: "voice_gain" sube la voz en un tramo concreto (lista de [segundo, dB] con
+# interpolación lineal entre puntos; fuera de los puntos la voz queda tal cual, a 0 dB).
+vg = cfg.get("voice_gain")
+voice_filter = ""
+if vg:
+    expr = "0"
+    for (t0, d0), (t1, d1) in zip(vg, vg[1:]):
+        expr = f"if(between(t,{t0},{t1}),{d0}+({d1}-{d0})*(t-{t0})/({t1}-{t0}),{expr})"
+    voice_filter = f"volume=eval=frame:volume='pow(10,({expr})/20)',"
+chains.append(f"[1:a]{voice_filter}apad=whole_dur={total:.3f}[voz]")
 chains.append(f"[voz]{''.join(labels)}amix=inputs={len(labels) + 1}:normalize=0:duration=first[a]")
 subprocess.run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(chains),
                 "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "320k", "-ar", str(sr),
