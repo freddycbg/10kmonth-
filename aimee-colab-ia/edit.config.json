@@ -243,7 +243,7 @@
   ],
   "music_bed": {
     "file": "input/material/musica_fondo.mp3",
-    "gain_db": -21.5,
-    "end_gain_db": -11
+    "gain_db": -33,
+    "end_gain_db": -22
   }
 }
