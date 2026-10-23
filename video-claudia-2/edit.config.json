@@ -1,0 +1,268 @@
+{
+  "source": "input/material/claudia2_base.MOV",
+  "transcript": "input/transcript.json",
+  "keep": "input/keep.json",
+  "music": "input/musica/ecstasy_eyes_drive.mp3",
+  "music_drop": 41.18,
+  "music_drop_at": "Y hoy estoy aquí",
+  "intro_drop_at": "muerte",
+  "freeze": [
+    {
+      "at": 2.4,
+      "dur": 0.8
+    }
+  ],
+  "denoise": true,
+  "rebuild_aroll": false,
+  "sfx_gain": 0.7,
+  "fixes": [
+    {
+      "find": [
+        "consejos,",
+        "no",
+        "llega",
+        "viejo."
+      ],
+      "replace": [
+        "consejo,",
+        "no",
+        "llega",
+        "a",
+        "viejo."
+      ]
+    },
+    {
+      "find": [
+        "Que",
+        "el",
+        "que",
+        "no",
+        "toma"
+      ],
+      "replace": [
+        "El",
+        "que",
+        "no",
+        "toma"
+      ]
+    }
+  ],
+  "intro": {
+    "punch_frames": 5,
+    "punch_scale": 1.35,
+    "ramp_frames": 10,
+    "pre_drop_scale": 1.5,
+    "drop_scale": 2.3,
+    "settle_scale": 2.55
+  },
+  "takes": [
+    {
+      "until": 2.45,
+      "face": [
+        0.5,
+        0.3
+      ],
+      "close": 2.0
+    },
+    {
+      "until": 33.1,
+      "face": [
+        0.5,
+        0.3
+      ],
+      "close": 2.0
+    },
+    {
+      "until": 999,
+      "face": [
+        0.5,
+        0.3
+      ],
+      "close": 2.0
+    }
+  ],
+  "titles": [
+    {
+      "phrase": "experiencia cercana a la muerte",
+      "top": "EXPERIENCIA CERCANA A LA",
+      "accent": [
+        "CERCANA"
+      ],
+      "big": "muerte",
+      "y": 0.16,
+      "align": "center",
+      "hold": 1.0
+    },
+    {
+      "phrase": "no llega a viejo",
+      "top": "NO LLEGA A",
+      "accent": [],
+      "big": "viejo",
+      "y": 0.16,
+      "align": "center"
+    },
+    {
+      "phrase": "cree en ti",
+      "top": "CREE EN",
+      "accent": [],
+      "big": "ti",
+      "y": 0.12,
+      "align": "center"
+    },
+    {
+      "phrase": "escríbeme",
+      "top": "",
+      "accent": [],
+      "big": "escríbeme",
+      "y": 0.2,
+      "align": "center",
+      "hold": 0.8
+    }
+  ],
+  "emphasis": [
+    "moto",
+    "frenos",
+    "árbol",
+    "sueños",
+    "proyectos",
+    "madre",
+    "peligrosa",
+    "consejo",
+    "basura",
+    "diferentes",
+    "buenas"
+  ],
+  "icons": [
+    {
+      "phrase": "18 años",
+      "icon": "CalendarDays",
+      "label": "18 AÑOS",
+      "x": 0.78,
+      "y": 0.2,
+      "hold": 1.3
+    },
+    {
+      "phrase": "sin frenos",
+      "icon": "TriangleAlert",
+      "label": "SIN FRENOS",
+      "x": 0.5,
+      "y": 0.22,
+      "size": 210,
+      "hold": 1.0
+    },
+    {
+      "phrase": "que es peligrosa",
+      "icon": "TriangleAlert",
+      "x": 0.78,
+      "y": 0.2,
+      "hold": 1.0
+    },
+    {
+      "phrase": "darte un consejo",
+      "icon": "Lightbulb",
+      "x": 0.78,
+      "y": 0.2,
+      "hold": 1.2
+    },
+    {
+      "phrase": "escríbeme",
+      "icon": "ArrowDown",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 150,
+      "anim": "bounce",
+      "hold": 1.6
+    }
+  ],
+  "impacts": [
+    "golpea",
+    "atropella"
+  ],
+  "bw": [
+    {
+      "from": "el que no toma consejo",
+      "to": "llega a viejo"
+    }
+  ],
+  "flash_at": [
+    "Y hoy estoy aquí",
+    "Haz las cosas"
+  ],
+  "sfx_extra": [
+    {
+      "phrase": "el que no toma consejo",
+      "sound": "sub_drop",
+      "vol": 0.5
+    },
+    {
+      "phrase": "Se murió, se murió",
+      "sound": "glitch",
+      "vol": 0.35
+    }
+  ],
+  "broll": [
+    {
+      "id": "avenida",
+      "file": "input/material/Avenida_estados_unidos.mp4",
+      "trim": 1.0,
+      "phrase": "por una vía principal"
+    },
+    {
+      "id": "carro",
+      "file": "input/material/Estados_unidos_2.mp4",
+      "trim": 7.6,
+      "phrase": "Un carro se quedó sin frenos"
+    },
+    {
+      "id": "ambulancia",
+      "file": "input/material/Ambulancia.mp4",
+      "trim": 1.0,
+      "phrase": "voces que decían se murió, se murió"
+    },
+    {
+      "id": "mente",
+      "file": "input/material/Reflexion.mp4",
+      "trim": 0.3,
+      "phrase": "lo único que pasó por mi mente"
+    },
+    {
+      "id": "suenos",
+      "file": "input/material/Horizonte_1.mp4",
+      "trim": 1.0,
+      "phrase": "mis sueños, mis proyectos"
+    },
+    {
+      "id": "madre",
+      "file": "input/material/Trabajar_sin_familia.mp4",
+      "trim": 1.0,
+      "phrase": "la voz de mi madre"
+    },
+    {
+      "id": "cima",
+      "file": "input/material/Horizonte_4.mp4",
+      "trim": 0.3,
+      "leak": true,
+      "phrase": "cumplir tus sueños"
+    },
+    {
+      "id": "basura",
+      "file": "input/material/Billes_1.mp4",
+      "trim": 1.0,
+      "phrase": "tirar tu vida a la basura"
+    },
+    {
+      "id": "convencion",
+      "file": "input/material/Convencion_AIL_Las_Vegas.mp4",
+      "trim": 1.5,
+      "leak": true,
+      "phrase": "vienen cosas buenas"
+    }
+  ],
+  "sentence_ends": true,
+  "retime": [
+    {
+      "phrase": "Hace 18 años",
+      "s": 2.88
+    }
+  ]
+}
