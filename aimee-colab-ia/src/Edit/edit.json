@@ -253,7 +253,7 @@
   },
   {
    "from": 272,
-   "durationInFrames": 54,
+   "durationInFrames": 122,
    "framing": "ancho",
    "face": {
     "x": 0.5,
@@ -262,28 +262,8 @@
    "closeScale": 1.2
   },
   {
-   "from": 326,
-   "durationInFrames": 78,
-   "framing": "cerrado",
-   "face": {
-    "x": 0.5,
-    "y": 0.42
-   },
-   "closeScale": 1.2
-  },
-  {
-   "from": 404,
-   "durationInFrames": 57,
-   "framing": "ancho",
-   "face": {
-    "x": 0.5,
-    "y": 0.42
-   },
-   "closeScale": 1.2
-  },
-  {
-   "from": 461,
-   "durationInFrames": 56,
+   "from": 394,
+   "durationInFrames": 123,
    "framing": "cerrado",
    "face": {
     "x": 0.5,
@@ -343,13 +323,6 @@
   }
  ],
  "broll": [
-  {
-   "name": "B-roll tel_anna1: Por supuesto. Dime en qué puedo ayudarte",
-   "src": "media/tel_anna1_0.mp4",
-   "from": 326,
-   "durationInFrames": 78,
-   "leak": false
-  },
   {
    "name": "B-roll tel_anna2: Un momento. Listo, Aimee.",
    "src": "media/tel_anna2_2.6.mp4",
@@ -1053,13 +1026,6 @@
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
-  },
-  {
-   "sound": "whoosh_corto",
-   "from": 318,
-   "trim": 0,
-   "durationInFrames": 14,
-   "vol": 0.15
   },
   {
    "sound": "ding",

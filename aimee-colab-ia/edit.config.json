@@ -63,12 +63,6 @@
   "icons": [],
   "broll": [
     {
-      "id": "tel_anna1",
-      "file": "input/arreglos2/IMG_1749.MOV",
-      "trim": 0.0,
-      "phrase": "Por supuesto. Dime en qué puedo ayudarte hoy."
-    },
-    {
       "id": "tel_anna2",
       "file": "input/arreglos2/IMG_1749.MOV",
       "trim": 2.6,
