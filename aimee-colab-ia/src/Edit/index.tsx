@@ -144,19 +144,21 @@ export const Edit: React.FC = () => {
         </Sequence>
       ))}
 
-      <Sequence
-        name="Cierre"
-        from={edit.arollFrames}
-        durationInFrames={edit.durationInFrames - edit.arollFrames}
-      >
-        {edit.endSrc ? (
-          <Video src={staticFile(edit.endSrc)} objectFit="cover" style={{ width: "100%", height: "100%" }} />
-        ) : edit.endCard ? (
-          <HandleOutro handle={edit.endCard.handle} kicker={edit.endCard.kicker} />
-        ) : (
-          <EndCard />
-        )}
-      </Sequence>
+      {edit.durationInFrames > edit.arollFrames ? (
+        <Sequence
+          name="Cierre"
+          from={edit.arollFrames}
+          durationInFrames={edit.durationInFrames - edit.arollFrames}
+        >
+          {edit.endSrc ? (
+            <Video src={staticFile(edit.endSrc)} objectFit="cover" style={{ width: "100%", height: "100%" }} />
+          ) : edit.endCard ? (
+            <HandleOutro handle={edit.endCard.handle} kicker={edit.endCard.kicker} />
+          ) : (
+            <EndCard />
+          )}
+        </Sequence>
+      ) : null}
 
       {edit.flashes.map((f, i) => (
         <Sequence

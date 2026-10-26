@@ -1,11 +1,11 @@
 {
   "source": "input/material/video_aimee_base_2_sdr.mov",
   "transcript": "input/transcript_base2_corregido.json",
-  "keep": "input/keep_base2.json",
+  "keep": "input/keep_base2_recortado.json",
   "intro_drop_at": "podrías",
   "denoise": false,
   "level_voice": false,
-  "rebuild_aroll": false,
+  "rebuild_aroll": true,
   "caption_case": "natural",
   "fixes": [],
   "intro": {
@@ -206,7 +206,7 @@
       "phrase": "Si quieres probar Anna",
       "until": "descuento",
       "sfx": "swoosh",
-      "src": "media/anna_chat.png",
+      "src": "media/anna_chat_330.png",
       "x": 0.8,
       "y": 0.3,
       "width": 0.34,
@@ -270,5 +270,6 @@
     "gain_db": -33,
     "end_gain_db": -22
   },
-  "voice_gain": []
+  "voice_gain": [],
+  "end_seconds": 0
 }

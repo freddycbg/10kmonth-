@@ -94,7 +94,7 @@ def main(cfg_path):
         t += b - a
     aroll_total = t
     aroll_frames = round(aroll_total * FPS)
-    end_seconds = END_CARD_SECONDS
+    end_seconds = cfg.get("end_seconds", END_CARD_SECONDS)  # 0: sin cierre (Aimee, última corrección de la cliente)
     if cfg.get("end_video"):
         end_seconds = int(probe_duration(cfg["end_video"]) * FPS) / FPS
     total_frames = aroll_frames + round(end_seconds * FPS)
@@ -339,7 +339,8 @@ def main(cfg_path):
         icons.append({"name": f"Icono {ic['icon']}: {ic['phrase'][:30]}", "icon": ic["icon"], "from": f0,
                       "durationInFrames": f1 - f0, "x": ic.get("x", 0.78), "y": ic.get("y", 0.3),
                       "size": ic.get("size", 190), "anim": ic.get("anim", "pop"), "label": ic.get("label", "")})
-    flashes.append(aroll_frames)  # destello al entrar la tarjeta final
+    if end_seconds > 0:
+        flashes.append(aroll_frames)  # destello al entrar la tarjeta final
 
     # --- Cierre -------------------------------------------------------------
     end_src = None
@@ -479,7 +480,7 @@ def sound_effects(cfg, root, words, frame, find_phrase, titles, broll, flashes, 
         for w in c["words"]:
             if w.get("em"):
                 add("click", c["from"] + w["at"], 0.18)
-    if cfg.get("end_card"):  # cierre con el usuario: whoosh al entrar y pop del icono
+    if cfg.get("end_card") and cfg.get("end_seconds", 1) > 0:  # cierre con el usuario: whoosh y pop del icono
         add("whoosh_largo", aroll_frames)
         add("pop", aroll_frames + 6, 0.45)
     for x in cfg.get("sfx_extra", []):

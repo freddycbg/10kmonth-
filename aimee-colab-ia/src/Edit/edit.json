@@ -2,8 +2,8 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationInFrames": 1060,
- "arollFrames": 985,
+ "durationInFrames": 979,
+ "arollFrames": 979,
  "lastWordFrame": 964,
  "introDropFrame": 284,
  "intro": {
@@ -170,7 +170,7 @@
   {
    "type": "image",
    "sfx": "swoosh",
-   "src": "media/anna_chat.png",
+   "src": "media/anna_chat_330.png",
    "x": 0.8,
    "y": 0.3,
    "width": 0.34,
@@ -313,7 +313,7 @@
   },
   {
    "from": 889,
-   "durationInFrames": 96,
+   "durationInFrames": 90,
    "framing": "ancho",
    "face": {
     "x": 0.5,
@@ -1089,23 +1089,7 @@
    "trim": 0,
    "durationInFrames": 51,
    "vol": 0.2
-  },
-  {
-   "sound": "whoosh_largo",
-   "from": 969,
-   "trim": 0,
-   "durationInFrames": 27,
-   "vol": 0.175
-  },
-  {
-   "sound": "pop",
-   "from": 991,
-   "trim": 0,
-   "durationInFrames": 13,
-   "vol": 0.225
   }
  ],
- "flashes": [
-  985
- ]
+ "flashes": []
 }
