@@ -715,13 +715,27 @@ def build_aroll(src, segs, dst, audio_src=None, raw_ranges=(), original_audio=Fa
     os.rmdir(tmp)
 
 
+# HDR del iPhone (HLG / Dolby Vision) a SDR BT.709. Sin esto los clips salían grises y lavados (Aimee, cambios de la
+# cliente). Tonemap "hable" con blanco de referencia a 203 nits: es el que mejor iguala las tomas SDR originales.
+HDR_TO_SDR = ("zscale=t=linear:npl=203,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,"
+              "zscale=t=bt709:m=bt709:r=tv,")
+
+
+def hdr_prefix(src):
+    """Cadena de conversión a SDR si el clip es HDR (HLG o PQ); vacía si ya es SDR."""
+    trc = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=color_transfer",
+                          "-of", "csv=p=0", src], capture_output=True, text=True).stdout.strip()
+    return HDR_TO_SDR if trc in ("arib-std-b67", "smpte2084") else ""
+
+
 def conform_broll(src, dst, speed, start, length, cx, transpose=None):
     """Recorta a vertical: escala a 1920 de alto (o 1080 de ancho) y toma la ventana en la posición cx.
 
     transpose: giro para clips grabados en vertical sin metadato de rotación (1 = 90° horario).
     """
     vf = (
-        (f"transpose={transpose}," if transpose is not None else "")
+        hdr_prefix(src)
+        + (f"transpose={transpose}," if transpose is not None else "")
         + f"setpts={1 / speed:.4f}*(PTS-STARTPTS),fps={FPS},"
         f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,"
         f"crop={W}:{H}:(iw-{W})*{cx}:(ih-{H})/2,format=yuv420p"

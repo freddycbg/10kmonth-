@@ -2,17 +2,17 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationInFrames": 1067,
- "arollFrames": 992,
- "lastWordFrame": 979,
- "introDropFrame": 293,
+ "durationInFrames": 1060,
+ "arollFrames": 985,
+ "lastWordFrame": 964,
+ "introDropFrame": 284,
  "intro": {
   "frames": [
    0,
    5,
-   285,
-   293,
-   297,
+   276,
+   284,
+   288,
    196
   ],
   "scales": [
@@ -27,7 +27,7 @@
  "endSrc": null,
  "endCard": {
   "handle": "@aimeecarolinag",
-  "kicker": "Sígueme"
+  "kicker": "Enlace en mi biografía"
  },
  "static": true,
  "music": false,
@@ -118,49 +118,54 @@
    "y": 0.1,
    "pill": true,
    "rotate": -2,
-   "name": "Gráfico phrase: Anna, ¿podrías recordarme",
-   "from": 275,
+   "name": "Gráfico phrase: Anna, ¿podrías ayudarme",
+   "from": 274,
    "durationInFrames": 66
   },
   {
    "type": "notification",
    "sfx": "ding",
    "app": "Anna",
-   "title": "Recordatorio · mañana",
-   "body": "Hablar con la maestra de mi hijo",
-   "time": "8:50 a. m.",
+   "title": "Recordatorio · hoy",
+   "body": "Sale mi hijo de la escuela",
+   "time": "3:30 p. m.",
    "y": 0.05,
-   "name": "Gráfico notification: 8:50 de la mañana",
-   "from": 464,
-   "durationInFrames": 102
+   "name": "Gráfico notification: Un momento",
+   "from": 517,
+   "durationInFrames": 65
+  },
+  {
+   "type": "phrase",
+   "lines": [
+    {
+     "text": "Y también me ayudó",
+     "style": "bold",
+     "size": 56
+    },
+    {
+     "text": "con ideas para la cena",
+     "style": "script",
+     "size": 76
+    }
+   ],
+   "y": 0.11,
+   "rotate": -2,
+   "sfx": "pop",
+   "dark": true,
+   "pill": true,
+   "name": "Gráfico phrase: También unos tacos",
+   "from": 584,
+   "durationInFrames": 206
   },
   {
    "type": "card",
    "icon": "UtensilsCrossed",
    "title": "Idea para la cena",
    "body": "Tacos de frijoles negros con aguacate",
-   "y": 0.2,
+   "y": 0.29,
    "name": "Gráfico card: tacos de frijoles negros con a",
-   "from": 578,
+   "from": 593,
    "durationInFrames": 98
-  },
-  {
-   "type": "phrase",
-   "lines": [
-    {
-     "text": "Una ayudita",
-     "style": "bold"
-    },
-    {
-     "text": "extra",
-     "style": "script"
-    }
-   ],
-   "y": 0.14,
-   "rotate": -3,
-   "name": "Gráfico phrase: una ayudita extra",
-   "from": 796,
-   "durationInFrames": 43
   },
   {
    "type": "image",
@@ -170,9 +175,28 @@
    "y": 0.3,
    "width": 0.34,
    "rotate": 6,
-   "name": "Gráfico image: descarga la aplicación Anna",
-   "from": 833,
-   "durationInFrames": 155
+   "name": "Gráfico image: Si quieres probar Anna",
+   "from": 791,
+   "durationInFrames": 182
+  },
+  {
+   "type": "phrase",
+   "lines": [
+    {
+     "text": "Link en mi",
+     "style": "bold"
+    },
+    {
+     "text": "bio",
+     "style": "script"
+    }
+   ],
+   "y": 0.16,
+   "rotate": -3,
+   "x": 0.34,
+   "name": "Gráfico phrase: el link está en mi bio",
+   "from": 844,
+   "durationInFrames": 39
   },
   {
    "type": "code",
@@ -180,9 +204,9 @@
    "code": "AIMEE",
    "x": 0.5,
    "y": 0.66,
-   "name": "Gráfico code: coloca AIMEE",
-   "from": 883,
-   "durationInFrames": 105
+   "name": "Gráfico code: el código AIMEE",
+   "from": 889,
+   "durationInFrames": 84
   },
   {
    "type": "badge",
@@ -192,8 +216,8 @@
    "x": 0.2,
    "y": 0.15,
    "name": "Gráfico badge: 20% de descuento",
-   "from": 940,
-   "durationInFrames": 49
+   "from": 924,
+   "durationInFrames": 50
   }
  ],
  "shots": [
@@ -229,7 +253,7 @@
   },
   {
    "from": 272,
-   "durationInFrames": 147,
+   "durationInFrames": 122,
    "framing": "ancho",
    "face": {
     "x": 0.5,
@@ -238,8 +262,8 @@
    "closeScale": 1.2
   },
   {
-   "from": 419,
-   "durationInFrames": 141,
+   "from": 394,
+   "durationInFrames": 123,
    "framing": "cerrado",
    "face": {
     "x": 0.5,
@@ -248,9 +272,19 @@
    "closeScale": 1.2
   },
   {
-   "from": 560,
+   "from": 517,
+   "durationInFrames": 58,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.2
+  },
+  {
+   "from": 575,
    "durationInFrames": 112,
-   "framing": "cerrado",
+   "framing": "ancho",
    "face": {
     "x": 0.5,
     "y": 0.42
@@ -258,29 +292,29 @@
    "closeScale": 1.2
   },
   {
-   "from": 672,
+   "from": 687,
    "durationInFrames": 105,
-   "framing": "ancho",
-   "face": {
-    "x": 0.5,
-    "y": 0.42
-   },
-   "closeScale": 1.2
-  },
-  {
-   "from": 777,
-   "durationInFrames": 106,
-   "framing": "ancho",
-   "face": {
-    "x": 0.5,
-    "y": 0.42
-   },
-   "closeScale": 1.2
-  },
-  {
-   "from": 883,
-   "durationInFrames": 109,
    "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.2
+  },
+  {
+   "from": 792,
+   "durationInFrames": 97,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.2
+  },
+  {
+   "from": 889,
+   "durationInFrames": 96,
+   "framing": "ancho",
    "face": {
     "x": 0.5,
     "y": 0.42
@@ -288,7 +322,15 @@
    "closeScale": 1.2
   }
  ],
- "broll": [],
+ "broll": [
+  {
+   "name": "B-roll tel_anna2: Un momento. Listo, Aimee.",
+   "src": "media/tel_anna2_2.6.mp4",
+   "from": 517,
+   "durationInFrames": 58,
+   "leak": false
+  }
+ ],
  "captions": [
   {
    "from": 0,
@@ -429,7 +471,7 @@
   },
   {
    "from": 257,
-   "durationInFrames": 18,
+   "durationInFrames": 17,
    "words": [
     {
      "text": "¿Dónde?",
@@ -439,8 +481,8 @@
    ]
   },
   {
-   "from": 275,
-   "durationInFrames": 18,
+   "from": 274,
+   "durationInFrames": 10,
    "words": [
     {
      "text": "Anna",
@@ -450,8 +492,8 @@
    ]
   },
   {
-   "from": 293,
-   "durationInFrames": 45,
+   "from": 284,
+   "durationInFrames": 42,
    "words": [
     {
      "text": "¿podrías",
@@ -459,108 +501,109 @@
      "em": false
     },
     {
-     "text": "recordarme",
-     "at": 9,
-     "em": false
-    },
-    {
-     "text": "que",
-     "at": 28,
-     "em": false
-    },
-    {
-     "text": "mañana",
-     "at": 33,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 338,
-   "durationInFrames": 36,
-   "words": [
-    {
-     "text": "debo",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "hablar",
+     "text": "ayudarme",
      "at": 8,
      "em": false
     },
     {
      "text": "con",
+     "at": 19,
+     "em": false
+    },
+    {
+     "text": "algo?",
+     "at": 26,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 326,
+   "durationInFrames": 29,
+   "words": [
+    {
+     "text": "Por",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "supuesto",
+     "at": 6,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 356,
+   "durationInFrames": 38,
+   "words": [
+    {
+     "text": "Dime",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "en",
+     "at": 9,
+     "em": false
+    },
+    {
+     "text": "qué",
+     "at": 13,
+     "em": false
+    },
+    {
+     "text": "puedo",
      "at": 15,
      "em": false
     },
     {
-     "text": "la",
-     "at": 21,
-     "em": false
-    },
-    {
-     "text": "maestra",
+     "text": "ayudarte",
      "at": 24,
      "em": false
     }
    ]
   },
   {
-   "from": 374,
+   "from": 394,
    "durationInFrames": 16,
    "words": [
     {
-     "text": "de",
+     "text": "hoy",
      "at": 0,
-     "em": false
-    },
-    {
-     "text": "mi",
-     "at": 5,
-     "em": false
-    },
-    {
-     "text": "hijo?",
-     "at": 9,
      "em": false
     }
    ]
   },
   {
-   "from": 390,
-   "durationInFrames": 29,
+   "from": 415,
+   "durationInFrames": 39,
    "words": [
     {
-     "text": "¿A",
+     "text": "Necesito",
      "at": 0,
      "em": false
     },
     {
-     "text": "qué",
-     "at": 1,
+     "text": "que",
+     "at": 16,
      "em": false
     },
     {
-     "text": "hora",
-     "at": 7,
+     "text": "me",
+     "at": 21,
      "em": false
     },
     {
-     "text": "te",
-     "at": 12,
-     "em": false
-    },
-    {
-     "text": "gustaría",
-     "at": 17,
+     "text": "recuerdes",
+     "at": 25,
      "em": false
     }
    ]
   },
   {
-   "from": 419,
-   "durationInFrames": 45,
+   "from": 454,
+   "durationInFrames": 16,
    "words": [
     {
      "text": "que",
@@ -568,75 +611,75 @@
      "em": false
     },
     {
-     "text": "te",
-     "at": 8,
+     "text": "a",
+     "at": 4,
      "em": false
     },
     {
-     "text": "lo",
+     "text": "las",
+     "at": 7,
+     "em": false
+    },
+    {
+     "text": "tres",
      "at": 11,
-     "em": false
-    },
-    {
-     "text": "recuerde",
-     "at": 15,
-     "em": false
-    },
-    {
-     "text": "mañana?",
-     "at": 27,
      "em": false
     }
    ]
   },
   {
-   "from": 464,
-   "durationInFrames": 52,
+   "from": 470,
+   "durationInFrames": 47,
    "words": [
     {
-     "text": "8:50",
+     "text": "y",
      "at": 0,
      "em": false
     },
     {
-     "text": "de",
-     "at": 29,
+     "text": "media",
+     "at": 6,
      "em": false
     },
     {
-     "text": "la",
-     "at": 34,
+     "text": "sale",
+     "at": 15,
      "em": false
     },
     {
-     "text": "mañana",
+     "text": "mi",
+     "at": 28,
+     "em": false
+    },
+    {
+     "text": "hijo",
      "at": 36,
      "em": false
     }
    ]
   },
   {
-   "from": 516,
-   "durationInFrames": 22,
+   "from": 517,
+   "durationInFrames": 27,
    "words": [
     {
-     "text": "por",
+     "text": "Un",
      "at": 0,
      "em": false
     },
     {
-     "text": "favor",
-     "at": 2,
+     "text": "momento",
+     "at": 4,
      "em": false
     }
    ]
   },
   {
-   "from": 542,
-   "durationInFrames": 18,
+   "from": 547,
+   "durationInFrames": 13,
    "words": [
     {
-     "text": "Entendido",
+     "text": "Listo",
      "at": 0,
      "em": false
     }
@@ -644,7 +687,18 @@
   },
   {
    "from": 560,
-   "durationInFrames": 45,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "Aimee",
+     "at": 0,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 575,
+   "durationInFrames": 46,
    "words": [
     {
      "text": "También",
@@ -674,8 +728,8 @@
    ]
   },
   {
-   "from": 605,
-   "durationInFrames": 39,
+   "from": 621,
+   "durationInFrames": 38,
    "words": [
     {
      "text": "negros",
@@ -684,18 +738,18 @@
     },
     {
      "text": "con",
-     "at": 14,
+     "at": 13,
      "em": false
     },
     {
      "text": "aguacate",
-     "at": 20,
+     "at": 19,
      "em": false
     }
    ]
   },
   {
-   "from": 644,
+   "from": 659,
    "durationInFrames": 28,
    "words": [
     {
@@ -711,7 +765,7 @@
    ]
   },
   {
-   "from": 672,
+   "from": 687,
    "durationInFrames": 24,
    "words": [
     {
@@ -721,7 +775,7 @@
     },
     {
      "text": "parece",
-     "at": 7,
+     "at": 8,
      "em": false
     },
     {
@@ -732,8 +786,8 @@
    ]
   },
   {
-   "from": 696,
-   "durationInFrames": 24,
+   "from": 711,
+   "durationInFrames": 25,
    "words": [
     {
      "text": "pero",
@@ -747,7 +801,7 @@
     },
     {
      "text": "a",
-     "at": 10,
+     "at": 9,
      "em": false
     },
     {
@@ -758,8 +812,8 @@
    ]
   },
   {
-   "from": 720,
-   "durationInFrames": 29,
+   "from": 736,
+   "durationInFrames": 28,
    "words": [
     {
      "text": "qué",
@@ -768,28 +822,28 @@
     },
     {
      "text": "tengo",
-     "at": 5,
+     "at": 4,
      "em": false
     },
     {
      "text": "en",
-     "at": 13,
+     "at": 12,
      "em": false
     },
     {
      "text": "la",
-     "at": 15,
+     "at": 14,
      "em": false
     },
     {
      "text": "refri",
-     "at": 17,
+     "at": 16,
      "em": false
     }
    ]
   },
   {
-   "from": 749,
+   "from": 764,
    "durationInFrames": 27,
    "words": [
     {
@@ -799,7 +853,7 @@
     },
     {
      "text": "mejor",
-     "at": 4,
+     "at": 5,
      "em": false
     },
     {
@@ -815,8 +869,8 @@
    ]
   },
   {
-   "from": 776,
-   "durationInFrames": 57,
+   "from": 791,
+   "durationInFrames": 53,
    "words": [
     {
      "text": "Si",
@@ -825,76 +879,92 @@
     },
     {
      "text": "quieres",
-     "at": 11,
+     "at": 15,
      "em": false
     },
     {
-     "text": "una",
-     "at": 20,
-     "em": false
-    },
-    {
-     "text": "ayudita",
-     "at": 28,
-     "em": false
-    },
-    {
-     "text": "extra",
-     "at": 41,
-     "em": false
-    }
-   ]
-  },
-  {
-   "from": 833,
-   "durationInFrames": 42,
-   "words": [
-    {
-     "text": "descarga",
-     "at": 0,
-     "em": false
-    },
-    {
-     "text": "la",
-     "at": 11,
-     "em": false
-    },
-    {
-     "text": "aplicación",
-     "at": 14,
+     "text": "probar",
+     "at": 25,
      "em": false
     },
     {
      "text": "Anna",
-     "at": 32,
+     "at": 39,
      "em": false
     }
    ]
   },
   {
-   "from": 875,
-   "durationInFrames": 36,
+   "from": 844,
+   "durationInFrames": 16,
    "words": [
     {
-     "text": "y",
+     "text": "el",
      "at": 0,
      "em": false
     },
     {
-     "text": "coloca",
-     "at": 8,
+     "text": "link",
+     "at": 4,
      "em": false
     },
     {
-     "text": "AIMEE",
-     "at": 22,
+     "text": "está",
+     "at": 9,
      "em": false
     }
    ]
   },
   {
-   "from": 911,
-   "durationInFrames": 49,
+   "from": 860,
+   "durationInFrames": 18,
+   "words": [
+    {
+     "text": "en",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "mi",
+     "at": 4,
+     "em": false
+    },
+    {
+     "text": "bio",
+     "at": 8,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 878,
+   "durationInFrames": 39,
+   "words": [
+    {
+     "text": "Utiliza",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "el",
+     "at": 11,
+     "em": false
+    },
+    {
+     "text": "código",
+     "at": 14,
+     "em": false
+    },
+    {
+     "text": "AIMEE",
+     "at": 24,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 917,
+   "durationInFrames": 56,
    "words": [
     {
      "text": "para",
@@ -902,39 +972,18 @@
      "em": false
     },
     {
-     "text": "que",
-     "at": 12,
-     "em": false
-    },
-    {
-     "text": "tengas",
-     "at": 17,
-     "em": false
-    },
-    {
-     "text": "un",
-     "at": 26,
-     "em": false
-    },
-    {
      "text": "20 %",
-     "at": 29,
+     "at": 7,
      "em": false
-    }
-   ]
-  },
-  {
-   "from": 960,
-   "durationInFrames": 28,
-   "words": [
+    },
     {
      "text": "de",
-     "at": 0,
+     "at": 30,
      "em": false
     },
     {
      "text": "descuento",
-     "at": 6,
+     "at": 34,
      "em": false
     }
    ]
@@ -973,90 +1022,90 @@
   },
   {
    "sound": "pop",
-   "from": 275,
+   "from": 274,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "ding",
-   "from": 464,
+   "from": 517,
    "trim": 0,
    "durationInFrames": 51,
    "vol": 0.175
   },
   {
    "sound": "whoosh_corto",
-   "from": 552,
+   "from": 567,
    "trim": 0,
    "durationInFrames": 14,
    "vol": 0.14
   },
   {
    "sound": "pop",
-   "from": 578,
+   "from": 584,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
-   "sound": "whoosh_corto",
-   "from": 769,
-   "trim": 0,
-   "durationInFrames": 14,
-   "vol": 0.14
-  },
-  {
    "sound": "pop",
-   "from": 796,
+   "from": 593,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "swoosh",
-   "from": 828,
+   "from": 786,
    "trim": 0,
    "durationInFrames": 9,
    "vol": 0.2
   },
   {
    "sound": "pop",
-   "from": 883,
+   "from": 844,
+   "trim": 0,
+   "durationInFrames": 13,
+   "vol": 0.25
+  },
+  {
+   "sound": "pop",
+   "from": 889,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.25
   },
   {
    "sound": "click",
-   "from": 895,
+   "from": 901,
    "trim": 0,
    "durationInFrames": 2,
    "vol": 0.25
   },
   {
    "sound": "kaching",
-   "from": 940,
+   "from": 924,
    "trim": 0,
    "durationInFrames": 51,
    "vol": 0.2
   },
   {
    "sound": "whoosh_largo",
-   "from": 976,
+   "from": 969,
    "trim": 0,
    "durationInFrames": 27,
    "vol": 0.175
   },
   {
    "sound": "pop",
-   "from": 998,
+   "from": 991,
    "trim": 0,
    "durationInFrames": 13,
    "vol": 0.225
   }
  ],
  "flashes": [
-  992
+  985
  ]
 }
