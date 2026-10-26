@@ -310,3 +310,17 @@ Como los de Freddy y Claudia (dinámico, entrada fuerte), pero femenino y cálid
 - **B-roll** (~40 %): Horizonte (mujer en la montaña, nieve para Utah, excursionista en la cima), Colchones, Trabajar
   de viejo, Frustración, Reflexión, Equipo de trabajo, Trabajar sin familia (mamá con bebé: proteger familias).
 - **Cierre:** tarjeta de Carta Business Group VIRGINIA (como Claudia).
+
+## Vídeo de Shirley (agente de Carta Business Group): estilo aprobado
+
+Estilo de las agentes (Johanna, Claudia 2) con su identidad. Aprobado en el primer borrador.
+
+- **Subtítulos** blancos (Montserrat ExtraBold) con la palabra clave en **Playfair Display Black Italic, minúsculas,
+  rojo rosado #FF4F6D** (su labial). Títulos delante: "LA VIDA NOS PONE A *prueba*" (gancho), "TU MAYOR
+  *testimonio*" sobre b-roll y "*contáctame*" con flecha al final.
+- **Material HDR (HLG) de la DJI Osmo Pocket 3:** se pasa a SDR con tonemap hable (203 nits) en `build_aroll`
+  (`hdr_prefix`); sin eso sale gris.
+- **Marca de agua "dji OSMO POCKET 3"** (arriba a la izquierda, 16–18 % del alto): `"watermark_safe": {"base": 1.25,
+  "y0_min": 0.2}`: zoom base en todo el A-roll y el encuadre empieza siempre por debajo de la marca.
+- **Música** "And Still": suave en el gancho, golpe con destello en "Empezar un nuevo camino".
+- **B-roll** ~36 % para que se luzcan sus tomas en los monumentos de Washington. Cierre Carta Business Group VIRGINIA.
