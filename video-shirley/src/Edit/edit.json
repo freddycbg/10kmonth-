@@ -1,0 +1,764 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 698,
+ "arollFrames": 623,
+ "lastWordFrame": 614,
+ "introDropFrame": 50,
+ "intro": {
+  "frames": [
+   0,
+   5,
+   40,
+   50,
+   54,
+   105
+  ],
+  "scales": [
+   1.0,
+   1.3,
+   1.45,
+   2.1,
+   1.98,
+   2.0
+  ]
+ },
+ "endSrc": null,
+ "endCard": null,
+ "static": false,
+ "music": true,
+ "overlays": [],
+ "shots": [
+  {
+   "from": 0,
+   "durationInFrames": 106,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.37
+   },
+   "closeScale": 1.6,
+   "take": 0
+  },
+  {
+   "from": 106,
+   "durationInFrames": 44,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.37
+   },
+   "closeScale": 1.6,
+   "take": 0
+  },
+  {
+   "from": 150,
+   "durationInFrames": 57,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.37
+   },
+   "closeScale": 1.6,
+   "take": 1
+  },
+  {
+   "from": 207,
+   "durationInFrames": 59,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.37
+   },
+   "closeScale": 1.6,
+   "take": 1
+  },
+  {
+   "from": 266,
+   "durationInFrames": 115,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.37
+   },
+   "closeScale": 1.6,
+   "take": 2
+  },
+  {
+   "from": 381,
+   "durationInFrames": 58,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.37
+   },
+   "closeScale": 1.6,
+   "take": 2
+  },
+  {
+   "from": 439,
+   "durationInFrames": 140,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.37
+   },
+   "closeScale": 1.6,
+   "take": 3
+  },
+  {
+   "from": 579,
+   "durationInFrames": 44,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.37
+   },
+   "closeScale": 1.6,
+   "take": 4
+  }
+ ],
+ "broll": [
+  {
+   "name": "B-roll de_nuevo: nos obliga a empezar de nuevo",
+   "src": "media/de_nuevo_1.mp4",
+   "from": 106,
+   "durationInFrames": 44,
+   "leak": false
+  },
+  {
+   "name": "B-roll parados: qué tan peligroso era quedarnos ahí para",
+   "src": "media/parados_0.mp4",
+   "from": 295,
+   "durationInFrames": 86,
+   "leak": false
+  },
+  {
+   "name": "B-roll testimonio: mañana puede convertirse en tu mayor tes",
+   "src": "media/testimonio_1.5.mp4",
+   "from": 439,
+   "durationInFrames": 94,
+   "leak": true
+  }
+ ],
+ "captions": [
+  {
+   "from": 0,
+   "durationInFrames": 22,
+   "words": [
+    {
+     "text": "A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "VECES",
+     "at": 6,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 68,
+   "durationInFrames": 13,
+   "words": [
+    {
+     "text": "NOS",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "CAMBIA",
+     "at": 4,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 81,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "LOS",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "PLANES",
+     "at": 5,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 97,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "Y",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "NOS",
+     "at": 9,
+     "em": false
+    },
+    {
+     "text": "OBLIGA",
+     "at": 13,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 122,
+   "durationInFrames": 9,
+   "words": [
+    {
+     "text": "A",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "EMPEZAR",
+     "at": 2,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 131,
+   "durationInFrames": 20,
+   "words": [
+    {
+     "text": "DE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "NUEVO",
+     "at": 6,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 151,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "EMPEZAR",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "UN",
+     "at": 16,
+     "em": false
+    },
+    {
+     "text": "NUEVO",
+     "at": 19,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 176,
+   "durationInFrames": 31,
+   "words": [
+    {
+     "text": "CAMINO",
+     "at": 0,
+     "em": true
+    },
+    {
+     "text": "ASUSTA",
+     "at": 10,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 207,
+   "durationInFrames": 18,
+   "words": [
+    {
+     "text": "PERO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "TRAS",
+     "at": 3,
+     "em": false
+    },
+    {
+     "text": "CADA",
+     "at": 9,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 225,
+   "durationInFrames": 36,
+   "words": [
+    {
+     "text": "PASO",
+     "at": 0,
+     "em": true
+    },
+    {
+     "text": "QUE",
+     "at": 11,
+     "em": false
+    },
+    {
+     "text": "DAMOS",
+     "at": 18,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 261,
+   "durationInFrames": 34,
+   "words": [
+    {
+     "text": "NOS",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "DAMOS",
+     "at": 14,
+     "em": false
+    },
+    {
+     "text": "CUENTA",
+     "at": 23,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 295,
+   "durationInFrames": 32,
+   "words": [
+    {
+     "text": "QUÉ",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "TAN",
+     "at": 9,
+     "em": false
+    },
+    {
+     "text": "PELIGROSO",
+     "at": 13,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 327,
+   "durationInFrames": 34,
+   "words": [
+    {
+     "text": "ERA",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "QUEDARNOS",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "AHÍ",
+     "at": 24,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 361,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "PARADOS",
+     "at": 0,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 386,
+   "durationInFrames": 17,
+   "words": [
+    {
+     "text": "LO",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "QUE",
+     "at": 7,
+     "em": false
+    },
+    {
+     "text": "HOY",
+     "at": 11,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 403,
+   "durationInFrames": 36,
+   "words": [
+    {
+     "text": "PARECE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "DIFÍCIL",
+     "at": 11,
+     "em": true
+    }
+   ]
+  },
+  {
+   "from": 439,
+   "durationInFrames": 16,
+   "words": [
+    {
+     "text": "MAÑANA",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "PUEDE",
+     "at": 7,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 455,
+   "durationInFrames": 37,
+   "words": [
+    {
+     "text": "CONVERTIRSE",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "EN",
+     "at": 26,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 530,
+   "durationInFrames": 25,
+   "words": [
+    {
+     "text": "SI",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "QUIERES",
+     "at": 5,
+     "em": false
+    },
+    {
+     "text": "SABER",
+     "at": 13,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 555,
+   "durationInFrames": 24,
+   "words": [
+    {
+     "text": "QUÉ",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "HE",
+     "at": 9,
+     "em": false
+    },
+    {
+     "text": "HECHO",
+     "at": 18,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 579,
+   "durationInFrames": 15,
+   "words": [
+    {
+     "text": "YO",
+     "at": 0,
+     "em": false
+    }
+   ]
+  }
+ ],
+ "titles": [
+  {
+   "name": "Título: LA VIDA NOS PONE A prueba",
+   "from": 22,
+   "durationInFrames": 55,
+   "top": [
+    {
+     "text": "LA",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "VIDA",
+     "accent": true,
+     "at": 7
+    },
+    {
+     "text": "NOS",
+     "accent": false,
+     "at": 13
+    },
+    {
+     "text": "PONE",
+     "accent": false,
+     "at": 18
+    },
+    {
+     "text": "A",
+     "accent": false,
+     "at": 25
+    }
+   ],
+   "big": "prueba",
+   "bigAt": 28,
+   "bottom": [],
+   "bigSize": 272.1,
+   "y": 0.07,
+   "align": "center"
+  },
+  {
+   "name": "Título: TU MAYOR testimonio",
+   "from": 492,
+   "durationInFrames": 44,
+   "top": [
+    {
+     "text": "TU",
+     "accent": false,
+     "at": 0
+    },
+    {
+     "text": "MAYOR",
+     "accent": false,
+     "at": 6
+    }
+   ],
+   "big": "testimonio",
+   "bigAt": 17,
+   "bottom": [],
+   "bigSize": 184.9,
+   "y": 0.12,
+   "align": "center"
+  },
+  {
+   "name": "Título:  contáctame",
+   "from": 594,
+   "durationInFrames": 44,
+   "top": [],
+   "big": "contáctame",
+   "bigAt": 0,
+   "bottom": [],
+   "bigSize": 169.3,
+   "y": 0.08,
+   "align": "center"
+  }
+ ],
+ "icons": [
+  {
+   "name": "Icono ArrowDown: contáctame",
+   "icon": "ArrowDown",
+   "from": 594,
+   "durationInFrames": 48,
+   "x": 0.5,
+   "y": 0.86,
+   "size": 150,
+   "anim": "bounce",
+   "label": ""
+  }
+ ],
+ "sfx": [
+  {
+   "sound": "impacto",
+   "from": 50,
+   "trim": 0,
+   "durationInFrames": 84,
+   "vol": 0.385
+  },
+  {
+   "sound": "riser",
+   "from": 0,
+   "trim": 10,
+   "durationInFrames": 50,
+   "vol": 0.21
+  },
+  {
+   "sound": "click",
+   "from": 86,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 98,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.21
+  },
+  {
+   "sound": "click",
+   "from": 137,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 135,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.245
+  },
+  {
+   "sound": "click",
+   "from": 170,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "click",
+   "from": 176,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "click",
+   "from": 225,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 258,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.196
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 279,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.21
+  },
+  {
+   "sound": "click",
+   "from": 308,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "click",
+   "from": 361,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 378,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.196
+  },
+  {
+   "sound": "click",
+   "from": 414,
+   "trim": 0,
+   "durationInFrames": 2,
+   "vol": 0.126
+  },
+  {
+   "sound": "whoosh_corto",
+   "from": 431,
+   "trim": 0,
+   "durationInFrames": 14,
+   "vol": 0.21
+  },
+  {
+   "sound": "sub_drop",
+   "from": 509,
+   "trim": 0,
+   "durationInFrames": 45,
+   "vol": 0.315
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 514,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.245
+  },
+  {
+   "sound": "sub_drop",
+   "from": 594,
+   "trim": 0,
+   "durationInFrames": 45,
+   "vol": 0.315
+  },
+  {
+   "sound": "whoosh_largo",
+   "from": 607,
+   "trim": 0,
+   "durationInFrames": 27,
+   "vol": 0.245
+  }
+ ],
+ "flashes": [
+  151,
+  530,
+  623
+ ],
+ "bw": [],
+ "impacts": [],
+ "safe": {
+  "base": 1.25,
+  "y0_min": 0.2
+ }
+}
