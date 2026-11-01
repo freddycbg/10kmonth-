@@ -16,7 +16,6 @@ import { Foreground } from "./Foreground";
 import { IconPop } from "./IconPop";
 import "./fonts";
 import { KineticTitle } from "./KineticTitle";
-import { Magic } from "./Magic";
 import { Flash, LightLeakOverlay } from "./Transitions";
 import { WordCaption } from "./WordCaption";
 
@@ -29,7 +28,7 @@ const brolls = edit.broll as BRoll[];
 const icons = edit.icons as IconItem[];
 type Title = { name: string; from: number; durationInFrames: number; top: { text: string; accent: boolean; at: number }[]; big: string; bigAt: number; bigSize: number; bottom: { text: string; at: number }[]; y: number; align: string };
 const titles = edit.titles as Title[];
-const magic = (edit as { magic?: { at: number; build: number; after: number } | null }).magic ?? null;
+const effect = (edit as { effect?: { src: string; from: number; durationInFrames: number } | null }).effect ?? null;
 
 // Música unos 7 dB por debajo de la voz (R1) y a primer plano en la tarjeta final (estilo.md §7).
 const MUSIC_UNDER_VOICE = 0.2;
@@ -174,10 +173,14 @@ export const Edit: React.FC = () => {
         </Sequence>
       ))}
 
-      {/* Transformación mágica en el corte de normales a caras verdes (Shrek de Aimee). */}
-      {magic ? (
-        <Sequence name="Transformación mágica" from={magic.at - magic.build} durationInFrames={magic.build + magic.after} layout="none">
-          <Magic build={magic.build} after={magic.after} />
+      {/* Efecto mágico de Aimee (luces sobre negro) en modo pantalla: el negro desaparece, quedan las luces. */}
+      {effect ? (
+        <Sequence name="Efecto mágico" from={effect.from} durationInFrames={effect.durationInFrames} premountFor={fps}>
+          <Video
+            src={staticFile(effect.src)}
+            muted
+            style={{ width: "100%", height: "100%", mixBlendMode: "screen" }}
+          />
         </Sequence>
       ) : null}
 

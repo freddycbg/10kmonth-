@@ -404,10 +404,12 @@ def main(cfg_path):
         "intro": intro_keys(cfg.get("intro"), frame(anchor), shots[0]["durationInFrames"] - 1),
         "endSrc": end_src,
         "endCard": end_card,
-        # Transformación mágica (Shrek de Aimee): destellos que giran, brillo azul y fogonazo blanco en el corte
-        # de "normales" a "caras verdes" (Magic.tsx). at = fotograma del corte; build/after en fotogramas.
-        "magic": ({"at": frame(to_out(cfg["magic"]["at"])), "build": round(cfg["magic"]["build"] * FPS),
-                   "after": round(cfg["magic"]["after"] * FPS)} if cfg.get("magic") else None),
+        # Efecto mágico (Shrek de Aimee): vídeo de luces sobre negro que da Aimee, encima del vídeo en modo pantalla
+        # (el negro desaparece). Su momento de más brillo ("peak", s del efecto) cae en el corte "at" (s del original)
+        # de "normales" a "caras verdes".
+        "effect": (lambda e: {"src": e["src"], "from": frame(to_out(e["at"])) - round(e["peak"] * FPS),
+                              "durationInFrames": round(e["duration"] * FPS)})(cfg["effect_overlay"])
+                  if cfg.get("effect_overlay") else None,
         # Cámara fija: sin zoom del gancho, sin punch-ins ni empuje (Aimee, borrador 2).
         "static": bool(cfg.get("static_camera")),
         "music": bool(cfg.get("music")),

@@ -26,10 +26,10 @@
  },
  "endSrc": null,
  "endCard": null,
- "magic": {
-  "at": 216,
-  "build": 30,
-  "after": 36
+ "effect": {
+  "src": "media/efecto_magico.mp4",
+  "from": 108,
+  "durationInFrames": 230
  },
  "static": true,
  "music": false,

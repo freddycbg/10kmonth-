@@ -61,16 +61,10 @@
   "sfx": false,
   "sfx_gain": 0.5,
   "end_seconds": 0,
-  "magic": {
+  "effect_overlay": {
+    "src": "media/efecto_magico.mp4",
     "at": 7.2,
-    "build": 1.0,
-    "after": 1.2
-  },
-  "audio_extra": [
-    {
-      "file": "../sfx/magia.wav",
-      "at": 6.2,
-      "gain_db": -5
-    }
-  ]
+    "peak": 3.6,
+    "duration": 7.667
+  }
 }
