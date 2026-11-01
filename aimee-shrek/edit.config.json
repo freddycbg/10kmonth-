@@ -1,0 +1,76 @@
+{
+  "source": "input/material/video_para_editar.mov",
+  "transcript": "input/transcript.json",
+  "keep": "input/keep.json",
+  "intro_drop_at": "Quiero",
+  "denoise": false,
+  "level_voice": false,
+  "rebuild_aroll": false,
+  "caption_case": "natural",
+  "fixes": [],
+  "intro": {
+    "punch_frames": 5,
+    "punch_scale": 1.0,
+    "ramp_frames": 8,
+    "pre_drop_scale": 1.0,
+    "drop_scale": 1.0,
+    "settle_scale": 1.0
+  },
+  "takes": [
+    {
+      "until": 1.1,
+      "face": [
+        0.5,
+        0.42
+      ],
+      "close": 1.0
+    },
+    {
+      "until": 3.067,
+      "face": [
+        0.5,
+        0.42
+      ],
+      "close": 1.0
+    },
+    {
+      "until": 7.2,
+      "face": [
+        0.5,
+        0.42
+      ],
+      "close": 1.0
+    },
+    {
+      "until": 999,
+      "face": [
+        0.5,
+        0.42
+      ],
+      "close": 1.0
+    }
+  ],
+  "titles": [],
+  "emphasis": [],
+  "icons": [],
+  "broll": [],
+  "flash_at": [],
+  "overlays": [],
+  "static_camera": true,
+  "original_audio": true,
+  "sfx": false,
+  "sfx_gain": 0.5,
+  "end_seconds": 0,
+  "magic": {
+    "at": 7.2,
+    "build": 1.0,
+    "after": 1.2
+  },
+  "audio_extra": [
+    {
+      "file": "../sfx/magia.wav",
+      "at": 6.2,
+      "gain_db": -5
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 358,
+ "arollFrames": 358,
+ "lastWordFrame": 145,
+ "introDropFrame": 0,
+ "intro": {
+  "frames": [
+   0,
+   5,
+   -8,
+   0,
+   4,
+   32
+  ],
+  "scales": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.88,
+   1.0
+  ]
+ },
+ "endSrc": null,
+ "endCard": null,
+ "magic": {
+  "at": 216,
+  "build": 30,
+  "after": 36
+ },
+ "static": true,
+ "music": false,
+ "overlays": [],
+ "shots": [
+  {
+   "from": 0,
+   "durationInFrames": 33,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.0
+  },
+  {
+   "from": 33,
+   "durationInFrames": 59,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.0
+  },
+  {
+   "from": 92,
+   "durationInFrames": 35,
+   "framing": "ancho",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.0
+  },
+  {
+   "from": 127,
+   "durationInFrames": 89,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.0
+  },
+  {
+   "from": 216,
+   "durationInFrames": 142,
+   "framing": "cerrado",
+   "face": {
+    "x": 0.5,
+    "y": 0.42
+   },
+   "closeScale": 1.0
+  }
+ ],
+ "broll": [],
+ "captions": [
+  {
+   "from": 0,
+   "durationInFrames": 56,
+   "words": [
+    {
+     "text": "Quiero",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "lo",
+     "at": 7,
+     "em": false
+    },
+    {
+     "text": "que",
+     "at": 11,
+     "em": false
+    },
+    {
+     "text": "toda",
+     "at": 16,
+     "em": false
+    },
+    {
+     "text": "princesa",
+     "at": 26,
+     "em": false
+    },
+    {
+     "text": "quiere",
+     "at": 45,
+     "em": false
+    }
+   ]
+  },
+  {
+   "from": 56,
+   "durationInFrames": 98,
+   "words": [
+    {
+     "text": "vivir",
+     "at": 0,
+     "em": false
+    },
+    {
+     "text": "feliz",
+     "at": 41,
+     "em": false
+    },
+    {
+     "text": "por",
+     "at": 63,
+     "em": false
+    },
+    {
+     "text": "siempre",
+     "at": 71,
+     "em": false
+    }
+   ]
+  }
+ ],
+ "titles": [],
+ "icons": [],
+ "sfx": [],
+ "flashes": []
+}

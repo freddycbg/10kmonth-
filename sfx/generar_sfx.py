@@ -16,6 +16,7 @@ Efectos:
   glitch                      corte digital entrecortado
   error                       zumbido de "incorrecto"
   braam                       golpe grave de tráiler, tenso
+  magia                       destellos de campanitas que suben hasta un brillo (transformación mágica)
 """
 import os
 
@@ -249,6 +250,24 @@ def braam():
     return stereo(reverb(x, 1.5, 0.35), 0.5)
 
 
+def magia(dur=2.6, peak=1.0):
+    """Polvo mágico: campanitas agudas al azar cada vez más seguidas hasta el brillo (en peak s) y una cola que se
+    apaga, sobre un aire que sube."""
+    t = t_axis(dur)
+    x = np.zeros(len(t))
+    for _ in range(140):
+        # Más campanitas cerca del brillo.
+        at = peak * (1 - rng.random() ** 0.5) if rng.random() < 0.65 else peak + rng.random() * (dur - peak - 0.3)
+        f = rng.choice([1568, 1760, 2093, 2349, 2637, 3136, 3520, 4186]) * (1 + rng.normal(0, 0.004))
+        tk = np.clip(t - at, 0, None)
+        on = (t >= at).astype(float)
+        amp = 0.25 + 0.75 * np.exp(-((at - peak) / 0.35) ** 2)
+        x += on * amp * 0.12 * np.sin(2 * np.pi * f * tk) * np.exp(-tk * 9)
+    air = bandpass_sweep(rng.standard_normal(len(t)), 600, 7000, q=1.6)
+    air *= np.interp(t, [0, peak, peak + 0.15, dur], [0, 1, 0.3, 0]) ** 1.5 * 0.35
+    return pan_sweep(reverb(x + air, 1.2, 0.3)[: len(t)], -0.4, 0.4)
+
+
 def main():
     print("Generando efectos en", OUT)
     save("whoosh_corto", whoosh(0.45, 400, 3500, -0.7, 0.7))
@@ -265,6 +284,7 @@ def main():
     save("glitch", glitch())
     save("error", error())
     save("braam", braam())
+    save("magia", magia())
 
 
 if __name__ == "__main__":
