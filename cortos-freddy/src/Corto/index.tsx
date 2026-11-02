@@ -11,6 +11,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
+import face from "../Edit/face.json";
 import data from "./corto.json";
 
 // Cortos de Freddy sacados de entrenamientos (estilo de la referencia "Así mejoras tu negocio"):
@@ -87,27 +88,28 @@ const Headline: React.FC = () => (
   </div>
 );
 
-// Plano del orador dentro de la franja: cada tramo con su encuadre (plano general o punch-in) y un empuje lento.
+// Plano del orador dentro de la franja: cada tramo con su zoom (plano abierto o punch-in) y un empuje lento; el
+// encuadre sigue la cara (src/Edit/face.json, scripts/facetrack.py) y la deja a un tercio de la altura de la franja.
+const FACE_Y = 0.36;
 const ARollBand: React.FC = () => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+  const { fps, width } = useVideoConfig();
   const t = frame / fps;
   const seg = D.segments.find((s) => t >= s.from && t < s.from + s.dur) ?? D.segments[D.segments.length - 1];
   const k = (t - seg.from) / Math.max(0.1, seg.dur);
   const scale = seg.scale * (1 + 0.04 * k);
+  const i = Math.min(frame, face.x.length - 1);
+  const fx = face.x[i] ?? seg.x;
+  const fy = face.y[i] ?? seg.y;
+  const vw = width * scale;
+  const vh = (width * 16 / 9) * scale;
+  const left = Math.min(0, Math.max(width - vw, width / 2 - fx * vw));
+  const top = Math.min(0, Math.max(D.band.h - vh, FACE_Y * D.band.h - fy * vh));
   return (
     <AbsoluteFill style={{ overflow: "hidden" }}>
       <OffthreadVideo
         src={staticFile(D.aroll)}
-        style={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: `${seg.x * 100}% ${seg.y * 100}%`,
-          transform: `scale(${scale})`,
-          transformOrigin: `${seg.x * 100}% ${seg.y * 100}%`,
-        }}
+        style={{ position: "absolute", left, top, width: vw, height: vh }}
       />
     </AbsoluteFill>
   );
@@ -202,7 +204,7 @@ const ANCHORS: Record<string, React.CSSProperties> = {
   tr: { right: 60, top: 70, alignItems: "flex-end", textAlign: "right" },
   bl: { left: 60, bottom: 80, alignItems: "flex-start", textAlign: "left" },
   br: { right: 60, bottom: 80, alignItems: "flex-end", textAlign: "right" },
-  c: { left: 0, right: 0, top: 0, bottom: 0, alignItems: "center", justifyContent: "center", textAlign: "center" },
+  c: { left: 0, right: 0, top: 50, alignItems: "center", textAlign: "center" },
   ct: { left: 0, right: 0, top: 60, alignItems: "center", textAlign: "center" },
 };
 

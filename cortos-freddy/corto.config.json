@@ -16,7 +16,7 @@
     {"from": "que tú vayas", "to": "qué rico"},
     {"from": "hay mucha gente que", "to": "cuando le llega"},
     {"from": "Mientras uno está", "to": "con la emoción"},
-    {"from": "Ya después que lo abres", "to": "el bendito paquete"}
+    {"from": "después que lo abres", "to": "el bendito paquete"}
   ],
   "fixes": {"cuerda": "cuerdo", "talas": "las"},
   "emphasis": ["latino", "consumismo", "emoción", "ánimo", "plata", "paquete"],
