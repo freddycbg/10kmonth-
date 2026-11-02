@@ -1,0 +1,146 @@
+{
+  "source": "input/material/shirley_base.MOV",
+  "transcript": "input/transcript.json",
+  "keep": "input/keep.json",
+  "music": "input/musica/cinematic_awards_and_still.mp3",
+  "music_drop": 15.5,
+  "music_drop_at": "Empezar un nuevo camino",
+  "intro_drop_at": "prueba",
+  "denoise": true,
+  "rebuild_aroll": false,
+  "sfx_gain": 0.7,
+  "sentence_ends": true,
+  "watermark_safe": {
+    "base": 1.25,
+    "y0_min": 0.2
+  },
+  "fixes": [],
+  "intro": {
+    "punch_frames": 5,
+    "punch_scale": 1.3,
+    "ramp_frames": 10,
+    "pre_drop_scale": 1.45,
+    "drop_scale": 2.1,
+    "settle_scale": 2.0
+  },
+  "takes": [
+    {
+      "until": 6.4,
+      "face": [
+        0.5,
+        0.37
+      ],
+      "close": 1.6
+    },
+    {
+      "until": 10.733,
+      "face": [
+        0.5,
+        0.37
+      ],
+      "close": 1.6
+    },
+    {
+      "until": 15.1,
+      "face": [
+        0.5,
+        0.37
+      ],
+      "close": 1.6
+    },
+    {
+      "until": 22.533,
+      "face": [
+        0.5,
+        0.37
+      ],
+      "close": 1.6
+    },
+    {
+      "until": 999,
+      "face": [
+        0.5,
+        0.37
+      ],
+      "close": 1.6
+    }
+  ],
+  "titles": [
+    {
+      "phrase": "la vida nos pone a prueba",
+      "top": "LA VIDA NOS PONE A",
+      "accent": [
+        "VIDA"
+      ],
+      "big": "prueba",
+      "y": 0.07,
+      "align": "center"
+    },
+    {
+      "phrase": "tu mayor testimonio",
+      "top": "TU MAYOR",
+      "accent": [],
+      "big": "testimonio",
+      "y": 0.12,
+      "align": "center",
+      "hold": 0.6
+    },
+    {
+      "phrase": "contáctame",
+      "top": "",
+      "accent": [],
+      "big": "contáctame",
+      "y": 0.08,
+      "align": "center",
+      "hold": 0.8
+    }
+  ],
+  "emphasis": [
+    "planes",
+    "nuevo",
+    "camino",
+    "paso",
+    "peligroso",
+    "parados",
+    "difícil"
+  ],
+  "icons": [
+    {
+      "phrase": "contáctame",
+      "icon": "ArrowDown",
+      "x": 0.5,
+      "y": 0.86,
+      "size": 150,
+      "anim": "bounce",
+      "hold": 1.6
+    }
+  ],
+  "impacts": [],
+  "bw": [],
+  "flash_at": [
+    "Empezar un nuevo camino",
+    "Si quieres saber"
+  ],
+  "sfx_extra": [],
+  "broll": [
+    {
+      "id": "de_nuevo",
+      "file": "input/material/Horizonte_1.mp4",
+      "trim": 1.0,
+      "phrase": "nos obliga a empezar de nuevo"
+    },
+    {
+      "id": "parados",
+      "file": "input/material/Reflexion.mp4",
+      "trim": 0.0,
+      "phrase": "qué tan peligroso era quedarnos ahí parados"
+    },
+    {
+      "id": "testimonio",
+      "file": "input/material/Convencion_AIL_Las_Vegas.mp4",
+      "trim": 1.5,
+      "leak": true,
+      "phrase": "mañana puede convertirse en tu mayor testimonio"
+    }
+  ]
+}
