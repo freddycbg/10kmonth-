@@ -287,3 +287,23 @@ clave grande en otro color, números y gráficos en pantalla, destellos, cierre 
 - **Cierre:** animación 10K Month (regla fija de arriba).
 - **No renderizar mientras corre `mattes.py`:** juntos se quedan sin memoria y el sistema mata el recorte (se
   reanuda desde las máscaras guardadas).
+
+## Cortos de Freddy desde entrenamientos (corto 1 "El placebo del latino"): estilo aprobado
+
+Cortos de 30-45 s sacados de entrenamientos largos sin guion, con el estilo de la referencia "Así mejoras tu
+negocio" (composición `Corto`, `scripts/build_corto.py`, `corto.config.json`). Aprobado en la v2.
+
+- **Flujo:** audio liviano (MP3 mono 48 kbps, partes de 10 min) → transcripción → lista de momentos → Freddy sube
+  el trozo de vídeo → frases elegidas por texto en `keep` (el gancho puede ir primero, fuera de orden).
+- **Formato:** fondo negro, vídeo en franja 4:3 (y 555, alto 810), titular fijo arriba entre comillas en Poppins
+  800 con la palabra de acento en **naranja #F26B2B**; el encuadre sigue la cara (`facetrack.py`) y la deja a un
+  tercio de la franja; alterna plano abierto y punch-in ×1.3.
+- **Texto animado:** grupos de hasta 4 palabras en Montserrat 800 blanca que cambian de esquina; palabras clave en
+  Playfair Black Italic naranja; palabra gigante (PLACEBO, AMAZON) en Poppins con tiradores de selección azules e
+  impacto. Glitch RGB cada 3 cortes.
+- **Cierre:** tarjeta negra con el titular y animación 10K Month (regla fija). Música suave (0.10) y voz limpia con
+  DeepFilterNet.
+- **Cortes finos:** revisar que no queden colas ni sílabas sueltas en las uniones; si Whisper adelanta una palabra,
+  cortar a mano en el silencio real con `start_at` / `end_at` (medido con el RMS cada 10 ms).
+- **Descarga de vídeos de Drive bloqueados por cuota:** `get_video_info` + versión de streaming 1080p desde
+  `*.c.drive.google.com` (dominio añadido en la red del entorno; script `drive_stream.sh`).
