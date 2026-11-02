@@ -1,0 +1,46 @@
+{
+  "source": "input/material/video_1.mp4",
+  "transcript": "input/video_1.json",
+  "denoise": true,
+  "accent": "#F26B2B",
+  "headline": ["\"El placebo", "del *latino*\""],
+  "keep": [
+    {"from": "lo que más mantiene cuerda un", "to": "es gastar plata"},
+    {"from": "La gente gasta en", "to": "demasiadas cosas"},
+    {"from": "Y uno dice", "to": "me van a decir que no"},
+    {"from": "Y la verdad es que no", "to": "gastando mucha plata"},
+    {"from": "Entiendan que esto", "to": "país de consumismo"},
+    {"from": "Ese es el efecto", "to": "en este país"},
+    {"from": "cuando se sienten", "to": "en la puerta"},
+    {"from": "Comprar cosas", "to": "el ánimo"},
+    {"from": "que tú vayas", "to": "qué rico"},
+    {"from": "hay mucha gente que", "to": "cuando le llega"},
+    {"from": "Mientras uno está", "to": "con la emoción"},
+    {"from": "Ya después que lo abres", "to": "el bendito paquete"}
+  ],
+  "fixes": {"cuerda": "cuerdo", "talas": "las"},
+  "emphasis": ["latino", "consumismo", "emoción", "ánimo", "plata", "paquete"],
+  "big": ["placebo", "Amazon"],
+  "anchors": ["tr", "tl", "ct"],
+  "glitch_every": 3,
+  "broll": [
+    {"phrase": "Y uno dice", "src": "media/billes_1.mp4", "dur": 1.8, "trim": 1.0},
+    {"phrase": "gastando mucha plata", "src": "media/gastar_dinero_1.mp4", "dur": 2.0, "trim": 0.5, "delay": -0.6},
+    {"phrase": "Entiendan que esto", "src": "media/estados_unidos_2.mp4", "dur": 1.6, "trim": 2.0},
+    {"phrase": "cuando se sienten", "src": "media/estres_1.mp4", "dur": 1.6, "trim": 1.0},
+    {"phrase": "en la puerta", "src": "media/paquete_amazon.mp4", "dur": 2.4, "trim": 0, "delay": -0.4},
+    {"phrase": "Comprar cosas", "src": "media/lujo_1.mp4", "dur": 1.6, "trim": 3.0},
+    {"phrase": "Mientras uno está", "src": "media/paquete_amazon.mp4", "dur": 1.8, "trim": 3.0, "delay": 0.8}
+  ],
+  "music": {"src": "media/musica.mp3", "volume": 0.1, "endVolume": 0.3, "trim": 0},
+  "end_card": {
+    "dur": 2.0,
+    "lines": [
+      {"text": "el", "big": false},
+      {"text": "placebo", "big": true},
+      {"text": "del", "big": false},
+      {"text": "latino", "big": true}
+    ]
+  },
+  "end_video": {"src": "media/final_10k.mp4", "dur": 4.0}
+}

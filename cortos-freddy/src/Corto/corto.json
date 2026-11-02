@@ -1,0 +1,1541 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 1219,
+ "aroll": "media/aroll.mp4",
+ "arollFrames": 1039,
+ "band": {
+  "y": 555,
+  "h": 810
+ },
+ "accent": "#F26B2B",
+ "headline": [
+  [
+   {
+    "text": "\"El placebo",
+    "accent": false
+   }
+  ],
+  [
+   {
+    "text": "del ",
+    "accent": false
+   },
+   {
+    "text": "latino",
+    "accent": true
+   },
+   {
+    "text": "\"",
+    "accent": false
+   }
+  ]
+ ],
+ "segments": [
+  {
+   "from": 0.0,
+   "dur": 2.8,
+   "scale": 1.0,
+   "x": 0.5,
+   "y": 0.3
+  },
+  {
+   "from": 2.8,
+   "dur": 1.5,
+   "scale": 1.3,
+   "x": 0.5,
+   "y": 0.28
+  },
+  {
+   "from": 4.3,
+   "dur": 3.82,
+   "scale": 1.0,
+   "x": 0.5,
+   "y": 0.3
+  },
+  {
+   "from": 8.12,
+   "dur": 2.74,
+   "scale": 1.3,
+   "x": 0.5,
+   "y": 0.28
+  },
+  {
+   "from": 10.86,
+   "dur": 1.7,
+   "scale": 1.0,
+   "x": 0.5,
+   "y": 0.3
+  },
+  {
+   "from": 12.56,
+   "dur": 2.96,
+   "scale": 1.3,
+   "x": 0.5,
+   "y": 0.28
+  },
+  {
+   "from": 15.52,
+   "dur": 4.34,
+   "scale": 1.0,
+   "x": 0.5,
+   "y": 0.3
+  },
+  {
+   "from": 19.86,
+   "dur": 2.16,
+   "scale": 1.3,
+   "x": 0.5,
+   "y": 0.28
+  },
+  {
+   "from": 22.02,
+   "dur": 2.379999999999957,
+   "scale": 1.0,
+   "x": 0.5,
+   "y": 0.3
+  },
+  {
+   "from": 24.4,
+   "dur": 4.9,
+   "scale": 1.3,
+   "x": 0.5,
+   "y": 0.28
+  },
+  {
+   "from": 29.3,
+   "dur": 3.0,
+   "scale": 1.0,
+   "x": 0.5,
+   "y": 0.3
+  },
+  {
+   "from": 32.3,
+   "dur": 2.32,
+   "scale": 1.3,
+   "x": 0.5,
+   "y": 0.28
+  }
+ ],
+ "groups": [
+  {
+   "start": 0.06,
+   "end": 0.8,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "lo",
+     "start": 0.06,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 0.14,
+     "kind": "n"
+    },
+    {
+     "text": "más",
+     "start": 0.26,
+     "kind": "n"
+    },
+    {
+     "text": "mantiene",
+     "start": 0.46,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 0.8,
+   "end": 1.64,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "cuerdo",
+     "start": 0.8,
+     "kind": "n"
+    },
+    {
+     "text": "un",
+     "start": 1.12,
+     "kind": "n"
+    },
+    {
+     "text": "latino",
+     "start": 1.22,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 1.64,
+   "end": 2.86,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "es",
+     "start": 1.64,
+     "kind": "n"
+    },
+    {
+     "text": "gastar",
+     "start": 1.92,
+     "kind": "n"
+    },
+    {
+     "text": "plata",
+     "start": 2.28,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 2.86,
+   "end": 3.44,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "La",
+     "start": 2.86,
+     "kind": "n"
+    },
+    {
+     "text": "gente",
+     "start": 2.94,
+     "kind": "n"
+    },
+    {
+     "text": "gasta",
+     "start": 3.1,
+     "kind": "n"
+    },
+    {
+     "text": "en",
+     "start": 3.36,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 3.44,
+   "end": 4.36,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "demasiadas",
+     "start": 3.44,
+     "kind": "n"
+    },
+    {
+     "text": "cosas.",
+     "start": 3.88,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 4.36,
+   "end": 4.78,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "Y",
+     "start": 4.36,
+     "kind": "n"
+    },
+    {
+     "text": "uno",
+     "start": 4.4,
+     "kind": "n"
+    },
+    {
+     "text": "dice",
+     "start": 4.52,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 4.78,
+   "end": 4.9,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "no",
+     "start": 4.78,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 4.9,
+   "end": 5.36,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "pero",
+     "start": 4.9,
+     "kind": "n"
+    },
+    {
+     "text": "es",
+     "start": 5.0,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 5.08,
+     "kind": "n"
+    },
+    {
+     "text": "si",
+     "start": 5.18,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 5.36,
+   "end": 6.2,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "gastan",
+     "start": 5.36,
+     "kind": "n"
+    },
+    {
+     "text": "demasiado",
+     "start": 5.64,
+     "kind": "n"
+    },
+    {
+     "text": "y",
+     "start": 5.98,
+     "kind": "n"
+    },
+    {
+     "text": "yo",
+     "start": 6.14,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 6.2,
+   "end": 6.76,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "vengo",
+     "start": 6.2,
+     "kind": "n"
+    },
+    {
+     "text": "y",
+     "start": 6.38,
+     "kind": "n"
+    },
+    {
+     "text": "les",
+     "start": 6.46,
+     "kind": "n"
+    },
+    {
+     "text": "meto",
+     "start": 6.54,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 6.76,
+   "end": 7.14,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "100",
+     "start": 6.76,
+     "kind": "n"
+    },
+    {
+     "text": "más",
+     "start": 6.92,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 7.14,
+   "end": 7.66,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "me",
+     "start": 7.14,
+     "kind": "n"
+    },
+    {
+     "text": "van",
+     "start": 7.24,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 7.36,
+     "kind": "n"
+    },
+    {
+     "text": "decir",
+     "start": 7.44,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 7.66,
+   "end": 8.18,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "que",
+     "start": 7.66,
+     "kind": "n"
+    },
+    {
+     "text": "no.",
+     "start": 7.84,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 8.18,
+   "end": 8.82,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "Y",
+     "start": 8.18,
+     "kind": "n"
+    },
+    {
+     "text": "la",
+     "start": 8.44,
+     "kind": "n"
+    },
+    {
+     "text": "verdad",
+     "start": 8.54,
+     "kind": "n"
+    },
+    {
+     "text": "es",
+     "start": 8.72,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 8.82,
+   "end": 9.06,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "que",
+     "start": 8.82,
+     "kind": "n"
+    },
+    {
+     "text": "no",
+     "start": 8.9,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 9.06,
+   "end": 9.66,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "porque",
+     "start": 9.06,
+     "kind": "n"
+    },
+    {
+     "text": "la",
+     "start": 9.2,
+     "kind": "n"
+    },
+    {
+     "text": "gente",
+     "start": 9.32,
+     "kind": "n"
+    },
+    {
+     "text": "está",
+     "start": 9.48,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 9.66,
+   "end": 10.92,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "gastando",
+     "start": 9.66,
+     "kind": "n"
+    },
+    {
+     "text": "mucha",
+     "start": 10.02,
+     "kind": "n"
+    },
+    {
+     "text": "plata",
+     "start": 10.36,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 10.92,
+   "end": 11.48,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "Entiendan",
+     "start": 10.92,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 11.24,
+     "kind": "n"
+    },
+    {
+     "text": "esto",
+     "start": 11.34,
+     "kind": "n"
+    },
+    {
+     "text": "es",
+     "start": 11.46,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 11.48,
+   "end": 12.62,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "un",
+     "start": 11.48,
+     "kind": "n"
+    },
+    {
+     "text": "país",
+     "start": 11.58,
+     "kind": "n"
+    },
+    {
+     "text": "de",
+     "start": 11.72,
+     "kind": "n"
+    },
+    {
+     "text": "consumismo",
+     "start": 11.84,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 12.62,
+   "end": 13.32,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "Ese",
+     "start": 12.62,
+     "kind": "n"
+    },
+    {
+     "text": "es",
+     "start": 12.76,
+     "kind": "n"
+    },
+    {
+     "text": "el",
+     "start": 12.86,
+     "kind": "n"
+    },
+    {
+     "text": "efecto",
+     "start": 12.96,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 13.32,
+   "end": 13.74,
+   "anchor": "c",
+   "words": [
+    {
+     "text": "PLACEBO",
+     "start": 13.32,
+     "kind": "big"
+    }
+   ]
+  },
+  {
+   "start": 13.74,
+   "end": 14.62,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "más",
+     "start": 13.74,
+     "kind": "n"
+    },
+    {
+     "text": "grande",
+     "start": 13.96,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 14.26,
+     "kind": "n"
+    },
+    {
+     "text": "tiene",
+     "start": 14.4,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 14.62,
+   "end": 15.16,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "uno",
+     "start": 14.62,
+     "kind": "n"
+    },
+    {
+     "text": "aquí",
+     "start": 14.74,
+     "kind": "n"
+    },
+    {
+     "text": "en",
+     "start": 14.9,
+     "kind": "n"
+    },
+    {
+     "text": "este",
+     "start": 15.0,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 15.16,
+   "end": 15.58,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "país.",
+     "start": 15.16,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 15.58,
+   "end": 16.5,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "cuando",
+     "start": 15.58,
+     "kind": "n"
+    },
+    {
+     "text": "se",
+     "start": 15.8,
+     "kind": "n"
+    },
+    {
+     "text": "sienten",
+     "start": 15.98,
+     "kind": "n"
+    },
+    {
+     "text": "así",
+     "start": 16.32,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 16.5,
+   "end": 17.64,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "como",
+     "start": 16.5,
+     "kind": "n"
+    },
+    {
+     "text": "medio",
+     "start": 16.68,
+     "kind": "n"
+    },
+    {
+     "text": "fastidiaditos",
+     "start": 16.9,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 17.64,
+   "end": 18.3,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "les",
+     "start": 17.64,
+     "kind": "n"
+    },
+    {
+     "text": "anima",
+     "start": 17.78,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 18.2,
+     "kind": "n"
+    },
+    {
+     "text": "ver",
+     "start": 18.28,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 18.3,
+   "end": 18.7,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "un",
+     "start": 18.3,
+     "kind": "n"
+    },
+    {
+     "text": "paquete",
+     "start": 18.4,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 18.7,
+   "end": 19.06,
+   "anchor": "c",
+   "words": [
+    {
+     "text": "de",
+     "start": 18.7,
+     "kind": "n"
+    },
+    {
+     "text": "AMAZON",
+     "start": 18.84,
+     "kind": "big"
+    }
+   ]
+  },
+  {
+   "start": 19.06,
+   "end": 19.92,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "en",
+     "start": 19.06,
+     "kind": "n"
+    },
+    {
+     "text": "la",
+     "start": 19.3,
+     "kind": "n"
+    },
+    {
+     "text": "puerta.",
+     "start": 19.38,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 19.92,
+   "end": 20.66,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "Comprar",
+     "start": 19.92,
+     "kind": "n"
+    },
+    {
+     "text": "cosas",
+     "start": 20.02,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 20.66,
+   "end": 21.4,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "les",
+     "start": 20.66,
+     "kind": "n"
+    },
+    {
+     "text": "sube",
+     "start": 20.92,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 21.16,
+     "kind": "n"
+    },
+    {
+     "text": "uno",
+     "start": 21.26,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 21.4,
+   "end": 22.08,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "el",
+     "start": 21.4,
+     "kind": "n"
+    },
+    {
+     "text": "ánimo",
+     "start": 21.62,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 22.08,
+   "end": 22.42,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "que",
+     "start": 22.08,
+     "kind": "n"
+    },
+    {
+     "text": "tú",
+     "start": 22.12,
+     "kind": "n"
+    },
+    {
+     "text": "vayas",
+     "start": 22.22,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 22.42,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 22.42,
+   "end": 23.0,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "hacer",
+     "start": 22.42,
+     "kind": "n"
+    },
+    {
+     "text": "las",
+     "start": 22.56,
+     "kind": "n"
+    },
+    {
+     "text": "uñas",
+     "start": 22.72,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 23.0,
+   "end": 23.32,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "tú",
+     "start": 23.0,
+     "kind": "n"
+    },
+    {
+     "text": "dices",
+     "start": 23.02,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 23.32,
+   "end": 23.6,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "ay",
+     "start": 23.32,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 23.6,
+   "end": 24.46,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "qué",
+     "start": 23.6,
+     "kind": "n"
+    },
+    {
+     "text": "rico.",
+     "start": 24.04,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 24.46,
+   "end": 25.44,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "hay",
+     "start": 24.46,
+     "kind": "n"
+    },
+    {
+     "text": "mucha",
+     "start": 24.58,
+     "kind": "n"
+    },
+    {
+     "text": "gente",
+     "start": 24.86,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 25.16,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 25.44,
+   "end": 26.16,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "más",
+     "start": 25.44,
+     "kind": "n"
+    },
+    {
+     "text": "es",
+     "start": 25.68,
+     "kind": "n"
+    },
+    {
+     "text": "el",
+     "start": 25.82,
+     "kind": "n"
+    },
+    {
+     "text": "efecto",
+     "start": 25.92,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 26.16,
+   "end": 26.48,
+   "anchor": "c",
+   "words": [
+    {
+     "text": "PLACEBO",
+     "start": 26.16,
+     "kind": "big"
+    }
+   ]
+  },
+  {
+   "start": 26.48,
+   "end": 27.22,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "que",
+     "start": 26.48,
+     "kind": "n"
+    },
+    {
+     "text": "le",
+     "start": 26.66,
+     "kind": "n"
+    },
+    {
+     "text": "da",
+     "start": 26.76,
+     "kind": "n"
+    },
+    {
+     "text": "esperar",
+     "start": 26.88,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 27.22,
+   "end": 27.84,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "que",
+     "start": 27.22,
+     "kind": "n"
+    },
+    {
+     "text": "le",
+     "start": 27.4,
+     "kind": "n"
+    },
+    {
+     "text": "llegue",
+     "start": 27.5,
+     "kind": "n"
+    },
+    {
+     "text": "algo",
+     "start": 27.68,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 27.84,
+   "end": 28.6,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "de",
+     "start": 27.84,
+     "kind": "n"
+    },
+    {
+     "text": "internet",
+     "start": 28.0,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 28.28,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 28.48,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 28.6,
+   "end": 29.36,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "cuando",
+     "start": 28.6,
+     "kind": "n"
+    },
+    {
+     "text": "le",
+     "start": 28.8,
+     "kind": "n"
+    },
+    {
+     "text": "llega.",
+     "start": 28.94,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 29.36,
+   "end": 30.34,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "Mientras",
+     "start": 29.36,
+     "kind": "n"
+    },
+    {
+     "text": "uno",
+     "start": 29.68,
+     "kind": "n"
+    },
+    {
+     "text": "está",
+     "start": 29.86,
+     "kind": "n"
+    },
+    {
+     "text": "esperando",
+     "start": 29.98,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 30.34,
+   "end": 30.78,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "que",
+     "start": 30.34,
+     "kind": "n"
+    },
+    {
+     "text": "uno",
+     "start": 30.48,
+     "kind": "n"
+    },
+    {
+     "text": "ya",
+     "start": 30.58,
+     "kind": "n"
+    },
+    {
+     "text": "ve",
+     "start": 30.68,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 30.78,
+   "end": 31.06,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "el",
+     "start": 30.78,
+     "kind": "n"
+    },
+    {
+     "text": "paquete",
+     "start": 30.86,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 31.06,
+   "end": 31.54,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "en",
+     "start": 31.06,
+     "kind": "n"
+    },
+    {
+     "text": "la",
+     "start": 31.16,
+     "kind": "n"
+    },
+    {
+     "text": "puerta",
+     "start": 31.26,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 31.54,
+   "end": 31.96,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "uno",
+     "start": 31.54,
+     "kind": "n"
+    },
+    {
+     "text": "anda",
+     "start": 31.62,
+     "kind": "n"
+    },
+    {
+     "text": "con",
+     "start": 31.76,
+     "kind": "n"
+    },
+    {
+     "text": "la",
+     "start": 31.88,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 31.96,
+   "end": 32.18,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "emoción",
+     "start": 31.96,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 32.18,
+   "end": 32.7,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "Ya",
+     "start": 32.18,
+     "kind": "n"
+    },
+    {
+     "text": "después",
+     "start": 32.28,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 32.46,
+     "kind": "n"
+    },
+    {
+     "text": "lo",
+     "start": 32.58,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 32.7,
+   "end": 32.96,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "abres",
+     "start": 32.7,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 32.96,
+   "end": 33.44,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "pasa",
+     "start": 32.96,
+     "kind": "n"
+    },
+    {
+     "text": "un",
+     "start": 33.06,
+     "kind": "n"
+    },
+    {
+     "text": "día",
+     "start": 33.2,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 33.44,
+   "end": 33.98,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "se",
+     "start": 33.44,
+     "kind": "n"
+    },
+    {
+     "text": "te",
+     "start": 33.56,
+     "kind": "n"
+    },
+    {
+     "text": "olvidó",
+     "start": 33.68,
+     "kind": "n"
+    },
+    {
+     "text": "el",
+     "start": 33.9,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 33.98,
+   "end": 34.62,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "bendito",
+     "start": 33.98,
+     "kind": "n"
+    },
+    {
+     "text": "paquete",
+     "start": 34.2,
+     "kind": "em"
+    }
+   ]
+  }
+ ],
+ "brolls": [
+  {
+   "src": "media/billes_1.mp4",
+   "from": 4.36,
+   "dur": 1.8,
+   "trim": 1.0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
+  },
+  {
+   "src": "media/gastar_dinero_1.mp4",
+   "from": 9.06,
+   "dur": 2.0,
+   "trim": 0.5,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
+  },
+  {
+   "src": "media/estados_unidos_2.mp4",
+   "from": 10.92,
+   "dur": 1.6,
+   "trim": 2.0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
+  },
+  {
+   "src": "media/estres_1.mp4",
+   "from": 15.58,
+   "dur": 1.6,
+   "trim": 1.0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
+  },
+  {
+   "src": "media/paquete_amazon.mp4",
+   "from": 18.66,
+   "dur": 2.4,
+   "trim": 0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
+  },
+  {
+   "src": "media/lujo_1.mp4",
+   "from": 19.92,
+   "dur": 1.6,
+   "trim": 3.0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
+  },
+  {
+   "src": "media/paquete_amazon.mp4",
+   "from": 30.16,
+   "dur": 1.8,
+   "trim": 3.0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
+  }
+ ],
+ "glitches": [
+  84,
+  326,
+  596,
+  879
+ ],
+ "sfx": [
+  {
+   "src": "sfx/glitch.wav",
+   "at": 2.75,
+   "volume": 0.3
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 4.26,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 8.96,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/glitch.wav",
+   "at": 10.81,
+   "volume": 0.3
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 10.82,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/impacto.wav",
+   "at": 13.32,
+   "volume": 0.45
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 15.48,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 18.56,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/impacto.wav",
+   "at": 18.84,
+   "volume": 0.45
+  },
+  {
+   "src": "sfx/glitch.wav",
+   "at": 19.81,
+   "volume": 0.3
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 19.82,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/impacto.wav",
+   "at": 26.16,
+   "volume": 0.45
+  },
+  {
+   "src": "sfx/glitch.wav",
+   "at": 29.25,
+   "volume": 0.3
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 30.06,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/whoosh_largo.wav",
+   "at": 34.47,
+   "volume": 0.4
+  }
+ ],
+ "music": {
+  "src": "media/musica.mp3",
+  "volume": 0.1,
+  "endVolume": 0.3,
+  "trim": 0
+ },
+ "endCard": {
+  "from": 34.62,
+  "dur": 2.0,
+  "lines": [
+   {
+    "text": "el",
+    "big": false
+   },
+   {
+    "text": "placebo",
+    "big": true
+   },
+   {
+    "text": "del",
+    "big": false
+   },
+   {
+    "text": "latino",
+    "big": true
+   }
+  ]
+ },
+ "endVideo": {
+  "src": "media/final_10k.mp4",
+  "from": 36.62,
+  "dur": 4.0
+ }
+}
