@@ -2,9 +2,9 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationInFrames": 1218,
+ "durationInFrames": 1222,
  "aroll": "media/aroll.mp4",
- "arollFrames": 1038,
+ "arollFrames": 1042,
  "band": {
   "y": 555,
   "h": 810
@@ -49,70 +49,70 @@
   },
   {
    "from": 4.3,
-   "dur": 3.82,
+   "dur": 3.833,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 8.12,
-   "dur": 2.78,
+   "from": 8.133,
+   "dur": 2.767,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
   },
   {
    "from": 10.9,
-   "dur": 1.46,
+   "dur": 1.633,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 12.36,
-   "dur": 3.23,
+   "from": 12.533,
+   "dur": 3.2,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
   },
   {
-   "from": 15.59,
-   "dur": 4.34,
+   "from": 15.733,
+   "dur": 4.333,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 19.93,
+   "from": 20.067,
    "dur": 1.9,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
   },
   {
-   "from": 21.83,
-   "dur": 2.64,
+   "from": 21.967,
+   "dur": 2.633,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 24.47,
-   "dur": 4.86,
+   "from": 24.6,
+   "dur": 4.867,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
   },
   {
-   "from": 29.33,
-   "dur": 2.94,
+   "from": 29.467,
+   "dur": 2.933,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 32.27,
-   "dur": 2.32,
+   "from": 32.4,
+   "dur": 2.333,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
@@ -395,7 +395,7 @@
   },
   {
    "start": 7.66,
-   "end": 8.18,
+   "end": 8.193,
    "anchor": "tr",
    "words": [
     {
@@ -411,94 +411,94 @@
    ]
   },
   {
-   "start": 8.18,
-   "end": 8.86,
+   "start": 8.193,
+   "end": 8.873,
    "anchor": "tl",
    "words": [
     {
      "text": "Y",
-     "start": 8.18,
+     "start": 8.193,
      "kind": "n"
     },
     {
      "text": "la",
-     "start": 8.5,
+     "start": 8.513,
      "kind": "n"
     },
     {
      "text": "verdad",
-     "start": 8.6,
+     "start": 8.613,
      "kind": "n"
     },
     {
      "text": "es",
-     "start": 8.76,
+     "start": 8.773,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 8.86,
-   "end": 9.12,
+   "start": 8.873,
+   "end": 9.133,
    "anchor": "ct",
    "words": [
     {
      "text": "que",
-     "start": 8.86,
+     "start": 8.873,
      "kind": "n"
     },
     {
      "text": "no",
-     "start": 8.94,
+     "start": 8.953,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 9.12,
-   "end": 9.7,
+   "start": 9.133,
+   "end": 9.713,
    "anchor": "tr",
    "words": [
     {
      "text": "porque",
-     "start": 9.12,
+     "start": 9.133,
      "kind": "n"
     },
     {
      "text": "la",
-     "start": 9.24,
+     "start": 9.253,
      "kind": "n"
     },
     {
      "text": "gente",
-     "start": 9.36,
+     "start": 9.373,
      "kind": "n"
     },
     {
      "text": "está",
-     "start": 9.52,
+     "start": 9.533,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 9.7,
+   "start": 9.713,
    "end": 10.96,
    "anchor": "tl",
    "words": [
     {
      "text": "gastando",
-     "start": 9.7,
+     "start": 9.713,
      "kind": "n"
     },
     {
      "text": "mucha",
-     "start": 10.06,
+     "start": 10.073,
      "kind": "n"
     },
     {
      "text": "plata",
-     "start": 10.4,
+     "start": 10.413,
      "kind": "em"
     }
    ]
@@ -532,7 +532,7 @@
   },
   {
    "start": 11.56,
-   "end": 12.53,
+   "end": 12.658,
    "anchor": "tr",
    "words": [
     {
@@ -558,781 +558,781 @@
    ]
   },
   {
-   "start": 12.53,
-   "end": 13.41,
+   "start": 12.658,
+   "end": 13.538,
    "anchor": "tl",
    "words": [
     {
      "text": "ese",
-     "start": 12.53,
+     "start": 12.658,
      "kind": "n"
     },
     {
      "text": "es",
-     "start": 12.71,
+     "start": 12.838,
      "kind": "n"
     },
     {
      "text": "el",
-     "start": 12.95,
+     "start": 13.078,
      "kind": "n"
     },
     {
      "text": "efecto",
-     "start": 13.07,
+     "start": 13.198,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 13.41,
-   "end": 13.85,
+   "start": 13.538,
+   "end": 13.978,
    "anchor": "c",
    "words": [
     {
      "text": "PLACEBO",
-     "start": 13.41,
+     "start": 13.538,
      "kind": "big"
     }
    ]
   },
   {
-   "start": 13.85,
-   "end": 14.71,
+   "start": 13.978,
+   "end": 14.838,
    "anchor": "tr",
    "words": [
     {
      "text": "más",
-     "start": 13.85,
+     "start": 13.978,
      "kind": "n"
     },
     {
      "text": "grande",
-     "start": 14.07,
+     "start": 14.198,
      "kind": "n"
     },
     {
      "text": "que",
-     "start": 14.35,
+     "start": 14.478,
      "kind": "n"
     },
     {
      "text": "tiene",
-     "start": 14.49,
+     "start": 14.618,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 14.71,
-   "end": 15.25,
+   "start": 14.838,
+   "end": 15.378,
    "anchor": "tl",
    "words": [
     {
      "text": "uno",
-     "start": 14.71,
+     "start": 14.838,
      "kind": "n"
     },
     {
      "text": "aquí",
-     "start": 14.85,
+     "start": 14.978,
      "kind": "n"
     },
     {
      "text": "en",
-     "start": 14.99,
+     "start": 15.118,
      "kind": "n"
     },
     {
      "text": "este",
-     "start": 15.09,
+     "start": 15.218,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 15.25,
-   "end": 15.65,
+   "start": 15.378,
+   "end": 15.793,
    "anchor": "ct",
    "words": [
     {
      "text": "país.",
-     "start": 15.25,
+     "start": 15.378,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 15.65,
-   "end": 16.57,
+   "start": 15.793,
+   "end": 16.713,
    "anchor": "tr",
    "words": [
     {
      "text": "cuando",
-     "start": 15.65,
+     "start": 15.793,
      "kind": "n"
     },
     {
      "text": "se",
-     "start": 15.89,
+     "start": 16.033,
      "kind": "n"
     },
     {
      "text": "sienten",
-     "start": 16.05,
+     "start": 16.193,
      "kind": "n"
     },
     {
      "text": "así",
-     "start": 16.39,
+     "start": 16.533,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 16.57,
-   "end": 17.75,
+   "start": 16.713,
+   "end": 17.893,
    "anchor": "tl",
    "words": [
     {
      "text": "como",
-     "start": 16.57,
+     "start": 16.713,
      "kind": "n"
     },
     {
      "text": "medio",
-     "start": 16.75,
+     "start": 16.893,
      "kind": "n"
     },
     {
      "text": "fastidiaditos",
-     "start": 16.97,
+     "start": 17.113,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 17.75,
-   "end": 18.37,
+   "start": 17.893,
+   "end": 18.513,
    "anchor": "ct",
    "words": [
     {
      "text": "les",
-     "start": 17.75,
+     "start": 17.893,
      "kind": "n"
     },
     {
      "text": "anima",
-     "start": 17.85,
+     "start": 17.993,
      "kind": "n"
     },
     {
      "text": "a",
-     "start": 18.27,
+     "start": 18.413,
      "kind": "n"
     },
     {
      "text": "ver",
-     "start": 18.35,
+     "start": 18.493,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 18.37,
-   "end": 18.79,
+   "start": 18.513,
+   "end": 18.933,
    "anchor": "tr",
    "words": [
     {
      "text": "un",
-     "start": 18.37,
+     "start": 18.513,
      "kind": "n"
     },
     {
      "text": "paquete",
-     "start": 18.47,
+     "start": 18.613,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 18.79,
-   "end": 19.13,
+   "start": 18.933,
+   "end": 19.273,
    "anchor": "c",
    "words": [
     {
      "text": "de",
-     "start": 18.79,
+     "start": 18.933,
      "kind": "n"
     },
     {
      "text": "AMAZON",
-     "start": 18.93,
+     "start": 19.073,
      "kind": "big"
     }
    ]
   },
   {
-   "start": 19.13,
-   "end": 19.99,
+   "start": 19.273,
+   "end": 20.127,
    "anchor": "ct",
    "words": [
     {
      "text": "en",
-     "start": 19.13,
+     "start": 19.273,
      "kind": "n"
     },
     {
      "text": "la",
-     "start": 19.37,
+     "start": 19.513,
      "kind": "n"
     },
     {
      "text": "puerta.",
-     "start": 19.49,
+     "start": 19.633,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 19.99,
-   "end": 20.99,
+   "start": 20.127,
+   "end": 21.127,
    "anchor": "tr",
    "words": [
     {
      "text": "Comprar",
-     "start": 19.99,
+     "start": 20.127,
      "kind": "n"
     },
     {
      "text": "cosas",
-     "start": 19.99,
+     "start": 20.127,
      "kind": "n"
     },
     {
      "text": "les",
-     "start": 20.39,
+     "start": 20.527,
      "kind": "n"
     },
     {
      "text": "sube",
-     "start": 20.75,
+     "start": 20.887,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 20.99,
-   "end": 21.89,
+   "start": 21.127,
+   "end": 22.027,
    "anchor": "tl",
    "words": [
     {
      "text": "a",
-     "start": 20.99,
+     "start": 21.127,
      "kind": "n"
     },
     {
      "text": "uno",
-     "start": 21.09,
+     "start": 21.227,
      "kind": "n"
     },
     {
      "text": "el",
-     "start": 21.23,
+     "start": 21.367,
      "kind": "n"
     },
     {
      "text": "ánimo",
-     "start": 21.43,
+     "start": 21.567,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 21.89,
-   "end": 22.33,
+   "start": 22.027,
+   "end": 22.467,
    "anchor": "ct",
    "words": [
     {
      "text": "que",
-     "start": 21.89,
+     "start": 22.027,
      "kind": "n"
     },
     {
      "text": "tú",
-     "start": 21.99,
+     "start": 22.127,
      "kind": "n"
     },
     {
      "text": "vayas",
-     "start": 22.09,
+     "start": 22.227,
      "kind": "n"
     },
     {
      "text": "a",
-     "start": 22.31,
+     "start": 22.447,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 22.33,
-   "end": 22.85,
+   "start": 22.467,
+   "end": 22.987,
    "anchor": "tr",
    "words": [
     {
      "text": "hacer",
-     "start": 22.33,
+     "start": 22.467,
      "kind": "n"
     },
     {
      "text": "las",
-     "start": 22.45,
+     "start": 22.587,
      "kind": "n"
     },
     {
      "text": "uñas",
-     "start": 22.55,
+     "start": 22.687,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 22.85,
-   "end": 23.19,
+   "start": 22.987,
+   "end": 23.327,
    "anchor": "tl",
    "words": [
     {
      "text": "tú",
-     "start": 22.85,
+     "start": 22.987,
      "kind": "n"
     },
     {
      "text": "dices",
-     "start": 22.89,
+     "start": 23.027,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 23.19,
-   "end": 23.45,
+   "start": 23.327,
+   "end": 23.587,
    "anchor": "ct",
    "words": [
     {
      "text": "ay",
-     "start": 23.19,
+     "start": 23.327,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 23.45,
-   "end": 24.53,
+   "start": 23.587,
+   "end": 24.66,
    "anchor": "tr",
    "words": [
     {
      "text": "qué",
-     "start": 23.45,
+     "start": 23.587,
      "kind": "n"
     },
     {
      "text": "rico.",
-     "start": 24.09,
+     "start": 24.227,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 24.53,
-   "end": 25.47,
+   "start": 24.66,
+   "end": 25.6,
    "anchor": "tl",
    "words": [
     {
      "text": "hay",
-     "start": 24.53,
+     "start": 24.66,
      "kind": "n"
     },
     {
      "text": "mucha",
-     "start": 24.63,
+     "start": 24.76,
      "kind": "n"
     },
     {
      "text": "gente",
-     "start": 24.89,
+     "start": 25.02,
      "kind": "n"
     },
     {
      "text": "que",
-     "start": 25.19,
+     "start": 25.32,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 25.47,
-   "end": 26.19,
+   "start": 25.6,
+   "end": 26.32,
    "anchor": "ct",
    "words": [
     {
      "text": "más",
-     "start": 25.47,
+     "start": 25.6,
      "kind": "n"
     },
     {
      "text": "es",
-     "start": 25.71,
+     "start": 25.84,
      "kind": "n"
     },
     {
      "text": "el",
-     "start": 25.85,
+     "start": 25.98,
      "kind": "n"
     },
     {
      "text": "efecto",
-     "start": 25.95,
+     "start": 26.08,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 26.19,
-   "end": 26.53,
+   "start": 26.32,
+   "end": 26.66,
    "anchor": "c",
    "words": [
     {
      "text": "PLACEBO",
-     "start": 26.19,
+     "start": 26.32,
      "kind": "big"
     }
    ]
   },
   {
-   "start": 26.53,
-   "end": 27.25,
+   "start": 26.66,
+   "end": 27.38,
    "anchor": "tl",
    "words": [
     {
      "text": "que",
-     "start": 26.53,
+     "start": 26.66,
      "kind": "n"
     },
     {
      "text": "le",
-     "start": 26.69,
+     "start": 26.82,
      "kind": "n"
     },
     {
      "text": "da",
-     "start": 26.81,
+     "start": 26.94,
      "kind": "n"
     },
     {
      "text": "esperar",
-     "start": 26.93,
+     "start": 27.06,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 27.25,
-   "end": 27.87,
+   "start": 27.38,
+   "end": 28.0,
    "anchor": "ct",
    "words": [
     {
      "text": "que",
-     "start": 27.25,
+     "start": 27.38,
      "kind": "n"
     },
     {
      "text": "le",
-     "start": 27.43,
+     "start": 27.56,
      "kind": "n"
     },
     {
      "text": "llegue",
-     "start": 27.53,
+     "start": 27.66,
      "kind": "n"
     },
     {
      "text": "algo",
-     "start": 27.73,
+     "start": 27.86,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 27.87,
-   "end": 28.63,
+   "start": 28.0,
+   "end": 28.76,
    "anchor": "tr",
    "words": [
     {
      "text": "de",
-     "start": 27.87,
+     "start": 28.0,
      "kind": "n"
     },
     {
      "text": "internet",
-     "start": 27.99,
+     "start": 28.12,
      "kind": "n"
     },
     {
      "text": "a",
-     "start": 28.31,
+     "start": 28.44,
      "kind": "n"
     },
     {
      "text": "que",
-     "start": 28.51,
+     "start": 28.64,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 28.63,
-   "end": 29.39,
+   "start": 28.76,
+   "end": 29.527,
    "anchor": "tl",
    "words": [
     {
      "text": "cuando",
-     "start": 28.63,
+     "start": 28.76,
      "kind": "n"
     },
     {
      "text": "le",
-     "start": 28.85,
+     "start": 28.98,
      "kind": "n"
     },
     {
      "text": "llega.",
-     "start": 28.97,
+     "start": 29.1,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 29.39,
-   "end": 30.31,
+   "start": 29.527,
+   "end": 30.447,
    "anchor": "ct",
    "words": [
     {
      "text": "Mientras",
-     "start": 29.39,
+     "start": 29.527,
      "kind": "n"
     },
     {
      "text": "uno",
-     "start": 29.67,
+     "start": 29.807,
      "kind": "n"
     },
     {
      "text": "está",
-     "start": 29.83,
+     "start": 29.967,
      "kind": "n"
     },
     {
      "text": "esperando",
-     "start": 29.97,
+     "start": 30.107,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 30.31,
-   "end": 30.75,
+   "start": 30.447,
+   "end": 30.887,
    "anchor": "tr",
    "words": [
     {
      "text": "que",
-     "start": 30.31,
+     "start": 30.447,
      "kind": "n"
     },
     {
      "text": "uno",
-     "start": 30.45,
+     "start": 30.587,
      "kind": "n"
     },
     {
      "text": "ya",
-     "start": 30.55,
+     "start": 30.687,
      "kind": "n"
     },
     {
      "text": "ve",
-     "start": 30.65,
+     "start": 30.787,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 30.75,
-   "end": 31.05,
+   "start": 30.887,
+   "end": 31.187,
    "anchor": "tl",
    "words": [
     {
      "text": "el",
-     "start": 30.75,
+     "start": 30.887,
      "kind": "n"
     },
     {
      "text": "paquete",
-     "start": 30.83,
+     "start": 30.967,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 31.05,
-   "end": 31.53,
+   "start": 31.187,
+   "end": 31.667,
    "anchor": "ct",
    "words": [
     {
      "text": "en",
-     "start": 31.05,
+     "start": 31.187,
      "kind": "n"
     },
     {
      "text": "la",
-     "start": 31.15,
+     "start": 31.287,
      "kind": "n"
     },
     {
      "text": "puerta",
-     "start": 31.21,
+     "start": 31.347,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 31.53,
-   "end": 31.93,
+   "start": 31.667,
+   "end": 32.067,
    "anchor": "tr",
    "words": [
     {
      "text": "uno",
-     "start": 31.53,
+     "start": 31.667,
      "kind": "n"
     },
     {
      "text": "anda",
-     "start": 31.59,
+     "start": 31.727,
      "kind": "n"
     },
     {
      "text": "con",
-     "start": 31.75,
+     "start": 31.887,
      "kind": "n"
     },
     {
      "text": "la",
-     "start": 31.85,
+     "start": 31.987,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 31.93,
-   "end": 32.25,
+   "start": 32.067,
+   "end": 32.38,
    "anchor": "tl",
    "words": [
     {
      "text": "emoción",
-     "start": 31.93,
+     "start": 32.067,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 32.25,
-   "end": 32.93,
+   "start": 32.38,
+   "end": 33.06,
    "anchor": "ct",
    "words": [
     {
      "text": "después",
-     "start": 32.25,
+     "start": 32.38,
      "kind": "n"
     },
     {
      "text": "que",
-     "start": 32.43,
+     "start": 32.56,
      "kind": "n"
     },
     {
      "text": "lo",
-     "start": 32.55,
+     "start": 32.68,
      "kind": "n"
     },
     {
      "text": "abres",
-     "start": 32.67,
+     "start": 32.8,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 32.93,
-   "end": 33.41,
+   "start": 33.06,
+   "end": 33.54,
    "anchor": "tr",
    "words": [
     {
      "text": "pasa",
-     "start": 32.93,
+     "start": 33.06,
      "kind": "n"
     },
     {
      "text": "un",
-     "start": 33.03,
+     "start": 33.16,
      "kind": "n"
     },
     {
      "text": "día",
-     "start": 33.17,
+     "start": 33.3,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 33.41,
-   "end": 33.95,
+   "start": 33.54,
+   "end": 34.08,
    "anchor": "tl",
    "words": [
     {
      "text": "se",
-     "start": 33.41,
+     "start": 33.54,
      "kind": "n"
     },
     {
      "text": "te",
-     "start": 33.53,
+     "start": 33.66,
      "kind": "n"
     },
     {
      "text": "olvidó",
-     "start": 33.65,
+     "start": 33.78,
      "kind": "n"
     },
     {
      "text": "el",
-     "start": 33.87,
+     "start": 34.0,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 33.95,
-   "end": 34.59,
+   "start": 34.08,
+   "end": 34.733,
    "anchor": "ct",
    "words": [
     {
      "text": "bendito",
-     "start": 33.95,
+     "start": 34.08,
      "kind": "n"
     },
     {
      "text": "paquete",
-     "start": 34.17,
+     "start": 34.3,
      "kind": "em"
     }
    ]
@@ -1350,7 +1350,7 @@
   },
   {
    "src": "media/gastar_dinero_1.mp4",
-   "from": 9.1,
+   "from": 9.113,
    "dur": 2.0,
    "trim": 0.5,
    "x": 0.5,
@@ -1368,7 +1368,7 @@
   },
   {
    "src": "media/estres_1.mp4",
-   "from": 15.65,
+   "from": 15.793,
    "dur": 1.6,
    "trim": 1.0,
    "x": 0.5,
@@ -1377,7 +1377,7 @@
   },
   {
    "src": "media/paquete_amazon.mp4",
-   "from": 18.73,
+   "from": 18.873,
    "dur": 2.4,
    "trim": 0,
    "x": 0.5,
@@ -1386,7 +1386,7 @@
   },
   {
    "src": "media/lujo_1.mp4",
-   "from": 19.99,
+   "from": 20.127,
    "dur": 1.6,
    "trim": 3.0,
    "x": 0.5,
@@ -1395,7 +1395,7 @@
   },
   {
    "src": "media/paquete_amazon.mp4",
-   "from": 30.19,
+   "from": 30.327,
    "dur": 1.8,
    "trim": 3.0,
    "x": 0.5,
@@ -1406,8 +1406,8 @@
  "glitches": [
   84,
   327,
-  598,
-  880
+  602,
+  884
  ],
  "sfx": [
   {
@@ -1422,7 +1422,7 @@
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 9.0,
+   "at": 9.013,
    "volume": 0.35
   },
   {
@@ -1437,52 +1437,52 @@
   },
   {
    "src": "sfx/impacto.wav",
-   "at": 13.41,
+   "at": 13.538,
    "volume": 0.45
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 15.55,
+   "at": 15.693,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 18.63,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/impacto.wav",
-   "at": 18.93,
-   "volume": 0.45
-  },
-  {
-   "src": "sfx/glitch.wav",
-   "at": 19.88,
-   "volume": 0.3
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 19.89,
+   "at": 18.773,
    "volume": 0.35
   },
   {
    "src": "sfx/impacto.wav",
-   "at": 26.19,
+   "at": 19.073,
    "volume": 0.45
   },
   {
    "src": "sfx/glitch.wav",
-   "at": 29.28,
+   "at": 20.017,
    "volume": 0.3
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 30.09,
+   "at": 20.027,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/impacto.wav",
+   "at": 26.32,
+   "volume": 0.45
+  },
+  {
+   "src": "sfx/glitch.wav",
+   "at": 29.417,
+   "volume": 0.3
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 30.227,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_largo.wav",
-   "at": 34.44,
+   "at": 34.583,
    "volume": 0.4
   }
  ],
@@ -1493,7 +1493,7 @@
   "trim": 0
  },
  "endCard": {
-  "from": 34.59,
+  "from": 34.733,
   "dur": 2.0,
   "lines": [
    {
@@ -1516,7 +1516,7 @@
  },
  "endVideo": {
   "src": "media/final_10k.mp4",
-  "from": 36.59,
+  "from": 36.733,
   "dur": 4.0
  }
 }

@@ -84,19 +84,27 @@ def main(cfg_path):
             e = cfg["keep"][k]["end_at"]  # corte manual: quita la cola de la frase (respiración, sílaba suelta)
         if ranges and ranges[-1][0] <= s < ranges[-1][1]:  # solo si van en orden (el gancho puede ir antes)
             s = ranges[-1][1]
-        ranges.append((s, e, a, b, k))
+        pad = cfg["keep"][k].get("pad_after", 0) if last else 0
+        ranges.append((s, e, a, b, k, pad))
 
     # 2. A-roll: tramos recortados al fotograma, convertidos a SDR si el original es HDR, voz limpia.
     info = probe(src, "stream=width,height,color_transfer")["streams"][0]
     hdr = info.get("color_transfer") in ("arib-std-b67", "smpte2084")
     tmp = tempfile.mkdtemp(dir=os.path.join(ROOT, "input"))
     parts = []
-    for i, (s, e, *_r) in enumerate(ranges):
+    for i, (s, e, _a, _b, _k, pad) in enumerate(ranges):
         p = os.path.join(tmp, f"p{i:03d}.mp4")
-        vf = (HDR if hdr else "") + f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS}"
+        # Cada tramo dura un número exacto de fotogramas, en vídeo y en audio: si no, al unirlos el audio se adelanta
+        # unos ms por tramo respecto a la imagen (0.4 s al final del corto 1). pad: pausa en silencio al final de la
+        # frase (se mantiene el último fotograma; suele ir bajo un b-roll).
+        dur = round((e - s + pad) * FPS) / FPS
+        vf = (HDR if hdr else "") + (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},"
+                                     f"tpad=stop_mode=clone:stop_duration={pad + 0.1:.3f}")
+        af = (f"aresample=48000,afade=t=in:d=0.012,afade=t=out:st={e - s - 0.015:.3f}:d=0.015,"
+              f"apad=whole_dur={dur:.4f},atrim=0:{dur:.4f}")
         run(["ffmpeg", "-v", "error", "-y", "-ss", f"{s:.3f}", "-to", f"{e:.3f}", "-i", src, "-vf", vf,
-             "-af", "aresample=48000", "-c:v", "libx264", "-crf", "12", "-preset", "fast", "-pix_fmt", "yuv420p",
-             "-c:a", "pcm_s16le", p.replace(".mp4", ".mov")])
+             "-af", af, "-frames:v", str(round(dur * FPS)), "-c:v", "libx264", "-crf", "12", "-preset", "fast",
+             "-pix_fmt", "yuv420p", "-c:a", "pcm_s16le", p.replace(".mp4", ".mov")])
         parts.append(p.replace(".mp4", ".mov"))
     lst = os.path.join(tmp, "l.txt")
     open(lst, "w").write("".join(f"file '{p}'\n" for p in parts))
@@ -115,11 +123,12 @@ def main(cfg_path):
 
     # 3. Tiempos de salida de cada palabra.
     out_t, acc, seg_out = {}, 0.0, []
-    for s, e, a, b, k in ranges:
+    for s, e, a, b, k, pad in ranges:
         for i in range(a, b + 1):
             out_t[i] = (acc + words[i]["start"] - s, acc + words[i]["end"] - s)
-        seg_out.append((acc, e - s, k))
-        acc += e - s
+        dur = round((e - s + pad) * FPS) / FPS
+        seg_out.append((acc, dur, k))
+        acc += dur
     total = acc
 
     # Encuadre por frase: alterna plano abierto y punch-in (sin repetir en dos frases seguidas).
