@@ -10,7 +10,7 @@
     {"from": "Y uno dice", "to": "me van a decir que no"},
     {"from": "Y la verdad es que no", "to": "gastando mucha plata"},
     {"from": "Entiendan que esto", "to": "país de consumismo"},
-    {"from": "Ese es el efecto", "to": "en este país"},
+    {"from": "es el efecto", "to": "en este país", "start_at": 27.25},
     {"from": "cuando se sienten", "to": "en la puerta"},
     {"from": "Comprar cosas", "to": "el ánimo"},
     {"from": "que tú vayas", "to": "qué rico"},

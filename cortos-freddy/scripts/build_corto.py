@@ -70,8 +70,14 @@ def main(cfg_path):
                 start = i + 1
         pieces.append((start, b, k))
     ranges = []
-    for a, b, k in pieces:
+    first_piece = set()
+    for n, (a, b, k) in enumerate(pieces):
+        if n == 0 or pieces[n - 1][2] != k:
+            first_piece.add(n)
+    for n, (a, b, k) in enumerate(pieces):
         s = max(0.0, words[a]["start"] - 0.06)
+        if n in first_piece and "start_at" in cfg["keep"][k]:
+            s = cfg["keep"][k]["start_at"]  # corte manual en el silencio real (Whisper a veces adelanta la palabra)
         e = words[b]["end"] + 0.12
         if ranges and ranges[-1][0] <= s < ranges[-1][1]:  # solo si van en orden (el gancho puede ir antes)
             s = ranges[-1][1]
