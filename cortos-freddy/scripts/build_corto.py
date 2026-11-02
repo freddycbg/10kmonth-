@@ -79,6 +79,9 @@ def main(cfg_path):
         if n in first_piece and "start_at" in cfg["keep"][k]:
             s = cfg["keep"][k]["start_at"]  # corte manual en el silencio real (Whisper a veces adelanta la palabra)
         e = words[b]["end"] + 0.12
+        last = n + 1 == len(pieces) or pieces[n + 1][2] != k
+        if last and "end_at" in cfg["keep"][k]:
+            e = cfg["keep"][k]["end_at"]  # corte manual: quita la cola de la frase (respiración, sílaba suelta)
         if ranges and ranges[-1][0] <= s < ranges[-1][1]:  # solo si van en orden (el gancho puede ir antes)
             s = ranges[-1][1]
         ranges.append((s, e, a, b, k))
