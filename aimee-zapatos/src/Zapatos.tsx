@@ -16,7 +16,7 @@ import {
 // Colaboración de Aimee (zapatos Wide Toe Box para los niños). Mismos textos, fuentes, tiempos y música que el vídeo
 // de referencia; las dos imágenes (pies en zapatos y siluetas de pies) van sin fondo.
 
-loadFont({ family: "Gluten", url: staticFile("fonts/gluten-latin-900-normal.woff2"), weight: "900" });
+loadFont({ family: "Archivo Black", url: staticFile("fonts/archivo-black-latin-400-normal.woff2"), weight: "400" });
 loadFont({ family: "Libre Caslon Text", url: staticFile("fonts/libre-caslon-text-latin-400-normal.woff2"), weight: "400" });
 loadFont({ family: "Young Serif", url: staticFile("fonts/young-serif-latin-400-normal.woff2"), weight: "400" });
 
@@ -39,12 +39,11 @@ const Title: React.FC = () => (
     <div
       style={{
         position: "absolute",
-        top: 266,
-        fontFamily: "Gluten",
-        fontWeight: 900,
-        fontSize: 56,
+        top: 262,
+        fontFamily: "Archivo Black",
+        fontSize: 58,
         color: TITLE_COLOR,
-        WebkitTextStroke: `5px ${TITLE_COLOR}`, // Gluten Black es algo más fina que la letra de la referencia
+        letterSpacing: 0.5,
         textShadow: SOFT_SHADOW,
         whiteSpace: "nowrap",
       }}
@@ -147,6 +146,79 @@ const List: React.FC = () => {
   );
 };
 
+// Información de los zapatos sobre las tomas del final (cada tarjeta dura su toma): título corto en la letra del
+// título y explicación en la letra de la lista, con sombra algo más fuerte para leerse sobre el suelo soleado.
+const INFO = [
+  { from: 8.57, to: 9.87, kicker: "PUNTERA ANCHA", lines: ["Los deditos se abren", "y no se aprietan"] },
+  { from: 9.87, to: 10.87, kicker: "MÁS EQUILIBRIO", lines: ["Pisan con todo el pie", "y caminan más firmes"] },
+  { from: 10.87, to: 11.83, kicker: "CIERRE DE VELCRO", lines: ["Se los ponen solitos"] },
+  { from: 11.83, to: 13.1, kicker: "SUELA FLEXIBLE", lines: ["Se dobla con cada paso,", "como un pie descalzo"] },
+  { from: 13.1, to: 13.87, kicker: "PIES SANOS", lines: ["que crecen libres"] },
+];
+const INFO_SHADOW = "0 2px 12px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.3)";
+
+const InfoCard: React.FC<{ kicker: string; lines: string[] }> = ({ kicker, lines }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const k = spring({ frame, fps, config: { damping: 13, stiffness: 210 } });
+  const box = spring({ frame, fps, config: { damping: 18, stiffness: 240 } });
+  return (
+    <AbsoluteFill style={{ alignItems: "center" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 228,
+          padding: "26px 54px 30px",
+          borderRadius: 44,
+          background: "rgba(45, 34, 28, 0.38)",
+          backdropFilter: "blur(10px)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 6,
+          transform: `scale(${0.9 + 0.1 * box})`,
+          opacity: Math.min(1, box * 1.8),
+        }}
+      >
+        <div
+          style={{
+            fontFamily: "Archivo Black",
+            fontSize: 58,
+            color: TITLE_COLOR,
+            letterSpacing: 1,
+            textShadow: INFO_SHADOW,
+            transform: `scale(${0.8 + 0.2 * k})`,
+            whiteSpace: "nowrap",
+          }}
+        >
+          {kicker}
+        </div>
+        {lines.map((l, i) => {
+          const f = frame - 5 - i * 4;
+          const o = interpolate(f, [0, 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+          return (
+            <div
+              key={i}
+              style={{
+                fontFamily: "Young Serif",
+                fontSize: 54,
+                lineHeight: 1.15,
+                color: LIST_COLOR,
+                textShadow: INFO_SHADOW,
+                opacity: o,
+                transform: `translateY(${(1 - o) * 12}px)`,
+                whiteSpace: "nowrap",
+              }}
+            >
+              {l}
+            </div>
+          );
+        })}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 export const Zapatos: React.FC = () => {
   const { durationInFrames } = useVideoConfig();
   return (
@@ -164,6 +236,11 @@ export const Zapatos: React.FC = () => {
       <Sequence from={s(LIST.from)} durationInFrames={s(LIST.to - LIST.from)}>
         <List />
       </Sequence>
+      {INFO.map((c, i) => (
+        <Sequence key={i} from={s(c.from)} durationInFrames={s(c.to) - s(c.from)}>
+          <InfoCard kicker={c.kicker} lines={c.lines} />
+        </Sequence>
+      ))}
       <Audio
         src={staticFile("media/musica.mp3")}
         volume={(f) => interpolate(f, [durationInFrames - 12, durationInFrames], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}
