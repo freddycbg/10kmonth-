@@ -75,12 +75,13 @@ const ARollFull: React.FC = () => {
 };
 
 // B-roll que entra con una cortinilla verde de derecha a izquierda.
-const BrollWipe: React.FC<{ b: Broll }> = ({ b }) => {
+const BrollWipe: React.FC<{ b: Broll; chained: boolean }> = ({ b, chained }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const n = b.dur * fps;
   const wipe = interpolate(frame, [0, 7], [100, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const out = interpolate(frame, [n - 5, n], [0, 100], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  // Si otro b-roll entra justo al terminar este, no sale con cortinilla (no se asoma el orador entre los dos).
+  const out = chained ? 0 : interpolate(frame, [n - 5, n], [0, 100], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const scale = 1.08 + 0.06 * (frame / n);
   return (
     <AbsoluteFill style={{ clipPath: `inset(0 ${out}% 0 ${wipe}%)` }}>
@@ -92,7 +93,7 @@ const BrollWipe: React.FC<{ b: Broll }> = ({ b }) => {
       />
       {/* borde verde que guía la cortinilla */}
       {frame < 8 && <div style={{ position: "absolute", top: 0, bottom: 0, left: `${wipe}%`, width: 26, marginLeft: -13, background: GREEN }} />}
-      {frame > n - 6 && <div style={{ position: "absolute", top: 0, bottom: 0, right: `${out}%`, width: 26, marginRight: -13, background: GREEN }} />}
+      {!chained && frame > n - 6 && <div style={{ position: "absolute", top: 0, bottom: 0, right: `${out}%`, width: 26, marginRight: -13, background: GREEN }} />}
     </AbsoluteFill>
   );
 };
@@ -269,8 +270,8 @@ export const CortoB: React.FC = () => {
         <ARollFull />
       </Sequence>
       {D.brolls.map((b, i) => (
-        <Sequence key={i} from={Math.round(b.from * fps)} durationInFrames={Math.round(b.dur * fps)}>
-          <BrollWipe b={b} />
+        <Sequence key={i} from={Math.round(b.from * fps)} durationInFrames={Math.round(b.dur * fps) + 1}>
+          <BrollWipe b={b} chained={D.brolls.some((o) => Math.abs(o.from - (b.from + b.dur)) < 0.1)} />
         </Sequence>
       ))}
       {flash > 0 && <AbsoluteFill style={{ background: "white", opacity: flash }} />}

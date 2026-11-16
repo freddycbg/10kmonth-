@@ -1323,10 +1323,28 @@
  ],
  "brolls": [
   {
-   "src": "media/reflexion.mp4",
-   "from": 4.9,
-   "dur": 1.6,
+   "src": "media/mentalidad.mp4",
+   "from": 4.0,
+   "dur": 1.9,
    "trim": 1.0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
+  },
+  {
+   "src": "media/reflexion.mp4",
+   "from": 5.9,
+   "dur": 1.7,
+   "trim": 1.0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
+  },
+  {
+   "src": "media/saludo_firme_1.mp4",
+   "from": 7.6,
+   "dur": 1.8,
+   "trim": 2.0,
    "x": 0.5,
    "y": 0.5,
    "zoom": 1.0
@@ -1368,15 +1386,6 @@
    "zoom": 1.0
   },
   {
-   "src": "media/saludo_firme_1.mp4",
-   "from": 13.62,
-   "dur": 1.8,
-   "trim": 2.0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0
-  },
-  {
    "src": "media/saludo_firme_2.mp4",
    "from": 44.113,
    "dur": 2.4,
@@ -1398,13 +1407,23 @@
    "volume": 0.45
   },
   {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 3.9,
+   "volume": 0.35
+  },
+  {
    "src": "sfx/glitch.wav",
    "at": 4.75,
    "volume": 0.3
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 4.8,
+   "at": 5.8,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 7.5,
    "volume": 0.35
   },
   {
@@ -1415,11 +1434,6 @@
   {
    "src": "sfx/whoosh_corto.wav",
    "at": 11.96,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 13.52,
    "volume": 0.35
   },
   {

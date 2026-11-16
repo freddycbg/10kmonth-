@@ -209,7 +209,7 @@ def main(cfg_path):
     # 5. B-roll, glitches y efectos de sonido.
     brolls, sfx = [], []
     for b in cfg.get("broll", []):
-        t = phrase_time(b["phrase"]) + b.get("delay", 0)
+        t = b["at"] if "at" in b else phrase_time(b["phrase"]) + b.get("delay", 0)  # "at": segundo exacto de salida
         brolls.append({"src": b["src"], "from": round(t, 3), "dur": b["dur"], "trim": b.get("trim", 0),
                        "x": b.get("x", 0.5), "y": b.get("y", 0.5), "zoom": b.get("zoom", 1.0)})
         sfx.append({"src": "sfx/whoosh_corto.wav", "at": round(t - 0.1, 3), "volume": 0.35})
