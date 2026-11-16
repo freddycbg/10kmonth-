@@ -15,8 +15,14 @@ Config.setDefaultPremountInSeconds(2);
 
 // El entorno en la nube no puede descargar Chrome Headless Shell desde remotion.media;
 // usa el headless shell de Playwright ya instalado en el contenedor.
-const PLAYWRIGHT_HEADLESS_SHELL =
-  "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell";
-if (fs.existsSync(PLAYWRIGHT_HEADLESS_SHELL)) {
-  Config.setBrowserExecutable(PLAYWRIGHT_HEADLESS_SHELL);
+// Busca la versión instalada (cambia al renovarse el contenedor).
+const PW = "/opt/pw-browsers";
+const shellDir = fs.existsSync(PW) ? fs.readdirSync(PW).find((d) => d.startsWith("chromium_headless_shell-")) : undefined;
+const shell = shellDir
+  ? ["chrome-linux/headless_shell", "chrome-headless-shell-linux64/chrome-headless-shell"]
+      .map((p) => `${PW}/${shellDir}/${p}`)
+      .find((p) => fs.existsSync(p))
+  : undefined;
+if (shell) {
+  Config.setBrowserExecutable(shell);
 }
