@@ -55,7 +55,7 @@ def find_phrase(words, phrase, after=0):
 def main(cfg_path):
     cfg = json.load(open(os.path.join(ROOT, cfg_path)))  # ruta relativa a la raíz o absoluta
     tr = json.load(open(os.path.join(ROOT, cfg["transcript"])))
-    words = [w for s in tr["segments"] for w in s["words"]]
+    words = [dict(w, seg=si) for si, s in enumerate(tr["segments"]) for w in s["words"]]
     src = os.path.join(ROOT, cfg["source"])
 
     # 1. Frases elegidas -> rangos de palabras, y dentro de cada frase se cortan los silencios > MIN_GAP.
@@ -145,7 +145,7 @@ def main(cfg_path):
     em = {norm(x) for x in cfg.get("emphasis", [])}
     big = {norm(x) for x in cfg.get("big", [])}
     anchors = cfg.get("anchors", ["tl", "tr", "ct"])
-    groups, cur = [], []
+    groups, cur, big_used = [], [], set()
     used = sorted(out_t, key=lambda i: out_t[i][0])
 
     def flush():
@@ -153,10 +153,19 @@ def main(cfg_path):
             groups.append(cur.copy())
             cur.clear()
 
+    wk = {i: k for _s, _e, a, b, k, _p in ranges for i in range(a, b + 1)}
+    first_of_item = {min(i for i in wk if wk[i] == k) for k in set(wk.values())}
+    prev_k = prev_seg = None
     for i in used:
         txt = words[i]["word"].strip()
+        # Cada frase elegida, y cada frase de Whisper, empieza su propio grupo de subtítulos.
+        if prev_k is not None and (wk[i] != prev_k or words[i]["seg"] != prev_seg):
+            flush()
+        prev_k, prev_seg = wk[i], words[i]["seg"]
         key = norm(txt)
-        kind = "big" if key in big else "em" if key in em else "n"
+        kind = "big" if key in big and key not in big_used else "em" if key in em or key in big else "n"
+        if kind == "big" and cfg.get("big_once"):  # la palabra gigante solo la primera vez; luego va como acento
+            big_used.add(key)
         if kind == "big":
             if len(cur) > 1:  # una palabra suelta antes de la gigante va encima de ella, en pequeño
                 flush()
@@ -178,6 +187,11 @@ def main(cfg_path):
             fx = cfg.get("fixes", {}).get(norm(txt))
             if fx:
                 txt = fx + (txt[-1] if txt[-1] in ".!?" else "")
+            prev_i = used[used.index(i) - 1] if used.index(i) else None
+            cont = prev_i is not None and words[prev_i]["seg"] == words[i]["seg"] and \
+                not re.search(r"[.?!]$", words[prev_i]["word"].strip())
+            if i in first_of_item and not cont and txt[:1].isalpha():
+                txt = txt[0].upper() + txt[1:]
             if kind != "n":
                 txt = re.sub(r"[.,!?¿¡]", "", txt)
             if kind == "big":
