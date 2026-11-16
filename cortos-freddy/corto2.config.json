@@ -9,15 +9,10 @@
     {"from": "mientras menos vergüenza", "to": "agarran más confianza", "start_at": 5.08, "end_at": 9.48},
     {"from": "La póliza realmente", "to": "no van a vender"},
     {"from": "Y si esa confianza", "to": "Y si esa confianza", "end_at": 57.52},
-    {"from": "No se desarrolla desde", "to": "Ahí ya no existe", "start_at": 58.9},
-    {"from": "yo me pongo con la gente", "to": "yo me pongo con la gente", "start_at": 87.17},
-    {"from": "Y vamos a revisar", "to": "mi licencia", "end_at": 90.86},
-    {"from": "Está activa", "to": "nuevamente se lo revisa", "start_at": 92.68},
-    {"from": "Porque eso", "to": "Porque eso", "end_at": 97.77},
-    {"from": "genera el primer impacto", "to": "genera el primer impacto", "start_at": 98.4}
+    {"from": "No se desarrolla desde", "to": "Ahí ya no existe", "start_at": 58.9}
   ],
   "fixes": {"fotos": "foto", "parece": "aparece"},
-  "emphasis": ["confianza", "vender", "comienzo", "existe", "licencia", "activa", "impacto", "venta"],
+  "emphasis": ["confianza", "vender", "comienzo", "existe", "venta"],
   "big": ["póliza", "confianza"],
   "big_once": true,
   "anchors": ["tr", "tl", "ct"],
@@ -30,7 +25,7 @@
     {"phrase": "no van a vender", "src": "media/frustracion_1.mp4", "dur": 1.6, "trim": 1.0, "delay": -0.4},
     {"phrase": "toda la presentación mal", "src": "media/aprendiendo_equipo.mp4", "dur": 1.8, "trim": 1.0, "delay": -0.5},
     {"phrase": "Ahí ya no existe", "src": "media/frustracion_2.mp4", "dur": 1.5, "trim": 0.5, "delay": -0.3},
-    {"phrase": "Porque eso", "src": "media/saludo_firme_2.mp4", "dur": 2.4, "trim": 2.0, "delay": -0.1}
+    {"phrase": "Y si esa confianza", "src": "media/saludo_firme_2.mp4", "dur": 2.4, "trim": 2.0, "delay": 0.2}
   ],
   "music": {"src": "media/musica.mp3", "volume": 0.1, "endVolume": 0.3, "trim": 0},
   "end_card": {
