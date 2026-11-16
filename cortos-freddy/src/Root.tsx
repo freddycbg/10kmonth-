@@ -1,5 +1,6 @@
 import { Composition } from "remotion";
 import { Corto } from "./Corto";
+import { CortoB } from "./CortoB";
 import corto from "./Corto/corto.json";
 import { Edit } from "./Edit";
 import edit from "./Edit/edit.json";
@@ -10,6 +11,14 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Corto"
         component={Corto}
+        durationInFrames={corto.durationInFrames}
+        fps={corto.fps}
+        width={corto.width}
+        height={corto.height}
+      />
+      <Composition
+        id="CortoB"
+        component={CortoB}
         durationInFrames={corto.durationInFrames}
         fps={corto.fps}
         width={corto.width}

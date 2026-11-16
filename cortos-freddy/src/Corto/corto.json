@@ -1366,6 +1366,24 @@
    "x": 0.5,
    "y": 0.5,
    "zoom": 1.0
+  },
+  {
+   "src": "media/saludo_firme_1.mp4",
+   "from": 13.62,
+   "dur": 1.8,
+   "trim": 2.0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
+  },
+  {
+   "src": "media/saludo_firme_2.mp4",
+   "from": 44.113,
+   "dur": 2.4,
+   "trim": 2.0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0
   }
  ],
  "glitches": [
@@ -1401,6 +1419,11 @@
   },
   {
    "src": "sfx/whoosh_corto.wav",
+   "at": 13.52,
+   "volume": 0.35
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
    "at": 18.68,
    "volume": 0.35
   },
@@ -1423,6 +1446,11 @@
    "src": "sfx/glitch.wav",
    "at": 39.65,
    "volume": 0.3
+  },
+  {
+   "src": "sfx/whoosh_corto.wav",
+   "at": 44.013,
+   "volume": 0.35
   },
   {
    "src": "sfx/whoosh_largo.wav",

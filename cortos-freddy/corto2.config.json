@@ -27,7 +27,9 @@
     {"phrase": "eso pasa en segundo plano", "src": "media/equipo_de_trabajo.mp4", "dur": 1.8, "trim": 1.0, "delay": -0.3},
     {"phrase": "no van a vender", "src": "media/frustracion_1.mp4", "dur": 1.6, "trim": 1.0, "delay": -0.4},
     {"phrase": "toda la presentación mal", "src": "media/aprendiendo_equipo.mp4", "dur": 1.8, "trim": 1.0, "delay": -0.5},
-    {"phrase": "Ahí ya no existe", "src": "media/frustracion_2.mp4", "dur": 1.5, "trim": 0.5, "delay": -0.3}
+    {"phrase": "Ahí ya no existe", "src": "media/frustracion_2.mp4", "dur": 1.5, "trim": 0.5, "delay": -0.3},
+    {"phrase": "Mientras ustedes no tengan", "src": "media/saludo_firme_1.mp4", "dur": 1.8, "trim": 2.0},
+    {"phrase": "Porque eso", "src": "media/saludo_firme_2.mp4", "dur": 2.4, "trim": 2.0, "delay": -0.1}
   ],
   "music": {"src": "media/musica.mp3", "volume": 0.1, "endVolume": 0.3, "trim": 0},
   "end_card": {
