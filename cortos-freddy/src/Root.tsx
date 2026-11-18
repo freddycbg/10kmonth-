@@ -4,6 +4,7 @@ import { CortoB } from "./CortoB";
 import { CortoC } from "./CortoC";
 import { CortoD } from "./CortoD";
 import { CortoE } from "./CortoE";
+import { CortoF } from "./CortoF";
 import corto from "./Corto/corto.json";
 import { Edit } from "./Edit";
 import edit from "./Edit/edit.json";
@@ -46,6 +47,14 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="CortoE"
         component={CortoE}
+        durationInFrames={corto.durationInFrames}
+        fps={corto.fps}
+        width={corto.width}
+        height={corto.height}
+      />
+      <Composition
+        id="CortoF"
+        component={CortoF}
         durationInFrames={corto.durationInFrames}
         fps={corto.fps}
         width={corto.width}

@@ -1,0 +1,173 @@
+{
+ "source": "input/material/video_andres.mp4",
+ "transcript": "input/andres.json",
+ "denoise": true,
+ "accent": "#FFB38A",
+ "headline": [
+  "De dónde",
+  "*vengo*"
+ ],
+ "keep": [
+  {
+   "from": "Muchos veis donde",
+   "to": "de donde vengo.",
+   "start_at": 0.9
+  },
+  {
+   "from": "Cuando llegué a",
+   "to": "fábrica de reciclaje."
+  },
+  {
+   "from": "Mi trabajo era",
+   "to": "banda transportadora."
+  },
+  {
+   "from": "Trabajaba 12 horas",
+   "to": "lunes a sábados."
+  },
+  {
+   "from": "Y aunque fue",
+   "to": "con gratitud."
+  },
+  {
+   "from": "Porque cada experiencia",
+   "to": "enseñado algo."
+  },
+  {
+   "from": "Hoy mi vida",
+   "to": "mi futuro."
+  },
+  {
+   "from": "Porque no importa",
+   "to": "para avanzar.",
+   "end_at": 29.6
+  }
+ ],
+ "fixes": {
+  "veis": "ven",
+  "traje": "trabajé en"
+ },
+ "emphasis": [
+  "vengo",
+  "reciclaje",
+  "papel",
+  "basura",
+  "12",
+  "esfuerzo",
+  "gratitud",
+  "diferente",
+  "futuro",
+  "avanzar"
+ ],
+ "big": [],
+ "glitch_every": 3,
+ "marks": {
+  "habla": "Muchos veis donde",
+  "vengo": "pero pocos conocen",
+  "llegue": "Cuando llegué a",
+  "doce": "Trabajaba 12 horas",
+  "gratitud": "hoy miro atrás",
+  "hoy": "Hoy mi vida",
+  "trabajando": "sigo trabajando",
+  "aprendiendo": "sigo aprendiendo",
+  "construyendo": "y sigo construyendo",
+  "final": "Porque no importa"
+ },
+ "broll": [
+  {
+   "phrase": "pero pocos conocen",
+   "src": "media/a_v_0724_wa0129.mp4",
+   "dur": 1.7,
+   "trim": 1.0,
+   "look": "past"
+  },
+  {
+   "phrase": "Cuando llegué a",
+   "src": "media/estados_unidos_1.mp4",
+   "dur": 1.2,
+   "trim": 1.0
+  },
+  {
+   "phrase": "una fábrica de reciclaje",
+   "src": "media/a_v_0729_wa0090.mp4",
+   "dur": 1.6,
+   "trim": 4.0,
+   "look": "past"
+  },
+  {
+   "phrase": "Mi trabajo era",
+   "src": "media/a_v_0724_231406.mp4",
+   "dur": 1.8,
+   "trim": 12.0,
+   "look": "past"
+  },
+  {
+   "phrase": "que pasaba por",
+   "src": "media/a_v_0724_wa0118.mp4",
+   "dur": 1.5,
+   "trim": 1.5,
+   "look": "past"
+  },
+  {
+   "phrase": "Trabajaba 12 horas",
+   "src": "media/a_v_0724_wa0119.mp4",
+   "dur": 1.2,
+   "trim": 0.0,
+   "look": "past"
+  },
+  {
+   "phrase": "de lunes a",
+   "src": "media/a_v_0724_wa0127.mp4",
+   "dur": 1.3,
+   "trim": 2.0,
+   "look": "past"
+  },
+  {
+   "phrase": "una etapa de",
+   "src": "media/a_v_0724_wa0121.mp4",
+   "dur": 1.4,
+   "trim": 3.0,
+   "look": "past"
+  },
+  {
+   "phrase": "sigo aprendiendo",
+   "src": "media/aprendiendo_equipo.mp4",
+   "dur": 0.8,
+   "trim": 1.0
+  },
+  {
+   "phrase": "Hoy mi vida",
+   "src": "media/a_f_170134.jpg",
+   "dur": 0.94,
+   "image": true
+  },
+  {
+   "phrase": "sigo trabajando",
+   "src": "media/a_f_wa0191.jpg",
+   "dur": 0.76,
+   "image": true
+  },
+  {
+   "phrase": "y sigo construyendo",
+   "src": "media/a_f_0817_wa0031.jpg",
+   "dur": 0.86,
+   "image": true
+  },
+  {
+   "phrase": "mi futuro.",
+   "src": "media/a_f_170146.jpg",
+   "dur": 0.95,
+   "image": true
+  }
+ ],
+ "music": {
+  "src": "media/musica.mp3",
+  "volume": 0.12,
+  "endVolume": 0.35,
+  "trim": 0
+ },
+ "end_card": {
+  "dur": 0,
+  "lines": []
+ }
+}

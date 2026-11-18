@@ -255,7 +255,8 @@ def main(cfg_path):
     for b in cfg.get("broll", []):
         t = b["at"] if "at" in b else phrase_time(b["phrase"]) + b.get("delay", 0)  # "at": segundo exacto de salida
         brolls.append({"src": b["src"], "from": round(t, 3), "dur": b["dur"], "trim": b.get("trim", 0),
-                       "x": b.get("x", 0.5), "y": b.get("y", 0.5), "zoom": b.get("zoom", 1.0)})
+                       "x": b.get("x", 0.5), "y": b.get("y", 0.5), "zoom": b.get("zoom", 1.0),
+                       "look": b.get("look", "clean"), "image": b.get("image", False)})
         sfx.append({"src": "sfx/whoosh_corto.wav", "at": round(t - 0.1, 3), "volume": 0.35})
     glitches = []
     cut_times = [s["from"] for s in segments[1:]]
