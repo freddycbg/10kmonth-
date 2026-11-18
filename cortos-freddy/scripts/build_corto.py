@@ -245,6 +245,9 @@ def main(cfg_path):
         "music": cfg["music"],
         "endCard": {"from": round(card_from, 3), "dur": card["dur"], "lines": card["lines"]},
         "endVideo": end_video,
+        # Marcas con nombre (segundo de salida de una frase) para efectos del diseño: cambio de color, rótulos...
+        "marks": {k: round(phrase_time(v), 3) for k, v in cfg.get("marks", {}).items()},
+        "lastWordEnd": round(max(e for _s, e in out_t.values()), 3),
     }
     json.dump(out, open(os.path.join(ROOT, "src/Corto/corto.json"), "w"), ensure_ascii=False, indent=1)
     print(f"corto: {total:.1f} s de voz + {card['dur']} s tarjeta, {len(ranges)} tramos, {len(gout)} grupos")
