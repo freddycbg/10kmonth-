@@ -52,6 +52,47 @@ def find_phrase(words, phrase, after=0):
     raise SystemExit(f"no encuentro la frase: {phrase!r}")
 
 
+def keep_original_audio(raw_wav, clean_wav, src_ranges, ranges, tmp):
+    """En los tramos [desde, hasta] (segundos del original) vuelve al audio sin limpiar, con fundidos de 15 ms.
+
+    DeepFilterNet borra los sonidos que no son voz (golpes en la pizarra de David); aquí se recuperan.
+    """
+    import wave
+
+    import numpy as np
+
+    def read(p):
+        with wave.open(p) as w:
+            return np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32), w.getframerate()
+
+    raw, sr = read(raw_wav)
+    out, _ = read(clean_wav)
+    out = out.copy()
+    n = min(len(raw), len(out))
+    acc = 0.0
+    for s, e, _a, _b, _k, pad in ranges:
+        dur = round((e - s + pad) * FPS) / FPS
+        for a, b in src_ranges:
+            lo, hi = max(a, s), min(b, e)
+            if hi <= lo:
+                continue
+            i0, i1 = int((acc + lo - s) * sr), min(n, int((acc + hi - s) * sr))
+            ramp = np.ones(i1 - i0, np.float32)
+            f = min(int(0.015 * sr), (i1 - i0) // 2)
+            if f:
+                ramp[:f] = np.linspace(0, 1, f)
+                ramp[-f:] = np.linspace(1, 0, f)
+            out[i0:i1] = out[i0:i1] * (1 - ramp) + raw[i0:i1] * ramp
+        acc += dur
+    dst = os.path.join(tmp, "voz_mezcla.wav")
+    with wave.open(dst, "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(sr)
+        w.writeframes(np.clip(out, -32768, 32767).astype(np.int16).tobytes())
+    return dst
+
+
 def main(cfg_path):
     cfg = json.load(open(os.path.join(ROOT, cfg_path)))  # ruta relativa a la raíz o absoluta
     tr = json.load(open(os.path.join(ROOT, cfg["transcript"])))
@@ -114,7 +155,10 @@ def main(cfg_path):
     run(["ffmpeg", "-v", "error", "-y", "-i", joined, "-ac", "1", "-ar", "48000", wav])
     if cfg.get("denoise", True):
         run(["/opt/deepfilter/deep-filter", "-D", "-o", os.path.join(tmp, "dn"), wav])
-        wav = os.path.join(tmp, "dn", "voz.wav")
+        clean = os.path.join(tmp, "dn", "voz.wav")
+        if cfg.get("keep_original"):
+            clean = keep_original_audio(wav, clean, cfg["keep_original"], ranges, tmp)
+        wav = clean
     os.makedirs(os.path.join(ROOT, "public/media"), exist_ok=True)
     aroll = os.path.join(ROOT, "public/media/aroll.mp4")
     run(["ffmpeg", "-v", "error", "-y", "-i", joined, "-i", wav, "-map", "0:v", "-map", "1:a", "-c:v", "copy",
