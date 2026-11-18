@@ -45,7 +45,8 @@
  ],
  "fixes": {
   "veis": "ven",
-  "traje": "trabajé en"
+  "traje": "trabajé en",
+  "donde": "dónde"
  },
  "emphasis": [
   "vengo",
@@ -75,86 +76,80 @@
  },
  "broll": [
   {
-   "phrase": "pero pocos conocen",
-   "src": "media/a_v_0724_wa0129.mp4",
-   "dur": 1.7,
-   "trim": 1.0,
-   "look": "past"
-  },
-  {
-   "phrase": "Cuando llegué a",
+   "at": 5.227,
    "src": "media/estados_unidos_1.mp4",
-   "dur": 1.2,
-   "trim": 1.0
+   "dur": 1.25,
+   "trim": 1.0,
+   "look": "clean"
   },
   {
-   "phrase": "una fábrica de reciclaje",
+   "at": 6.477,
    "src": "media/a_v_0729_wa0090.mp4",
-   "dur": 1.6,
+   "dur": 1.4,
    "trim": 4.0,
    "look": "past"
   },
   {
-   "phrase": "Mi trabajo era",
+   "at": 7.877,
    "src": "media/a_v_0724_231406.mp4",
-   "dur": 1.8,
+   "dur": 1.9,
    "trim": 12.0,
    "look": "past"
   },
   {
-   "phrase": "que pasaba por",
+   "at": 9.777,
    "src": "media/a_v_0724_wa0118.mp4",
    "dur": 1.5,
    "trim": 1.5,
    "look": "past"
   },
   {
-   "phrase": "Trabajaba 12 horas",
+   "at": 11.277,
    "src": "media/a_v_0724_wa0119.mp4",
    "dur": 1.2,
    "trim": 0.0,
    "look": "past"
   },
   {
-   "phrase": "de lunes a",
+   "at": 12.477,
    "src": "media/a_v_0724_wa0127.mp4",
-   "dur": 1.3,
+   "dur": 1.4,
    "trim": 2.0,
    "look": "past"
   },
   {
-   "phrase": "una etapa de",
+   "at": 13.877,
    "src": "media/a_v_0724_wa0121.mp4",
-   "dur": 1.4,
+   "dur": 1.7,
    "trim": 3.0,
    "look": "past"
   },
   {
-   "phrase": "sigo aprendiendo",
-   "src": "media/aprendiendo_equipo.mp4",
-   "dur": 0.8,
-   "trim": 1.0
-  },
-  {
-   "phrase": "Hoy mi vida",
+   "at": 18.727,
    "src": "media/a_f_170134.jpg",
    "dur": 0.94,
    "image": true
   },
   {
-   "phrase": "sigo trabajando",
-   "src": "media/a_f_wa0191.jpg",
+   "at": 19.667,
+   "src": "media/saludo_firme_2.mp4",
    "dur": 0.76,
-   "image": true
+   "trim": 2.2
   },
   {
-   "phrase": "y sigo construyendo",
+   "at": 20.427,
+   "src": "media/aprendiendo_equipo.mp4",
+   "dur": 0.56,
+   "trim": 1.0
+  },
+  {
+   "at": 20.987,
    "src": "media/a_f_0817_wa0031.jpg",
    "dur": 0.86,
    "image": true
   },
   {
-   "phrase": "mi futuro.",
+   "at": 21.847,
    "src": "media/a_f_170146.jpg",
    "dur": 0.95,
    "image": true

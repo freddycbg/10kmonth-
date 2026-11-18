@@ -99,7 +99,7 @@
      "kind": "n"
     },
     {
-     "text": "donde",
+     "text": "dónde",
      "start": 3.16,
      "kind": "n"
     },
@@ -143,7 +143,7 @@
    "anchor": "ct",
    "words": [
     {
-     "text": "donde",
+     "text": "dónde",
      "start": 4.62,
      "kind": "n"
     },
@@ -664,7 +664,7 @@
      "kind": "n"
     },
     {
-     "text": "donde",
+     "text": "dónde",
      "start": 22.993,
      "kind": "n"
     }
@@ -734,20 +734,9 @@
  ],
  "brolls": [
   {
-   "src": "media/a_v_0724_wa0129.mp4",
-   "from": 3.74,
-   "dur": 1.7,
-   "trim": 1.0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "past",
-   "image": false
-  },
-  {
    "src": "media/estados_unidos_1.mp4",
    "from": 5.227,
-   "dur": 1.2,
+   "dur": 1.25,
    "trim": 1.0,
    "x": 0.5,
    "y": 0.5,
@@ -757,8 +746,8 @@
   },
   {
    "src": "media/a_v_0729_wa0090.mp4",
-   "from": 6.467,
-   "dur": 1.6,
+   "from": 6.477,
+   "dur": 1.4,
    "trim": 4.0,
    "x": 0.5,
    "y": 0.5,
@@ -768,8 +757,8 @@
   },
   {
    "src": "media/a_v_0724_231406.mp4",
-   "from": 7.693,
-   "dur": 1.8,
+   "from": 7.877,
+   "dur": 1.9,
    "trim": 12.0,
    "x": 0.5,
    "y": 0.5,
@@ -779,7 +768,7 @@
   },
   {
    "src": "media/a_v_0724_wa0118.mp4",
-   "from": 9.453,
+   "from": 9.777,
    "dur": 1.5,
    "trim": 1.5,
    "x": 0.5,
@@ -790,7 +779,7 @@
   },
   {
    "src": "media/a_v_0724_wa0119.mp4",
-   "from": 11.16,
+   "from": 11.277,
    "dur": 1.2,
    "trim": 0.0,
    "x": 0.5,
@@ -801,8 +790,8 @@
   },
   {
    "src": "media/a_v_0724_wa0127.mp4",
-   "from": 12.44,
-   "dur": 1.3,
+   "from": 12.477,
+   "dur": 1.4,
    "trim": 2.0,
    "x": 0.5,
    "y": 0.5,
@@ -812,24 +801,13 @@
   },
   {
    "src": "media/a_v_0724_wa0121.mp4",
-   "from": 14.327,
-   "dur": 1.4,
+   "from": 13.877,
+   "dur": 1.7,
    "trim": 3.0,
    "x": 0.5,
    "y": 0.5,
    "zoom": 1.0,
    "look": "past",
-   "image": false
-  },
-  {
-   "src": "media/aprendiendo_equipo.mp4",
-   "from": 20.427,
-   "dur": 0.8,
-   "trim": 1.0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "clean",
    "image": false
   },
   {
@@ -844,15 +822,26 @@
    "image": true
   },
   {
-   "src": "media/a_f_wa0191.jpg",
+   "src": "media/saludo_firme_2.mp4",
    "from": 19.667,
    "dur": 0.76,
-   "trim": 0,
+   "trim": 2.2,
    "x": 0.5,
    "y": 0.5,
    "zoom": 1.0,
    "look": "clean",
-   "image": true
+   "image": false
+  },
+  {
+   "src": "media/aprendiendo_equipo.mp4",
+   "from": 20.427,
+   "dur": 0.56,
+   "trim": 1.0,
+   "x": 0.5,
+   "y": 0.5,
+   "zoom": 1.0,
+   "look": "clean",
+   "image": false
   },
   {
    "src": "media/a_f_0817_wa0031.jpg",
@@ -884,11 +873,6 @@
  ],
  "sfx": [
   {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 3.64,
-   "volume": 0.35
-  },
-  {
    "src": "sfx/glitch.wav",
    "at": 5.117,
    "volume": 0.3
@@ -900,27 +884,27 @@
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 6.367,
+   "at": 6.377,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 7.593,
+   "at": 7.777,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 9.353,
+   "at": 9.677,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 11.06,
+   "at": 11.177,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 12.34,
+   "at": 12.377,
    "volume": 0.35
   },
   {
@@ -930,7 +914,7 @@
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 14.227,
+   "at": 13.777,
    "volume": 0.35
   },
   {

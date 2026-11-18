@@ -53,14 +53,27 @@ const PEACH = "#FFB38A";
 const M = D.marks;
 const sec = (a: number, b: number, fps: number) => ({ from: Math.round(a * fps), durationInFrames: Math.max(1, Math.round((b - a) * fps)) });
 
+const easeInOut = (x: number) => (x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2);
+
+// Zooms dinámicos: al empezar la cámara se acerca a su cara mientras se sienta y dice el gancho (y da un golpe más
+// cerrado en "de dónde vengo"); después, cada tramo entra con un golpe de zoom y alterna plano medio y cerrado.
 const ARoll: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
   const idx = Math.max(0, D.segments.findIndex((s) => t >= s.from && t < s.from + s.dur));
   const seg = D.segments[idx];
-  const k = (t - seg.from) / Math.max(0.1, seg.dur);
-  const scale = (idx % 2 ? 1.14 : 1.02) * (1 + 0.03 * k);
+  const local = t - seg.from;
+  const k = local / Math.max(0.1, seg.dur);
+  let scale: number;
+  if (t < M.llegue) {
+    const approach = easeInOut(Math.min(1, t / (M.habla + 0.6)));
+    const hit = interpolate(t, [M.vengo, M.vengo + 0.12], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+    scale = 1 + 0.38 * approach + 0.17 * hit + 0.03 * Math.max(0, t - M.habla);
+  } else {
+    const punch = interpolate(local, [0, 0.2], [1.1, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+    scale = (idx % 2 ? 1.22 : 1.04) * punch * (1 + 0.04 * k);
+  }
   const i = Math.min(frame, face.x.length - 1);
   return (
     <OffthreadVideo
@@ -276,7 +289,7 @@ export const CortoF: React.FC = () => {
     <AbsoluteFill style={{ background: "black" }}>
       <ARoll />
       {D.brolls.map((b, i) => (
-        <Sequence key={i} from={Math.round(b.from * fps)} durationInFrames={Math.round(b.dur * fps)}>
+        <Sequence key={i} from={Math.round(b.from * fps)} durationInFrames={Math.round(b.dur * fps) + 1}>
           <BrollClip b={b} />
         </Sequence>
       ))}
@@ -288,10 +301,10 @@ export const CortoF: React.FC = () => {
         }}
       />
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.5) 100%)" }} />
-      <Sequence {...sec(0.4, M.habla + 1.0, fps)}>
+      <Sequence {...sec(0.4, M.habla - 0.05, fps)}>
         <NameTag />
       </Sequence>
-      <Sequence {...sec(M.vengo, M.llegue, fps)}>
+      <Sequence {...sec(M.llegue, M.llegue + 2.6, fps)}>
         <Chapter label="ANTES" title="de dónde vengo" />
       </Sequence>
       <Sequence {...sec(M.llegue, M.llegue + 1.2, fps)}>
