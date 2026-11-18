@@ -1,0 +1,38 @@
+{
+ "source": "input/material/video_david.mp4",
+ "transcript": "input/david.json",
+ "denoise": true,
+ "accent": "#E63A2E",
+ "headline": ["¿Dinero en el", "*lugar equivocado*?"],
+ "keep": [
+  {"from": "Y si estás buscando", "to": "lugar equivocado"},
+  {"from": "Yo también trabajé", "to": "un almacén"},
+  {"from": "Buscando maneras de", "to": "ganar más dinero"},
+  {"from": "Pero lo que aprendí", "to": "me di cuenta"},
+  {"from": "Es que en un", "to": "llega rápido"},
+  {"from": "Puede ser el mejor", "to": "en tu trabajo"},
+  {"from": "Matarte haciendo horas", "to": "horas extras"},
+  {"from": "Y el cheque va", "to": "casi el mismo"},
+  {"from": "Los puestos de arriba", "to": "son pocos"},
+  {"from": "Y la fila para", "to": "muy larga"},
+  {"from": "El problema no es", "to": "el esfuerzo"},
+  {"from": "Es el lugar en", "to": "lo estás poniendo"},
+  {"from": "Porque si estás esperando", "to": "metas que tienes"},
+  {"from": "Viajar y darte", "to": "que deseas"},
+  {"from": "Pero sigues en", "to": "un empleo"},
+  {"from": "Déjame decirte lo", "to": "a entender"},
+  {"from": "Un empleo no te", "to": "a ese punto"},
+  {"from": "Sino lo que muchas", "to": "es retrasarte", "end_at": 44.6}
+ ],
+ "emphasis": ["equivocado", "almacén", "techo", "extras", "cheque", "pocos", "larga", "esfuerzo", "lugar", "metas", "retrasarte"],
+ "big": [],
+ "glitch_every": 2,
+ "marks": {"techo": "Es que en un", "extras": "Matarte haciendo horas", "cheque": "Y el cheque va", "fila": "Los puestos de arriba", "esfuerzo": "El problema no es", "lugar": "Es el lugar en", "final": "Un empleo no te"},
+ "broll": [
+  {"phrase": "Yo también trabajé", "src": "media/trabajar_1.mp4", "dur": 2.4, "trim": 0.5, "delay": 0.3},
+  {"phrase": "Matarte haciendo horas", "src": "media/trabajar_2.mp4", "dur": 1.7, "trim": 1.0},
+  {"phrase": "Viajar y darte", "src": "media/lujo_1.mp4", "dur": 1.8, "trim": 2.0}
+ ],
+ "music": {"src": "media/musica.mp3", "volume": 0.12, "endVolume": 0.35, "trim": 0},
+ "end_card": {"dur": 0, "lines": []}
+}
