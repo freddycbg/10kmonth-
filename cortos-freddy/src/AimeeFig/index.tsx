@@ -62,7 +62,7 @@ const Step: React.FC<{ n: number; text: string }> = ({ n, text }) => {
     <div
       style={{
         position: "absolute",
-        top: 56,
+        top: 215,
         left: "50%",
         transform: `translateX(-50%) translateY(${(1 - s) * -30}px)`,
         opacity: Math.min(1, s * 1.5) * out,
@@ -90,7 +90,7 @@ const Note: React.FC<{ kicker: string; text: string }> = ({ kicker, text }) => {
   return (
     <>
     <TopShade opacity={s * out} />
-    <div style={{ position: "absolute", top: 200, left: 0, right: 0, textAlign: "center", opacity: s * out }}>
+    <div style={{ position: "absolute", top: 220, left: 0, right: 0, textAlign: "center", opacity: s * out }}>
       <div style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 28, letterSpacing: 8, color: CREAM, textShadow: SOFT }}>{kicker}</div>
       <div style={{ fontFamily: "Great Vibes", fontSize: 128, lineHeight: 1, color: CREAM, textShadow: `0 4px 22px ${RED}99, ${SOFT}`, transform: `scale(${0.85 + 0.15 * s})` }}>{text}</div>
     </div>
@@ -102,7 +102,7 @@ const Note: React.FC<{ kicker: string; text: string }> = ({ kicker, text }) => {
 const Offer: React.FC = () => {
   const { s } = useInOut(12, 1);
   return (
-    <div style={{ position: "absolute", top: 230, left: 90, right: 90, display: "flex", justifyContent: "center", opacity: Math.min(1, s * 1.5) }}>
+    <div style={{ position: "absolute", top: 220, left: 90, right: 90, display: "flex", justifyContent: "center", opacity: Math.min(1, s * 1.5) }}>
       <div
         style={{
           padding: "26px 50px 30px",
@@ -117,11 +117,42 @@ const Offer: React.FC = () => {
         <div style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 30, letterSpacing: 10, color: RED }}>BLACK FRIDAY</div>
         <div style={{ fontFamily: "Great Vibes", fontSize: 104, lineHeight: 1.05, color: "#3A2219" }}>crea la tuya</div>
         <div style={{ fontFamily: "Cormorant Garamond", fontStyle: "italic", fontWeight: 700, fontSize: 52, color: "#3A2219" }}>
-          con mi código de descuento
+          usa mi código
         </div>
+        <div style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 72, letterSpacing: 6, color: RED, lineHeight: 1.1 }}>AIMEE20</div>
         <div style={{ marginTop: 14, display: "inline-block", padding: "10px 28px", borderRadius: 999, background: RED, color: "white", fontFamily: "Inter", fontWeight: 700, fontSize: 34, letterSpacing: 2 }}>
           Link en mi bio ✨
         </div>
+      </div>
+    </div>
+  );
+};
+
+// Código de descuento fijo arriba (desde el paso 1 hasta el final, 16 s).
+const CodeBadge: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const s = spring({ frame, fps, config: { damping: 13, stiffness: 180 } });
+  const pulse = 1 + 0.025 * Math.sin(frame / 9);
+  return (
+    <div style={{ position: "absolute", top: 46, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 18,
+          padding: "12px 34px 14px",
+          borderRadius: 999,
+          background: RED,
+          boxShadow: "0 12px 30px rgba(0,0,0,0.3)",
+          border: `4px solid ${CREAM}`,
+          transform: `translateY(${(1 - s) * -80}px) scale(${pulse})`,
+          opacity: Math.min(1, s * 1.5),
+          whiteSpace: "nowrap",
+        }}
+      >
+        <span style={{ fontFamily: "Cormorant Garamond", fontStyle: "italic", fontWeight: 700, fontSize: 48, color: CREAM }}>código</span>
+        <span style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 62, letterSpacing: 4, color: "white" }}>AIMEE20</span>
       </div>
     </div>
   );
@@ -190,6 +221,9 @@ export const AimeeFig: React.FC = () => (
     </Sequence>
     <Sequence from={s(13.4)} durationInFrames={s(5.2)}>
       <Offer />
+    </Sequence>
+    <Sequence from={s(2.6)}>
+      <CodeBadge />
     </Sequence>
     <Subs />
   </AbsoluteFill>
