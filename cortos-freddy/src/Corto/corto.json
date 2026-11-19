@@ -800,17 +800,6 @@
    "image": false
   },
   {
-   "src": "media/a_v_0724_wa0121.mp4",
-   "from": 13.877,
-   "dur": 1.7,
-   "trim": 3.0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "past",
-   "image": false
-  },
-  {
    "src": "media/a_f_170134.jpg",
    "from": 18.727,
    "dur": 0.94,
@@ -911,11 +900,6 @@
    "src": "sfx/glitch.wav",
    "at": 13.517,
    "volume": 0.3
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 13.777,
-   "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",

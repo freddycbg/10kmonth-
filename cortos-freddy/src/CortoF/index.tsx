@@ -55,7 +55,7 @@ const sec = (a: number, b: number, fps: number) => ({ from: Math.round(a * fps),
 
 const easeInOut = (x: number) => (x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2);
 
-// Zooms dinámicos: al empezar la cámara se acerca a su cara mientras se sienta y dice el gancho (y da un golpe más
+// Zooms dinámicos: mientras se sienta, el encuadre original; al empezar a hablar, zoom a su cara (y un golpe más
 // cerrado en "de dónde vengo"); después, cada tramo entra con un golpe de zoom y alterna plano medio y cerrado.
 const ARoll: React.FC = () => {
   const frame = useCurrentFrame();
@@ -67,9 +67,10 @@ const ARoll: React.FC = () => {
   const k = local / Math.max(0.1, seg.dur);
   let scale: number;
   if (t < M.llegue) {
-    const approach = easeInOut(Math.min(1, t / (M.habla + 0.6)));
+    // encuadre original mientras se sienta; zoom a la cara cuando empieza a hablar
+    const approach = easeInOut(interpolate(t, [M.habla - 0.05, M.habla + 0.45], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }));
     const hit = interpolate(t, [M.vengo, M.vengo + 0.12], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-    scale = 1 + 0.38 * approach + 0.17 * hit + 0.03 * Math.max(0, t - M.habla);
+    scale = 1 + 0.32 * approach + 0.1 * hit + 0.03 * Math.max(0, t - M.habla);
   } else {
     const punch = interpolate(local, [0, 0.2], [1.1, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
     scale = (idx % 2 ? 1.22 : 1.04) * punch * (1 + 0.04 * k);
