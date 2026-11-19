@@ -93,6 +93,40 @@ def keep_original_audio(raw_wav, clean_wav, src_ranges, ranges, tmp):
     return dst
 
 
+def apply_speed(out, aroll, speed):
+    """Ralentiza (speed < 1) o acelera el A-roll: imagen con setpts y voz con atempo (sin cambiar el tono), y
+    escala todos los tiempos del corto (subtítulos, b-roll, marcas, efectos) por 1/speed."""
+    tmp = aroll.replace(".mp4", "_vel.mp4")
+    run(["ffmpeg", "-v", "error", "-y", "-i", aroll, "-vf", f"setpts=PTS/{speed},fps={FPS}", "-af", f"atempo={speed}",
+         "-c:v", "libx264", "-crf", "12", "-preset", "fast", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k", tmp])
+    os.replace(tmp, aroll)
+    k = 1.0 / speed
+
+    def sc(x):
+        return round(x * k, 3)
+
+    for s in out["segments"]:
+        s["from"], s["dur"] = sc(s["from"]), sc(s["dur"])
+    for g in out["groups"]:
+        g["start"], g["end"] = sc(g["start"]), sc(g["end"])
+        for w in g["words"]:
+            w["start"] = sc(w["start"])
+    for b in out["brolls"]:
+        b["from"], b["dur"] = sc(b["from"]), sc(b["dur"])
+    for x in out["sfx"]:
+        x["at"] = sc(x["at"])
+    out["glitches"] = [round(g * k) for g in out["glitches"]]
+    out["marks"] = {n: sc(v) for n, v in out["marks"].items()}
+    out["lastWordEnd"] = sc(out["lastWordEnd"])
+    out["endCard"]["from"] = sc(out["endCard"]["from"])
+    extra = out["durationInFrames"] - out["arollFrames"]
+    out["arollFrames"] = int(round(out["arollFrames"] * k))
+    out["durationInFrames"] = out["arollFrames"] + extra
+    if out.get("endVideo"):
+        out["endVideo"]["from"] = sc(out["endVideo"]["from"])
+    return out
+
+
 def main(cfg_path):
     cfg = json.load(open(os.path.join(ROOT, cfg_path)))  # ruta relativa a la raíz o absoluta
     tr = json.load(open(os.path.join(ROOT, cfg["transcript"])))
@@ -294,6 +328,9 @@ def main(cfg_path):
         "marks": {k: round(phrase_time(v), 3) for k, v in cfg.get("marks", {}).items()},
         "lastWordEnd": round(max(e for _s, e in out_t.values()), 3),
     }
+    speed = cfg.get("speed", 1.0)
+    if speed != 1.0:
+        out = apply_speed(out, aroll, speed)
     json.dump(out, open(os.path.join(ROOT, "src/Corto/corto.json"), "w"), ensure_ascii=False, indent=1)
     print(f"corto: {total:.1f} s de voz + {card['dur']} s tarjeta, {len(ranges)} tramos, {len(gout)} grupos")
     for g in gout:

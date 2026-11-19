@@ -157,5 +157,6 @@
  "end_card": {
   "dur": 0,
   "lines": []
- }
+ },
+ "speed": 0.9
 }

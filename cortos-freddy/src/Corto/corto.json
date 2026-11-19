@@ -2,9 +2,9 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationInFrames": 800,
+ "durationInFrames": 889,
  "aroll": "media/aroll.mp4",
- "arollFrames": 800,
+ "arollFrames": 889,
  "band": {
   "y": 555,
   "h": 810
@@ -27,56 +27,56 @@
  "segments": [
   {
    "from": 0.0,
-   "dur": 5.167,
+   "dur": 5.741,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 5.167,
-   "dur": 2.467,
+   "from": 5.741,
+   "dur": 2.741,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
   },
   {
-   "from": 7.633,
-   "dur": 3.467,
+   "from": 8.481,
+   "dur": 3.852,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 11.1,
-   "dur": 2.467,
+   "from": 12.333,
+   "dur": 2.741,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
   },
   {
-   "from": 13.567,
-   "dur": 3.167,
+   "from": 15.074,
+   "dur": 3.519,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 16.733,
-   "dur": 1.933,
+   "from": 18.592,
+   "dur": 2.148,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
   },
   {
-   "from": 18.667,
-   "dur": 3.667,
+   "from": 20.741,
+   "dur": 4.074,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 22.333,
-   "dur": 4.333,
+   "from": 24.814,
+   "dur": 4.814,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
@@ -84,649 +84,649 @@
  ],
  "groups": [
   {
-   "start": 2.56,
-   "end": 3.74,
+   "start": 2.844,
+   "end": 4.156,
    "anchor": "tl",
    "words": [
     {
      "text": "Muchos",
-     "start": 2.56,
+     "start": 2.844,
      "kind": "n"
     },
     {
      "text": "ven",
-     "start": 3.0,
+     "start": 3.333,
      "kind": "n"
     },
     {
      "text": "dónde",
-     "start": 3.16,
+     "start": 3.511,
      "kind": "n"
     },
     {
      "text": "estoy",
-     "start": 3.28,
+     "start": 3.644,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 3.74,
-   "end": 4.62,
+   "start": 4.156,
+   "end": 5.133,
    "anchor": "tr",
    "words": [
     {
      "text": "pero",
-     "start": 3.74,
+     "start": 4.156,
      "kind": "n"
     },
     {
      "text": "pocos",
-     "start": 3.82,
+     "start": 4.244,
      "kind": "n"
     },
     {
      "text": "conocen",
-     "start": 4.14,
+     "start": 4.6,
      "kind": "n"
     },
     {
      "text": "de",
-     "start": 4.52,
+     "start": 5.022,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 4.62,
-   "end": 5.227,
+   "start": 5.133,
+   "end": 5.808,
    "anchor": "ct",
    "words": [
     {
      "text": "dónde",
-     "start": 4.62,
+     "start": 5.133,
      "kind": "n"
     },
     {
      "text": "vengo",
-     "start": 4.76,
+     "start": 5.289,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 5.227,
-   "end": 5.947,
+   "start": 5.808,
+   "end": 6.608,
    "anchor": "tl",
    "words": [
     {
      "text": "Cuando",
-     "start": 5.227,
+     "start": 5.808,
      "kind": "n"
     },
     {
      "text": "llegué",
-     "start": 5.567,
+     "start": 6.186,
      "kind": "n"
     },
     {
      "text": "a",
-     "start": 5.747,
+     "start": 6.386,
      "kind": "n"
     },
     {
      "text": "Estados",
-     "start": 5.827,
+     "start": 6.474,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 5.947,
-   "end": 6.967,
+   "start": 6.608,
+   "end": 7.741,
    "anchor": "tr",
    "words": [
     {
      "text": "Unidos",
-     "start": 5.947,
+     "start": 6.608,
      "kind": "n"
     },
     {
      "text": "trabajé en",
-     "start": 6.207,
+     "start": 6.897,
      "kind": "n"
     },
     {
      "text": "una",
-     "start": 6.467,
+     "start": 7.186,
      "kind": "n"
     },
     {
      "text": "fábrica",
-     "start": 6.607,
+     "start": 7.341,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 6.967,
-   "end": 7.693,
+   "start": 7.741,
+   "end": 8.548,
    "anchor": "ct",
    "words": [
     {
      "text": "de",
-     "start": 6.967,
+     "start": 7.741,
      "kind": "n"
     },
     {
      "text": "reciclaje",
-     "start": 7.067,
+     "start": 7.852,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 7.693,
-   "end": 8.693,
+   "start": 8.548,
+   "end": 9.659,
    "anchor": "tl",
    "words": [
     {
      "text": "Mi",
-     "start": 7.693,
+     "start": 8.548,
      "kind": "n"
     },
     {
      "text": "trabajo",
-     "start": 7.813,
+     "start": 8.681,
      "kind": "n"
     },
     {
      "text": "era",
-     "start": 8.133,
+     "start": 9.037,
      "kind": "n"
     },
     {
      "text": "separar",
-     "start": 8.313,
+     "start": 9.237,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 8.693,
-   "end": 8.993,
+   "start": 9.659,
+   "end": 9.992,
    "anchor": "tr",
    "words": [
     {
      "text": "el",
-     "start": 8.693,
+     "start": 9.659,
      "kind": "n"
     },
     {
      "text": "papel",
-     "start": 8.793,
+     "start": 9.77,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 8.993,
-   "end": 9.453,
+   "start": 9.992,
+   "end": 10.503,
    "anchor": "ct",
    "words": [
     {
      "text": "de",
-     "start": 8.993,
+     "start": 9.992,
      "kind": "n"
     },
     {
      "text": "la",
-     "start": 9.113,
+     "start": 10.126,
      "kind": "n"
     },
     {
      "text": "basura",
-     "start": 9.213,
+     "start": 10.237,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 9.453,
-   "end": 10.153,
+   "start": 10.503,
+   "end": 11.281,
    "anchor": "tl",
    "words": [
     {
      "text": "que",
-     "start": 9.453,
+     "start": 10.503,
      "kind": "n"
     },
     {
      "text": "pasaba",
-     "start": 9.613,
+     "start": 10.681,
      "kind": "n"
     },
     {
      "text": "por",
-     "start": 9.893,
+     "start": 10.992,
      "kind": "n"
     },
     {
      "text": "una",
-     "start": 10.033,
+     "start": 11.148,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 10.153,
-   "end": 11.16,
+   "start": 11.281,
+   "end": 12.4,
    "anchor": "tr",
    "words": [
     {
      "text": "banda",
-     "start": 10.153,
+     "start": 11.281,
      "kind": "n"
     },
     {
      "text": "transportadora.",
-     "start": 10.333,
+     "start": 11.481,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 11.16,
-   "end": 11.92,
+   "start": 12.4,
+   "end": 13.244,
    "anchor": "ct",
    "words": [
     {
      "text": "Trabajaba",
-     "start": 11.16,
+     "start": 12.4,
      "kind": "n"
     },
     {
      "text": "12",
-     "start": 11.6,
+     "start": 12.889,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 11.92,
-   "end": 12.92,
+   "start": 13.244,
+   "end": 14.356,
    "anchor": "tl",
    "words": [
     {
      "text": "horas",
-     "start": 11.92,
+     "start": 13.244,
      "kind": "n"
     },
     {
      "text": "diarias",
-     "start": 12.16,
+     "start": 13.511,
      "kind": "n"
     },
     {
      "text": "de",
-     "start": 12.44,
+     "start": 13.822,
      "kind": "n"
     },
     {
      "text": "lunes",
-     "start": 12.6,
+     "start": 14.0,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 12.92,
-   "end": 13.627,
+   "start": 14.356,
+   "end": 15.141,
    "anchor": "tr",
    "words": [
     {
      "text": "a",
-     "start": 12.92,
+     "start": 14.356,
      "kind": "n"
     },
     {
      "text": "sábados.",
-     "start": 13.1,
+     "start": 14.556,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 13.627,
-   "end": 14.467,
+   "start": 15.141,
+   "end": 16.074,
    "anchor": "ct",
    "words": [
     {
      "text": "Y",
-     "start": 13.627,
+     "start": 15.141,
      "kind": "n"
     },
     {
      "text": "aunque",
-     "start": 13.987,
+     "start": 15.541,
      "kind": "n"
     },
     {
      "text": "fue",
-     "start": 14.147,
+     "start": 15.719,
      "kind": "n"
     },
     {
      "text": "una",
-     "start": 14.327,
+     "start": 15.919,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 14.467,
-   "end": 15.527,
+   "start": 16.074,
+   "end": 17.252,
    "anchor": "tl",
    "words": [
     {
      "text": "etapa",
-     "start": 14.467,
+     "start": 16.074,
      "kind": "n"
     },
     {
      "text": "de",
-     "start": 14.747,
+     "start": 16.386,
      "kind": "n"
     },
     {
      "text": "mucho",
-     "start": 14.867,
+     "start": 16.519,
      "kind": "n"
     },
     {
      "text": "esfuerzo",
-     "start": 15.027,
+     "start": 16.697,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 15.527,
-   "end": 16.287,
+   "start": 17.252,
+   "end": 18.097,
    "anchor": "tr",
    "words": [
     {
      "text": "hoy",
-     "start": 15.527,
+     "start": 17.252,
      "kind": "n"
     },
     {
      "text": "miro",
-     "start": 15.667,
+     "start": 17.408,
      "kind": "n"
     },
     {
      "text": "atrás",
-     "start": 15.847,
+     "start": 17.608,
      "kind": "n"
     },
     {
      "text": "con",
-     "start": 16.047,
+     "start": 17.83,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 16.287,
-   "end": 16.793,
+   "start": 18.097,
+   "end": 18.659,
    "anchor": "ct",
    "words": [
     {
      "text": "gratitud",
-     "start": 16.287,
+     "start": 18.097,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 16.793,
-   "end": 17.993,
+   "start": 18.659,
+   "end": 19.992,
    "anchor": "tl",
    "words": [
     {
      "text": "Porque",
-     "start": 16.793,
+     "start": 18.659,
      "kind": "n"
     },
     {
      "text": "cada",
-     "start": 17.213,
+     "start": 19.126,
      "kind": "n"
     },
     {
      "text": "experiencia",
-     "start": 17.413,
+     "start": 19.348,
      "kind": "n"
     },
     {
      "text": "me",
-     "start": 17.793,
+     "start": 19.77,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 17.993,
-   "end": 18.727,
+   "start": 19.992,
+   "end": 20.808,
    "anchor": "tr",
    "words": [
     {
      "text": "ha",
-     "start": 17.993,
+     "start": 19.992,
      "kind": "n"
     },
     {
      "text": "enseñado",
-     "start": 18.013,
+     "start": 20.014,
      "kind": "n"
     },
     {
      "text": "algo.",
-     "start": 18.333,
+     "start": 20.37,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 18.727,
-   "end": 19.207,
+   "start": 20.808,
+   "end": 21.341,
    "anchor": "ct",
    "words": [
     {
      "text": "Hoy",
-     "start": 18.727,
+     "start": 20.808,
      "kind": "n"
     },
     {
      "text": "mi",
-     "start": 18.927,
+     "start": 21.03,
      "kind": "n"
     },
     {
      "text": "vida",
-     "start": 19.047,
+     "start": 21.163,
      "kind": "n"
     },
     {
      "text": "es",
-     "start": 19.107,
+     "start": 21.23,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 19.207,
-   "end": 19.667,
+   "start": 21.341,
+   "end": 21.852,
    "anchor": "tl",
    "words": [
     {
      "text": "diferente",
-     "start": 19.207,
+     "start": 21.341,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 19.667,
-   "end": 20.427,
+   "start": 21.852,
+   "end": 22.697,
    "anchor": "tr",
    "words": [
     {
      "text": "sigo",
-     "start": 19.667,
+     "start": 21.852,
      "kind": "n"
     },
     {
      "text": "trabajando",
-     "start": 19.827,
+     "start": 22.03,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 20.427,
-   "end": 21.447,
+   "start": 22.697,
+   "end": 23.83,
    "anchor": "ct",
    "words": [
     {
      "text": "sigo",
-     "start": 20.427,
+     "start": 22.697,
      "kind": "n"
     },
     {
      "text": "aprendiendo",
-     "start": 20.547,
+     "start": 22.83,
      "kind": "n"
     },
     {
      "text": "y",
-     "start": 20.987,
+     "start": 23.319,
      "kind": "n"
     },
     {
      "text": "sigo",
-     "start": 21.167,
+     "start": 23.519,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 21.447,
-   "end": 22.373,
+   "start": 23.83,
+   "end": 24.859,
    "anchor": "tl",
    "words": [
     {
      "text": "construyendo",
-     "start": 21.447,
+     "start": 23.83,
      "kind": "n"
     },
     {
      "text": "mi",
-     "start": 21.847,
+     "start": 24.274,
      "kind": "n"
     },
     {
      "text": "futuro",
-     "start": 21.967,
+     "start": 24.408,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 22.373,
-   "end": 23.153,
+   "start": 24.859,
+   "end": 25.726,
    "anchor": "tr",
    "words": [
     {
      "text": "Porque",
-     "start": 22.373,
+     "start": 24.859,
      "kind": "n"
     },
     {
      "text": "no",
-     "start": 22.613,
+     "start": 25.126,
      "kind": "n"
     },
     {
      "text": "importa",
-     "start": 22.713,
+     "start": 25.237,
      "kind": "n"
     },
     {
      "text": "dónde",
-     "start": 22.993,
+     "start": 25.548,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 23.153,
-   "end": 23.793,
+   "start": 25.726,
+   "end": 26.437,
    "anchor": "ct",
    "words": [
     {
      "text": "empieces",
-     "start": 23.153,
+     "start": 25.726,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 23.793,
-   "end": 24.453,
+   "start": 26.437,
+   "end": 27.17,
    "anchor": "tl",
    "words": [
     {
      "text": "sino",
-     "start": 23.793,
+     "start": 26.437,
      "kind": "n"
     },
     {
      "text": "lo",
-     "start": 23.993,
+     "start": 26.659,
      "kind": "n"
     },
     {
      "text": "que",
-     "start": 24.113,
+     "start": 26.792,
      "kind": "n"
     },
     {
      "text": "decides",
-     "start": 24.233,
+     "start": 26.926,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 24.453,
-   "end": 26.053,
+   "start": 27.17,
+   "end": 28.948,
    "anchor": "tr",
    "words": [
     {
      "text": "hacer",
-     "start": 24.453,
+     "start": 27.17,
      "kind": "n"
     },
     {
      "text": "para",
-     "start": 24.773,
+     "start": 27.526,
      "kind": "n"
     },
     {
      "text": "avanzar",
-     "start": 25.053,
+     "start": 27.837,
      "kind": "em"
     }
    ]
@@ -735,8 +735,8 @@
  "brolls": [
   {
    "src": "media/estados_unidos_1.mp4",
-   "from": 5.227,
-   "dur": 1.25,
+   "from": 5.808,
+   "dur": 1.389,
    "trim": 1.0,
    "x": 0.5,
    "y": 0.5,
@@ -746,8 +746,8 @@
   },
   {
    "src": "media/a_v_0729_wa0090.mp4",
-   "from": 6.477,
-   "dur": 1.4,
+   "from": 7.197,
+   "dur": 1.556,
    "trim": 4.0,
    "x": 0.5,
    "y": 0.5,
@@ -757,8 +757,8 @@
   },
   {
    "src": "media/a_v_0724_231406.mp4",
-   "from": 7.877,
-   "dur": 1.9,
+   "from": 8.752,
+   "dur": 2.111,
    "trim": 12.0,
    "x": 0.5,
    "y": 0.5,
@@ -768,8 +768,8 @@
   },
   {
    "src": "media/a_v_0724_wa0118.mp4",
-   "from": 9.777,
-   "dur": 1.5,
+   "from": 10.863,
+   "dur": 1.667,
    "trim": 1.5,
    "x": 0.5,
    "y": 0.5,
@@ -779,8 +779,8 @@
   },
   {
    "src": "media/a_v_0724_wa0119.mp4",
-   "from": 11.277,
-   "dur": 1.2,
+   "from": 12.53,
+   "dur": 1.333,
    "trim": 0.0,
    "x": 0.5,
    "y": 0.5,
@@ -790,8 +790,8 @@
   },
   {
    "src": "media/a_v_0724_wa0127.mp4",
-   "from": 12.477,
-   "dur": 1.4,
+   "from": 13.863,
+   "dur": 1.556,
    "trim": 2.0,
    "x": 0.5,
    "y": 0.5,
@@ -801,8 +801,8 @@
   },
   {
    "src": "media/a_f_170134.jpg",
-   "from": 18.727,
-   "dur": 0.94,
+   "from": 20.808,
+   "dur": 1.044,
    "trim": 0,
    "x": 0.5,
    "y": 0.5,
@@ -812,8 +812,8 @@
   },
   {
    "src": "media/saludo_firme_2.mp4",
-   "from": 19.667,
-   "dur": 0.76,
+   "from": 21.852,
+   "dur": 0.844,
    "trim": 2.2,
    "x": 0.5,
    "y": 0.5,
@@ -823,8 +823,8 @@
   },
   {
    "src": "media/aprendiendo_equipo.mp4",
-   "from": 20.427,
-   "dur": 0.56,
+   "from": 22.697,
+   "dur": 0.622,
    "trim": 1.0,
    "x": 0.5,
    "y": 0.5,
@@ -834,8 +834,8 @@
   },
   {
    "src": "media/a_f_0817_wa0031.jpg",
-   "from": 20.987,
-   "dur": 0.86,
+   "from": 23.319,
+   "dur": 0.956,
    "trim": 0,
    "x": 0.5,
    "y": 0.5,
@@ -845,8 +845,8 @@
   },
   {
    "src": "media/a_f_170146.jpg",
-   "from": 21.847,
-   "dur": 0.95,
+   "from": 24.274,
+   "dur": 1.056,
    "trim": 0,
    "x": 0.5,
    "y": 0.5,
@@ -856,84 +856,84 @@
   }
  ],
  "glitches": [
-  155,
-  407,
-  670
+  172,
+  452,
+  744
  ],
  "sfx": [
   {
    "src": "sfx/glitch.wav",
-   "at": 5.117,
+   "at": 5.686,
    "volume": 0.3
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 5.127,
+   "at": 5.697,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 6.377,
+   "at": 7.086,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 7.777,
+   "at": 8.641,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 9.677,
+   "at": 10.752,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 11.177,
+   "at": 12.419,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 12.377,
+   "at": 13.752,
    "volume": 0.35
   },
   {
    "src": "sfx/glitch.wav",
-   "at": 13.517,
+   "at": 15.019,
    "volume": 0.3
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 18.627,
+   "at": 20.697,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 19.567,
+   "at": 21.741,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 20.327,
+   "at": 22.586,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 20.887,
+   "at": 23.208,
    "volume": 0.35
   },
   {
    "src": "sfx/whoosh_corto.wav",
-   "at": 21.747,
+   "at": 24.163,
    "volume": 0.35
   },
   {
    "src": "sfx/glitch.wav",
-   "at": 22.283,
+   "at": 24.759,
    "volume": 0.3
   },
   {
    "src": "sfx/whoosh_largo.wav",
-   "at": 26.517,
+   "at": 29.463,
    "volume": 0.4
   }
  ],
@@ -944,22 +944,22 @@
   "trim": 0
  },
  "endCard": {
-  "from": 26.667,
+  "from": 29.63,
   "dur": 0,
   "lines": []
  },
  "endVideo": null,
  "marks": {
-  "habla": 2.56,
-  "vengo": 3.74,
-  "llegue": 5.227,
-  "doce": 11.16,
-  "gratitud": 15.527,
-  "hoy": 18.727,
-  "trabajando": 19.667,
-  "aprendiendo": 20.427,
-  "construyendo": 20.987,
-  "final": 22.373
+  "habla": 2.844,
+  "vengo": 4.156,
+  "llegue": 5.808,
+  "doce": 12.4,
+  "gratitud": 17.252,
+  "hoy": 20.808,
+  "trabajando": 21.852,
+  "aprendiendo": 22.697,
+  "construyendo": 23.319,
+  "final": 24.859
  },
- "lastWordEnd": 25.453
+ "lastWordEnd": 28.281
 }
