@@ -98,29 +98,30 @@ const Note: React.FC<{ kicker: string; text: string }> = ({ kicker, text }) => {
   );
 };
 
-// Tarjeta final: Black Friday, código y link en la bio.
+// Tarjeta final compacta, abajo sobre la mesa (encima de los subtítulos) para no tapar su cara ni la figura.
 const Offer: React.FC = () => {
   const { s } = useInOut(12, 1);
   return (
-    <div style={{ position: "absolute", top: 220, left: 90, right: 90, display: "flex", justifyContent: "center", opacity: Math.min(1, s * 1.5) }}>
+    <div style={{ position: "absolute", bottom: 250, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: Math.min(1, s * 1.5) }}>
       <div
         style={{
-          padding: "26px 50px 30px",
-          borderRadius: 34,
+          width: 640,
+          padding: "14px 30px 18px",
+          borderRadius: 26,
           background: "rgba(255,247,238,0.95)",
-          boxShadow: "0 18px 40px rgba(0,0,0,0.3)",
+          boxShadow: "0 14px 32px rgba(0,0,0,0.3)",
           textAlign: "center",
-          transform: `scale(${0.8 + 0.2 * s}) rotate(${(1 - s) * -3}deg)`,
+          transform: `translateY(${(1 - s) * 60}px) scale(${0.85 + 0.15 * s})`,
           border: `3px solid ${RED}`,
         }}
       >
-        <div style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 30, letterSpacing: 10, color: RED }}>BLACK FRIDAY</div>
-        <div style={{ fontFamily: "Great Vibes", fontSize: 104, lineHeight: 1.05, color: "#3A2219" }}>crea la tuya</div>
-        <div style={{ fontFamily: "Cormorant Garamond", fontStyle: "italic", fontWeight: 700, fontSize: 52, color: "#3A2219" }}>
-          usa mi código
+        <div style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 22, letterSpacing: 8, color: RED }}>BLACK FRIDAY</div>
+        <div style={{ fontFamily: "Great Vibes", fontSize: 66, lineHeight: 1.05, color: "#3A2219" }}>crea la tuya</div>
+        <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 14 }}>
+          <span style={{ fontFamily: "Cormorant Garamond", fontStyle: "italic", fontWeight: 700, fontSize: 38, color: "#3A2219" }}>usa mi código</span>
+          <span style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 44, letterSpacing: 3, color: RED }}>AIMEE20</span>
         </div>
-        <div style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 72, letterSpacing: 6, color: RED, lineHeight: 1.1 }}>AIMEE20</div>
-        <div style={{ marginTop: 14, display: "inline-block", padding: "10px 28px", borderRadius: 999, background: RED, color: "white", fontFamily: "Inter", fontWeight: 700, fontSize: 34, letterSpacing: 2 }}>
+        <div style={{ marginTop: 8, display: "inline-block", padding: "6px 20px", borderRadius: 999, background: RED, color: "white", fontFamily: "Inter", fontWeight: 700, fontSize: 26, letterSpacing: 1 }}>
           Link en mi bio ✨
         </div>
       </div>
