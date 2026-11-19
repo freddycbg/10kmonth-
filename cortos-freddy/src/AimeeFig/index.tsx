@@ -1,0 +1,196 @@
+import { loadFont } from "@remotion/fonts";
+import React from "react";
+import { AbsoluteFill, interpolate, OffthreadVideo, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import subs from "./subs.json";
+
+// Colaboración de Aimee con JuJuBit (figura 3D personalizada y cómo pedirla). El vídeo ya viene montado con su voz y
+// música; aquí van los títulos con letra bonita (Cormorant Garamond cursiva + Great Vibes), los pasos de la página y
+// subtítulos pequeños abajo (Inter en una cápsula translúcida, que se lean sin ocupar mucho).
+
+loadFont({ family: "Cormorant Garamond", url: staticFile("fonts/cormorant-garamond-latin-700-italic.woff2"), weight: "700", style: "italic" });
+loadFont({ family: "Cormorant Garamond", url: staticFile("fonts/cormorant-garamond-latin-600-normal.woff2"), weight: "600" });
+loadFont({ family: "Great Vibes", url: staticFile("fonts/great-vibes-latin-400-normal.woff2"), weight: "400" });
+loadFont({ family: "Inter", url: staticFile("fonts/inter-latin-700-normal.woff2"), weight: "700" });
+
+const RED = "#E8452C"; // naranja rojizo de JuJuBit
+const CREAM = "#FFF7EE";
+const SOFT = "0 4px 18px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.35)";
+
+type G = { start: number; end: number; words: { t: string; s: number }[] };
+const GROUPS = (subs as { groups: G[] }).groups;
+
+const useInOut = (inFrames = 10, outFrames = 8) => {
+  const frame = useCurrentFrame();
+  const { fps, durationInFrames } = useVideoConfig();
+  const s = spring({ frame, fps, config: { damping: 16, stiffness: 150 }, durationInFrames: inFrames * 2 });
+  const out = interpolate(frame, [durationInFrames - outFrames, durationInFrames], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return { s, out };
+};
+
+const TopShade: React.FC<{ opacity: number }> = ({ opacity }) => (
+  <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: 760, opacity, background: "linear-gradient(180deg, rgba(40,20,14,0.55) 0%, rgba(40,20,14,0.35) 55%, rgba(40,20,14,0) 100%)" }} />
+);
+
+// Título del gancho: "Tu recuerdo," en cursiva elegante y "para siempre" en caligrafía.
+const Hook: React.FC = () => {
+  const { s, out } = useInOut();
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const s2 = spring({ frame: frame - 8, fps, config: { damping: 15, stiffness: 140 } });
+  return (
+    <>
+    <TopShade opacity={Math.min(1, s * 1.5) * out} />
+    <div style={{ position: "absolute", top: 210, left: 0, right: 0, textAlign: "center", opacity: out }}>
+      <div style={{ fontFamily: "Cormorant Garamond", fontStyle: "italic", fontWeight: 700, fontSize: 92, color: CREAM, textShadow: SOFT, opacity: s, transform: `translateY(${(1 - s) * 20}px)` }}>
+        Tu recuerdo,
+      </div>
+      <div style={{ fontFamily: "Great Vibes", fontSize: 150, lineHeight: 0.9, color: CREAM, textShadow: `0 4px 22px ${RED}AA, ${SOFT}`, opacity: s2, transform: `scale(${0.85 + 0.15 * s2})` }}>
+        para siempre
+      </div>
+      <div style={{ marginTop: 14, fontFamily: "Inter", fontWeight: 700, fontSize: 30, letterSpacing: 8, color: CREAM, opacity: s2 * 0.95, textShadow: SOFT }}>
+        EN FIGURA 3D
+      </div>
+    </div>
+    </>
+  );
+};
+
+// Paso de la página: número en caligrafía dentro de un círculo rojo y texto en cursiva elegante.
+const Step: React.FC<{ n: number; text: string }> = ({ n, text }) => {
+  const { s, out } = useInOut(8, 6);
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: 56,
+        left: "50%",
+        transform: `translateX(-50%) translateY(${(1 - s) * -30}px)`,
+        opacity: Math.min(1, s * 1.5) * out,
+        display: "flex",
+        alignItems: "center",
+        gap: 20,
+        padding: "12px 36px 14px 14px",
+        borderRadius: 999,
+        background: "rgba(255,247,238,0.94)",
+        boxShadow: "0 12px 30px rgba(0,0,0,0.25)",
+        whiteSpace: "nowrap",
+      }}
+    >
+      <div style={{ width: 78, height: 78, borderRadius: 39, background: RED, color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Great Vibes", fontSize: 62, paddingTop: 6 }}>
+        {n}
+      </div>
+      <div style={{ fontFamily: "Cormorant Garamond", fontStyle: "italic", fontWeight: 700, fontSize: 62, color: "#3A2219" }}>{text}</div>
+    </div>
+  );
+};
+
+// Rótulo elegante en el centro superior (detalles, protección).
+const Note: React.FC<{ kicker: string; text: string }> = ({ kicker, text }) => {
+  const { s, out } = useInOut();
+  return (
+    <>
+    <TopShade opacity={s * out} />
+    <div style={{ position: "absolute", top: 200, left: 0, right: 0, textAlign: "center", opacity: s * out }}>
+      <div style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 28, letterSpacing: 8, color: CREAM, textShadow: SOFT }}>{kicker}</div>
+      <div style={{ fontFamily: "Great Vibes", fontSize: 128, lineHeight: 1, color: CREAM, textShadow: `0 4px 22px ${RED}99, ${SOFT}`, transform: `scale(${0.85 + 0.15 * s})` }}>{text}</div>
+    </div>
+    </>
+  );
+};
+
+// Tarjeta final: Black Friday, código y link en la bio.
+const Offer: React.FC = () => {
+  const { s } = useInOut(12, 1);
+  return (
+    <div style={{ position: "absolute", top: 230, left: 90, right: 90, display: "flex", justifyContent: "center", opacity: Math.min(1, s * 1.5) }}>
+      <div
+        style={{
+          padding: "26px 50px 30px",
+          borderRadius: 34,
+          background: "rgba(255,247,238,0.95)",
+          boxShadow: "0 18px 40px rgba(0,0,0,0.3)",
+          textAlign: "center",
+          transform: `scale(${0.8 + 0.2 * s}) rotate(${(1 - s) * -3}deg)`,
+          border: `3px solid ${RED}`,
+        }}
+      >
+        <div style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 30, letterSpacing: 10, color: RED }}>BLACK FRIDAY</div>
+        <div style={{ fontFamily: "Great Vibes", fontSize: 104, lineHeight: 1.05, color: "#3A2219" }}>crea la tuya</div>
+        <div style={{ fontFamily: "Cormorant Garamond", fontStyle: "italic", fontWeight: 700, fontSize: 52, color: "#3A2219" }}>
+          con mi código de descuento
+        </div>
+        <div style={{ marginTop: 14, display: "inline-block", padding: "10px 28px", borderRadius: 999, background: RED, color: "white", fontFamily: "Inter", fontWeight: 700, fontSize: 34, letterSpacing: 2 }}>
+          Link en mi bio ✨
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Subtítulos pequeños abajo.
+const Subs: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const t = frame / fps;
+  const g = GROUPS.find((x) => t >= x.start && t < x.end);
+  if (!g) return null;
+  const a = interpolate(frame - Math.round(g.start * fps), [0, 4], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return (
+    <div style={{ position: "absolute", left: 0, right: 0, bottom: 150, display: "flex", justifyContent: "center", opacity: a }}>
+      <div
+        style={{
+          maxWidth: 860,
+          padding: "10px 24px 12px",
+          borderRadius: 16,
+          background: "rgba(20,12,10,0.66)",
+          fontFamily: "Inter",
+          fontWeight: 700,
+          fontSize: 40,
+          lineHeight: 1.25,
+          color: "white",
+          textAlign: "center",
+        }}
+      >
+        {g.words.map((w, i) => (
+          <span key={i} style={{ opacity: t >= w.s ? 1 : 0.6 }}>
+            {w.t}
+            {i < g.words.length - 1 ? " " : ""}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const s = (t: number) => Math.round(t * 30);
+
+export const AimeeFig: React.FC = () => (
+  <AbsoluteFill style={{ background: "black" }}>
+    <OffthreadVideo src={staticFile("media/aimee_fig.mp4")} style={{ width: "100%", height: "100%" }} />
+    <Sequence from={s(0.1)} durationInFrames={s(2.45)}>
+      <Hook />
+    </Sequence>
+    <Sequence from={s(2.67)} durationInFrames={s(0.85)}>
+      <Step n={1} text="Entra a jujubit.ai" />
+    </Sequence>
+    <Sequence from={s(3.52)} durationInFrames={s(0.85)}>
+      <Step n={2} text="Sube tu foto" />
+    </Sequence>
+    <Sequence from={s(4.4)} durationInFrames={s(0.8)}>
+      <Step n={3} text="Toca “Generate”" />
+    </Sequence>
+    <Sequence from={s(5.2)} durationInFrames={s(4.5)}>
+      <Step n={4} text="¡Mira tu figura en 3D!" />
+    </Sequence>
+    <Sequence from={s(10.0)} durationInFrames={s(1.6)}>
+      <Note kicker="CALIDAD Y DETALLE" text="me encantó" />
+    </Sequence>
+    <Sequence from={s(11.65)} durationInFrames={s(1.7)}>
+      <Note kicker="LLEGA" text="súper protegida" />
+    </Sequence>
+    <Sequence from={s(13.4)} durationInFrames={s(5.2)}>
+      <Offer />
+    </Sequence>
+    <Subs />
+  </AbsoluteFill>
+);

@@ -1,4 +1,5 @@
 import { Composition } from "remotion";
+import { AimeeFig } from "./AimeeFig";
 import { Corto } from "./Corto";
 import { CortoB } from "./CortoB";
 import { CortoC } from "./CortoC";
@@ -60,6 +61,7 @@ export const RemotionRoot: React.FC = () => {
         width={corto.width}
         height={corto.height}
       />
+      <Composition id="AimeeFig" component={AimeeFig} durationInFrames={555} fps={30} width={1080} height={1920} />
       <Composition
         id="Edit"
         component={Edit}
