@@ -119,7 +119,10 @@ const Offer: React.FC = () => {
         <div style={{ fontFamily: "Great Vibes", fontSize: 66, lineHeight: 1.05, color: "#3A2219" }}>crea la tuya</div>
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 14 }}>
           <span style={{ fontFamily: "Cormorant Garamond", fontStyle: "italic", fontWeight: 700, fontSize: 38, color: "#3A2219" }}>usa mi código</span>
-          <span style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 44, letterSpacing: 3, color: RED }}>AIMEE20</span>
+          <span style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 44, letterSpacing: 3, color: RED }}>AIMEE23</span>
+        </div>
+        <div style={{ fontFamily: "Cormorant Garamond", fontStyle: "italic", fontWeight: 700, fontSize: 38, color: "#3A2219", marginTop: -2 }}>
+          y obtén <span style={{ fontFamily: "Inter", fontStyle: "normal", fontSize: 36, color: RED }}>23%</span> de descuento
         </div>
         <div style={{ marginTop: 8, display: "inline-block", padding: "6px 20px", borderRadius: 999, background: RED, color: "white", fontFamily: "Inter", fontWeight: 700, fontSize: 26, letterSpacing: 1 }}>
           Link en mi bio ✨
@@ -153,7 +156,8 @@ const CodeBadge: React.FC = () => {
         }}
       >
         <span style={{ fontFamily: "Cormorant Garamond", fontStyle: "italic", fontWeight: 700, fontSize: 48, color: CREAM }}>código</span>
-        <span style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 62, letterSpacing: 4, color: "white" }}>AIMEE20</span>
+        <span style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 62, letterSpacing: 4, color: "white" }}>AIMEE23</span>
+        <span style={{ padding: "4px 16px 6px", borderRadius: 999, background: CREAM, color: RED, fontFamily: "Inter", fontWeight: 700, fontSize: 40 }}>−23%</span>
       </div>
     </div>
   );
