@@ -106,9 +106,35 @@
   "idioma": "Y todavía no hablan",
   "broma": "O sea una broma",
   "pct": "y llevan que si",
-  "japones": "algún día ese señor"
+  "japones": "algún día ese señor",
+  "citas": "empiezan a bajar las citas"
  },
- "broll": [],
+ "broll": [
+  {
+   "phrase": "perder un poquito el",
+   "src": "media/estres_2.mp4",
+   "dur": 1.4,
+   "trim": 1.0
+  },
+  {
+   "phrase": "tú te sientes explosivo",
+   "src": "media/horizonte_2.mp4",
+   "dur": 1.5,
+   "trim": 2.0
+  },
+  {
+   "phrase": "ya tú andas",
+   "src": "media/frustracion_2.mp4",
+   "dur": 1.6,
+   "trim": 0.5
+  },
+  {
+   "phrase": "Una cosa que me",
+   "src": "media/frustracion_1.mp4",
+   "dur": 1.3,
+   "trim": 1.0
+  }
+ ],
  "music": {
   "src": "media/musica.mp3",
   "volume": 0.1,
@@ -116,11 +142,15 @@
   "trim": 0
  },
  "end_card": {
-  "dur": 3.4,
+  "dur": 0.6,
   "lines": []
  },
  "end_video": {
   "src": "media/final_10k.mp4",
   "dur": 4.0
- }
+ },
+ "aroll_size": [
+  1440,
+  2560
+ ]
 }

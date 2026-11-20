@@ -173,7 +173,8 @@ def main(cfg_path):
         # unos ms por tramo respecto a la imagen (0.4 s al final del corto 1). pad: pausa en silencio al final de la
         # frase (se mantiene el último fotograma; suele ir bajo un b-roll).
         dur = round((e - s + pad) * FPS) / FPS
-        vf = (HDR if hdr else "") + (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},"
+        AW, AH = cfg.get("aroll_size", [W, H])  # A-roll a la resolución del original para zooms cerrados nítidos
+        vf = (HDR if hdr else "") + (f"scale={AW}:{AH}:force_original_aspect_ratio=increase,crop={AW}:{AH},fps={FPS},"
                                      f"tpad=stop_mode=clone:stop_duration={pad + 0.1:.3f}")
         af = (f"aresample=48000,afade=t=in:d=0.012,afade=t=out:st={e - s - 0.015:.3f}:d=0.015,"
               f"apad=whole_dur={dur:.4f},atrim=0:{dur:.4f}")
