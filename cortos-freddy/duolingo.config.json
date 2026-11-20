@@ -1,0 +1,126 @@
+{
+ "source": "input/material/video_duolingo.mp4",
+ "transcript": "input/duolingo.json",
+ "denoise": true,
+ "accent": "#FF9600",
+ "headline": [
+  "El síndrome de",
+  "*Duolingo*"
+ ],
+ "keep": [
+  {
+   "from": "No puedes detenerte",
+   "to": "bajar el LP"
+  },
+  {
+   "from": "aquí existe algo que",
+   "to": "el síndrome de duolingo"
+  },
+  {
+   "from": "el síndrome de duolingo aquí",
+   "to": "existe la racha"
+  },
+  {
+   "from": "Cómo funciona el",
+   "to": "sientes explosivo"
+  },
+  {
+   "from": "Pero esa racha",
+   "to": "y no vende"
+  },
+  {
+   "from": "ya tú andas",
+   "to": "porque tú dices"
+  },
+  {
+   "from": "el que se me pare al frente no",
+   "to": "le voy a vender"
+  },
+  {
+   "from": "Es lo mismo",
+   "to": "decir que no"
+  },
+  {
+   "from": "Entonces esa racha",
+   "to": "de controlarla"
+  },
+  {
+   "from": "tienen que tratar de controlar",
+   "to": "no les afecte"
+  },
+  {
+   "from": "Hay gente yo no",
+   "to": "hablan el idioma"
+  },
+  {
+   "from": "O sea una broma",
+   "to": "mantener el fueguito"
+  },
+  {
+   "from": "Y no habla",
+   "to": "estoy seguro",
+   "start_at": 83.7
+  },
+  {
+   "from": "Y tú ves",
+   "to": "hablar japonés",
+   "end_at": 95.62
+  }
+ ],
+ "fixes": {
+  "lp": "ALP",
+  "siente": "sienta",
+  "duolingo": "Duolingo",
+  "haces": "hacen",
+  "30": "30%"
+ },
+ "emphasis": [
+  "ritmo",
+  "citas",
+  "ventas",
+  "lp",
+  "explosivo",
+  "contrario",
+  "miedo",
+  "controlarla",
+  "afecte",
+  "absurda",
+  "idioma",
+  "fueguito",
+  "japonés"
+ ],
+ "big": [
+  "racha"
+ ],
+ "big_once": true,
+ "glitch_every": 2,
+ "marks": {
+  "sindrome": "aquí existe algo que",
+  "racha": "existe la racha",
+  "vendiendo": "Cuando tú estás vendiendo",
+  "contrario": "Pero esa racha",
+  "miedo": "ya tú andas",
+  "controlar": "Entonces esa racha",
+  "app": "gente que literalmente",
+  "anos": "por más de 10",
+  "idioma": "Y todavía no hablan",
+  "broma": "O sea una broma",
+  "pct": "y llevan que si",
+  "japones": "algún día ese señor"
+ },
+ "broll": [],
+ "music": {
+  "src": "media/musica.mp3",
+  "volume": 0.1,
+  "endVolume": 0.3,
+  "trim": 0
+ },
+ "end_card": {
+  "dur": 3.4,
+  "lines": []
+ },
+ "end_video": {
+  "src": "media/final_10k.mp4",
+  "dur": 4.0
+ }
+}

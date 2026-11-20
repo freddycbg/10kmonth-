@@ -263,6 +263,8 @@ def main(cfg_path):
         for i, kind in g:
             txt = re.sub(r"[,;:]$", "", words[i]["word"].strip())
             fx = cfg.get("fixes", {}).get(norm(txt))
+            if fx == "-" or not norm(txt):  # palabra que no se escribe (".500" tras "3.500", un "%" suelto) en los subtítulos (p. ej. ".500" tras "3.500")
+                continue
             if fx:
                 txt = fx + (txt[-1] if txt[-1] in ".!?" else "")
             prev_i = used[used.index(i) - 1] if used.index(i) else None

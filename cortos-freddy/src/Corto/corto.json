@@ -2,24 +2,24 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationInFrames": 889,
+ "durationInFrames": 2289,
  "aroll": "media/aroll.mp4",
- "arollFrames": 889,
+ "arollFrames": 2067,
  "band": {
   "y": 555,
   "h": 810
  },
- "accent": "#FFB38A",
+ "accent": "#FF9600",
  "headline": [
   [
    {
-    "text": "De dónde",
+    "text": "El síndrome de",
     "accent": false
    }
   ],
   [
    {
-    "text": "vengo",
+    "text": "Duolingo",
     "accent": true
    }
   ]
@@ -27,56 +27,98 @@
  "segments": [
   {
    "from": 0.0,
-   "dur": 5.741,
+   "dur": 9.133,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 5.741,
-   "dur": 2.741,
+   "from": 9.133,
+   "dur": 2.467,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
   },
   {
-   "from": 8.481,
-   "dur": 3.852,
+   "from": 11.6,
+   "dur": 3.8,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 12.333,
-   "dur": 2.741,
+   "from": 15.4,
+   "dur": 4.733,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
   },
   {
-   "from": 15.074,
-   "dur": 3.519,
+   "from": 20.133,
+   "dur": 5.600333333333333,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 18.592,
-   "dur": 2.148,
+   "from": 25.733,
+   "dur": 1.733,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
   },
   {
-   "from": 20.741,
-   "dur": 4.074,
+   "from": 27.467,
+   "dur": 1.833,
    "scale": 1.0,
    "x": 0.5,
    "y": 0.3
   },
   {
-   "from": 24.814,
-   "dur": 4.814,
+   "from": 29.3,
+   "dur": 1.667,
+   "scale": 1.3,
+   "x": 0.5,
+   "y": 0.28
+  },
+  {
+   "from": 30.967,
+   "dur": 3.867,
+   "scale": 1.0,
+   "x": 0.5,
+   "y": 0.3
+  },
+  {
+   "from": 34.833,
+   "dur": 2.367,
+   "scale": 1.3,
+   "x": 0.5,
+   "y": 0.28
+  },
+  {
+   "from": 37.2,
+   "dur": 15.999666666666666,
+   "scale": 1.0,
+   "x": 0.5,
+   "y": 0.3
+  },
+  {
+   "from": 53.2,
+   "dur": 4.433,
+   "scale": 1.3,
+   "x": 0.5,
+   "y": 0.28
+  },
+  {
+   "from": 57.633,
+   "dur": 1.867,
+   "scale": 1.0,
+   "x": 0.5,
+   "y": 0.3
+  },
+  {
+   "from": 59.5,
+   "dur": 9.400333333333332,
    "scale": 1.3,
    "x": 0.5,
    "y": 0.28
@@ -84,882 +126,2081 @@
  ],
  "groups": [
   {
-   "start": 2.844,
-   "end": 4.156,
+   "start": 0.0,
+   "end": 2.84,
    "anchor": "tl",
    "words": [
     {
-     "text": "Muchos",
-     "start": 2.844,
+     "text": "No",
+     "start": 0.0,
      "kind": "n"
     },
     {
-     "text": "ven",
-     "start": 3.333,
+     "text": "puedes",
+     "start": 0.68,
      "kind": "n"
     },
     {
-     "text": "dónde",
-     "start": 3.511,
+     "text": "detenerte",
+     "start": 1.54,
      "kind": "n"
     },
     {
-     "text": "estoy",
-     "start": 3.644,
+     "text": "nunca",
+     "start": 2.08,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 4.156,
-   "end": 5.133,
+   "start": 2.84,
+   "end": 3.78,
    "anchor": "tr",
    "words": [
     {
-     "text": "pero",
-     "start": 4.156,
+     "text": "porque",
+     "start": 2.84,
      "kind": "n"
     },
     {
-     "text": "pocos",
-     "start": 4.244,
+     "text": "en",
+     "start": 3.26,
      "kind": "n"
     },
     {
-     "text": "conocen",
-     "start": 4.6,
+     "text": "el",
+     "start": 3.4,
      "kind": "n"
     },
     {
-     "text": "de",
-     "start": 5.022,
+     "text": "momento",
+     "start": 3.52,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 5.133,
-   "end": 5.808,
+   "start": 3.78,
+   "end": 4.5,
    "anchor": "ct",
    "words": [
     {
-     "text": "dónde",
-     "start": 5.133,
+     "text": "que",
+     "start": 3.78,
      "kind": "n"
     },
     {
-     "text": "vengo",
-     "start": 5.289,
-     "kind": "em"
-    }
-   ]
-  },
-  {
-   "start": 5.808,
-   "end": 6.608,
-   "anchor": "tl",
-   "words": [
-    {
-     "text": "Cuando",
-     "start": 5.808,
+     "text": "tú",
+     "start": 3.94,
      "kind": "n"
     },
     {
-     "text": "llegué",
-     "start": 6.186,
+     "text": "empieces",
+     "start": 4.04,
      "kind": "n"
     },
     {
      "text": "a",
-     "start": 6.386,
-     "kind": "n"
-    },
-    {
-     "text": "Estados",
-     "start": 6.474,
+     "start": 4.36,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 6.608,
-   "end": 7.741,
-   "anchor": "tr",
-   "words": [
-    {
-     "text": "Unidos",
-     "start": 6.608,
-     "kind": "n"
-    },
-    {
-     "text": "trabajé en",
-     "start": 6.897,
-     "kind": "n"
-    },
-    {
-     "text": "una",
-     "start": 7.186,
-     "kind": "n"
-    },
-    {
-     "text": "fábrica",
-     "start": 7.341,
-     "kind": "n"
-    }
-   ]
-  },
-  {
-   "start": 7.741,
-   "end": 8.548,
-   "anchor": "ct",
-   "words": [
-    {
-     "text": "de",
-     "start": 7.741,
-     "kind": "n"
-    },
-    {
-     "text": "reciclaje",
-     "start": 7.852,
-     "kind": "em"
-    }
-   ]
-  },
-  {
-   "start": 8.548,
-   "end": 9.659,
+   "start": 4.5,
+   "end": 5.4,
    "anchor": "tl",
    "words": [
     {
-     "text": "Mi",
-     "start": 8.548,
+     "text": "perder",
+     "start": 4.5,
      "kind": "n"
     },
     {
-     "text": "trabajo",
-     "start": 8.681,
+     "text": "un",
+     "start": 4.74,
      "kind": "n"
     },
     {
-     "text": "era",
-     "start": 9.037,
+     "text": "poquito",
+     "start": 4.94,
      "kind": "n"
     },
     {
-     "text": "separar",
-     "start": 9.237,
+     "text": "el",
+     "start": 5.24,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 9.659,
-   "end": 9.992,
+   "start": 5.4,
+   "end": 5.86,
    "anchor": "tr",
    "words": [
     {
-     "text": "el",
-     "start": 9.659,
-     "kind": "n"
-    },
-    {
-     "text": "papel",
-     "start": 9.77,
+     "text": "ritmo",
+     "start": 5.4,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 9.992,
-   "end": 10.503,
+   "start": 5.86,
+   "end": 6.7,
    "anchor": "ct",
    "words": [
     {
+     "text": "empiezan",
+     "start": 5.86,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 6.28,
+     "kind": "n"
+    },
+    {
+     "text": "bajar",
+     "start": 6.34,
+     "kind": "n"
+    },
+    {
+     "text": "las",
+     "start": 6.54,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 6.7,
+   "end": 7.12,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "citas",
+     "start": 6.7,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 7.12,
+   "end": 7.8,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "empiezan",
+     "start": 7.12,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 7.42,
+     "kind": "n"
+    },
+    {
+     "text": "bajar",
+     "start": 7.48,
+     "kind": "n"
+    },
+    {
+     "text": "las",
+     "start": 7.68,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 7.8,
+   "end": 8.16,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "ventas",
+     "start": 7.8,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 8.16,
+   "end": 8.74,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "empiezan",
+     "start": 8.16,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 8.4,
+     "kind": "n"
+    },
+    {
+     "text": "bajar",
+     "start": 8.46,
+     "kind": "n"
+    },
+    {
+     "text": "el",
+     "start": 8.64,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 8.74,
+   "end": 9.193,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "ALP",
+     "start": 8.74,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 9.193,
+   "end": 10.053,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "Aquí",
+     "start": 9.193,
+     "kind": "n"
+    },
+    {
+     "text": "existe",
+     "start": 9.453,
+     "kind": "n"
+    },
+    {
+     "text": "algo",
+     "start": 9.713,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 9.913,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 10.053,
+   "end": 10.553,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "yo",
+     "start": 10.053,
+     "kind": "n"
+    },
+    {
+     "text": "le",
+     "start": 10.153,
+     "kind": "n"
+    },
+    {
+     "text": "llamo",
+     "start": 10.253,
+     "kind": "n"
+    },
+    {
+     "text": "el",
+     "start": 10.433,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 10.553,
+   "end": 11.66,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "síndrome",
+     "start": 10.553,
+     "kind": "n"
+    },
+    {
      "text": "de",
-     "start": 9.992,
+     "start": 10.893,
+     "kind": "n"
+    },
+    {
+     "text": "Duolingo",
+     "start": 11.033,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 11.66,
+   "end": 13.56,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "El",
+     "start": 11.66,
+     "kind": "n"
+    },
+    {
+     "text": "síndrome",
+     "start": 12.36,
+     "kind": "n"
+    },
+    {
+     "text": "de",
+     "start": 12.78,
+     "kind": "n"
+    },
+    {
+     "text": "Duolingo",
+     "start": 12.94,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 13.56,
+   "end": 14.86,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "aquí",
+     "start": 13.56,
+     "kind": "n"
+    },
+    {
+     "text": "existe",
+     "start": 14.38,
      "kind": "n"
     },
     {
      "text": "la",
-     "start": 10.126,
+     "start": 14.7,
      "kind": "n"
-    },
-    {
-     "text": "basura",
-     "start": 10.237,
-     "kind": "em"
     }
    ]
   },
   {
-   "start": 10.503,
-   "end": 11.281,
-   "anchor": "tl",
+   "start": 14.86,
+   "end": 15.46,
+   "anchor": "c",
    "words": [
     {
-     "text": "que",
-     "start": 10.503,
-     "kind": "n"
-    },
-    {
-     "text": "pasaba",
-     "start": 10.681,
-     "kind": "n"
-    },
-    {
-     "text": "por",
-     "start": 10.992,
-     "kind": "n"
-    },
-    {
-     "text": "una",
-     "start": 11.148,
-     "kind": "n"
+     "text": "RACHA",
+     "start": 14.86,
+     "kind": "big"
     }
    ]
   },
   {
-   "start": 11.281,
-   "end": 12.4,
-   "anchor": "tr",
-   "words": [
-    {
-     "text": "banda",
-     "start": 11.281,
-     "kind": "n"
-    },
-    {
-     "text": "transportadora.",
-     "start": 11.481,
-     "kind": "n"
-    }
-   ]
-  },
-  {
-   "start": 12.4,
-   "end": 13.244,
+   "start": 15.46,
+   "end": 16.52,
    "anchor": "ct",
    "words": [
     {
-     "text": "Trabajaba",
-     "start": 12.4,
+     "text": "¿Cómo",
+     "start": 15.46,
      "kind": "n"
     },
     {
-     "text": "12",
-     "start": 12.889,
-     "kind": "em"
+     "text": "funciona",
+     "start": 15.84,
+     "kind": "n"
+    },
+    {
+     "text": "el",
+     "start": 16.22,
+     "kind": "n"
+    },
+    {
+     "text": "tema",
+     "start": 16.34,
+     "kind": "n"
     }
    ]
   },
   {
-   "start": 13.244,
-   "end": 14.356,
+   "start": 16.52,
+   "end": 17.12,
    "anchor": "tl",
    "words": [
-    {
-     "text": "horas",
-     "start": 13.244,
-     "kind": "n"
-    },
-    {
-     "text": "diarias",
-     "start": 13.511,
-     "kind": "n"
-    },
     {
      "text": "de",
-     "start": 13.822,
+     "start": 16.52,
      "kind": "n"
     },
     {
-     "text": "lunes",
-     "start": 14.0,
-     "kind": "n"
-    }
-   ]
-  },
-  {
-   "start": 14.356,
-   "end": 15.141,
-   "anchor": "tr",
-   "words": [
-    {
-     "text": "a",
-     "start": 14.356,
+     "text": "la",
+     "start": 16.62,
      "kind": "n"
     },
     {
-     "text": "sábados.",
-     "start": 14.556,
-     "kind": "n"
-    }
-   ]
-  },
-  {
-   "start": 15.141,
-   "end": 16.074,
-   "anchor": "ct",
-   "words": [
-    {
-     "text": "Y",
-     "start": 15.141,
-     "kind": "n"
-    },
-    {
-     "text": "aunque",
-     "start": 15.541,
-     "kind": "n"
-    },
-    {
-     "text": "fue",
-     "start": 15.719,
-     "kind": "n"
-    },
-    {
-     "text": "una",
-     "start": 15.919,
-     "kind": "n"
-    }
-   ]
-  },
-  {
-   "start": 16.074,
-   "end": 17.252,
-   "anchor": "tl",
-   "words": [
-    {
-     "text": "etapa",
-     "start": 16.074,
-     "kind": "n"
-    },
-    {
-     "text": "de",
-     "start": 16.386,
-     "kind": "n"
-    },
-    {
-     "text": "mucho",
-     "start": 16.519,
-     "kind": "n"
-    },
-    {
-     "text": "esfuerzo",
-     "start": 16.697,
+     "text": "racha",
+     "start": 16.72,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 17.252,
-   "end": 18.097,
+   "start": 17.12,
+   "end": 18.42,
    "anchor": "tr",
    "words": [
     {
-     "text": "hoy",
-     "start": 17.252,
+     "text": "Cuando",
+     "start": 17.12,
      "kind": "n"
     },
     {
-     "text": "miro",
-     "start": 17.408,
+     "text": "tú",
+     "start": 17.36,
      "kind": "n"
     },
     {
-     "text": "atrás",
-     "start": 17.608,
+     "text": "estás",
+     "start": 17.52,
      "kind": "n"
     },
     {
-     "text": "con",
-     "start": 17.83,
+     "text": "vendiendo",
+     "start": 17.72,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 18.097,
-   "end": 18.659,
+   "start": 18.42,
+   "end": 20.193,
    "anchor": "ct",
    "words": [
     {
-     "text": "gratitud",
-     "start": 18.097,
+     "text": "tú",
+     "start": 18.42,
+     "kind": "n"
+    },
+    {
+     "text": "te",
+     "start": 18.48,
+     "kind": "n"
+    },
+    {
+     "text": "sientes",
+     "start": 18.62,
+     "kind": "n"
+    },
+    {
+     "text": "explosivo",
+     "start": 19.04,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 18.659,
-   "end": 19.992,
+   "start": 20.193,
+   "end": 20.953,
    "anchor": "tl",
    "words": [
     {
-     "text": "Porque",
-     "start": 18.659,
+     "text": "Pero",
+     "start": 20.193,
      "kind": "n"
     },
     {
-     "text": "cada",
-     "start": 19.126,
+     "text": "esa",
+     "start": 20.513,
      "kind": "n"
     },
     {
-     "text": "experiencia",
-     "start": 19.348,
-     "kind": "n"
-    },
-    {
-     "text": "me",
-     "start": 19.77,
-     "kind": "n"
-    }
-   ]
-  },
-  {
-   "start": 19.992,
-   "end": 20.808,
-   "anchor": "tr",
-   "words": [
-    {
-     "text": "ha",
-     "start": 19.992,
-     "kind": "n"
-    },
-    {
-     "text": "enseñado",
-     "start": 20.014,
-     "kind": "n"
-    },
-    {
-     "text": "algo.",
-     "start": 20.37,
-     "kind": "n"
-    }
-   ]
-  },
-  {
-   "start": 20.808,
-   "end": 21.341,
-   "anchor": "ct",
-   "words": [
-    {
-     "text": "Hoy",
-     "start": 20.808,
-     "kind": "n"
-    },
-    {
-     "text": "mi",
-     "start": 21.03,
-     "kind": "n"
-    },
-    {
-     "text": "vida",
-     "start": 21.163,
-     "kind": "n"
-    },
-    {
-     "text": "es",
-     "start": 21.23,
-     "kind": "n"
-    }
-   ]
-  },
-  {
-   "start": 21.341,
-   "end": 21.852,
-   "anchor": "tl",
-   "words": [
-    {
-     "text": "diferente",
-     "start": 21.341,
+     "text": "racha",
+     "start": 20.673,
      "kind": "em"
     }
    ]
   },
   {
-   "start": 21.852,
-   "end": 22.697,
+   "start": 20.953,
+   "end": 22.16,
    "anchor": "tr",
    "words": [
     {
-     "text": "sigo",
-     "start": 21.852,
+     "text": "también",
+     "start": 20.953,
      "kind": "n"
     },
     {
-     "text": "trabajando",
-     "start": 22.03,
+     "text": "sirve",
+     "start": 21.173,
+     "kind": "n"
+    },
+    {
+     "text": "al",
+     "start": 21.453,
+     "kind": "n"
+    },
+    {
+     "text": "contrario",
+     "start": 21.533,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 22.16,
+   "end": 23.2,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "Cuando",
+     "start": 22.16,
+     "kind": "n"
+    },
+    {
+     "text": "uno",
+     "start": 22.48,
+     "kind": "n"
+    },
+    {
+     "text": "se",
+     "start": 22.8,
+     "kind": "n"
+    },
+    {
+     "text": "está",
+     "start": 23.08,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 22.697,
-   "end": 23.83,
-   "anchor": "ct",
+   "start": 23.2,
+   "end": 24.04,
+   "anchor": "tl",
    "words": [
     {
-     "text": "sigo",
-     "start": 22.697,
-     "kind": "n"
-    },
-    {
-     "text": "aprendiendo",
-     "start": 22.83,
+     "text": "sentando",
+     "start": 23.2,
      "kind": "n"
     },
     {
      "text": "y",
-     "start": 23.319,
+     "start": 23.58,
      "kind": "n"
     },
     {
-     "text": "sigo",
-     "start": 23.519,
+     "text": "se",
+     "start": 23.66,
+     "kind": "n"
+    },
+    {
+     "text": "sienta",
+     "start": 23.76,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 23.83,
-   "end": 24.859,
-   "anchor": "tl",
-   "words": [
-    {
-     "text": "construyendo",
-     "start": 23.83,
-     "kind": "n"
-    },
-    {
-     "text": "mi",
-     "start": 24.274,
-     "kind": "n"
-    },
-    {
-     "text": "futuro",
-     "start": 24.408,
-     "kind": "em"
-    }
-   ]
-  },
-  {
-   "start": 24.859,
-   "end": 25.726,
+   "start": 24.04,
+   "end": 24.38,
    "anchor": "tr",
    "words": [
     {
-     "text": "Porque",
-     "start": 24.859,
+     "text": "y",
+     "start": 24.04,
+     "kind": "n"
+    },
+    {
+     "text": "se",
+     "start": 24.1,
+     "kind": "n"
+    },
+    {
+     "text": "sienta",
+     "start": 24.16,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 24.38,
+   "end": 24.74,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "y",
+     "start": 24.38,
+     "kind": "n"
+    },
+    {
+     "text": "se",
+     "start": 24.48,
+     "kind": "n"
+    },
+    {
+     "text": "sienta",
+     "start": 24.56,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 24.74,
+   "end": 25.2,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "y",
+     "start": 24.74,
+     "kind": "n"
+    },
+    {
+     "text": "se",
+     "start": 24.82,
+     "kind": "n"
+    },
+    {
+     "text": "sienta",
+     "start": 24.9,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 25.2,
+   "end": 25.793,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "y",
+     "start": 25.2,
      "kind": "n"
     },
     {
      "text": "no",
-     "start": 25.126,
+     "start": 25.2,
      "kind": "n"
     },
     {
-     "text": "importa",
-     "start": 25.237,
-     "kind": "n"
-    },
-    {
-     "text": "dónde",
-     "start": 25.548,
+     "text": "vende",
+     "start": 25.28,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 25.726,
-   "end": 26.437,
+   "start": 25.793,
+   "end": 26.533,
    "anchor": "ct",
    "words": [
     {
-     "text": "empieces",
-     "start": 25.726,
+     "text": "Ya",
+     "start": 25.793,
+     "kind": "n"
+    },
+    {
+     "text": "tú",
+     "start": 26.093,
+     "kind": "n"
+    },
+    {
+     "text": "andas",
+     "start": 26.213,
+     "kind": "n"
+    },
+    {
+     "text": "con",
+     "start": 26.393,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 26.437,
-   "end": 27.17,
+   "start": 26.533,
+   "end": 26.853,
    "anchor": "tl",
    "words": [
     {
-     "text": "sino",
-     "start": 26.437,
+     "text": "el",
+     "start": 26.533,
      "kind": "n"
     },
     {
-     "text": "lo",
-     "start": 26.659,
+     "text": "miedo",
+     "start": 26.653,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 26.853,
+   "end": 27.527,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "porque",
+     "start": 26.853,
+     "kind": "n"
+    },
+    {
+     "text": "tú",
+     "start": 27.053,
+     "kind": "n"
+    },
+    {
+     "text": "dices",
+     "start": 27.193,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 27.527,
+   "end": 28.107,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "el",
+     "start": 27.527,
      "kind": "n"
     },
     {
      "text": "que",
-     "start": 26.792,
+     "start": 27.727,
      "kind": "n"
     },
     {
-     "text": "decides",
-     "start": 26.926,
+     "text": "se",
+     "start": 27.847,
+     "kind": "n"
+    },
+    {
+     "text": "me",
+     "start": 27.967,
      "kind": "n"
     }
    ]
   },
   {
-   "start": 27.17,
-   "end": 28.948,
+   "start": 28.107,
+   "end": 28.667,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "pare",
+     "start": 28.107,
+     "kind": "n"
+    },
+    {
+     "text": "al",
+     "start": 28.267,
+     "kind": "n"
+    },
+    {
+     "text": "frente",
+     "start": 28.367,
+     "kind": "n"
+    },
+    {
+     "text": "no",
+     "start": 28.547,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 28.667,
+   "end": 29.36,
    "anchor": "tr",
    "words": [
     {
-     "text": "hacer",
-     "start": 27.17,
+     "text": "le",
+     "start": 28.667,
+     "kind": "n"
+    },
+    {
+     "text": "voy",
+     "start": 28.767,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 28.887,
+     "kind": "n"
+    },
+    {
+     "text": "vender.",
+     "start": 28.987,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 29.36,
+   "end": 30.1,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "Es",
+     "start": 29.36,
+     "kind": "n"
+    },
+    {
+     "text": "lo",
+     "start": 29.68,
+     "kind": "n"
+    },
+    {
+     "text": "mismo",
+     "start": 29.78,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 30.1,
+   "end": 30.52,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "me",
+     "start": 30.1,
+     "kind": "n"
+    },
+    {
+     "text": "van",
+     "start": 30.14,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 30.26,
+     "kind": "n"
+    },
+    {
+     "text": "decir",
+     "start": 30.34,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 30.52,
+   "end": 31.027,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "que",
+     "start": 30.52,
+     "kind": "n"
+    },
+    {
+     "text": "no",
+     "start": 30.7,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 31.027,
+   "end": 31.207,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "Entonces",
+     "start": 31.027,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 31.207,
+   "end": 31.847,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "esa",
+     "start": 31.207,
+     "kind": "n"
+    },
+    {
+     "text": "racha",
+     "start": 31.547,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 31.847,
+   "end": 33.387,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "existe",
+     "start": 31.847,
+     "kind": "n"
+    },
+    {
+     "text": "y",
+     "start": 32.367,
+     "kind": "n"
+    },
+    {
+     "text": "ustedes",
+     "start": 32.887,
+     "kind": "n"
+    },
+    {
+     "text": "tienen",
+     "start": 33.107,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 33.387,
+   "end": 34.893,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "que",
+     "start": 33.387,
+     "kind": "n"
+    },
+    {
+     "text": "tratar",
+     "start": 33.527,
+     "kind": "n"
+    },
+    {
+     "text": "de",
+     "start": 33.787,
+     "kind": "n"
+    },
+    {
+     "text": "controlarla",
+     "start": 33.967,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 34.893,
+   "end": 35.533,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "Tienen",
+     "start": 34.893,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 35.013,
+     "kind": "n"
+    },
+    {
+     "text": "tratar",
+     "start": 35.133,
+     "kind": "n"
+    },
+    {
+     "text": "de",
+     "start": 35.373,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 35.533,
+   "end": 36.473,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "controlar",
+     "start": 35.533,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 35.873,
+     "kind": "n"
+    },
+    {
+     "text": "esa",
+     "start": 36.053,
+     "kind": "n"
+    },
+    {
+     "text": "racha",
+     "start": 36.193,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 36.473,
+   "end": 37.16,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "no",
+     "start": 36.473,
+     "kind": "n"
+    },
+    {
+     "text": "les",
+     "start": 36.573,
+     "kind": "n"
+    },
+    {
+     "text": "afecte",
+     "start": 36.713,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 37.16,
+   "end": 37.76,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "Hay",
+     "start": 37.16,
+     "kind": "n"
+    },
+    {
+     "text": "gente",
+     "start": 37.28,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 37.76,
+   "end": 38.18,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "yo",
+     "start": 37.76,
+     "kind": "n"
+    },
+    {
+     "text": "no",
+     "start": 37.86,
+     "kind": "n"
+    },
+    {
+     "text": "sé",
+     "start": 37.94,
+     "kind": "n"
+    },
+    {
+     "text": "si",
+     "start": 38.06,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 38.18,
+   "end": 39.08,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "ustedes",
+     "start": 38.18,
+     "kind": "n"
+    },
+    {
+     "text": "han",
+     "start": 38.28,
+     "kind": "n"
+    },
+    {
+     "text": "conocido",
+     "start": 38.62,
+     "kind": "n"
+    },
+    {
+     "text": "gente",
+     "start": 38.94,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 39.08,
+   "end": 39.493,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "así",
+     "start": 39.08,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 39.493,
+   "end": 40.613,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "gente",
+     "start": 39.493,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 39.693,
+     "kind": "n"
+    },
+    {
+     "text": "literalmente",
+     "start": 39.853,
+     "kind": "n"
+    },
+    {
+     "text": "tiene",
+     "start": 40.393,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 40.613,
+   "end": 41.953,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "la",
+     "start": 40.613,
+     "kind": "n"
+    },
+    {
+     "text": "aplicación",
+     "start": 40.733,
+     "kind": "n"
+    },
+    {
+     "text": "de",
+     "start": 41.193,
+     "kind": "n"
+    },
+    {
+     "text": "Duolingo",
+     "start": 41.333,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 41.953,
+   "end": 43.053,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "y",
+     "start": 41.953,
+     "kind": "n"
+    },
+    {
+     "text": "ellos",
+     "start": 42.293,
+     "kind": "n"
+    },
+    {
+     "text": "entran",
+     "start": 42.533,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 43.053,
+   "end": 44.133,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "hacen",
+     "start": 43.053,
+     "kind": "n"
+    },
+    {
+     "text": "una",
+     "start": 43.253,
+     "kind": "n"
+    },
+    {
+     "text": "sola",
+     "start": 43.413,
+     "kind": "n"
+    },
+    {
+     "text": "clasecita",
+     "start": 43.613,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 44.133,
+   "end": 45.333,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "simplemente",
+     "start": 44.133,
      "kind": "n"
     },
     {
      "text": "para",
-     "start": 27.526,
+     "start": 44.573,
      "kind": "n"
     },
     {
-     "text": "avanzar",
-     "start": 27.837,
+     "text": "mantener",
+     "start": 44.893,
+     "kind": "n"
+    },
+    {
+     "text": "la",
+     "start": 45.193,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 45.333,
+   "end": 45.793,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "racha",
+     "start": 45.333,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 45.793,
+   "end": 46.733,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "Y",
+     "start": 45.793,
+     "kind": "n"
+    },
+    {
+     "text": "ustedes",
+     "start": 46.073,
+     "kind": "n"
+    },
+    {
+     "text": "ven",
+     "start": 46.313,
+     "kind": "n"
+    },
+    {
+     "text": "en",
+     "start": 46.553,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 46.733,
+   "end": 47.473,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "el",
+     "start": 46.733,
+     "kind": "n"
+    },
+    {
+     "text": "historial",
+     "start": 46.813,
+     "kind": "n"
+    },
+    {
+     "text": "gente",
+     "start": 47.093,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 47.333,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 47.473,
+   "end": 47.973,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "tiene",
+     "start": 47.473,
+     "kind": "n"
+    },
+    {
+     "text": "la",
+     "start": 47.633,
+     "kind": "n"
+    },
+    {
+     "text": "racha",
+     "start": 47.753,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 47.973,
+   "end": 48.593,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "por",
+     "start": 47.973,
+     "kind": "n"
+    },
+    {
+     "text": "más",
+     "start": 48.153,
+     "kind": "n"
+    },
+    {
+     "text": "de",
+     "start": 48.273,
+     "kind": "n"
+    },
+    {
+     "text": "10",
+     "start": 48.393,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 48.593,
+   "end": 48.973,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "años.",
+     "start": 48.593,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 48.973,
+   "end": 49.653,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "Una",
+     "start": 48.973,
+     "kind": "n"
+    },
+    {
+     "text": "cosa",
+     "start": 49.133,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 49.413,
+     "kind": "n"
+    },
+    {
+     "text": "me",
+     "start": 49.553,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 49.653,
+   "end": 51.36,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "parece",
+     "start": 49.653,
+     "kind": "n"
+    },
+    {
+     "text": "totalmente",
+     "start": 49.953,
+     "kind": "n"
+    },
+    {
+     "text": "absurda",
+     "start": 50.513,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 51.36,
+   "end": 52.62,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "Y",
+     "start": 51.36,
+     "kind": "n"
+    },
+    {
+     "text": "todavía",
+     "start": 51.74,
+     "kind": "n"
+    },
+    {
+     "text": "no",
+     "start": 52.12,
+     "kind": "n"
+    },
+    {
+     "text": "hablan",
+     "start": 52.42,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 52.62,
+   "end": 53.26,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "el",
+     "start": 52.62,
+     "kind": "n"
+    },
+    {
+     "text": "idioma",
+     "start": 52.76,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 53.26,
+   "end": 53.78,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "O",
+     "start": 53.26,
+     "kind": "n"
+    },
+    {
+     "text": "sea",
+     "start": 53.64,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 53.78,
+   "end": 54.42,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "una",
+     "start": 53.78,
+     "kind": "n"
+    },
+    {
+     "text": "broma",
+     "start": 53.92,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 54.16,
+     "kind": "n"
+    },
+    {
+     "text": "tú",
+     "start": 54.3,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 54.42,
+   "end": 54.7,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "dices",
+     "start": 54.42,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 54.7,
+   "end": 54.9,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "o",
+     "start": 54.7,
+     "kind": "n"
+    },
+    {
+     "text": "sea",
+     "start": 54.76,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 54.9,
+   "end": 55.42,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "el",
+     "start": 54.9,
+     "kind": "n"
+    },
+    {
+     "text": "bicho",
+     "start": 55.0,
+     "kind": "n"
+    },
+    {
+     "text": "lo",
+     "start": 55.2,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 55.32,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 55.42,
+   "end": 56.18,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "está",
+     "start": 55.42,
+     "kind": "n"
+    },
+    {
+     "text": "es",
+     "start": 55.56,
+     "kind": "n"
+    },
+    {
+     "text": "peleando",
+     "start": 55.64,
+     "kind": "n"
+    },
+    {
+     "text": "con",
+     "start": 56.02,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 56.18,
+   "end": 56.52,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "la",
+     "start": 56.18,
+     "kind": "n"
+    },
+    {
+     "text": "racha",
+     "start": 56.28,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 56.52,
+   "end": 57.673,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "para",
+     "start": 56.52,
+     "kind": "n"
+    },
+    {
+     "text": "mantener",
+     "start": 56.66,
+     "kind": "n"
+    },
+    {
+     "text": "el",
+     "start": 56.98,
+     "kind": "n"
+    },
+    {
+     "text": "fueguito",
+     "start": 57.14,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 57.673,
+   "end": 58.853,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "Y",
+     "start": 57.673,
+     "kind": "n"
+    },
+    {
+     "text": "no",
+     "start": 58.053,
+     "kind": "n"
+    },
+    {
+     "text": "habla",
+     "start": 58.253,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 58.853,
+   "end": 59.56,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "pero",
+     "start": 58.853,
+     "kind": "n"
+    },
+    {
+     "text": "estoy",
+     "start": 58.873,
+     "kind": "n"
+    },
+    {
+     "text": "seguro.",
+     "start": 59.073,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 59.56,
+   "end": 60.46,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "Y",
+     "start": 59.56,
+     "kind": "n"
+    },
+    {
+     "text": "tú",
+     "start": 59.88,
+     "kind": "n"
+    },
+    {
+     "text": "ves",
+     "start": 60.0,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 60.46,
+   "end": 61.12,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "y",
+     "start": 60.46,
+     "kind": "n"
+    },
+    {
+     "text": "ahí",
+     "start": 60.6,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 60.78,
+     "kind": "n"
+    },
+    {
+     "text": "veces",
+     "start": 60.94,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 61.12,
+   "end": 62.32,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "salen",
+     "start": 61.12,
+     "kind": "n"
+    },
+    {
+     "text": "también",
+     "start": 61.42,
+     "kind": "n"
+    },
+    {
+     "text": "cuánto",
+     "start": 61.6,
+     "kind": "n"
+    },
+    {
+     "text": "llevan",
+     "start": 61.96,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 62.32,
+   "end": 62.86,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "y",
+     "start": 62.32,
+     "kind": "n"
+    },
+    {
+     "text": "llevan",
+     "start": 62.36,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 62.6,
+     "kind": "n"
+    },
+    {
+     "text": "si",
+     "start": 62.72,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 62.86,
+   "end": 63.66,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "el",
+     "start": 62.86,
+     "kind": "n"
+    },
+    {
+     "text": "30%",
+     "start": 62.98,
+     "kind": "n"
+    },
+    {
+     "text": "de",
+     "start": 63.56,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 63.66,
+   "end": 64.04,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "la",
+     "start": 63.66,
+     "kind": "n"
+    },
+    {
+     "text": "clase",
+     "start": 63.74,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 64.04,
+   "end": 64.46,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "porque",
+     "start": 64.04,
+     "kind": "n"
+    },
+    {
+     "text": "claro",
+     "start": 64.16,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 64.46,
+   "end": 64.86,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "entran",
+     "start": 64.46,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 64.86,
+   "end": 65.6,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "hacen",
+     "start": 64.86,
+     "kind": "n"
+    },
+    {
+     "text": "una",
+     "start": 65.0,
+     "kind": "n"
+    },
+    {
+     "text": "sola",
+     "start": 65.16,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 65.6,
+   "end": 66.36,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "ya",
+     "start": 65.6,
+     "kind": "n"
+    },
+    {
+     "text": "sale",
+     "start": 65.72,
+     "kind": "n"
+    },
+    {
+     "text": "la",
+     "start": 65.94,
+     "kind": "n"
+    },
+    {
+     "text": "racha",
+     "start": 66.06,
+     "kind": "em"
+    }
+   ]
+  },
+  {
+   "start": 66.36,
+   "end": 67.227,
+   "anchor": "tl",
+   "words": [
+    {
+     "text": "de",
+     "start": 66.36,
+     "kind": "n"
+    },
+    {
+     "text": "que",
+     "start": 66.46,
+     "kind": "n"
+    },
+    {
+     "text": "lo",
+     "start": 66.54,
+     "kind": "n"
+    },
+    {
+     "text": "hiciste",
+     "start": 66.64,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 67.227,
+   "end": 68.167,
+   "anchor": "tr",
+   "words": [
+    {
+     "text": "algún",
+     "start": 67.227,
+     "kind": "n"
+    },
+    {
+     "text": "día",
+     "start": 67.547,
+     "kind": "n"
+    },
+    {
+     "text": "ese",
+     "start": 67.747,
+     "kind": "n"
+    },
+    {
+     "text": "señor",
+     "start": 67.907,
+     "kind": "n"
+    }
+   ]
+  },
+  {
+   "start": 68.167,
+   "end": 68.9,
+   "anchor": "ct",
+   "words": [
+    {
+     "text": "va",
+     "start": 68.167,
+     "kind": "n"
+    },
+    {
+     "text": "a",
+     "start": 68.307,
+     "kind": "n"
+    },
+    {
+     "text": "hablar",
+     "start": 68.347,
+     "kind": "n"
+    },
+    {
+     "text": "japonés",
+     "start": 68.427,
      "kind": "em"
     }
    ]
   }
  ],
- "brolls": [
-  {
-   "src": "media/estados_unidos_1.mp4",
-   "from": 5.808,
-   "dur": 1.389,
-   "trim": 1.0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "clean",
-   "image": false
-  },
-  {
-   "src": "media/a_v_0729_wa0090.mp4",
-   "from": 7.197,
-   "dur": 1.556,
-   "trim": 4.0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "past",
-   "image": false
-  },
-  {
-   "src": "media/a_v_0724_231406.mp4",
-   "from": 8.752,
-   "dur": 2.111,
-   "trim": 12.0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "past",
-   "image": false
-  },
-  {
-   "src": "media/a_v_0724_wa0118.mp4",
-   "from": 10.863,
-   "dur": 1.667,
-   "trim": 1.5,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "past",
-   "image": false
-  },
-  {
-   "src": "media/a_v_0724_wa0119.mp4",
-   "from": 12.53,
-   "dur": 1.333,
-   "trim": 0.0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "past",
-   "image": false
-  },
-  {
-   "src": "media/a_v_0724_wa0127.mp4",
-   "from": 13.863,
-   "dur": 1.556,
-   "trim": 2.0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "past",
-   "image": false
-  },
-  {
-   "src": "media/a_f_170134.jpg",
-   "from": 20.808,
-   "dur": 1.044,
-   "trim": 0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "clean",
-   "image": true
-  },
-  {
-   "src": "media/saludo_firme_2.mp4",
-   "from": 21.852,
-   "dur": 0.844,
-   "trim": 2.2,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "clean",
-   "image": false
-  },
-  {
-   "src": "media/aprendiendo_equipo.mp4",
-   "from": 22.697,
-   "dur": 0.622,
-   "trim": 1.0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "clean",
-   "image": false
-  },
-  {
-   "src": "media/a_f_0817_wa0031.jpg",
-   "from": 23.319,
-   "dur": 0.956,
-   "trim": 0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "clean",
-   "image": true
-  },
-  {
-   "src": "media/a_f_170146.jpg",
-   "from": 24.274,
-   "dur": 1.056,
-   "trim": 0,
-   "x": 0.5,
-   "y": 0.5,
-   "zoom": 1.0,
-   "look": "clean",
-   "image": true
-  }
- ],
+ "brolls": [],
  "glitches": [
-  172,
-  452,
-  744
+  274,
+  462,
+  772,
+  879,
+  1045,
+  1596,
+  1785
  ],
  "sfx": [
   {
    "src": "sfx/glitch.wav",
-   "at": 5.686,
+   "at": 9.083,
    "volume": 0.3
   },
   {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 5.697,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 7.086,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 8.641,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 10.752,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 12.419,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 13.752,
-   "volume": 0.35
+   "src": "sfx/impacto.wav",
+   "at": 14.86,
+   "volume": 0.45
   },
   {
    "src": "sfx/glitch.wav",
-   "at": 15.019,
+   "at": 15.35,
    "volume": 0.3
   },
   {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 20.697,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 21.741,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 22.586,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 23.208,
-   "volume": 0.35
-  },
-  {
-   "src": "sfx/whoosh_corto.wav",
-   "at": 24.163,
-   "volume": 0.35
+   "src": "sfx/glitch.wav",
+   "at": 25.683,
+   "volume": 0.3
   },
   {
    "src": "sfx/glitch.wav",
-   "at": 24.759,
+   "at": 29.25,
+   "volume": 0.3
+  },
+  {
+   "src": "sfx/glitch.wav",
+   "at": 34.783,
+   "volume": 0.3
+  },
+  {
+   "src": "sfx/glitch.wav",
+   "at": 53.15,
+   "volume": 0.3
+  },
+  {
+   "src": "sfx/glitch.wav",
+   "at": 59.45,
    "volume": 0.3
   },
   {
    "src": "sfx/whoosh_largo.wav",
-   "at": 29.463,
+   "at": 68.75,
    "volume": 0.4
   }
  ],
  "music": {
   "src": "media/musica.mp3",
-  "volume": 0.12,
-  "endVolume": 0.35,
+  "volume": 0.1,
+  "endVolume": 0.3,
   "trim": 0
  },
  "endCard": {
-  "from": 29.63,
-  "dur": 0,
+  "from": 68.9,
+  "dur": 3.4,
   "lines": []
  },
- "endVideo": null,
- "marks": {
-  "habla": 2.844,
-  "vengo": 4.156,
-  "llegue": 5.808,
-  "doce": 12.4,
-  "gratitud": 17.252,
-  "hoy": 20.808,
-  "trabajando": 21.852,
-  "aprendiendo": 22.697,
-  "construyendo": 23.319,
-  "final": 24.859
+ "endVideo": {
+  "src": "media/final_10k.mp4",
+  "from": 72.3,
+  "dur": 4.0
  },
- "lastWordEnd": 28.281
+ "marks": {
+  "sindrome": 9.193,
+  "racha": 14.38,
+  "vendiendo": 17.12,
+  "contrario": 20.193,
+  "miedo": 25.793,
+  "controlar": 31.027,
+  "app": 39.493,
+  "anos": 47.973,
+  "idioma": 51.36,
+  "broma": 53.26,
+  "pct": 62.32,
+  "japones": 67.227
+ },
+ "lastWordEnd": 68.847
 }
