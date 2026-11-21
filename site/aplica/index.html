@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Opportunity Unlimited — Aplica, acciona y gana. Únete al equipo de Freddy Mota en American Income Life · Carta Business Group." />
+    <link rel="icon" href="data:," />
+    <title>10K Month Group — Opportunity Unlimited</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #F4F1EA;
+        --panel: #FBF9F5;
+        --card: #FFFFFF;
+        --dark: #211C16;
+        --ink: #1A1714;
+        --ink-soft: #554D41;
+        --accent: #E2571E;
+        --accent-dark: #B03F0E;
+        --accent-soft: #FF8A5C;
+        --amber: #F2A33C;
+        --gold: #D9A441;
+        --gold-bright: #F2C14E;
+        --gold-deep: #8A5E0E;
+        --navy: #152A47;
+        --navy-deep: #0D1B2E;
+        --green: #2E7D32;
+        --line: #E4DAC7;
+        --radius: 20px;
+        --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 24px 44px -22px rgba(84, 56, 22, 0.30), 0 6px 16px -6px rgba(84, 56, 22, 0.10);
+        --shadow-dark: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 26px 48px -24px rgba(0, 0, 0, 0.70);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(1200px 480px at 50% -120px, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 60%),
+          var(--bg);
+        color: var(--ink);
+        font-family: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      h2, h3 { overflow-wrap: break-word; }
+      h1 { overflow-wrap: normal; word-break: normal; hyphens: none; }
+      .card, .step, .video-card, .form-grid > *, .hero-grid > * { min-width: 0; }
+      .card p, .step p, .edu p, .mentor p.bio { overflow-wrap: break-word; }
+      img, video { max-width: 100%; display: block; }
+      a { color: var(--accent-dark); }
+      .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+      /* ---------- Header ---------- */
+      header.site {
+        position: sticky; top: 0; z-index: 50;
+        background: linear-gradient(180deg, rgba(26, 21, 16, 0.96), rgba(13, 10, 8, 0.94));
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(255, 158, 96, 0.22);
+        box-shadow: 0 10px 30px -18px rgba(10, 6, 2, 0.8);
+      }
+      .site-inner {
+        display: flex; align-items: center; justify-content: space-between; gap: 16px;
+        padding: 12px 0;
+      }
+      .brand { display: flex; align-items: baseline; gap: 10px; text-decoration: none; color: #fff; }
+      .brand .mark {
+        font-family: "Poppins", "Archivo", sans-serif;
+        font-weight: 800; font-size: 26px; letter-spacing: -0.02em; line-height: 1;
+      }
+      .brand .mark span { color: var(--accent); }
+      .brand .sub {
+        font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+        color: #B9B2A6;
+      }
+      .site-who { display: flex; align-items: center; gap: 16px; }
+      .site-who .who { font-size: 14px; font-weight: 600; color: #B9B2A6; }
+      .site-who .who strong { color: #fff; }
+
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        background: linear-gradient(180deg, #E05A17 0%, #C64509 55%, #A83A06 100%); color: #fff; text-decoration: none;
+        font-weight: 800; font-size: 16px; letter-spacing: 0.01em;
+        padding: 13px 26px; border-radius: 12px; border: 0; cursor: pointer;
+        min-height: 48px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), inset 0 -1px 0 rgba(110, 36, 0, 0.35), 0 14px 28px -10px rgba(226, 87, 30, 0.55);
+        transition: box-shadow 0.2s ease, filter 0.2s ease, transform 0.15s ease;
+      }
+      .btn:hover { filter: brightness(1.07); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(110, 36, 0, 0.35), 0 16px 32px -10px rgba(226, 87, 30, 0.65); }
+      .btn:active { transform: translateY(1px); }
+      .btn.small { padding: 9px 18px; min-height: 40px; font-size: 14px; }
+      .btn.dark { background: linear-gradient(180deg, #3B342B 0%, #221C16 55%, #16120D 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.20), 0 14px 26px -12px rgba(18, 12, 6, 0.65); }
+      .btn.dark:hover { filter: brightness(1.15); background: linear-gradient(180deg, #3B342B 0%, #221C16 55%, #16120D 100%); }
+      .btn.ghost {
+        background: rgba(255, 255, 255, 0.06); color: #fff;
+        border: 1.5px solid rgba(255, 255, 255, 0.85); border-radius: 999px;
+        padding: 13px 36px;
+        backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 12px 30px -12px rgba(0, 0, 0, 0.55);
+      }
+      .btn.ghost:hover { background: rgba(226, 87, 30, 0.92); border-color: rgba(226, 87, 30, 0.92); color: #fff; filter: none; }
+
+      /* ---------- Hero (oscuro, estilo Carta) ---------- */
+      .hero {
+        position: relative;
+        background: #0C0A08;
+        background-image:
+          radial-gradient(1050px 520px at 88% -10%, rgba(226, 87, 30, 0.24), rgba(226, 87, 30, 0) 60%),
+          radial-gradient(720px 420px at 6% 112%, rgba(242, 163, 60, 0.12), rgba(242, 163, 60, 0) 62%),
+          linear-gradient(180deg, #14110C 0%, #0B0908 100%);
+        color: #F5F1EA;
+        padding: 64px 0 76px;
+        overflow: hidden;
+      }
+      .hero::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+        background: linear-gradient(90deg, rgba(255, 138, 92, 0) 0%, rgba(255, 138, 92, 0.55) 35%, rgba(242, 163, 60, 0.55) 65%, rgba(242, 163, 60, 0) 100%);
+      }
+      .hero-grid {
+        display: grid; grid-template-columns: 1.18fr 0.82fr; gap: 40px; align-items: center;
+      }
+      .hero h1 {
+        font-family: "Poppins", "Archivo", sans-serif;
+        margin: 0 0 22px;
+        font-size: clamp(36px, 4.9vw, 64px);
+        font-weight: 900; line-height: 1.02; letter-spacing: -0.01em;
+        text-transform: uppercase; color: #fff;
+        overflow-wrap: normal; word-break: normal; hyphens: none;
+        white-space: normal;
+      }
+      .hero h1 .line1 {
+        display: block; white-space: nowrap;
+        overflow-wrap: normal; word-break: normal; hyphens: none;
+        text-shadow: 0 0 38px rgba(255, 150, 80, 0.22);
+      }
+      .hero h1 .line2 { display: block; }
+      .hero h1 .line2 svg {
+        display: block; width: 100%; height: auto;
+        filter: drop-shadow(0 0 16px rgba(242, 163, 60, 0.28));
+      }
+      .hero .frase {
+        font-size: clamp(18px, 2.2vw, 22px); line-height: 1.55; color: #CFC8BC;
+        max-width: 34em; margin: 0 0 32px;
+      }
+      .hero .frase strong { color: #fff; }
+      .hero-photo { position: relative; }
+      .photo-frame {
+        position: relative;
+        padding: 3px; border-radius: 26px;
+        background: linear-gradient(150deg, rgba(255, 186, 128, 0.95) 0%, rgba(226, 87, 30, 0.55) 38%, rgba(255, 255, 255, 0.16) 62%, rgba(242, 163, 60, 0.7) 100%);
+        box-shadow: 0 36px 72px -28px rgba(0, 0, 0, 0.78), 0 20px 54px -18px rgba(226, 87, 30, 0.35);
+      }
+      .photo-frame img {
+        width: 100%; height: auto;
+        border-radius: 23px;
+      }
+      .hero-photo figcaption {
+        margin-top: 18px;
+        font-size: 13.5px; font-weight: 600; color: #B9B2A6;
+      }
+
+      /* ---------- Sections ---------- */
+      section.block { padding: 68px 0; }
+      section.block.alt {
+        background: linear-gradient(180deg, #FCFAF6 0%, #F6F1E7 100%);
+        border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      }
+      h2.sec {
+        font-family: "Poppins", "Archivo", sans-serif;
+        margin: 0 0 10px;
+        font-size: clamp(28px, 4.4vw, 44px); font-weight: 800; letter-spacing: -0.01em;
+        text-transform: uppercase; line-height: 1.12;
+      }
+      h2.sec::after {
+        content: ""; display: block; width: 74px; height: 3px; margin-top: 16px; border-radius: 2px;
+        background: linear-gradient(90deg, var(--accent) 0%, var(--amber) 100%);
+        box-shadow: 0 2px 12px rgba(226, 87, 30, 0.35);
+      }
+      section.block.dark {
+        background: linear-gradient(180deg, #15110C 0%, #0F0C09 100%);
+        color: #F3EFE8;
+      }
+      section.block.dark .sec-sub { color: #B4AC9E; }
+      section.block.dark .video-card {
+        background: linear-gradient(168deg, #28211A 0%, #1A1510 58%, #130F0B 100%);
+        border-color: rgba(255, 170, 110, 0.18);
+        box-shadow: var(--shadow-dark);
+      }
+      section.block.dark .video-card .vname { color: #fff; }
+      section.block.dark .video-card .vname span { color: #B4AC9E; }
+      section.block.dark .members { color: #B4AC9E; }
+      section.block.dark .members strong { color: #fff; }
+      .sec-sub { font-size: 19px; color: var(--ink-soft); margin: 0 0 38px; max-width: 40em; }
+
+      /* Benefits */
+      .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .card {
+        position: relative; overflow: hidden;
+        background: linear-gradient(165deg, #FFFFFF 0%, #FDFBF7 55%, #F7F0E3 100%);
+        border: 1px solid #E9DFCB; border-radius: var(--radius);
+        padding: 30px 28px;
+        box-shadow: var(--shadow-card);
+      }
+      .card::before {
+        content: ""; position: absolute; left: 0; right: 0; top: 0; height: 52%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+        pointer-events: none;
+      }
+      .card > * { position: relative; }
+      .card .icon {
+        width: 54px; height: 54px; border-radius: 15px;
+        background: linear-gradient(150deg, #FFEBD9 0%, #FFD2AE 100%); color: var(--accent-dark);
+        border: 1px solid rgba(226, 87, 30, 0.28);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 -8px 14px rgba(226, 87, 30, 0.16), 0 10px 18px -8px rgba(176, 63, 14, 0.45);
+        display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+      }
+      .card .icon svg { width: 27px; height: 27px; }
+      .card h3 { font-family: "Poppins", "Archivo", sans-serif; margin: 0 0 8px; font-size: 20px; font-weight: 700; line-height: 1.3; }
+      .card p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+
+      /* Steps */
+      .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .step {
+        position: relative; overflow: hidden;
+        background: linear-gradient(165deg, #2E271E 0%, #1C1712 58%, #131009 100%);
+        color: #F3EFE8; border: 1px solid rgba(255, 170, 110, 0.18); border-radius: var(--radius);
+        padding: 30px 26px;
+        box-shadow: var(--shadow-dark);
+      }
+      .step::before {
+        content: ""; position: absolute; left: 0; right: 0; top: 0; height: 46%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0));
+        pointer-events: none;
+      }
+      .step > * { position: relative; }
+      .step .num {
+        font-size: 15px; font-weight: 900; letter-spacing: 0.18em; color: var(--accent-soft);
+        display: block; margin-bottom: 14px;
+      }
+      .step h3 { font-family: "Poppins", "Archivo", sans-serif; margin: 0 0 10px; font-size: 25px; font-weight: 800; text-transform: uppercase; }
+      .step p { margin: 0; color: #CFC8BC; font-size: 16px; }
+      /* Paso «Gana»: el dorado se reserva para el resultado */
+      .step.gold {
+        background: linear-gradient(165deg, #3D2E13 0%, #261B0A 58%, #1A1206 100%);
+        border-color: rgba(242, 193, 78, 0.5);
+        box-shadow: inset 0 1px 0 rgba(255, 220, 150, 0.25), 0 26px 48px -24px rgba(0, 0, 0, 0.70), 0 0 34px -8px rgba(217, 164, 65, 0.35);
+      }
+      .step.gold .num { color: var(--gold-bright); }
+      .step.gold h3 { color: var(--gold-bright); }
+
+      /* Mission */
+      .mission {
+        background:
+          radial-gradient(640px 300px at 50% 0%, rgba(242, 163, 60, 0.12), rgba(242, 163, 60, 0) 70%),
+          linear-gradient(180deg, #F8F4EC, #F3EFE6);
+        color: var(--ink); padding: 76px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+        box-shadow: inset 0 2px 0 rgba(201, 138, 27, 0.45), inset 0 -2px 0 rgba(201, 138, 27, 0.30);
+      }
+      .mission p {
+        font-family: "Poppins", "Archivo", sans-serif;
+        margin: 0 auto; max-width: 22em; text-align: center;
+        font-size: clamp(23px, 3.6vw, 36px); font-weight: 700; line-height: 1.35; letter-spacing: -0.01em;
+      }
+      .mission p em { color: var(--gold-deep); font-style: normal; }
+
+      /* Testimonials */
+      .videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .video-card {
+        background: linear-gradient(168deg, #FFFFFF 0%, #FBF7EE 100%);
+        border: 1px solid #E9DFCB; border-radius: var(--radius); overflow: hidden;
+        box-shadow: var(--shadow-card);
+      }
+      .video-card video { width: 100%; aspect-ratio: 16 / 9; height: auto; object-fit: contain; background: #000; display: block; }
+      .video-card .vname { padding: 14px 18px 16px; font-weight: 800; font-size: 17px; }
+      .video-card .vname span { display: block; font-weight: 600; font-size: 13.5px; color: var(--ink-soft); margin-top: 2px; }
+      .members { margin-top: 30px; text-align: center; color: var(--ink-soft); font-size: 16px; }
+      .members strong { color: var(--ink); }
+      .members .dot { color: var(--accent); font-weight: 900; padding: 0 4px; }
+
+      /* Education */
+      .edu { max-width: 46em; }
+      .edu p { font-size: 19px; color: var(--ink-soft); margin: 0 0 20px; }
+      .edu p strong { color: var(--ink); }
+      .edu .cta-line { font-family: "Poppins", "Archivo", sans-serif; font-size: 23px; font-weight: 800; color: var(--ink); margin: 30px 0 18px; }
+
+      /* Mentor */
+      .mentor {
+        display: grid; grid-template-columns: minmax(0, 430px) 1fr; gap: 38px; align-items: center;
+        background: linear-gradient(165deg, #FFFFFF 0%, #FBF7EE 60%, #F6EFE0 100%);
+        border: 1px solid #E9DFCB; border-radius: 26px;
+        padding: 32px;
+        box-shadow: var(--shadow-card);
+      }
+      .mentor .photo-frame { border-radius: 20px; }
+      .mentor .photo-frame img { border-radius: 17px; }
+      .mentor h3 { font-family: "Poppins", "Archivo", sans-serif; margin: 0 0 4px; font-size: 27px; font-weight: 800; }
+      .mentor .role { color: var(--accent-dark); font-weight: 700; font-size: 16px; margin: 0 0 14px; }
+      .mentor p.bio { margin: 0; color: var(--ink-soft); font-size: 17.5px; max-width: 42em; }
+
+      /* Form */
+      .form-lead { font-size: 20px; font-weight: 700; max-width: 34em; margin: 0 0 8px; }
+      .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+      form.postula {
+        background: linear-gradient(168deg, #FFFFFF 0%, #FBF7EE 100%);
+        border: 1px solid #E9DFCB; border-radius: 24px;
+        padding: 32px 30px;
+        box-shadow: var(--shadow-card);
+        /* La tarjeta es clara aunque viva sobre la sección azul marino:
+           todo su texto va oscuro, sin depender de la herencia. */
+        color: var(--ink);
+      }
+      .field { margin-bottom: 18px; }
+      .field label { display: block; font-weight: 700; font-size: 15px; margin-bottom: 7px; color: var(--ink); }
+      .field input::placeholder, .field textarea::placeholder { color: #7A6C55; opacity: 1; }
+      .field label .opt { font-weight: 500; color: var(--ink-soft); }
+      .field input, .field select, .field textarea {
+        width: 100%; font: inherit; font-size: 16px; color: var(--ink);
+        background: linear-gradient(180deg, #FFFFFF 0%, #FBF8F1 100%);
+        border: 1.5px solid #DED2BB; border-radius: 11px;
+        box-shadow: inset 0 2px 5px rgba(96, 70, 32, 0.07), inset 0 -1px 0 rgba(255, 255, 255, 0.9);
+        padding: 12px 14px; min-height: 48px;
+      }
+      .field textarea { min-height: 84px; resize: vertical; }
+      .field input:focus, .field select:focus, .field textarea:focus {
+        outline: none; border-color: var(--accent);
+        box-shadow: 0 0 0 4px rgba(226, 87, 30, 0.16), inset 0 2px 5px rgba(96, 70, 32, 0.05);
+      }
+      .privacy { font-size: 14px; color: var(--ink-soft); margin: 14px 0 0; }
+      /* Grupos de opciones (radios) y consentimiento, dentro de la misma tarjeta */
+      fieldset.field { border: 0; margin: 0 0 18px; padding: 0; min-width: 0; }
+      fieldset.field legend { font-weight: 700; font-size: 15px; color: var(--ink); padding: 0; margin-bottom: 9px; }
+      .opts { display: flex; flex-wrap: wrap; gap: 10px; }
+      .opts.stack { flex-direction: column; gap: 8px; }
+      .field label.opt-item {
+        display: inline-flex; align-items: flex-start; gap: 9px;
+        font-size: 15.5px; font-weight: 600; color: var(--ink);
+        background: linear-gradient(180deg, #FFFFFF 0%, #FBF8F1 100%);
+        border: 1.5px solid #DED2BB; border-radius: 11px;
+        box-shadow: inset 0 2px 5px rgba(96, 70, 32, 0.05), inset 0 -1px 0 rgba(255, 255, 255, 0.9);
+        padding: 10px 14px; margin: 0; cursor: pointer;
+      }
+      .opts.stack label.opt-item { display: flex; }
+      .field label.opt-item input {
+        width: 18px; height: 18px; min-height: 0; padding: 0; margin: 2px 0 0;
+        flex: none; box-shadow: none; accent-color: var(--accent);
+      }
+      .field.check label.opt-item {
+        background: none; border: 0; box-shadow: none; padding: 2px 0; display: flex;
+      }
+      .ferr { margin: 7px 0 0; font-size: 13.5px; font-weight: 600; color: #B3261E; }
+      .field.invalid input[type="text"], .field.invalid input[type="tel"],
+      .field.invalid select, .field.invalid textarea {
+        border-color: #B3261E;
+        box-shadow: 0 0 0 4px rgba(179, 38, 30, 0.12), inset 0 2px 5px rgba(96, 70, 32, 0.05);
+      }
+      fieldset.field.invalid label.opt-item { border-color: rgba(179, 38, 30, 0.55); }
+      .field.check.invalid label.opt-item { color: #B3261E; }
+      .form-side p { color: var(--ink-soft); font-size: 17.5px; margin: 0 0 18px; }
+      .form-done {
+        display: none;
+        background: linear-gradient(168deg, #F5FBF2 0%, #EAF5E3 100%);
+        border: 1.5px solid #8FBC7E; border-radius: var(--radius);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 18px 34px -20px rgba(70, 110, 50, 0.4);
+        padding: 26px; margin-top: 4px;
+      }
+      .form-done.show { display: block; }
+      .form-done h3 { margin: 0 0 8px; font-size: 21px; color: #2E6B21; display: flex; align-items: center; gap: 10px; }
+      .form-done h3 svg { width: 26px; height: 26px; color: var(--green); flex: none; }
+      .form-done p { margin: 0 0 16px; color: var(--ink-soft); }
+
+      /* Formulario sobre azul marino: ancla de confianza financiera */
+      section.block.apply {
+        background:
+          radial-gradient(760px 340px at 85% -10%, rgba(217, 164, 65, 0.14), rgba(217, 164, 65, 0) 60%),
+          linear-gradient(180deg, #1B3357 0%, var(--navy) 55%, var(--navy-deep) 100%);
+        color: #EDF1F7;
+      }
+      section.block.apply .form-lead { color: #F4F7FB; }
+      section.block.apply h2.sec { color: #fff; }
+      section.block.apply .form-side p { color: #C2CFDF; }
+      .trust { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+      .trust li {
+        display: inline-flex; align-items: center; gap: 8px;
+        font-size: 14px; font-weight: 700; color: #EAF0F8;
+        background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(242, 193, 78, 0.4);
+        border-radius: 999px; padding: 8px 14px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+      }
+      .trust li svg { width: 17px; height: 17px; color: var(--gold-bright); flex: none; }
+      /* WhatsApp: acción secundaria, un punto menos saturada que el CTA */
+      .btn.wa {
+        background: linear-gradient(180deg, #6E6455 0%, #4E463B 100%);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 10px 20px -10px rgba(20, 14, 6, 0.5);
+      }
+      .btn.wa:hover { filter: brightness(1.08); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 12px 22px -10px rgba(20, 14, 6, 0.55); }
+
+      /* Footer */
+      footer.site {
+        background: linear-gradient(180deg, #182C49 0%, #0C1A2D 100%);
+        border-top: 1px solid rgba(242, 193, 78, 0.35);
+        color: #CFC8BC; padding: 36px 0;
+      }
+      footer.site .foot {
+        display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between;
+        font-size: 15px;
+      }
+      footer.site strong { color: #fff; }
+
+      @media (max-width: 900px) {
+        .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+        .videos { grid-template-columns: 1fr; }
+        .steps { grid-template-columns: 1fr; }
+        .form-grid { grid-template-columns: 1fr; gap: 28px; }
+        .mentor { grid-template-columns: 1fr; padding: 24px; gap: 26px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .btn { transition: none; }
+      }
+      @media (max-width: 620px) {
+        .cards { grid-template-columns: 1fr; }
+        .site-who .who { display: none; }
+        section.block { padding: 48px 0; }
+        .hero { padding: 40px 0 52px; }
+        .hero h1 { font-size: clamp(30px, 10vw, 46px); }
+        .mission { padding: 52px 0; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="site">
+      <div class="wrap site-inner">
+        <a class="brand" href="#top" aria-label="10K Month Group">
+          <span class="mark">10K<span>.</span></span>
+          <span class="sub">Month Group</span>
+        </a>
+        <div class="site-who">
+          <span class="who"><strong>Freddy Mota</strong> · General Agent</span>
+          <a class="btn small" href="#postulate">Registrarme</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+
+      <!-- 1 · HERO -->
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <h1><span class="line1">Opportunity</span> <span class="line2"><svg viewBox="0 0 660 100" focusable="false"><defs><linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F6C453" /><stop offset="0.55" stop-color="#E3A82B" /><stop offset="1" stop-color="#B97F14" /></linearGradient></defs><text x="3" y="76" font-family="Poppins, Archivo, sans-serif" font-size="86" font-weight="900" fill="none" stroke="url(#goldStroke)" stroke-width="2.6" textLength="650" lengthAdjust="spacingAndGlyphs">UNLIMITED</text></svg></span></h1>
+            <p class="frase"><strong>“Aplica, acciona y gana”</strong> — la oportunidad, el sistema educativo y el acompañamiento lo colocamos nosotros, los resultados los colocas tú.</p>
+            <a class="btn ghost" href="#postulate">Registrarme</a>
+          </div>
+          <figure class="hero-photo" style="margin:0">
+            <div class="photo-frame">
+              <img src="assets/foto-1.jpg" alt="Freddy Mota dirigiendo una sesión de entrenamiento con su equipo" width="900" height="1350" />
+            </div>
+            <figcaption>Freddy Mota entrenando a su equipo — 10K Month Group, Utah.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 2 · BENEFICIOS -->
+      <section class="block alt">
+        <div class="wrap">
+          <h2 class="sec">Nuestros Beneficios</h2>
+          <p class="sec-sub">Conoce un poco más acerca de nuestras oportunidades.</p>
+          <div class="cards">
+            <article class="card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.133-8-12.739-8-4.585 0-4.585 8 0 8 5.606 0 7.644-8 12.74-8z"/><path d="m12.5 3-1.5 2 1.5 2"/><path d="m17 2-1.5 2L17 6"/><path d="m22 2-1.5 2L22 6"/></svg>
+              </div>
+              <h3>Una oportunidad sin límites</h3>
+              <p>No existe techo ni limitantes en esta carrera. Tu rendimiento y enfoque determinará hasta dónde puedes llegar.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </div>
+              <h3>Disciplina sobre talento</h3>
+              <p>Nada puede ocupar el lugar de la persistencia. Es común ver hombres con talento sin éxito. La persistencia y la determinación son el arma más poderosa.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3>Liderazgo y capacitación</h3>
+              <p>Nuestra diversidad de profesionales serán tus mentores y mediante un programa educativo te asesorarán cada paso en el desarrollo de tu carrera.</p>
+            </article>
+            <article class="card">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+              </div>
+              <h3>Conoce más de la Industria Financiera</h3>
+              <p>Somos filial de American Income Life, una empresa con más de 70 años de trayectoria y galardonada con la máxima acreditación en la industria financiera en USA.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 · CÓMO FUNCIONA -->
+      <section class="block dark">
+        <div class="wrap">
+          <h2 class="sec">¿Cómo Funciona?</h2>
+          <p class="sec-sub">Únete en solo Tres Simples Pasos.</p>
+          <div class="steps">
+            <article class="step">
+              <span class="num">PASO 01</span>
+              <h3>Aplica</h3>
+              <p>Aplica en nuestra página web y agenda una llamada con uno de nuestros gerentes.</p>
+            </article>
+            <article class="step">
+              <span class="num">PASO 02</span>
+              <h3>Acciona</h3>
+              <p>Si eres elegible, tendrás la oportunidad de comenzar una carrera profesional con nuestra firma.</p>
+            </article>
+            <article class="step gold">
+              <span class="num">PASO 03</span>
+              <h3>Gana</h3>
+              <p>Aprende las habilidades necesarias y estarás listo para implementarlas mientras nuestros gerentes te dan acompañamiento asegurando tus resultados.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 · MISIÓN -->
+      <section class="mission">
+        <div class="wrap">
+          <p>Impulsamos sueños, construimos confianza y transformamos vidas. Unimos talento y propósito para que juntos alcancemos nuevas alturas. <em>¡Descubre tu mejor versión con nosotros!</em></p>
+        </div>
+      </section>
+
+      <!-- 5 · TESTIMONIOS -->
+      <section class="block dark">
+        <div class="wrap">
+          <h2 class="sec">Testimonios</h2>
+          <p class="sec-sub">Escucha directamente de parte de algunos de nuestros miembros en la industria.</p>
+          <div class="videos">
+            <article class="video-card">
+              <video controls preload="metadata" playsinline poster="assets/foto-2.jpg">
+                <source src="assets/testimonio-1.mp4" type="video/mp4" />
+                Tu navegador no puede reproducir este video.
+              </video>
+              <div class="vname">Nelson Sucre <span>De delivery y cargar cajas a Gerente General</span></div>
+            </article>
+            <article class="video-card">
+              <video controls preload="metadata" playsinline poster="assets/foto-3.jpg">
+                <source src="assets/testimonio-2.mp4" type="video/mp4" />
+                Tu navegador no puede reproducir este video.
+              </video>
+              <div class="vname">Pablo Castro <span>De dishwasher y car wash a proteger familias, sin techo</span></div>
+            </article>
+            <article class="video-card">
+              <video controls preload="metadata" playsinline poster="assets/foto-4.jpg">
+                <source src="assets/testimonio-3.mp4" type="video/mp4" />
+                Tu navegador no puede reproducir este video.
+              </video>
+              <div class="vname">Diego Sucre <span>Su ingreso depende solo de su trabajo, sin límite</span></div>
+            </article>
+          </div>
+          <p class="members"><strong>Miembros en la industria:</strong> Nelson Sucre <span class="dot">·</span> Pablo Castro <span class="dot">·</span> Diego Sucre <span class="dot">·</span> Carol Fernandez <span class="dot">·</span> Sergio Carta</p>
+        </div>
+      </section>
+
+      <!-- 6 · BLOQUE EDUCATIVO -->
+      <section class="block alt">
+        <div class="wrap">
+          <div class="edu">
+            <h2 class="sec">Sistema Educativo</h2>
+            <p>Orientamos a nuevos talentos y guiamos sus carreras en la industria financiera para generar nuevos ingresos y maximizar ventas. Nuestro sistema educativo ha orientado a profesionales durante años de forma exitosa a encontrar estabilidad financiera en ingresos variables.</p>
+            <p>Aprenderás las bondades de la industria financiera, descubrirás el potencial de las ventas y te enseñaremos cómo alcanzar el sueño americano generando ingresos residuales.</p>
+            <p class="cta-line">¡Contáctanos y agendemos una llamada!</p>
+            <a class="btn" href="#postulate">Registrarme</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 · MENTOR -->
+      <section class="block">
+        <div class="wrap">
+          <h2 class="sec">Tu Mentor</h2>
+          <p class="sec-sub">La persona que te va a entrenar directamente.</p>
+          <div class="mentor">
+            <div class="photo-frame">
+              <img src="assets/foto-5.jpg" alt="Freddy Mota, de traje azul marino y corbata negra, sonriendo frente a una pared de listones de madera con un logo dorado" width="1320" height="880" />
+            </div>
+            <div>
+              <h3>Freddy Mota</h3>
+              <p class="role">General Agent en American Income Life</p>
+              <p class="bio">Llegué a Estados Unidos hace cuatro años. Empecé en construcción, después delivery y mi propia empresa de limpieza. Hace un año entré a esta industria y cambió mi techo por completo: hoy entreno directamente a 25 agentes dentro de una agencia de más de 200.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 · FORMULARIO -->
+      <section class="block apply" id="postulate">
+        <div class="wrap">
+          <p class="form-lead">Utiliza los métodos que hemos comprobado para ayudar a nuestros agentes a conseguir libertad financiera.</p>
+          <div class="form-grid">
+            <div class="form-side">
+              <h2 class="sec">¡Postúlate al empleo aquí!</h2>
+              <p>Al dejar tus datos, nuestro equipo de Recursos Humanos se estará poniendo en contacto contigo para agendar una entrevista de trabajo.</p>
+              <ul class="trust">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                  Tus datos no se venden
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  Te contacta nuestro equipo de RH
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  Entrevista sin compromiso
+                </li>
+              </ul>
+            </div>
+            <div>
+              <!-- Formulario oculto de detección de Netlify Forms: en producción el formulario se llama "lead" -->
+              <form name="lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
+                <input type="hidden" name="bot-field" />
+                <textarea name="resumen"></textarea>
+                <input type="text" name="consentimiento" />
+              </form>
+              <form class="postula" id="form-postula" novalidate>
+                <div class="field" data-field="nombre">
+                  <label for="f-nombre">Nombre completo</label>
+                  <input id="f-nombre" name="nombre" type="text" autocomplete="name" required placeholder="Tu nombre y apellido" />
+                  <p class="ferr" hidden>Escribe tu nombre completo.</p>
+                </div>
+                <div class="field" data-field="telefono">
+                  <label for="f-telefono">Teléfono</label>
+                  <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" required placeholder="(801) 555-1234" />
+                  <p class="ferr" hidden>Ingresa un número de teléfono válido de 10 dígitos.</p>
+                </div>
+                <div class="field" data-field="estado">
+                  <label for="f-estado">Estado</label>
+                  <select id="f-estado" name="estado" required>
+                    <option value="" selected disabled>Selecciona tu estado</option>
+                    <option>Utah</option>
+                    <option>Virginia</option>
+                    <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option>
+                    <option>California</option><option>Carolina del Norte</option><option>Carolina del Sur</option>
+                    <option>Colorado</option><option>Connecticut</option><option>Dakota del Norte</option><option>Dakota del Sur</option>
+                    <option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawái</option>
+                    <option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option>
+                    <option>Kansas</option><option>Kentucky</option><option>Luisiana</option><option>Maine</option>
+                    <option>Maryland</option><option>Massachusetts</option><option>Míchigan</option><option>Minnesota</option>
+                    <option>Misisipi</option><option>Misuri</option><option>Montana</option><option>Nebraska</option>
+                    <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New York</option>
+                    <option>Nuevo México</option><option>Ohio</option><option>Oklahoma</option><option>Oregón</option>
+                    <option>Pensilvania</option><option>Rhode Island</option><option>Tennessee</option><option>Texas</option>
+                    <option>Vermont</option><option>Washington</option><option>Washington D.C.</option>
+                    <option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+                  </select>
+                  <p class="ferr" hidden>Selecciona tu estado.</p>
+                </div>
+                <fieldset class="field" data-field="autorizacion">
+                  <legend>¿Puedes trabajar legalmente en Estados Unidos?</legend>
+                  <div class="opts">
+                    <label class="opt-item"><input type="radio" name="autorizacion" value="Sí" required /> Sí</label>
+                    <label class="opt-item"><input type="radio" name="autorizacion" value="No" required /> No</label>
+                  </div>
+                  <p class="ferr" hidden>Selecciona una opción.</p>
+                </fieldset>
+                <fieldset class="field" data-field="estatus">
+                  <legend>Selecciona la opción que aplique para ti</legend>
+                  <div class="opts stack">
+                    <label class="opt-item"><input type="radio" name="estatus" value="Ciudadano o residente legal" required /> Soy ciudadano o residente legal</label>
+                    <label class="opt-item"><input type="radio" name="estatus" value="Permiso de trabajo vigente" required /> Tengo un permiso de trabajo vigente</label>
+                    <label class="opt-item"><input type="radio" name="estatus" value="ITIN y licencia de conducir" required /> Tengo un número ITIN y una licencia de conducir válida</label>
+                    <label class="opt-item"><input type="radio" name="estatus" value="Ninguna de las anteriores" required /> Ninguna de las anteriores</label>
+                  </div>
+                  <p class="ferr" hidden>Selecciona una opción.</p>
+                </fieldset>
+                <div class="field" data-field="ocupacion">
+                  <label for="f-actual">¿Qué haces actualmente?</label>
+                  <input id="f-actual" name="ocupacion" type="text" required placeholder="Construcción, restaurante…" />
+                  <p class="ferr" hidden>Cuéntanos qué haces actualmente.</p>
+                </div>
+                <div class="field" data-field="motivo">
+                  <label for="f-interes">¿Por qué te interesa? <span class="opt">(opcional)</span></label>
+                  <textarea id="f-interes" name="motivo" placeholder="Cuéntanos en una línea"></textarea>
+                </div>
+                <div class="field check" data-field="consentimiento">
+                  <label class="opt-item" for="f-consentimiento">
+                    <input type="checkbox" id="f-consentimiento" name="consentimiento" value="si" required />
+                    <span>Acepto que Freddy Mota y su equipo me contacten por teléfono, mensaje de texto o WhatsApp.</span>
+                  </label>
+                  <p class="ferr" hidden>Debes aceptar el contacto para poder registrarte.</p>
+                </div>
+                <button class="btn" type="submit" style="width:100%">Registrarme</button>
+                <p class="privacy">Tu información es solo para que mi equipo te contacte. No la vendo ni la uso para publicidad. <a href="/privacidad.html">Política de privacidad</a></p>
+              </form>
+              <div class="form-done" id="form-done" role="status">
+                <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>¡Listo! Tu postulación quedó registrada.</h3>
+                <p>Ya recibimos tus datos. Si quieres agilizar tu entrevista, envíalos también por WhatsApp tocando el botón.</p>
+                <a class="btn wa" id="wa-send" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 9 · FOOTER -->
+    <footer class="site">
+      <div class="wrap foot">
+        <span><strong>10K Month Group</strong> — Freddy Mota</span>
+        <span>American Income Life · Carta Business Group</span>
+      </div>
+    </footer>
+
+    <script>
+      // Solo un video a la vez
+      var videos = document.querySelectorAll("video");
+      videos.forEach(function (v) {
+        v.addEventListener("play", function () {
+          videos.forEach(function (o) { if (o !== v) o.pause(); });
+        });
+      });
+
+      // Formulario de producción: mismo pipeline de leads que 10kmonthgroup.com.
+      // 1) Netlify Forms, formulario "lead": POST a "/" solo con resumen + consentimiento.
+      // 2) Función /.netlify/functions/lead con todos los datos + UTM + referrer (nunca bloquea).
+      // 3) Pantalla de éxito con el botón de WhatsApp llevando el resumen; si el envío
+      //    principal falla, ese mismo botón queda como respaldo.
+      var form = document.getElementById("form-postula");
+      var done = document.getElementById("form-done");
+      var waBtn = document.getElementById("wa-send");
+
+      function fieldWrap(name) { return form.querySelector('[data-field="' + name + '"]'); }
+      function setErr(name, bad) {
+        var wrap = fieldWrap(name);
+        if (!wrap) return;
+        wrap.classList.toggle("invalid", bad);
+        var err = wrap.querySelector(".ferr");
+        if (err) err.hidden = !bad;
+        var control = wrap.querySelector("input, select, textarea");
+        if (control) control.setAttribute("aria-invalid", bad ? "true" : "false");
+      }
+      function textVal(sel) { var el = form.querySelector(sel); return el ? el.value.trim() : ""; }
+      function radioVal(name) {
+        var r = form.querySelector('input[name="' + name + '"]:checked');
+        return r ? r.value : "";
+      }
+      function phoneDigits(v) {
+        var d = (v || "").replace(/\D/g, "");
+        if (d.length === 11 && d.charAt(0) === "1") d = d.slice(1);
+        return d;
+      }
+      function fmtPhone(d) {
+        return "+1 (" + d.slice(0, 3) + ") " + d.slice(3, 6) + "-" + d.slice(6, 10);
+      }
+
+      // Al corregir un campo se limpia su error
+      form.addEventListener("input", clearErrOnFix);
+      form.addEventListener("change", clearErrOnFix);
+      function clearErrOnFix(e) {
+        var wrap = e.target.closest ? e.target.closest("[data-field]") : null;
+        if (wrap) {
+          wrap.classList.remove("invalid");
+          var err = wrap.querySelector(".ferr");
+          if (err) err.hidden = true;
+        }
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var nombre = textVal("#f-nombre");
+        var tel10 = phoneDigits(textVal("#f-telefono"));
+        var estado = textVal("#f-estado");
+        var autorizacion = radioVal("autorizacion");
+        var estatus = radioVal("estatus");
+        var ocupacion = textVal("#f-actual");
+        var motivo = textVal("#f-interes");
+        var consentEl = document.getElementById("f-consentimiento");
+        var consentimiento = consentEl && consentEl.checked ? "Sí" : "No";
+
+        // Validación completa: marca cada campo con error y enfoca el primero
+        var checks = [
+          ["nombre", !!nombre],
+          ["telefono", tel10.length === 10],
+          ["estado", !!estado],
+          ["autorizacion", !!autorizacion],
+          ["estatus", !!estatus],
+          ["ocupacion", !!ocupacion],
+          ["consentimiento", consentimiento === "Sí"]
+        ];
+        var firstBad = null;
+        checks.forEach(function (c) {
+          setErr(c[0], !c[1]);
+          if (!c[1] && !firstBad) firstBad = c[0];
+        });
+        if (firstBad) {
+          var wrap = fieldWrap(firstBad);
+          var control = wrap ? wrap.querySelector("input, select, textarea") : null;
+          if (wrap) wrap.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (control) control.focus({ preventScroll: true });
+          return;
+        }
+
+        var params = new URLSearchParams(window.location.search);
+        function utm(k) { return params.get(k) || ""; }
+        var origen = utm("utm_source") || document.referrer || "directo";
+
+        var resumen = [
+          "Nombre completo: " + nombre,
+          "Número de teléfono: " + fmtPhone(tel10),
+          "Estado donde vive: " + estado,
+          "Estatus legal: " + (autorizacion === "Sí"
+            ? "Sí puede trabajar legalmente en Estados Unidos"
+            : "No puede trabajar legalmente en Estados Unidos"),
+          "",
+          "Información adicional:",
+          "· Situación: " + estatus,
+          "· Trabaja actualmente en: " + ocupacion,
+          "· Comentario: " + (motivo ? motivo : "no dejó ninguno"),
+          "· Llegó desde: " + origen
+        ].join("\n");
+
+        waBtn.href = "https://wa.me/13855383938?text=" + encodeURIComponent(resumen);
+
+        var submitBtn = form.querySelector('button[type="submit"]');
+        var originalBtnText = submitBtn ? submitBtn.textContent : "";
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Enviando…";
+        }
+        function showDone() {
+          done.classList.add("show");
+          done.scrollIntoView({ behavior: "smooth", block: "center" });
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+          }
+        }
+
+        // Envío secundario a la función de leads: todos los datos + UTM + referrer.
+        // Nunca bloquea al usuario: sus errores se ignoran.
+        try {
+          fetch("/.netlify/functions/lead", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              nombre: nombre,
+              telefono: "+1" + tel10,
+              estado: estado,
+              autorizacion: autorizacion,
+              estatus: estatus,
+              ocupacion: ocupacion,
+              motivo: motivo,
+              consentimiento: consentimiento,
+              utm_source: utm("utm_source"),
+              utm_medium: utm("utm_medium"),
+              utm_campaign: utm("utm_campaign"),
+              utm_content: utm("utm_content"),
+              utm_term: utm("utm_term"),
+              referrer: document.referrer || ""
+            })
+          }).catch(function () {});
+        } catch (err) { /* la función nunca bloquea el registro */ }
+
+        // Envío principal a Netlify Forms (formulario "lead")
+        var body = new URLSearchParams();
+        body.set("form-name", "lead");
+        body.set("resumen", resumen);
+        body.set("consentimiento", consentimiento);
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: body.toString()
+        }).then(function () {
+          showDone();
+        }).catch(function () {
+          // Si el envío principal falla, la pantalla de éxito muestra el WhatsApp como respaldo
+          showDone();
+        });
+      });
+    </script>
+  </body>
+</html>
