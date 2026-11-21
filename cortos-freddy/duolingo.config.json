@@ -10,7 +10,8 @@
  "keep": [
   {
    "from": "No puedes detenerte",
-   "to": "bajar el LP"
+   "to": "bajar el LP",
+   "start_at": 0.5
   },
   {
    "from": "aquí existe algo que",
@@ -75,8 +76,8 @@
   },
   {
    "from": "Entonces recuerden",
-   "to": "del trabajo",
-   "end_at": 107.21
+   "to": "están viendo",
+   "end_at": 108.36
   }
  ],
  "fixes": {

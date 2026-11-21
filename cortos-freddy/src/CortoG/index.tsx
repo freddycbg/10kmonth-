@@ -230,7 +230,7 @@ const Streak: React.FC = () => {
 const AppStat: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const t = frame / fps + M.app;
+  const t = frame / fps + (M.anos - 0.4);
   const days = Math.round(interpolate(t, [M.anos - 0.5, M.anos + 0.9], [0, 3650], clamp01));
   const fmt = days >= 1000 ? `${Math.floor(days / 1000)}.${String(days % 1000).padStart(3, "0")}` : String(days);
   const lang = interpolate(t, [M.idioma, M.idioma + 0.2], [0, 1], clamp01);
@@ -387,7 +387,7 @@ export const CortoG: React.FC = () => {
       <Sequence {...sec(M.vendiendo, M.miedo, fps)}>
         <Streak />
       </Sequence>
-      <Sequence {...sec(M.app, M.broma + 0.3, fps)}>
+      <Sequence {...sec(M.anos - 0.4, M.broma + 0.3, fps)}>
         <AppStat />
       </Sequence>
       <Sequence {...sec(M.pct, M.japones, fps)}>

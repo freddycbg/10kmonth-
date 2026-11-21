@@ -204,7 +204,7 @@ def main(cfg_path):
     out_t, acc, seg_out = {}, 0.0, []
     for s, e, a, b, k, pad in ranges:
         for i in range(a, b + 1):
-            out_t[i] = (acc + words[i]["start"] - s, acc + words[i]["end"] - s)
+            out_t[i] = (max(acc, acc + words[i]["start"] - s), acc + words[i]["end"] - s)  # sin tiempos antes del tramo
         dur = round((e - s + pad) * FPS) / FPS
         seg_out.append((acc, dur, k))
         acc += dur
