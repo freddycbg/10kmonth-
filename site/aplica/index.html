@@ -268,14 +268,14 @@
       }
       .mission p em { color: var(--gold-deep); font-style: normal; }
 
-      /* Testimonials */
-      .videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      /* Testimonials: videos verticales 9:16, tarjetas contenidas y centradas */
+      .videos { display: grid; grid-template-columns: repeat(3, minmax(0, 340px)); justify-content: center; gap: 20px; }
       .video-card {
         background: linear-gradient(168deg, #FFFFFF 0%, #FBF7EE 100%);
         border: 1px solid #E9DFCB; border-radius: var(--radius); overflow: hidden;
         box-shadow: var(--shadow-card);
       }
-      .video-card video { width: 100%; aspect-ratio: 16 / 9; height: auto; object-fit: contain; background: #000; display: block; }
+      .video-card video { width: 100%; aspect-ratio: 9 / 16; height: auto; object-fit: contain; background: #000; display: block; }
       .video-card .vname { padding: 14px 18px 16px; font-weight: 800; font-size: 17px; }
       .video-card .vname span { display: block; font-weight: 600; font-size: 13.5px; color: var(--ink-soft); margin-top: 2px; }
       .members { margin-top: 30px; text-align: center; color: var(--ink-soft); font-size: 16px; }
@@ -413,7 +413,7 @@
 
       @media (max-width: 900px) {
         .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-        .videos { grid-template-columns: 1fr; }
+        .videos { grid-template-columns: minmax(0, 420px); }
         .steps { grid-template-columns: 1fr; }
         .form-grid { grid-template-columns: 1fr; gap: 28px; }
         .mentor { grid-template-columns: 1fr; padding: 24px; gap: 26px; }
