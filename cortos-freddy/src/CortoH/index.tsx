@@ -146,11 +146,11 @@ const FX: Fx[] = [
 // ---------- golpes de obturador ----------
 const near = (a: number, b: number) => Math.abs(a - b) < 0.02;
 const SHUTTERS: { t: number; v: number }[] = [
-  ...BROLL.map((b, i) => ({ t: b.from, v: i > 0 && near(BROLL[i - 1].to, b.from) ? 0.3 : 0.55 })),
+  ...BROLL.map((b, i) => ({ t: b.from, v: i > 0 && near(BROLL[i - 1].to, b.from) ? 0.45 : 0.7 })),
   ...BROLL.filter((b, i) => !(BROLL[i + 1] && near(BROLL[i + 1].from, b.to)))
     .filter((b) => !FX.some((f) => (f.type === "leak" || f.type === "pink") && Math.abs(f.t - b.to) < 0.1))
-    .map((b) => ({ t: b.to, v: 0.55 })),
-  { t: END, v: 0.55 },
+    .map((b) => ({ t: b.to, v: 0.7 })),
+  { t: END, v: 0.7 },
 ];
 
 // ---------- zoom dinámico del A-roll: golpes a una nueva escala ----------
@@ -364,13 +364,13 @@ export const CortoH: React.FC = () => {
         src={staticFile(D.music.src)}
         startFrom={Math.round(D.music.trim * fps)}
         volume={(f) =>
-          interpolate(f, [0, 6, D.arollFrames - 6, D.arollFrames + 6, durationInFrames - 30, durationInFrames], [0, D.music.volume, D.music.volume, D.music.endVolume, D.music.endVolume, 0], clamp)
+          interpolate(f, [0, 2, D.arollFrames - 6, D.arollFrames + 6, durationInFrames - 30, durationInFrames], [0, D.music.volume, D.music.volume, D.music.endVolume, D.music.endVolume, 0], clamp)
         }
       />
-      {/* sonido como la referencia: golpe de obturador al entrar y salir de cada tanda y en cada plano dentro de ella */}
+      {/* sonido de la referencia (extraído de su vídeo): golpe suave al entrar y salir de cada tanda y en cada plano dentro de ella */}
       {SHUTTERS.map((h, i) => (
-        <Sequence key={`sh${i}`} from={Math.max(0, fr(h.t) - 1)} durationInFrames={15}>
-          <Audio src={staticFile("sfx/obturador.wav")} volume={h.v} />
+        <Sequence key={`sh${i}`} from={Math.max(0, fr(h.t) - 1)} durationInFrames={16}>
+          <Audio src={staticFile("sfx/golpe_carol.wav")} volume={h.v} />
         </Sequence>
       ))}
     </AbsoluteFill>

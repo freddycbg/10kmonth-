@@ -812,8 +812,8 @@
  ],
  "music": {
   "src": "media/cocktail.mp3",
-  "volume": 0.14,
-  "endVolume": 0.3,
+  "volume": 0.3,
+  "endVolume": 0.42,
   "trim": 0
  },
  "endCard": {
