@@ -90,25 +90,43 @@ const GROUPS = CAPS.map(([i0, ...txt], n) => {
   return { words, from: words[0].start - 0.2, to: Math.min(nextStart, lastStart + 0.95) };
 });
 
-// ---------- b-roll (segundos de salida) ----------
-type B = { src: string; from: number; to: number; photo?: boolean; pan?: boolean };
+// ---------- b-roll (segundos de salida): seis tandas como en el vídeo de referencia ----------
+type B = { src: string; from: number; to: number; photo?: boolean; pan?: boolean; fast?: boolean };
+const M = "media/camp/";
+// Tanda 1: 8 planos rapidísimos (5 fotogramas) de su vida profesional en la agencia.
+const T1 = ["logo_oro.jpg", "oficina.mp4", "anillos.jpg", "convencion.mp4", "gala.jpg", "oficina_cbg.jpg", "colega.jpg", "vegas.jpg"];
+const T1_START = T(8);
+const T1_STEP = 5 / 30;
 const BROLL: B[] = [
-  { src: "media/camp/capitolio.jpg", from: T(6), to: T(8), photo: true },
-  { src: "media/camp/manejando.mp4", from: T(8), to: T(11) + 0.1 },
-  { src: "media/camp/ensenando.mp4", from: T(14) - 0.05, to: T(16) },
-  { src: "media/camp/convencion.mp4", from: T(16), to: T(18) },
-  { src: "media/camp/equipo.jpg", from: T(19), to: T(22), photo: true, pan: true },
-  { src: "media/camp/globelife.jpg", from: T(22), to: T(26), photo: true },
-  { src: "media/camp/retiro.jpg", from: T(26), to: T(30), photo: true, pan: true },
-  { src: "media/camp/oficina.mp4", from: T(32), to: T(36) },
-  { src: "media/camp/vegas.jpg", from: T(36), to: T(41), photo: true },
-  { src: "media/camp/coaching.mp4", from: T(47), to: T(51) },
-  { src: "media/camp/escenario.mp4", from: T(51), to: T(54) },
-  { src: "media/camp/atardecer.jpg", from: T(63), to: T(67), photo: true },
-  { src: "media/camp/fabrica.mp4", from: T(67), to: T(70) },
-  { src: "media/camp/delivery.mp4", from: T(70), to: T(73) },
-  { src: "media/camp/yate.mp4", from: T(73), to: T(76) },
-  { src: "media/camp/deportivo.mp4", from: T(76), to: T(79) },
+  ...T1.map((f, k) => ({
+    src: M + f,
+    from: T1_START + k * T1_STEP,
+    to: k === T1.length - 1 ? T(13) : T1_START + (k + 1) * T1_STEP,
+    photo: f.endsWith(".jpg"),
+    fast: true,
+  })),
+  // Tanda 2: entrenando en la oficina
+  { src: M + "presentando.mp4", from: T(14) - 0.05, to: T(16) },
+  { src: M + "presentando2.mp4", from: T(16), to: T(18) },
+  // Tanda 3: rodeado de la gente de la agencia (el retiro de Idaho, grabado en horizontal, se recorre en vertical)
+  { src: M + "selfie_equipo.mp4", from: T(19), to: T(22) },
+  { src: M + "idaho.mp4", from: T(22), to: T(28), pan: true },
+  { src: M + "fogata.mp4", from: T(28), to: T(30) },
+  // Tanda 4: los equipos aprendiendo en la oficina
+  ...["mesa_equipo.mp4", "sofa_equipo.mp4", "sala_equipo.jpg", "libretas.jpg"].map((f, k) => {
+    const step = (T(41) - T(32)) / 4;
+    return { src: M + f, from: T(32) + k * step, to: T(32) + (k + 1) * step, photo: f.endsWith(".jpg") };
+  }),
+  // Tanda 5: entrenando de nuevo
+  { src: M + "ensenando.mp4", from: T(47), to: T(51) + 0.07 },
+  { src: M + "escenario.mp4", from: T(51) + 0.07, to: T(54) },
+  // Tanda 6: tres de vida común (stock) y tres de la vida soñada (suyos)
+  { src: M + "cocina.mp4", from: T(67), to: T(70) - 0.12 },
+  { src: M + "delivery.mp4", from: T(70) - 0.12, to: T(71) + 0.09 },
+  { src: M + "avenida.mp4", from: T(71) + 0.09, to: T(73) },
+  { src: M + "moto.mp4", from: T(73), to: T(76) },
+  { src: M + "piscina.mp4", from: T(76), to: (T(76) + T(79)) / 2 },
+  { src: M + "deportivo.mp4", from: (T(76) + T(79)) / 2, to: T(79) },
 ];
 
 // ---------- transiciones ----------
@@ -123,6 +141,16 @@ const FX: Fx[] = [
   { t: T(67), type: "white" },
   { t: T(79), type: "blur" },
   { t: END, type: "blur" },
+];
+
+// ---------- golpes de obturador ----------
+const near = (a: number, b: number) => Math.abs(a - b) < 0.02;
+const SHUTTERS: { t: number; v: number }[] = [
+  ...BROLL.map((b, i) => ({ t: b.from, v: i > 0 && near(BROLL[i - 1].to, b.from) ? 0.3 : 0.55 })),
+  ...BROLL.filter((b, i) => !(BROLL[i + 1] && near(BROLL[i + 1].from, b.to)))
+    .filter((b) => !FX.some((f) => (f.type === "leak" || f.type === "pink") && Math.abs(f.t - b.to) < 0.1))
+    .map((b) => ({ t: b.to, v: 0.55 })),
+  { t: END, v: 0.55 },
 ];
 
 // ---------- zoom dinámico del A-roll: golpes a una nueva escala ----------
@@ -171,9 +199,20 @@ const ARoll: React.FC = () => {
 const BrollClip: React.FC<{ b: B }> = ({ b }) => {
   const frame = useCurrentFrame();
   const n = (b.to - b.from) * 30;
-  const settle = interpolate(frame, [0, 5], [1.14, 1.0], { ...clamp, easing: Easing.out(Easing.cubic) });
-  const blur = interpolate(frame, [0, 3], [10, 0], clamp);
+  const settle = b.fast ? 1.03 - 0.006 * frame : interpolate(frame, [0, 5], [1.14, 1.0], { ...clamp, easing: Easing.out(Easing.cubic) });
+  const blur = b.fast ? 0 : interpolate(frame, [0, 3], [10, 0], clamp);
   const style: React.CSSProperties = { filter: blur > 0.3 ? `blur(${blur}px)` : undefined };
+  if (b.pan && !b.photo) {
+    // vídeo horizontal: zoom a toda la altura y pasada de izquierda a derecha por todo el grupo
+    const hh = H * 1.06;
+    const ww = (hh * 3444) / 1920;
+    const x = interpolate(frame, [0, n], [0, W - ww], { ...clamp, easing: Easing.inOut(Easing.sin) });
+    return (
+      <AbsoluteFill style={{ ...style, overflow: "hidden" }}>
+        <OffthreadVideo src={staticFile(b.src)} muted style={{ position: "absolute", height: hh, width: ww, top: (H - hh) / 2, left: x, transform: `scale(${settle})` }} />
+      </AbsoluteFill>
+    );
+  }
   if (b.photo && b.pan) {
     // foto horizontal: recorrido lateral para que se vea el grupo entero
     const x = interpolate(frame, [0, n], [-0.12, -0.5], clamp);
@@ -328,18 +367,10 @@ export const CortoH: React.FC = () => {
           interpolate(f, [0, 6, D.arollFrames - 6, D.arollFrames + 6, durationInFrames - 30, durationInFrames], [0, D.music.volume, D.music.volume, D.music.endVolume, D.music.endVolume, 0], clamp)
         }
       />
-      {/* sonido: whoosh al entrar cada b-roll, brillo en los destellos de luz, golpe en los destellos blancos */}
-      {BROLL.map((b, i) => (
-        <Sequence key={`sb${i}`} from={Math.max(0, fr(b.from) - 3)} durationInFrames={20}>
-          <Audio src={staticFile("sfx/whoosh_corto.wav")} volume={0.18} />
-        </Sequence>
-      ))}
-      {FX.map((f, i) => (
-        <Sequence key={`sf${i}`} from={Math.max(0, fr(f.t) - (f.type === "blur" ? 8 : 6))} durationInFrames={40}>
-          <Audio
-            src={staticFile(f.type === "blur" ? "sfx/whoosh_largo.wav" : f.type === "white" ? "sfx/camara.wav" : "sfx/swoosh.wav")}
-            volume={f.type === "white" ? 0.35 : 0.3}
-          />
+      {/* sonido como la referencia: golpe de obturador al entrar y salir de cada tanda y en cada plano dentro de ella */}
+      {SHUTTERS.map((h, i) => (
+        <Sequence key={`sh${i}`} from={Math.max(0, fr(h.t) - 1)} durationInFrames={15}>
+          <Audio src={staticFile("sfx/obturador.wav")} volume={h.v} />
         </Sequence>
       ))}
     </AbsoluteFill>
