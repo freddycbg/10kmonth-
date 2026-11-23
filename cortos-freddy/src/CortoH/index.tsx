@@ -106,8 +106,8 @@ const BROLL: B[] = [
     fast: true,
   })),
   // Tanda 2: entrenando en la oficina
-  { src: M + "presentando.mp4", from: T(14) - 0.05, to: T(16) },
-  { src: M + "presentando2.mp4", from: T(16), to: T(18) },
+  { src: M + "entreno_a.mp4", from: T(14) - 0.05, to: T(16) },
+  { src: M + "entreno_b.mp4", from: T(16), to: T(18) },
   // Tanda 3: rodeado de la gente de la agencia (el retiro de Idaho, grabado en horizontal, se recorre en vertical)
   { src: M + "selfie_equipo.mp4", from: T(19), to: T(22) },
   { src: M + "idaho.mp4", from: T(22), to: T(28), pan: true },
@@ -126,7 +126,7 @@ const BROLL: B[] = [
   { src: M + "avenida.mp4", from: T(71) + 0.09, to: T(73) },
   { src: M + "moto.mp4", from: T(73), to: T(76) },
   { src: M + "piscina.mp4", from: T(76), to: (T(76) + T(79)) / 2 },
-  { src: M + "deportivo.mp4", from: (T(76) + T(79)) / 2, to: T(79) },
+  { src: M + "rolls.mp4", from: (T(76) + T(79)) / 2, to: T(79) },
 ];
 
 // ---------- transiciones ----------

@@ -32,6 +32,9 @@ VIDEOS = {  # nombre: (archivo, desde, duración, centro x 0..1)
     "freddy_lounge": (f"{BP}/IMG_8667.MOV", 8.9, 1.5, 0.5),
     "moto": (f"{BP}/IMG_3968.MOV", 25.5, 1.5, 0.5),
     "fiesta": (f"{BP}/dde01fd5.MP4", 7.5, 1.5, 0.5),
+    "entreno_a": (f"{BP}/copy_F9566760-E596-47F8-AD35-E6E21E0B4CF4.MOV", 53.6, 1.5, 0.22, 1.55, 0.3),
+    "entreno_b": (f"{BP}/copy_F9566760-E596-47F8-AD35-E6E21E0B4CF4.MOV", 76.6, 1.5, 0.52, 1.3, 0.35),
+    "rolls": (f"{BP}/IMG_8662.MOV", 15.8, 1.5, 0.5),
     "piscina": (f"{BP}/IMG_6110.mov", 0.1, 1.4, 0.5),
     "cocina": (f"{ROOT}/input/material/trabajar_cocina.mp4", 2.0, 1.5, 0.5),
     "avenida": (f"{ROOT}/input/material/avenida_eeuu.mp4", 2.0, 1.5, 0.5),
@@ -47,16 +50,18 @@ PHOTOS = {
     "anillos": ("IMG_4321.PNG", 0.5),
     "gala": ("IMG_6089.JPG", 0.62),
     "oficina_cbg": ("IMG_3054.JPG", 0.5),
-    "colega": ("IMG_4463.PNG", 0.32),
+    "colega": ("IMG_4463.PNG", 0.1),
     "sala_equipo": ("IMG_8725.JPG", 0.5),
     "libretas": ("IMG_8692.JPG", 0.42),
 }
 
-for name, (src, ss, dur, cx) in VIDEOS.items():
+for name, spec in VIDEOS.items():
+    src, ss, dur, cx = spec[:4]
+    z, cy = (spec[4], spec[5]) if len(spec) > 4 else (1.0, 0.5)  # zoom y centro vertical del recorte
     if ONLY and name not in ONLY:
         continue
-    vf = (f"scale=1080:1920:force_original_aspect_ratio=increase,"
-          f"crop=1080:1920:(iw-1080)*{cx}:(ih-1920)/2,fps=30,format=yuv420p")
+    vf = (f"scale={round(1080 * z / 2) * 2}:{round(1920 * z / 2) * 2}:force_original_aspect_ratio=increase,"
+          f"crop=1080:1920:(iw-1080)*{cx}:(ih-1920)*{cy},fps=30,format=yuv420p")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(ss), "-t", str(dur), "-i", src, "-vf", vf, "-an",
                     "-c:v", "libx264", "-crf", "14", "-preset", "fast", f"{OUT}/{name}.mp4"], check=True)
     print("video", name)
