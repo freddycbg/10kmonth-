@@ -1,0 +1,21 @@
+{
+ "source": "input/campana/video_campana.mov",
+ "transcript": "input/campana/campana.json",
+ "denoise": false,
+ "min_gap": 0.8,
+ "max_words": 3,
+ "headline": [""],
+ "keep": [
+  {"from": "Cuando llegué", "to": "vida profesional", "start_at": 0.54, "end_at": 4.22},
+  {"from": "1 Aprender", "to": "de ventas", "start_at": 5.15, "end_at": 7.60},
+  {"from": "2 Juntarme", "to": "en sobrevivir", "start_at": 8.45, "end_at": 11.86},
+  {"from": "Y 3", "to": "seguros de vida", "start_at": 13.17, "end_at": 15.84},
+  {"from": "Si quieres empezar", "to": "tu realidad", "start_at": 16.84, "end_at": 22.86},
+  {"from": "Pases de vivir", "to": "te cuento cómo", "start_at": 24.19, "end_at": 30.30}
+ ],
+ "fixes": {"1": "Uno:", "2": "Dos:", "3": "Tres:", "clic": "clic"},
+ "music": {"src": "media/cocktail.mp3", "volume": 0.14, "endVolume": 0.3, "trim": 0},
+ "end_card": {"dur": 0.0, "lines": []},
+ "end_video": {"src": "media/final_10k.mp4", "dur": 4.0},
+ "aroll_size": [1440, 2560]
+}

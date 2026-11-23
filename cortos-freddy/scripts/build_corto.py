@@ -140,7 +140,7 @@ def main(cfg_path):
         _, b = find_phrase(words, item["to"], a)
         start = a
         for i in range(a, b):
-            if words[i + 1]["start"] - words[i]["end"] > MIN_GAP:
+            if words[i + 1]["start"] - words[i]["end"] > cfg.get("min_gap", MIN_GAP):
                 pieces.append((start, i, k))
                 start = i + 1
         pieces.append((start, b, k))
